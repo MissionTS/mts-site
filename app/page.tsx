@@ -10,6 +10,7 @@ import {
   ShieldCheckIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -26,25 +27,36 @@ const services = [
 
 const industries = ["Local Government", "Healthcare", "Professional Services", "Nonprofits", "Automotive", "Churches & Schools"];
 
+const heroHighlights = ["Managed IT", "Cybersecurity", "Microsoft 365", "Cabling", "Cameras", "Access Control"];
+
 export default function Home() {
   return (
     <main>
       <SiteHeader />
 
       <section className="relative overflow-hidden bg-mission-ink text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(48,80,108,0.75),_transparent_38%)]" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 py-24 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-32">
-          <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200">
+        <div className="absolute inset-0">
+          <Image src="/photos/managed-it-team.jpg" alt="" fill priority sizes="100vw" className="object-cover opacity-20" />
+          <div className="absolute inset-0 bg-mission-ink/85" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-mission-ink to-transparent" />
+        </div>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-16 pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-20 lg:pt-20">
+          <div className="max-w-4xl">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-slate-100 shadow-lg shadow-black/10 backdrop-blur">
               <BoltIcon className="h-4 w-4 text-mission-gold" />
               IT support that moves at your speed
             </div>
-            <h1 className="max-w-4xl text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl">
+            <h1 className="text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl">
               Technology that works <span className="text-mission-gold">for your mission.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
               Managed IT, cybersecurity, cloud, communications, and strategic technology services for organizations that need dependable systems and a partner they can actually reach.
             </p>
+            <div className="mt-8 flex max-w-3xl flex-wrap gap-3">
+              {heroHighlights.map((item) => (
+                <span key={item} className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-slate-100 backdrop-blur">{item}</span>
+              ))}
+            </div>
             <div className="mt-10 flex flex-wrap gap-4">
               <a href="#contact" className="inline-flex items-center gap-2 rounded-xl bg-mission-gold px-6 py-3.5 font-bold text-mission-ink transition hover:brightness-105">
                 Start a Conversation <ArrowRightIcon className="h-4 w-4" />
@@ -55,18 +67,37 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-7 shadow-2xl backdrop-blur">
-            <div className="text-sm font-bold uppercase tracking-[0.18em] text-mission-gold">The Mission Difference</div>
-            <div className="mt-6 space-y-5">
+          <div className="relative">
+            <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] shadow-2xl shadow-black/30 backdrop-blur">
+              <div className="relative h-72 sm:h-80 lg:h-96">
+                <Image src="/photos/mission-team-illustration.png" alt="Mission Technology Solutions team supporting a client environment" fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-mission-ink/80 via-mission-ink/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="text-sm font-bold uppercase tracking-[0.18em] text-mission-gold">The Mission Difference</div>
+                  <p className="mt-2 max-w-md text-2xl font-black leading-tight">Local people, practical answers, and systems that stay ready.</p>
+                </div>
+              </div>
+              <div className="grid gap-0 border-t border-white/10 sm:grid-cols-3">
+                {[
+                  ["Support", "Fast, human help"],
+                  ["Security", "Built in early"],
+                  ["Planning", "Clear next steps"],
+                ].map(([title, text]) => (
+                  <div key={title} className="border-white/10 px-5 py-4 sm:border-r sm:last:border-r-0">
+                    <div className="text-sm font-extrabold text-mission-gold">{title}</div>
+                    <div className="mt-1 text-sm font-semibold text-slate-200">{text}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {[
-                "Fast, human support from a local team",
-                "Security built into the service — not bolted on later",
-                "Clear roadmaps and lifecycle planning",
-                "One partner across IT, cloud, network, voice, and security",
+                "Monitoring, helpdesk, and lifecycle care",
+                "Network, cloud, cameras, and access control",
               ].map((item) => (
-                <div key={item} className="flex gap-3">
-                  <CheckCircleIcon className="mt-0.5 h-5 w-5 shrink-0 text-mission-gold" />
-                  <span className="text-slate-200">{item}</span>
+                <div key={item} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/10 p-4 text-sm font-bold text-slate-100 backdrop-blur">
+                  <CheckCircleIcon className="h-5 w-5 shrink-0 text-mission-gold" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>

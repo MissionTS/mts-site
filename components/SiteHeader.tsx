@@ -22,10 +22,10 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" aria-label="Mission Technology Solutions home" className="shrink-0" onClick={() => setMenuOpen(false)}>
-          <Image src="/brand/mission-mark-blue.png" alt="" width={1856} height={1827} priority className="h-10 w-10 object-contain sm:hidden" />
-          <Image src="/brand/mission-wordmark-blue.png" alt="Mission Technology Solutions" width={4980} height={539} priority className="hidden h-auto w-[220px] sm:block" />
+          <Image src="/brand/mission-mark-blue.png" alt="" width={1856} height={1827} priority className="h-12 w-12 object-contain sm:hidden" />
+          <Image src="/brand/mission-wordmark-blue.png" alt="Mission Technology Solutions" width={4980} height={539} priority className="hidden h-auto w-[260px] sm:block xl:w-[300px]" />
         </Link>
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-5 xl:gap-6 lg:flex" aria-label="Primary navigation">
           {nav.map((item) => <Link key={item.href} href={item.href} className="text-sm font-semibold text-slate-700 transition hover:text-mission-navy">{item.label}</Link>)}
         </nav>
         <div className="hidden items-center gap-3 sm:inline-flex">
