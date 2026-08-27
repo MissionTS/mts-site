@@ -10,14 +10,15 @@ import {
   ShieldCheckIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/react/24/outline";
+import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 const services = [
-  { icon: WrenchScrewdriverIcon, title: "Managed IT", text: "Responsive helpdesk, lifecycle management, patching, monitoring, and proactive support." },
-  { icon: ShieldCheckIcon, title: "Cybersecurity", text: "Layered protection with endpoint security, MDR, email security, awareness training, and security operations." },
+  { icon: WrenchScrewdriverIcon, title: "Managed IT", text: "Responsive helpdesk, lifecycle management, patching, monitoring, and proactive support.", href: "/managed-it" },
+  { icon: ShieldCheckIcon, title: "Cybersecurity", text: "Layered protection with endpoint security, MDR, email security, awareness training, and security operations.", href: "/cybersecurity" },
   { icon: CloudIcon, title: "Microsoft 365 & Cloud", text: "Modern identity, collaboration, SharePoint, OneDrive, Teams, Intune, and secure cloud migrations." },
-  { icon: CpuChipIcon, title: "Network & Infrastructure", text: "Secure switching, Wi-Fi, firewalls, segmentation, structured cabling, and infrastructure modernization." },
+  { icon: CpuChipIcon, title: "Structured Cabling & Security", text: "Professional cabling, camera systems, access control, and the infrastructure that keeps every connection dependable.", href: "/structured-cabling-security" },
   { icon: PhoneIcon, title: "Mission Connect", text: "Business VoIP, mobile calling, auto attendants, call routing, and communications built around your team." },
   { icon: BuildingOffice2Icon, title: "Strategic IT", text: "vCIO guidance, roadmaps, budgeting, lifecycle planning, compliance support, and technology strategy." },
 ];
@@ -80,11 +81,16 @@ export default function Home() {
             <p className="mt-5 text-lg leading-8 text-slate-600">We bring the core technology disciplines together so your organization spends less time coordinating vendors and more time moving forward.</p>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map(({ icon: Icon, title, text }) => (
+            {services.map(({ icon: Icon, title, text, href }) => (
               <article key={title} className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-mission-navy/10 text-mission-navy"><Icon className="h-6 w-6" /></div>
                 <h3 className="mt-5 text-xl font-extrabold text-mission-ink">{title}</h3>
                 <p className="mt-3 leading-7 text-slate-600">{text}</p>
+                {href && (
+                  <Link href={href} className="mt-5 inline-flex items-center gap-2 font-bold text-mission-navy transition hover:text-mission-gold">
+                    Learn more <ArrowRightIcon className="h-4 w-4" />
+                  </Link>
+                )}
               </article>
             ))}
           </div>

@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const nav = [
-  { href: "#services", label: "Services" },
-  { href: "#why-mission", label: "Why Mission" },
-  { href: "#industries", label: "Industries" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#services", label: "Services" },
+  { href: "/#why-mission", label: "Why Mission" },
+  { href: "/#industries", label: "Industries" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
@@ -37,7 +37,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Link href="#contact" className="rounded-xl bg-mission-navy px-4 py-2.5 text-sm font-bold text-white transition hover:opacity-90">
+        <Link href="/#contact" className="rounded-xl bg-mission-navy px-4 py-2.5 text-sm font-bold text-white transition hover:opacity-90">
           Talk to Mission
         </Link>
       </div>
