@@ -16,9 +16,10 @@ type ServicePageProps = {
   situations: { title: string; text: string }[];
   process: { step: string; title: string; text: string }[];
   faqs: { question: string; answer: string }[];
+  partnerShowcase?: { title: string; text: string; image: string; alt: string }[];
 };
 
-export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs }: ServicePageProps) {
+export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs, partnerShowcase }: ServicePageProps) {
   return (
     <main>
       <SiteHeader />
@@ -104,6 +105,33 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
           </div>
         </div>
       </section>
+
+      {partnerShowcase && (
+        <section className="bg-white py-20 lg:py-24">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+              <div>
+                <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Current-gen platforms</p>
+                <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Modern hardware, installed with practical field experience.</h2>
+              </div>
+              <p className="text-lg leading-8 text-slate-600">We design around the environment first, then match the right cabling, switching, wireless, cameras, access control, and management platform to the job.</p>
+            </div>
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {partnerShowcase.map((item) => (
+                <article key={item.title} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+                  <div className="flex h-52 items-center justify-center bg-slate-50 p-6">
+                    <Image src={item.image} alt={item.alt} width={520} height={360} className="max-h-44 w-full object-contain transition duration-300 group-hover:scale-105" />
+                  </div>
+                  <div className="border-t border-slate-100 p-6">
+                    <h3 className="text-xl font-black text-mission-ink">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="bg-white py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

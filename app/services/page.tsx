@@ -93,6 +93,13 @@ const supportingServices = [
   },
 ];
 
+const partnerVisuals = [
+  { title: "WiFi 7 access", image: "/photos/partners/ubiquiti-u7-pro-max-01.png", alt: "Current-generation Ubiquiti U7 Pro Max access point" },
+  { title: "PoE switching", image: "/photos/partners/ubiquiti-pro-max-24-poe-deployment.png", alt: "Current-generation Ubiquiti Pro Max PoE switch deployment" },
+  { title: "Camera security", image: "/photos/partners/verkada-third-gen-bullet.png", alt: "Current-generation Verkada bullet camera" },
+  { title: "Access control", image: "/photos/partners/verkada-access-controller-flexible.jpg", alt: "Current-generation Verkada access control installation" },
+];
+
 const missionStack = [
   ["People", "Helpdesk, onboarding, training, practical support, and a team your staff can reach."],
   ["Devices", "Workstations, servers, mobile devices, patching, security tools, standards, and lifecycle planning."],
@@ -191,6 +198,23 @@ export default function ServicesPage() {
                 <p className="mt-4 text-sm font-bold leading-6 text-slate-700">{outcome}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white pb-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-mission-mist shadow-sm">
+            <div className="grid gap-px bg-slate-200 md:grid-cols-4">
+              {partnerVisuals.map((visual) => (
+                <div key={visual.title} className="group bg-white p-6">
+                  <div className="flex h-44 items-center justify-center rounded-2xl bg-slate-50 p-5">
+                    <Image src={visual.image} alt={visual.alt} width={480} height={320} className="max-h-36 w-full object-contain transition duration-300 group-hover:scale-105" />
+                  </div>
+                  <div className="mt-4 text-sm font-black uppercase tracking-[0.18em] text-mission-navy">{visual.title}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

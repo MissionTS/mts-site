@@ -12,16 +12,22 @@ export default function StructuredCablingSecurityPage() {
     title="A stronger foundation for"
     accent="connected, secure facilities."
     introduction="Reliable technology starts behind the walls and extends to every door, camera, access point, and workstation. Mission designs and installs structured cabling and physical security systems that are clean, scalable, and built for everyday use."
-    heroImage="/photos/physical-security-monitoring.jpg"
-    heroImageAlt="Security professional monitoring multiple surveillance camera feeds"
+    heroImage="/photos/partners/verkada-access-controller-hero.jpg"
+    heroImageAlt="Modern access control hardware installed in a commercial building"
     outcomes={["Clean, labeled infrastructure that is easier to manage", "Reliable connectivity where your people and devices need it", "Better visibility across entrances and critical areas", "Consistent access controls with room to grow"]}
     services={[
-      { title: "Structured Cabling", text: "Professional copper and fiber cabling, pathways, termination, labeling, testing, and certification." },
-      { title: "Network Closets & Racks", text: "Organized racks, patch panels, cable management, cleanup, documentation, and infrastructure refreshes." },
-      { title: "Camera Systems", text: "Thoughtful camera placement, installation, recording, remote viewing, and system configuration." },
+      { title: "Structured Cabling", text: "Professional copper and fiber cabling, pathways, termination, labeling, testing, certification, and clean infrastructure for modern PoE systems." },
+      { title: "Network Closets & Racks", text: "Organized racks, patch panels, cable management, cleanup, documentation, and infrastructure refreshes built for current-generation switching." },
+      { title: "Camera Systems", text: "Thoughtful camera placement, installation, recording, remote viewing, and system configuration using modern cloud-managed camera platforms." },
       { title: "Access Control", text: "Secure doors, readers, credentials, schedules, permissions, and manageable employee access." },
-      { title: "Wireless Infrastructure", text: "Cabling and mounting for access points, coverage improvements, and dependable facility-wide Wi-Fi." },
+      { title: "Wireless Infrastructure", text: "Cabling and mounting for WiFi 7 access points, coverage improvements, and dependable facility-wide wireless performance." },
       { title: "Moves, Adds & Changes", text: "Efficient support for office changes, expansions, new workstations, equipment moves, and new locations." },
+    ]}
+    partnerShowcase={[
+      { title: "Ubiquiti WiFi 7", text: "Current-generation UniFi access points for cleaner coverage, higher capacity, and easier site management.", image: "/photos/partners/ubiquiti-u7-pro-max-01.png", alt: "Ubiquiti U7 Pro Max access point" },
+      { title: "UniFi switching", text: "Modern PoE switching and Etherlighting deployments that make cabling, cameras, and access points easier to trace.", image: "/photos/partners/ubiquiti-pro-max-24-poe-deployment.png", alt: "Ubiquiti Pro Max PoE switch deployment" },
+      { title: "Camera security", text: "Current camera platforms from Ubiquiti and Verkada for clear coverage, analytics, and practical management.", image: "/photos/partners/ubiquiti-g6-pro-bullet-01.png", alt: "Ubiquiti G6 Pro Bullet camera" },
+      { title: "Access control", text: "Cloud-managed access control hardware for doors, readers, credentials, schedules, and secure facilities.", image: "/photos/partners/verkada-door-reader-ad34-ad64.png", alt: "Verkada door reader and access control interface" },
     ]}
     situations={[
       { title: "The network closet has become a mystery", text: "Unlabeled cables, crowded racks, and undocumented changes make every repair or expansion slower than it should be." },
