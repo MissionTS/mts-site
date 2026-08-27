@@ -13,10 +13,12 @@ type ServicePageProps = {
   heroImageAlt: string;
   outcomes: string[];
   services: { title: string; text: string }[];
+  situations: { title: string; text: string }[];
   process: { step: string; title: string; text: string }[];
+  faqs: { question: string; answer: string }[];
 };
 
-export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, process }: ServicePageProps) {
+export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs }: ServicePageProps) {
   return (
     <main>
       <SiteHeader />
@@ -45,6 +47,26 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-mission-navy shadow-2xl">
               <Image src={heroImage} alt={heroImageAlt} fill priority sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-mission-ink/35 via-transparent to-transparent" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="overflow-hidden bg-mission-ink py-20 text-white lg:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+            <div>
+              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">When it’s time to act</p>
+              <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Does this sound familiar?</h2>
+              <p className="mt-5 leading-8 text-slate-300">You do not need to wait for an emergency. These are common signs that a focused conversation can uncover a better path forward.</p>
+            </div>
+            <div className="grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2">
+              {situations.map((situation) => (
+                <div key={situation.title} className="bg-mission-ink p-6 sm:p-7">
+                  <h3 className="text-lg font-extrabold text-white">{situation.title}</h3>
+                  <p className="mt-2 leading-7 text-slate-300">{situation.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -94,6 +116,27 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
                 <h3 className="mt-3 text-2xl font-extrabold text-mission-ink">{item.title}</h3>
                 <p className="mt-3 leading-7 text-slate-600">{item.text}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-mission-mist py-20 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.7fr_1.3fr] lg:px-8">
+          <div>
+            <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Questions, answered</p>
+            <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink">What organizations ask us.</h2>
+            <p className="mt-5 leading-8 text-slate-600">Every environment is different, but these answers can help you understand what a conversation with Mission might look like.</p>
+          </div>
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details key={faq.question} className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm open:shadow-md">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-extrabold text-mission-ink">
+                  {faq.question}
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-mission-navy/10 text-xl text-mission-navy transition group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 max-w-3xl border-t border-slate-100 pt-4 leading-7 text-slate-600">{faq.answer}</p>
+              </details>
             ))}
           </div>
         </div>
