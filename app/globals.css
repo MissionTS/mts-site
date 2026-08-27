@@ -51,11 +51,11 @@ body {
 }
 
 .animate-signal {
-  animation: signal-rise 8s ease both infinite;
+  animation: signal-rise 8s ease both;
 }
 
 .animate-data-bar {
-  animation: data-bar 8s ease both infinite;
+  animation: data-bar 8s ease both;
 }
 
 @media (prefers-reduced-motion: reduce) {
