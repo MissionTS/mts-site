@@ -2,7 +2,6 @@ import {
   ArrowRightIcon,
   BoltIcon,
   BuildingOffice2Icon,
-  ChartBarIcon,
   CheckCircleIcon,
   ClipboardDocumentCheckIcon,
   CloudIcon,
@@ -35,7 +34,7 @@ const industries = ["Local Government", "Healthcare", "Professional Services", "
 const heroHighlights = ["Managed IT", "Cybersecurity", "Microsoft 365", "Cabling", "Cameras", "Access Control"];
 
 const liveSignals = [
-  { label: "Helpdesk queue", value: "12 active", status: "Triaged by priority" },
+  { label: "Average response time", value: "<8 min", status: "Fast help when it matters" },
   { label: "Endpoints", value: "Protected", status: "Monitoring and patching" },
   { label: "Microsoft 365", value: "Healthy", status: "Identity and mail watched" },
   { label: "Site security", value: "Online", status: "Cameras and access ready" },
@@ -158,17 +157,6 @@ export default function Home() {
           </div>
 
           <div className="relative">
-            <div className="absolute -left-6 top-10 hidden rounded-2xl border border-white/10 bg-white/10 p-4 shadow-2xl shadow-black/30 backdrop-blur lg:block">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mission-gold text-mission-ink">
-                  <ChartBarIcon className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold uppercase text-slate-300">Today</div>
-                  <div className="text-sm font-black text-white">Systems watched</div>
-                </div>
-              </div>
-            </div>
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.08] shadow-2xl shadow-black/30 backdrop-blur">
               <div className="border-b border-white/10 bg-mission-ink/70 px-5 py-4">
                 <div className="flex items-center justify-between gap-4">
