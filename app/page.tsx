@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { ContactForm } from "@/components/ContactForm";
 
 const services = [
   { icon: WrenchScrewdriverIcon, title: "Managed IT", text: "Responsive helpdesk, lifecycle management, patching, monitoring, and proactive support.", href: "/managed-it" },
@@ -137,14 +138,17 @@ export default function Home() {
       </section>
 
       <section id="contact" className="bg-mission-navy py-20 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-10 px-6 lg:flex-row lg:items-center lg:px-8">
-          <div>
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:px-8">
+          <div className="lg:sticky lg:top-28">
             <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Ready when you are</p>
             <h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Let’s make your technology easier to run, easier to secure, and easier to grow.</h2>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-200">Tell us what you’re working through. We’ll route your message to the right person and follow up with a practical next step.</p>
+            <div className="mt-8 border-l-4 border-mission-gold pl-5">
+              <div className="text-sm font-bold uppercase tracking-wider text-slate-300">Prefer to call?</div>
+              <a href="tel:+17652458515" className="mt-1 inline-block text-2xl font-black text-white">(765) 245-8515</a>
+            </div>
           </div>
-          <a href="mailto:sales@missionts.com" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-extrabold text-mission-navy transition hover:bg-slate-100">
-            Contact Sales <ArrowRightIcon className="h-4 w-4" />
-          </a>
+          <ContactForm />
         </div>
       </section>
 

@@ -34,9 +34,9 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">{introduction}</p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <a href="mailto:sales@missionts.com" className="inline-flex items-center gap-2 rounded-xl bg-mission-gold px-6 py-3.5 font-bold text-mission-ink transition hover:brightness-105">
+              <Link href="/#contact" className="inline-flex items-center gap-2 rounded-xl bg-mission-gold px-6 py-3.5 font-bold text-mission-ink transition hover:brightness-105">
                 Talk with our team <ArrowRightIcon className="h-4 w-4" />
-              </a>
+              </Link>
               <a href="tel:+17652458515" className="rounded-xl border border-white/20 px-6 py-3.5 font-bold transition hover:bg-white/10">(765) 245-8515</a>
             </div>
           </div>
@@ -105,9 +105,9 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
             <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Let’s get started</p>
             <h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Tell us what’s working, what isn’t, and where you need to go.</h2>
           </div>
-          <a href="mailto:sales@missionts.com" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-extrabold text-mission-navy transition hover:bg-slate-100">
+          <Link href="/#contact" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-extrabold text-mission-navy transition hover:bg-slate-100">
             Contact Sales <ArrowRightIcon className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </section>
 
