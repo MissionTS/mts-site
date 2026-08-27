@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { TeamProfiles, type TeamProfile } from "@/components/TeamProfiles";
 
 export const metadata: Metadata = {
   title: "About Us | Mission Technology Solutions",
@@ -17,17 +18,19 @@ const values = [
   ["Determined to Help", "Mission began with a desire to make stronger, more affordable technology support available to organizations serving their communities."],
 ];
 
-const leadership = [["Westin Padgett", "Chief Executive Officer & Founder"], ["Ronnie Schaeffer", "Director of Managed Services"], ["Derrick Gatt", "Director of Installation"]];
-const team = [["Ashley Padgett", "Billing & Executive Assistant"], ["Dave Osenbaugh", "Accounts & AV Project Manager"], ["Chris Dame", "Senior Support Technician"], ["Shelby Davis", "Support Technician"], ["Jonathan Davis", "Installation Technician"], ["Colton Langley", "Installation Technician"]];
+const leadership: TeamProfile[] = [
+  { name: "Westin Padgett", role: "Chief Executive Officer & Founder", bio: "Westin founded Mission Technology Solutions to make capable, community-minded technology support easier to access. He focuses on helping organizations turn technology decisions into practical next steps that support both their people and long-term goals." },
+  { name: "Derrick Gatt", role: "Director of Installation", bio: "Derrick leads Mission’s installation work with a focus on thoughtful planning, clean execution, and dependable results. He helps turn the details behind networks, infrastructure, and physical security into systems clients can rely on every day." },
+];
 
-function TeamList({ title, people }: { title: string; people: string[][] }) {
-  return <div>
-    <h3 className="text-xl font-extrabold text-mission-ink">{title}</h3>
-    <div className="mt-5 grid gap-3 sm:grid-cols-2">
-      {people.map(([name, role]) => <div key={name} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"><div className="font-extrabold text-mission-ink">{name}</div><div className="mt-1 text-sm leading-6 text-slate-600">{role}</div></div>)}
-    </div>
-  </div>;
-}
+const team: TeamProfile[] = [
+  { name: "Ashley Padgett", role: "Billing & Executive Assistant", bio: "Ashley helps keep the client experience organized and responsive behind the scenes. From billing coordination to day-to-day support for the Mission team, she helps make sure the details do not get in the way of great service." },
+  { name: "Jonathan Davis", role: "Installation Technician", bio: "Jonathan supports the hands-on work that brings technology projects to life. He approaches installations with care and attention to the details that make systems easier to maintain and use." },
+  { name: "Colton Langley", role: "Installation Technician", bio: "Colton helps deliver dependable technology installations for Mission clients. His work supports the infrastructure, cabling, and on-site details that create a strong foundation for daily operations." },
+  { name: "Alyssa Hopen", role: "Service Coordinator", bio: "Alyssa helps keep service moving smoothly from the first request through follow-up. She coordinates communication, helps connect clients with the right Mission resources, and keeps the service experience organized and approachable." },
+  { name: "Jacob Bohlmann", role: "Helpdesk Technician", bio: "Jacob supports clients with friendly, practical technical help. He works to make everyday technology issues less disruptive so teams can stay focused on the work that matters most." },
+  { name: "Dylan Wyatt", role: "Helpdesk Technician", bio: "Dylan helps Mission clients navigate technology questions and day-to-day support needs with a service-first mindset. He is focused on clear communication, reliable troubleshooting, and a better experience for every user." },
+];
 
 export default function AboutPage() {
   return <main>
@@ -51,7 +54,7 @@ export default function AboutPage() {
 
     <section className="bg-white py-20 lg:py-24"><div className="mx-auto max-w-7xl px-6 lg:px-8"><div className="max-w-3xl"><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Our story</p><h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Built to make technology support more practical.</h2></div><div className="mt-12 grid gap-6 lg:grid-cols-3">{[["The problem", "In the Kokomo area, many nonprofits and growing organizations were navigating unclear technology needs, limited security knowledge, and services that strained already-tight budgets."], ["The solution", "Mission set out to provide practical managed IT and networking support that helps organizations focus their attention on the people and communities they serve."], ["Where we are now", "Our work has expanded beyond nonprofits to serve industries including manufacturing and government, with services that support today’s operations and planning for what comes next."]].map(([title, text], index) => <article key={title} className="border-l-4 border-mission-gold pl-6"><div className="text-sm font-black uppercase tracking-widest text-mission-navy">0{index + 1}</div><h3 className="mt-3 text-2xl font-extrabold text-mission-ink">{title}</h3><p className="mt-3 leading-7 text-slate-600">{text}</p></article>)}</div></div></section>
 
-    <section className="bg-mission-mist py-20 lg:py-24"><div className="mx-auto max-w-7xl px-6 lg:px-8"><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Our team</p><h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">People who care about getting it right.</h2><div className="mt-12 space-y-12"><TeamList title="Leadership" people={leadership} /><TeamList title="Operations, Support & Installation" people={team} /></div></div></section>
+    <section className="bg-mission-mist py-20 lg:py-24"><div className="mx-auto max-w-7xl px-6 lg:px-8"><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Our team</p><h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">People who care about getting it right.</h2><p className="mt-5 max-w-2xl leading-8 text-slate-600">Select a team member to learn more about the people behind Mission.</p><div className="mt-12 space-y-12"><TeamProfiles title="Leadership" people={leadership} /><TeamProfiles title="Operations, Support & Installation" people={team} /></div></div></section>
 
     <section className="bg-mission-navy py-20 text-white"><div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-8"><div><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">How can we help?</p><h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Tell us about your business and the work you need technology to support.</h2></div><Link href="/#contact" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-extrabold text-mission-navy transition hover:bg-slate-100">Start a Conversation <ArrowRightIcon className="h-4 w-4" /></Link></div></section>
     <SiteFooter />
