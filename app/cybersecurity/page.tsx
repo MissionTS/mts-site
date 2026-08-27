@@ -12,6 +12,8 @@ export default function CybersecurityPage() {
     title="Reduce risk without"
     accent="slowing down your team."
     introduction="Security is not one product or one annual project. Mission builds practical, layered protection around your identities, devices, email, network, data, and people—then helps you keep improving as threats and requirements change."
+    heroImage="/photos/cybersecurity-operations.jpg"
+    heroImageAlt="Cybersecurity professionals monitoring systems from a modern operations center"
     outcomes={["Stronger protection across the most common attack paths", "Clearer visibility into vulnerabilities and suspicious activity", "Faster detection, response, and recovery", "Security decisions grounded in business risk—not fear"]}
     services={[
       { title: "Endpoint Protection & MDR", text: "Advanced endpoint controls backed by active monitoring, investigation, containment, and response." },

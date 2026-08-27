@@ -1,4 +1,5 @@
 import { ArrowLeftIcon, ArrowRightIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -8,32 +9,43 @@ type ServicePageProps = {
   title: string;
   accent: string;
   introduction: string;
+  heroImage: string;
+  heroImageAlt: string;
   outcomes: string[];
   services: { title: string; text: string }[];
   process: { step: string; title: string; text: string }[];
 };
 
-export function ServicePage({ eyebrow, title, accent, introduction, outcomes, services, process }: ServicePageProps) {
+export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, process }: ServicePageProps) {
   return (
     <main>
       <SiteHeader />
 
       <section className="relative overflow-hidden bg-mission-ink text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(48,80,108,0.9),_transparent_42%)]" />
-        <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-          <Link href="/#services" className="inline-flex items-center gap-2 text-sm font-bold text-slate-300 transition hover:text-white">
-            <ArrowLeftIcon className="h-4 w-4" /> Back to all services
-          </Link>
-          <p className="mt-10 text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">{eyebrow}</p>
-          <h1 className="mt-4 max-w-5xl text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl">
-            {title} <span className="text-mission-gold">{accent}</span>
-          </h1>
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">{introduction}</p>
-          <div className="mt-9 flex flex-wrap gap-4">
-            <a href="mailto:sales@missionts.com" className="inline-flex items-center gap-2 rounded-xl bg-mission-gold px-6 py-3.5 font-bold text-mission-ink transition hover:brightness-105">
-              Talk with our team <ArrowRightIcon className="h-4 w-4" />
-            </a>
-            <a href="tel:+17652458515" className="rounded-xl border border-white/20 px-6 py-3.5 font-bold transition hover:bg-white/10">(765) 245-8515</a>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-24">
+          <div>
+            <Link href="/#services" className="inline-flex items-center gap-2 text-sm font-bold text-slate-300 transition hover:text-white">
+              <ArrowLeftIcon className="h-4 w-4" /> Back to all services
+            </Link>
+            <p className="mt-10 text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">{eyebrow}</p>
+            <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl">
+              {title} <span className="text-mission-gold">{accent}</span>
+            </h1>
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">{introduction}</p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <a href="mailto:sales@missionts.com" className="inline-flex items-center gap-2 rounded-xl bg-mission-gold px-6 py-3.5 font-bold text-mission-ink transition hover:brightness-105">
+                Talk with our team <ArrowRightIcon className="h-4 w-4" />
+              </a>
+              <a href="tel:+17652458515" className="rounded-xl border border-white/20 px-6 py-3.5 font-bold transition hover:bg-white/10">(765) 245-8515</a>
+            </div>
+          </div>
+          <div className="relative mx-auto w-full max-w-2xl lg:mx-0">
+            <div className="absolute -inset-3 rounded-[1.75rem] border border-mission-gold/30" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-mission-navy shadow-2xl">
+              <Image src={heroImage} alt={heroImageAlt} fill priority sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-mission-ink/35 via-transparent to-transparent" />
+            </div>
           </div>
         </div>
       </section>

@@ -12,6 +12,8 @@ export default function StructuredCablingSecurityPage() {
     title="A stronger foundation for"
     accent="connected, secure facilities."
     introduction="Reliable technology starts behind the walls and extends to every door, camera, access point, and workstation. Mission designs and installs structured cabling and physical security systems that are clean, scalable, and built for everyday use."
+    heroImage="/photos/physical-security-monitoring.jpg"
+    heroImageAlt="Security professional monitoring multiple surveillance camera feeds"
     outcomes={["Clean, labeled infrastructure that is easier to manage", "Reliable connectivity where your people and devices need it", "Better visibility across entrances and critical areas", "Consistent access controls with room to grow"]}
     services={[
       { title: "Structured Cabling", text: "Professional copper and fiber cabling, pathways, termination, labeling, testing, and certification." },
