@@ -4,11 +4,14 @@ import {
   BuildingOffice2Icon,
   ChartBarIcon,
   CheckCircleIcon,
+  ClipboardDocumentCheckIcon,
   CloudIcon,
   CpuChipIcon,
   CursorArrowRaysIcon,
+  LifebuoyIcon,
   LockClosedIcon,
   PhoneIcon,
+  ServerStackIcon,
   ShieldCheckIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/react/24/outline";
@@ -62,6 +65,58 @@ const proofPoints = [
   ["One partner", "IT, cloud, network, voice, cameras"],
   ["Proactive", "Monitoring, patching, lifecycle planning"],
   ["Secure", "Identity, endpoint, email, and network layers"],
+];
+
+const outcomeCards = [
+  {
+    icon: LifebuoyIcon,
+    eyebrow: "Support",
+    title: "Your team knows exactly who to call.",
+    text: "Friendly helpdesk, remote support, onsite escalation, onboarding, and recurring issue cleanup so daily work keeps moving.",
+    href: "/managed-it",
+  },
+  {
+    icon: ShieldCheckIcon,
+    eyebrow: "Security",
+    title: "Protection is part of the operating plan.",
+    text: "Endpoint security, email protection, awareness, backup planning, identity controls, and practical insurance-readiness guidance.",
+    href: "/cybersecurity",
+  },
+  {
+    icon: CpuChipIcon,
+    eyebrow: "Infrastructure",
+    title: "The physical layer is handled with care.",
+    text: "Structured cabling, wireless, cameras, door access, network closets, and clean documentation from the same team.",
+    href: "/structured-cabling-security",
+  },
+];
+
+const operatingModel = [
+  ["Listen", "We learn the business, the people, and the pain points before prescribing tools."],
+  ["Stabilize", "We document the environment, reduce immediate risk, and clean up recurring issues."],
+  ["Protect", "We layer security across identity, devices, email, network, backups, and user behavior."],
+  ["Plan", "We build roadmaps for upgrades, budgets, lifecycle replacement, and future projects."],
+];
+
+const authorityPanels = [
+  {
+    title: "Nonprofit and community roots",
+    text: "Mission started with the goal of helping organizations serve their communities without being trapped by overpriced or confusing technology.",
+  },
+  {
+    title: "Business-grade networking",
+    text: "From Wi-Fi planning to secure network infrastructure, we design around reliability, coverage, and the way your team actually works.",
+  },
+  {
+    title: "Security-minded by default",
+    text: "Cybersecurity is part of the conversation from the start, especially for healthcare, government, nonprofits, and growing businesses.",
+  },
+];
+
+const faqItems = [
+  ["Can Mission be our full IT department?", "Yes. We can provide helpdesk, monitoring, security, projects, Microsoft 365, networking, phones, and planning as one partner."],
+  ["Do you handle onsite work?", "Yes. We support remote issues and onsite needs including structured cabling, network equipment, cameras, access control, and physical installs."],
+  ["Can you help us plan a budget?", "Yes. Our strategic IT work helps turn urgent technology spending into a clearer roadmap with priorities, timing, and lifecycle planning."],
 ];
 
 export default function Home() {
@@ -141,15 +196,6 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div className="border-t border-white/10 p-4">
-                <div className="relative overflow-hidden rounded-xl">
-                  <Image src="/photos/mission-team-illustration.png" alt="Mission Technology Solutions team supporting a client environment" width={900} height={420} priority className="h-56 w-full object-cover sm:h-64" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-mission-ink/90 via-mission-ink/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <div className="max-w-md text-2xl font-black leading-tight">Local people, practical answers, and systems that stay ready.</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -194,46 +240,98 @@ export default function Home() {
 
       <section id="services" className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">What we do</p>
-            <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">One technology partner. Fewer loose ends.</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">We bring the core technology disciplines together so your organization spends less time coordinating vendors and more time moving forward.</p>
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">What we solve</p>
+              <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Turn disconnected technology into one operating system.</h2>
+            </div>
+            <p className="text-lg leading-8 text-slate-600">The old site says it well: Mission is not just IT support, it is IT partnership. This section now frames your services around the problems clients actually feel first.</p>
           </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map(({ icon: Icon, title, text, href }) => (
-              <article key={title} className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-mission-navy/10 text-mission-navy"><Icon className="h-6 w-6" /></div>
-                <h3 className="mt-5 text-xl font-extrabold text-mission-ink">{title}</h3>
-                <p className="mt-3 leading-7 text-slate-600">{text}</p>
-                {href && (
-                  <Link href={href} className="mt-5 inline-flex items-center gap-2 font-bold text-mission-navy transition hover:text-mission-gold">
-                    Learn more <ArrowRightIcon className="h-4 w-4" />
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            {outcomeCards.map(({ icon: Icon, eyebrow, title, text, href }) => (
+              <article key={title} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+                <div className="h-2 bg-mission-gold" />
+                <div className="p-7">
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="text-sm font-black uppercase tracking-[0.18em] text-mission-navy">{eyebrow}</div>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-mission-navy text-white transition group-hover:bg-mission-gold group-hover:text-mission-ink">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                  </div>
+                  <h3 className="mt-8 text-2xl font-black leading-tight text-mission-ink">{title}</h3>
+                  <p className="mt-4 leading-7 text-slate-600">{text}</p>
+                  <Link href={href} className="mt-7 inline-flex items-center gap-2 font-bold text-mission-navy transition hover:text-mission-gold">
+                    See how it works <ArrowRightIcon className="h-4 w-4" />
                   </Link>
-                )}
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {services.slice(3).map(({ icon: Icon, title, text, href }) => (
+              <article key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-mission-navy shadow-sm"><Icon className="h-6 w-6" /></div>
+                  <div>
+                    <h3 className="font-black text-mission-ink">{title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
+                    {href && <Link href={href} className="mt-3 inline-flex text-sm font-bold text-mission-navy">Learn more</Link>}
+                  </div>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="why-mission" className="bg-mission-mist py-24">
-        <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:px-8">
-          <div>
-            <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Why Mission</p>
-            <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Small-business culture. Enterprise-level solutions.</h2>
+      <section id="why-mission" className="bg-mission-ink py-24 text-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">How Mission works</p>
+              <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">A better IT relationship has a rhythm.</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-300">We listen first, stabilize the environment, build in protection, and keep a living roadmap so support does not feel random.</p>
+              <Link href="#contact" className="mt-8 inline-flex items-center gap-2 rounded-xl bg-mission-gold px-6 py-3.5 font-bold text-mission-ink transition hover:brightness-105">
+                Start with a consult <ArrowRightIcon className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {operatingModel.map(([title, text], index) => (
+                <div key={title} className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur">
+                  <div className="text-sm font-black text-mission-gold">0{index + 1}</div>
+                  <div className="mt-5 text-2xl font-black">{title}</div>
+                  <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {[
-              ["Responsive", "Get real help from people who know your environment."],
-              ["Proactive", "Fix risk and technical debt before they become emergencies."],
-              ["Secure", "Build security into identity, endpoints, email, network, and operations."],
-              ["Strategic", "Tie technology decisions to budget, risk, growth, and business goals."],
-            ].map(([title, text]) => (
-              <div key={title} className="rounded-2xl bg-white p-6 shadow-sm">
-                <div className="text-lg font-extrabold text-mission-navy">{title}</div>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
+        </div>
+      </section>
+
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div className="relative overflow-hidden rounded-2xl">
+              <Image src="/photos/cybersecurity-operations.jpg" alt="Cybersecurity operations and monitoring workspace" width={1100} height={760} className="h-[520px] w-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-mission-ink/85 via-mission-ink/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-7 text-white">
+                <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Authority signals</p>
+                <h2 className="mt-3 max-w-2xl text-4xl font-black tracking-tight">Built for organizations that serve people, protect data, and cannot afford confusion.</h2>
               </div>
-            ))}
+            </div>
+            <div className="grid gap-4">
+              {authorityPanels.map((panel) => (
+                <article key={panel.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <div className="flex gap-4">
+                    <ClipboardDocumentCheckIcon className="mt-1 h-6 w-6 shrink-0 text-mission-gold" />
+                    <div>
+                      <h3 className="text-xl font-black text-mission-ink">{panel.title}</h3>
+                      <p className="mt-3 leading-7 text-slate-600">{panel.text}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -249,8 +347,34 @@ export default function Home() {
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => (
-              <div key={industry} className="rounded-xl border border-slate-200 px-5 py-4 font-bold text-slate-700">{industry}</div>
+              <div key={industry} className="group rounded-2xl border border-slate-200 px-6 py-5 transition hover:-translate-y-1 hover:border-mission-gold hover:shadow-lg">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="font-black text-slate-800">{industry}</div>
+                  <ServerStackIcon className="h-5 w-5 text-mission-navy transition group-hover:text-mission-gold" />
+                </div>
+                <p className="mt-3 text-sm leading-6 text-slate-600">Support, security, infrastructure, and planning matched to the way this organization operates.</p>
+              </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-mission-mist py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+            <div>
+              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Common questions</p>
+              <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Give buyers answers before they have to ask.</h2>
+              <p className="mt-5 text-lg leading-8 text-slate-600">This builds authority lower on the page and helps visitors understand the scope of Mission before they submit the form.</p>
+            </div>
+            <div className="grid gap-4">
+              {faqItems.map(([question, answer]) => (
+                <div key={question} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h3 className="text-xl font-black text-mission-ink">{question}</h3>
+                  <p className="mt-3 leading-7 text-slate-600">{answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
