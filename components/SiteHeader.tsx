@@ -20,6 +20,13 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+      <div className="bg-mission-ink text-white">
+        <div className="mx-auto flex max-w-7xl items-center justify-end gap-4 px-6 py-2 text-xs font-bold sm:gap-6 lg:px-8">
+          <a href="tel:+17652458515" className="text-slate-200 transition hover:text-mission-gold">Helpdesk: (765) 245-8515</a>
+          <span className="h-3 w-px bg-white/20" aria-hidden="true" />
+          <Link href={remoteSupportUrl} target="_blank" rel="noopener noreferrer" className="text-mission-gold transition hover:text-white">Remote Support <span aria-hidden="true">↗</span></Link>
+        </div>
+      </div>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" aria-label="Mission Technology Solutions home" className="shrink-0" onClick={() => setMenuOpen(false)}>
           <Image src="/brand/mission-mark-blue.png" alt="" width={1856} height={1827} priority className="h-12 w-12 object-contain sm:hidden" />
