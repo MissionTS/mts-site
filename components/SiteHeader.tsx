@@ -30,7 +30,7 @@ export function SiteHeader() {
         </nav>
         <div className="hidden items-center gap-3 sm:inline-flex">
           <Link href={remoteSupportUrl} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-mission-navy/20 px-4 py-2.5 text-sm font-bold text-mission-navy transition hover:border-mission-gold hover:bg-mission-mist">Remote Support</Link>
-          <Link href="/#contact" className="rounded-xl bg-mission-navy px-4 py-2.5 text-sm font-bold text-white transition hover:opacity-90">Talk to Mission</Link>
+          <Link href="/#contact" className="rounded-xl bg-mission-gold px-4 py-2.5 text-sm font-extrabold text-mission-ink shadow-sm shadow-mission-gold/30 transition hover:-translate-y-0.5 hover:brightness-105">Get Started</Link>
         </div>
         <button type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen((open) => !open)} className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-mission-navy transition hover:bg-mission-mist lg:hidden">
           {menuOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
@@ -44,7 +44,7 @@ export function SiteHeader() {
             </div>
             <div className="mt-4 grid gap-3">
               <Link href={remoteSupportUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="inline-flex w-full items-center justify-center rounded-xl border border-mission-navy/20 px-5 py-3.5 font-extrabold text-mission-navy">Remote Support</Link>
-              <Link href="/#contact" onClick={() => setMenuOpen(false)} className="inline-flex w-full items-center justify-center rounded-xl bg-mission-gold px-5 py-3.5 font-extrabold text-mission-ink">Start a Conversation</Link>
+              <Link href="/#contact" onClick={() => setMenuOpen(false)} className="inline-flex w-full items-center justify-center rounded-xl bg-mission-gold px-5 py-3.5 font-extrabold text-mission-ink">Get Started</Link>
             </div>
           </nav>
         </div>
