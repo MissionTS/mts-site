@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "Mission Technology Solutions | Managed IT & Cybersecurity",
   description:
     "Mission Technology Solutions provides managed IT, cybersecurity, cloud, communications, and strategic technology services for growing organizations.",
+  icons: {
+    icon: "/brand/mission-mark-blue.png",
+    apple: "/brand/mission-mark-blue.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

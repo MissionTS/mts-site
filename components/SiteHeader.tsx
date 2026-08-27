@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const nav = [
@@ -11,12 +12,23 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mission-navy text-lg font-black text-white">M</div>
-          <div>
-            <div className="text-sm font-extrabold uppercase tracking-[0.16em] text-mission-navy">Mission</div>
-            <div className="text-xs font-semibold text-slate-500">Technology Solutions</div>
-          </div>
+        <Link href="/" aria-label="Mission Technology Solutions home" className="shrink-0">
+          <Image
+            src="/brand/mission-mark-blue.png"
+            alt=""
+            width={1856}
+            height={1827}
+            priority
+            className="h-10 w-10 object-contain sm:hidden"
+          />
+          <Image
+            src="/brand/mission-wordmark-blue.png"
+            alt="Mission Technology Solutions"
+            width={4980}
+            height={539}
+            priority
+            className="hidden h-auto w-[220px] sm:block"
+          />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {nav.map((item) => (

@@ -1,9 +1,17 @@
+import Image from "next/image";
+
 export function SiteFooter() {
   return (
     <footer className="bg-mission-ink text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-3 lg:px-8">
         <div>
-          <div className="text-lg font-extrabold uppercase tracking-[0.12em]">Mission Technology Solutions</div>
+          <Image
+            src="/brand/mission-wordmark-white.png"
+            alt="Mission Technology Solutions"
+            width={4980}
+            height={540}
+            className="h-auto w-full max-w-[280px]"
+          />
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-300">Small-business culture. Enterprise-level solutions.</p>
         </div>
         <div>
