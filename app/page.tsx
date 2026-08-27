@@ -359,11 +359,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-mission-mist py-24">
+      <section id="resources" className="bg-mission-mist py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
-              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Common questions</p>
+              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Resources</p>
               <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Give buyers answers before they have to ask.</h2>
               <p className="mt-5 text-lg leading-8 text-slate-600">This builds authority lower on the page and helps visitors understand the scope of Mission before they submit the form.</p>
             </div>

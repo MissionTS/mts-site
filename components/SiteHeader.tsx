@@ -9,9 +9,9 @@ const remoteSupportUrl = "https://missionts.rmmservices.net/connect/#/";
 
 const nav = [
   { href: "/#services", label: "Services" },
-  { href: "/#why-mission", label: "Why Mission" },
-  { href: "/about", label: "About Us" },
   { href: "/#industries", label: "Industries" },
+  { href: "/#resources", label: "Resources" },
+  { href: "/about", label: "About Us" },
   { href: "/#contact", label: "Contact" },
 ];
 
