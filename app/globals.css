@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --mission-blue: #30506c;
+  --mission-gold: #d3a63b;
+  --mission-ink: #14202b;
+  --mission-mist: #f3f6f8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--mission-ink);
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--mission-gold);
+  color: var(--mission-ink);
+}
