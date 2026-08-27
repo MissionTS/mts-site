@@ -151,9 +151,9 @@ export default function Home() {
               <a href="#contact" className="inline-flex items-center gap-2 rounded-xl bg-mission-gold px-6 py-3.5 font-bold text-mission-ink transition hover:brightness-105">
                 Start a Conversation <ArrowRightIcon className="h-4 w-4" />
               </a>
-              <a href="#services" className="rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
+              <Link href="/services" className="rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:bg-white/10">
                 Explore Services
-              </a>
+              </Link>
             </div>
           </div>
 

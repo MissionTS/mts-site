@@ -27,7 +27,7 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(48,80,108,0.9),_transparent_42%)]" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-24">
           <div>
-            <Link href="/#services" className="inline-flex items-center gap-2 text-sm font-bold text-slate-300 transition hover:text-white">
+            <Link href="/services" className="inline-flex items-center gap-2 text-sm font-bold text-slate-300 transition hover:text-white">
               <ArrowLeftIcon className="h-4 w-4" /> Back to all services
             </Link>
             <p className="mt-10 text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">{eyebrow}</p>
