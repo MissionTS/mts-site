@@ -19,14 +19,17 @@ type ServicePageProps = {
   partnerShowcase?: { title: string; text: string; image: string; alt: string }[];
   industryExperience?: { title: string; text: string }[];
   certifications?: string[];
+  heroBackgroundImage?: string;
+  ctaBackgroundImage?: string;
 };
 
-export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs, partnerShowcase, industryExperience, certifications }: ServicePageProps) {
+export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs, partnerShowcase, industryExperience, certifications, heroBackgroundImage, ctaBackgroundImage }: ServicePageProps) {
   return (
     <main>
       <SiteHeader />
 
       <section className="relative overflow-hidden bg-mission-ink text-white">
+        {heroBackgroundImage && <><Image src={heroBackgroundImage} alt="" fill sizes="100vw" className="object-cover opacity-20" /><div className="absolute inset-0 bg-mission-ink/85" /></>}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(48,80,108,0.9),_transparent_42%)]" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-24">
           <div>
@@ -205,8 +208,9 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
         </div>
       </section>
 
-      <section id="contact" className="bg-mission-navy py-20 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-8">
+      <section id="contact" className="relative overflow-hidden bg-mission-navy py-20 text-white">
+        {ctaBackgroundImage && <><Image src={ctaBackgroundImage} alt="" fill sizes="100vw" className="object-cover opacity-20" /><div className="absolute inset-0 bg-mission-navy/90" /></>}
+        <div className="relative mx-auto flex max-w-7xl flex-col justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-8">
           <div>
             <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Let’s get started</p>
             <h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Tell us what’s working, what isn’t, and where you need to go.</h2>
