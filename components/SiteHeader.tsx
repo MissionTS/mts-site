@@ -29,7 +29,7 @@ export function SiteHeader() {
       </div>
       <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" aria-label="Mission Technology Solutions home" className="shrink-0" onClick={() => setMenuOpen(false)}>
-          <Image src="/brand/mission-wordmark-blue.png" alt="Mission Technology Solutions" width={4980} height={539} priority className="absolute left-1/2 h-auto w-[240px] -translate-x-1/2 sm:hidden" />
+          <Image src="/brand/mission-wordmark-blue.png" alt="Mission Technology Solutions" width={4980} height={539} priority className="absolute left-1/2 top-1/2 h-auto w-[240px] -translate-x-1/2 -translate-y-1/2 sm:hidden" />
           <Image src="/brand/mission-wordmark-blue.png" alt="Mission Technology Solutions" width={4980} height={539} priority className="hidden h-auto w-[260px] sm:block xl:w-[300px]" />
         </Link>
         <nav className="hidden items-center gap-5 xl:gap-6 lg:flex" aria-label="Primary navigation">
