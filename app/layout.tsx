@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={montserrat.variable}>
-      <body>{children}<Script id="hs-script-loader" src="https://js-na1.hs-scripts.com/50569444.js" strategy="afterInteractive" /></body>
+      <body>{children}<Script id="hs-script-loader" src="https://js.hs-scripts.com/50569444.js" strategy="afterInteractive" /></body>
     </html>
   );
 }
