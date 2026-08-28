@@ -143,11 +143,11 @@ export function KnowledgeArticle({ slug, guide }: { slug: string; guide: Guide }
   const article = articles[slug] ?? defaultArticle(guide);
   return (
     <>
-      <article className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-10">
-        <p className="text-xl font-semibold leading-9 text-slate-700">{article.lead}</p>
+      <article className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-12 lg:p-14">
+        <div className="flex items-start gap-4 rounded-2xl bg-mission-mist p-6"><LightBulbIcon className="mt-1 h-7 w-7 shrink-0 text-mission-gold" /><p className="text-xl font-semibold leading-9 text-slate-700">{article.lead}</p></div>
         <div className="mt-10 grid gap-10">
           {article.sections.map((section, index) => (
-            <section key={section.heading} className={index % 2 ? "border-l-4 border-mission-gold pl-6" : ""}>
+            <section key={section.heading} className={`rounded-2xl p-5 sm:p-7 ${index % 2 ? "border-l-4 border-mission-gold bg-amber-50/40" : "bg-slate-50/70"}`}>
               <h2 className="text-3xl font-black tracking-tight text-mission-ink">{section.heading}</h2>
               <p className="mt-4 text-lg leading-8 text-slate-600">{section.body}</p>
             </section>

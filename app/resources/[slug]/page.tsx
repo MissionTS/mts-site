@@ -67,9 +67,10 @@ export default function ChecklistPage({ params }: { params: { slug: string } }) 
         </div>
       </section>
       <section className="bg-mission-mist py-16 lg:py-24">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8"><KnowledgeArticle slug={params.slug} guide={guide} /></div>
+        <div className="mx-auto max-w-6xl px-6 lg:px-8"><KnowledgeArticle slug={params.slug} guide={guide} /></div>
       </section>
       <SiteFooter />
     </main>
   );
 }
+
