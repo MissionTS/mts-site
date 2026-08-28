@@ -144,6 +144,7 @@ function defaultArticle(guide: Guide) {
 export function KnowledgeArticle({ slug, guide }: { slug: string; guide: Guide }) {
   const article = articles[slug] ?? defaultArticle(guide);
   const [copied, setCopied] = useState(false);
+  const [completed, setCompleted] = useState<Set<number>>(new Set());
   const shareArticle = async () => {
     const url = window.location.href;
     if (navigator.share) await navigator.share({ title: guide.title, text: article.lead, url });
@@ -168,7 +169,7 @@ export function KnowledgeArticle({ slug, guide }: { slug: string; guide: Guide }
       </article>
       <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-10">
         <div className="flex items-center gap-3"><CheckCircleIcon className="h-7 w-7 text-mission-gold" /><h2 className="text-2xl font-black text-mission-ink">Put this guide into practice</h2></div>
-        <div className="mt-8 grid gap-4">{guide.items.map((item, index) => <div key={item} className="flex gap-4 rounded-2xl border border-slate-200 p-5"><div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-mission-navy text-sm font-black text-white">{index + 1}</div><p className="font-bold leading-7 text-slate-700">{item}</p></div>)}</div>
+        <div className="mt-8 grid gap-4">{guide.items.map((item, index) => { const done = completed.has(index); return <button type="button" key={item} onClick={() => setCompleted((current) => { const next = new Set(current); done ? next.delete(index) : next.add(index); return next; })} className={`flex w-full items-center gap-4 rounded-2xl border p-5 text-left transition ${done ? "border-mission-gold bg-amber-50/60" : "border-slate-200 hover:border-mission-gold hover:bg-mission-mist/50"}`}><div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-black transition ${done ? "bg-mission-gold text-mission-ink" : "bg-mission-navy text-white"}`}>{done ? <CheckCircleIcon className="h-5 w-5" /> : index + 1}</div><p className={`font-bold leading-7 transition ${done ? "text-mission-ink line-through decoration-mission-gold/70" : "text-slate-700"}`}>{item}</p></button>; })}</div>
       </section>
       <div className="mt-8 rounded-3xl bg-mission-navy p-8 text-white"><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Want a second set of eyes?</p><h2 className="mt-3 text-3xl font-black">Mission can help turn this guide into a plan.</h2><Link href="/#contact" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-mission-gold px-6 py-3.5 font-extrabold text-mission-ink">Talk with Mission <ArrowRightIcon className="h-4 w-4" /></Link></div>
     </>
