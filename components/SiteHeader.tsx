@@ -36,7 +36,6 @@ export function SiteHeader() {
           {nav.map((item) => <Link key={item.href} href={item.href} className="text-sm font-semibold text-slate-700 transition hover:text-mission-navy">{item.label}</Link>)}
         </nav>
         <div className="hidden items-center gap-3 sm:inline-flex">
-          <Link href={remoteSupportUrl} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-mission-navy/20 px-4 py-2.5 text-sm font-bold text-mission-navy transition hover:border-mission-gold hover:bg-mission-mist">Remote Support</Link>
           <Link href="/#contact" className="rounded-xl bg-mission-gold px-4 py-2.5 text-sm font-extrabold text-mission-ink shadow-sm shadow-mission-gold/30 transition hover:-translate-y-0.5 hover:brightness-105">Get Started</Link>
         </div>
         <button type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen((open) => !open)} className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-mission-navy transition hover:bg-mission-mist lg:hidden">
