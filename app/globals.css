@@ -58,6 +58,17 @@ body {
   animation: data-bar 8s ease both;
 }
 
+.success-burst { position: relative; display: flex; height: 5rem; width: 5rem; align-items: center; justify-content: center; }
+.success-burst::before { content: ""; position: absolute; inset: 0; border-radius: 9999px; background: var(--mission-gold); opacity: .18; animation: success-ring 1.4s ease-out both; }
+.success-burst span { position: absolute; height: .45rem; width: .45rem; border-radius: 9999px; background: var(--mission-gold); animation: success-spark 900ms cubic-bezier(.2,.8,.3,1) both; }
+.success-burst span:nth-of-type(1) { transform: translateY(-2.8rem); }
+.success-burst span:nth-of-type(2) { transform: translate(2.5rem, -1rem); animation-delay: 80ms; }
+.success-burst span:nth-of-type(3) { transform: translate(2rem, 1.8rem); animation-delay: 140ms; }
+.success-burst span:nth-of-type(4) { transform: translate(-2.4rem, 1.4rem); animation-delay: 200ms; }
+
+@keyframes success-ring { from { opacity: .35; transform: scale(.65); } to { opacity: 0; transform: scale(1.35); } }
+@keyframes success-spark { from { opacity: 0; transform: scale(.3); } 35% { opacity: 1; } to { opacity: 0; transform: scale(1.15); } }
+
 @keyframes mission-hero-rise {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -84,4 +95,6 @@ body {
   .hero-motion a {
     animation: none;
   }
+  .success-burst::before,
+  .success-burst span { animation: none; }
 }

@@ -47,10 +47,9 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="flex min-h-[470px] flex-col items-center justify-center rounded-3xl bg-white p-8 text-center text-mission-ink shadow-2xl">
-        <CheckCircleIcon className="h-16 w-16 text-mission-gold" />
+        <div className="success-burst"><CheckCircleIcon className="relative z-10 h-16 w-16 text-mission-gold" /><span /><span /><span /><span /></div>
         <h3 className="mt-5 text-3xl font-black">Message received.</h3>
         <p className="mt-3 max-w-md leading-7 text-slate-600">Thanks for reaching out. A member of the Mission team will follow up soon.</p>
-        <button type="button" onClick={() => setStatus("idle")} className="mt-7 font-bold text-mission-navy hover:underline">Send another message</button>
       </div>
     );
   }
