@@ -5,6 +5,15 @@ type Guide = { category: string; title: string; intro: string; items: string[] }
 type Section = { heading: string; body: string };
 
 const articles: Record<string, { lead: string; sections: Section[]; takeaway: string }> = {
+  "physical-security-cybersecurity": {
+    lead: "Cybersecurity does not stop at the login screen. A stolen badge, unlocked network closet, or exposed camera controller can give an intruder a path to the same systems protected by passwords and firewalls.",
+    sections: [
+      { heading: "The physical attack surface", body: "Server rooms, wiring closets, laptops, printers, access controllers, and cameras all hold information or provide a route into the environment. If they are easy to reach, digital controls may be bypassed entirely." },
+      { heading: "Connect the controls", body: "Physical security and cybersecurity work best together: access permissions should match identity roles, devices should be patched and monitored, and camera footage should support investigations when an account or facility is compromised." },
+      { heading: "Make it part of the routine", body: "Review badge access, visitor processes, equipment locations, privacy zones, and incident contacts alongside MFA, endpoint security, and backups. The goal is one risk picture—not separate checklists owned by disconnected teams." },
+    ],
+    takeaway: "A secure organization protects the places, devices, people, and accounts that make its technology possible.",
+  },
   "security-baseline": {
     lead: "A practical security baseline is the collection of everyday controls that makes a business harder to compromise and easier to recover. It is not a single product. It is a repeatable way to protect identities, devices, information, and operations.",
     sections: [

@@ -16,6 +16,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 const guides = [
+  { slug: "physical-security-cybersecurity", icon: LockClosedIcon, tag: "Cybersecurity", title: "Why Physical Security Is Part of Cybersecurity", text: "How doors, cameras, devices, and the people who use them form one connected security layer.", time: "7 min read", tone: "bg-mission-navy" },
   { slug: "security-baseline", icon: ShieldCheckIcon, tag: "Cybersecurity", title: "The Practical Security Baseline", text: "A plain-language starting point for identity, email, endpoints, backups, and the habits that reduce risk every day.", time: "8 min read", tone: "bg-mission-navy" },
   { slug: "microsoft-365-setup", icon: CloudIcon, tag: "Microsoft 365", title: "A calmer Microsoft 365 setup", text: "The decisions that make Teams, SharePoint, OneDrive, and Entra ID easier for your people to use securely.", time: "7 min read", tone: "bg-mission-gold" },
   { slug: "proactive-it", icon: WrenchScrewdriverIcon, tag: "Managed IT", title: "What proactive IT actually looks like", text: "See what should happen between helpdesk tickets: maintenance, lifecycle planning, documentation, and a roadmap.", time: "6 min read", tone: "bg-mission-ink" },
