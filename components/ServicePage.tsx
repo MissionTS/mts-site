@@ -18,9 +18,10 @@ type ServicePageProps = {
   faqs: { question: string; answer: string }[];
   partnerShowcase?: { title: string; text: string; image: string; alt: string }[];
   industryExperience?: { title: string; text: string }[];
+  certifications?: string[];
 };
 
-export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs, partnerShowcase, industryExperience }: ServicePageProps) {
+export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs, partnerShowcase, industryExperience, certifications }: ServicePageProps) {
   return (
     <main>
       <SiteHeader />
@@ -164,6 +165,21 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {certifications && (
+        <section className="bg-white py-16 lg:py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Technical depth</p>
+                <h2 className="mt-3 text-3xl font-black tracking-tight text-mission-ink sm:text-4xl">Credentials behind the recommendations.</h2>
+              </div>
+              <p className="max-w-xl text-slate-600">Our networking guidance is grounded in hands-on deployment experience and continuing technical education.</p>
+            </div>
+            <div className="mt-9 flex flex-wrap gap-3">{certifications.map((certification) => <span key={certification} className="rounded-full border border-slate-200 bg-mission-mist px-5 py-3 text-sm font-extrabold text-mission-navy">{certification}</span>)}</div>
           </div>
         </section>
       )}
