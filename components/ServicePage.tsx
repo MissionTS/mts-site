@@ -17,9 +17,10 @@ type ServicePageProps = {
   process: { step: string; title: string; text: string }[];
   faqs: { question: string; answer: string }[];
   partnerShowcase?: { title: string; text: string; image: string; alt: string }[];
+  industryExperience?: { title: string; text: string }[];
 };
 
-export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs, partnerShowcase }: ServicePageProps) {
+export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs, partnerShowcase, industryExperience }: ServicePageProps) {
   return (
     <main>
       <SiteHeader />
@@ -148,6 +149,24 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
           </div>
         </div>
       </section>
+
+      {industryExperience && (
+        <section className="relative overflow-hidden bg-mission-navy py-20 text-white lg:py-24">
+          <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_top_right,_rgba(211,166,59,0.18),_transparent_60%)]" />
+          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+            <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Experience that travels well</p>
+            <h2 className="mt-3 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl">Networks built for the environments where reliability matters most.</h2>
+            <div className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
+              {industryExperience.map((industry) => (
+                <div key={industry.title} className="bg-mission-navy/90 p-7">
+                  <h3 className="text-xl font-black text-white">{industry.title}</h3>
+                  <p className="mt-3 leading-7 text-slate-300">{industry.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="bg-mission-mist py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.7fr_1.3fr] lg:px-8">
