@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeftIcon, CheckCircleIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { KnowledgeArticle } from "@/components/KnowledgeArticle";
 
 const checklists: Record<string, { category: string; title: string; intro: string; items: string[] }> = {
   "security-baseline": { category: "Cybersecurity", title: "The practical security baseline", intro: "Use this as a first-pass review of the safeguards that protect people, systems, and customer trust.", items: ["Turn on multifactor authentication for every user and administrator.", "Confirm endpoint protection, patching, and encryption are active on every managed device.", "Review admin accounts and remove access people no longer need.", "Test backups by restoring a real file—not just checking that a job completed.", "Run a short phishing and incident-reporting refresher with staff.", "Write down who makes the call if an account, device, or mailbox is compromised."] },
@@ -53,5 +54,21 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
 export default function ChecklistPage({ params }: { params: { slug: string } }) {
   const guide = checklists[params.slug] ?? checklists["security-baseline"];
-  return <main><SiteHeader /><section className="bg-mission-ink py-20 text-white lg:py-28"><div className="mx-auto max-w-4xl px-6 lg:px-8"><Link href="/resources" className="inline-flex items-center gap-2 text-sm font-bold text-slate-300 hover:text-mission-gold"><ArrowLeftIcon className="h-4 w-4" /> Back to Knowledge Hub</Link><p className="mt-10 text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">{guide.category} checklist</p><h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">{guide.title}</h1><p className="mt-6 max-w-3xl text-xl leading-8 text-slate-300">{guide.intro}</p></div></section><section className="bg-mission-mist py-16 lg:py-24"><div className="mx-auto max-w-4xl px-6 lg:px-8"><div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-10"><div className="flex items-center gap-3"><CheckCircleIcon className="h-7 w-7 text-mission-gold" /><h2 className="text-2xl font-black text-mission-ink">Work through these one at a time</h2></div><div className="mt-8 grid gap-4">{guide.items.map((item, index) => <div key={item} className="flex gap-4 rounded-2xl border border-slate-200 p-5"><div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-mission-navy text-sm font-black text-white">{index + 1}</div><p className="font-bold leading-7 text-slate-700">{item}</p></div>)}</div></div><div className="mt-8 rounded-3xl bg-mission-navy p-8 text-white"><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Want a second set of eyes?</p><h2 className="mt-3 text-3xl font-black">Mission can help turn this checklist into a plan.</h2><Link href="/#contact" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-mission-gold px-6 py-3.5 font-extrabold text-mission-ink">Talk with Mission <ArrowRightIcon className="h-4 w-4" /></Link></div></div></section><SiteFooter /></main>;
+  return (
+    <main>
+      <SiteHeader />
+      <section className="bg-mission-ink py-20 text-white lg:py-28">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <Link href="/resources" className="inline-flex items-center gap-2 text-sm font-bold text-slate-300 hover:text-mission-gold"><ArrowLeftIcon className="h-4 w-4" /> Back to Knowledge Hub</Link>
+          <p className="mt-10 text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">{guide.category} guide</p>
+          <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">{guide.title}</h1>
+          <p className="mt-6 max-w-3xl text-xl leading-8 text-slate-300">{guide.intro}</p>
+        </div>
+      </section>
+      <section className="bg-mission-mist py-16 lg:py-24">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8"><KnowledgeArticle slug={params.slug} guide={guide} /></div>
+      </section>
+      <SiteFooter />
+    </main>
+  );
 }
