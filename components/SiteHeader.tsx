@@ -27,9 +27,9 @@ export function SiteHeader() {
           <Link href={remoteSupportUrl} target="_blank" rel="noopener noreferrer" className="text-mission-gold transition hover:text-white">Remote Support <span aria-hidden="true">↗</span></Link>
         </div>
       </div>
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between bg-mission-navy px-6 py-4 lg:bg-transparent lg:px-8">
         <Link href="/" aria-label="Mission Technology Solutions home" className="shrink-0" onClick={() => setMenuOpen(false)}>
-          <Image src="/brand/mission-wordmark-blue.png" alt="Mission Technology Solutions" width={4980} height={539} priority className="absolute left-1/2 top-1/2 h-auto w-[240px] -translate-x-1/2 -translate-y-1/2 sm:hidden" />
+          <Image src="/brand/mission-wordmark-mono-blue.png" alt="Mission Technology Solutions" width={2560} height={277} priority className="absolute left-1/2 top-1/2 h-auto w-[255px] -translate-x-1/2 -translate-y-1/2 sm:hidden" />
           <Image src="/brand/mission-wordmark-blue.png" alt="Mission Technology Solutions" width={4980} height={539} priority className="hidden h-auto w-[260px] sm:block xl:w-[300px]" />
         </Link>
         <nav className="hidden items-center gap-5 xl:gap-6 lg:flex" aria-label="Primary navigation">
@@ -38,7 +38,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-3 sm:inline-flex">
           <Link href="/#contact" className="rounded-xl bg-mission-gold px-4 py-2.5 text-sm font-extrabold text-mission-ink shadow-sm shadow-mission-gold/30 transition hover:-translate-y-0.5 hover:brightness-105">Get Started</Link>
         </div>
-        <button type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen((open) => !open)} className="order-first inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-mission-navy transition hover:bg-mission-mist lg:order-none lg:hidden">
+        <button type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen((open) => !open)} className="order-first inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/30 text-white transition hover:bg-white/10 lg:order-none lg:hidden">
           {menuOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
         </button>
       </div>
