@@ -1,0 +1,22 @@
+from pathlib import Path
+from reportlab.lib.pagesizes import letter
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem
+
+out = Path('public/downloads/checklists'); out.mkdir(parents=True, exist_ok=True)
+items = {
+ 'security-baseline': ('The Practical Security Baseline', ['Turn on multifactor authentication for every user and administrator.', 'Confirm endpoint protection, patching, and encryption are active on every managed device.', 'Review admin accounts and remove access people no longer need.', 'Test backups by restoring a real file.', 'Run a short phishing and incident-reporting refresher with staff.', 'Write down who makes the call if an account, device, or mailbox is compromised.']),
+ 'microsoft-365-setup': ('A Calmer Microsoft 365 Setup', ['Choose a clear naming and ownership pattern for Teams and SharePoint sites.', 'Review guest access, external sharing, and inactive accounts.', 'Standardize MFA, sign-in policies, and device enrollment.', 'Define where files belong so staff are not emailing duplicate versions.', 'Create retention, backup, and recovery expectations for critical data.', 'Give users a short guide for Teams, OneDrive, and reporting suspicious messages.']),
+ 'proactive-it': ('What Proactive IT Actually Looks Like', ['Maintain an accurate inventory of users, devices, software, and warranties.', 'Patch operating systems, browsers, applications, and network equipment regularly.', 'Review alerts and recurring tickets for patterns that deserve a permanent fix.', 'Track device age and plan replacements before productivity is affected.', 'Keep diagrams, credentials, vendors, and escalation contacts documented.', 'Hold a recurring roadmap conversation tied to business priorities and budget.']),
+ 'physical-security': ('Cameras and Access Control, Connected', ['Map entrances, sensitive areas, delivery points, and after-hours activity.', 'Choose camera views, retention, lighting, and privacy zones for each area.', 'Confirm network, PoE, bandwidth, and power requirements before installation.', 'Define door groups, schedules, visitor handling, and emergency access.', 'Assign ownership for reviewing alerts, footage, and access events.', 'Document device locations, serials, user roles, and maintenance expectations.']),
+ 'network-closet': ('A Network Closet Field Guide', ['Label both ends of every cable and keep labels matched to a simple port map.', 'Remove abandoned cabling and keep patching neat enough to trace quickly.', 'Check rack power, UPS capacity, cooling, and physical access.', 'Document switches, uplinks, VLANs, wireless access points, and camera runs.', 'Test cable performance and fiber links after moves, adds, or changes.', 'Leave clear space and a growth plan for the next device or service.']),
+ '90-day-plan': ('Your Next 90-Day Technology Plan', ['List business-critical systems and the impact if each one fails.', 'Separate urgent risk, productivity friction, and longer-term improvement.', 'Choose three outcomes that matter most in the next 90 days.', 'Assign an owner, rough cost, and target date to each priority.', 'Schedule the small maintenance work that prevents larger surprises.', 'Set a review date to measure progress and adjust the roadmap.']),
+}
+styles = getSampleStyleSheet(); title = ParagraphStyle('title', parent=styles['Title'], fontName='Helvetica-Bold', fontSize=25, textColor=colors.HexColor('#30506c'), spaceAfter=12); body = ParagraphStyle('body', parent=styles['BodyText'], fontSize=11, leading=16, textColor=colors.HexColor('#334155'))
+for slug, (name, checklist) in items.items():
+    doc = SimpleDocTemplate(str(out / f'{slug}.pdf'), pagesize=letter, rightMargin=54, leftMargin=54, topMargin=54, bottomMargin=54)
+    story = [Paragraph('MISSION TECHNOLOGY SOLUTIONS', styles['Heading4']), Spacer(1, 18), Paragraph(name, title), Paragraph('A practical checklist from the Mission Knowledge Hub', body), Spacer(1, 24), Paragraph('WORK THROUGH THESE ONE AT A TIME', styles['Heading3']), Spacer(1, 10)]
+    story.append(ListFlowable([ListItem(Paragraph(item, body), leftIndent=12) for item in checklist], bulletType='bullet', start='circle', bulletFontSize=14, bulletColor=colors.HexColor('#d3a63b'), leftIndent=20, bulletOffsetY=2))
+    story += [Spacer(1, 28), Paragraph('Need a second set of eyes? Contact Mission Technology Solutions to turn this checklist into a plan.', body)]
+    doc.build(story)
