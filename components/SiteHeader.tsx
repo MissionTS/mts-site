@@ -12,7 +12,7 @@ const nav = [
   { href: "/industries", label: "Industries" },
   { href: "/resources", label: "Resources" },
   { href: "/about", label: "About Us" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
