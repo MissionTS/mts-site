@@ -16,7 +16,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 const guides = [
-  { slug: "security-baseline", icon: ShieldCheckIcon, tag: "Cybersecurity", title: "The practical security baseline", text: "A plain-language starting point for identity, email, endpoints, backups, and the habits that reduce risk every day.", time: "8 min read", tone: "bg-mission-navy" },
+  { slug: "security-baseline", icon: ShieldCheckIcon, tag: "Cybersecurity", title: "The Practical Security Baseline", text: "A plain-language starting point for identity, email, endpoints, backups, and the habits that reduce risk every day.", time: "8 min read", tone: "bg-mission-navy" },
   { slug: "microsoft-365-setup", icon: CloudIcon, tag: "Microsoft 365", title: "A calmer Microsoft 365 setup", text: "The decisions that make Teams, SharePoint, OneDrive, and Entra ID easier for your people to use securely.", time: "7 min read", tone: "bg-mission-gold" },
   { slug: "proactive-it", icon: WrenchScrewdriverIcon, tag: "Managed IT", title: "What proactive IT actually looks like", text: "See what should happen between helpdesk tickets: maintenance, lifecycle planning, documentation, and a roadmap.", time: "6 min read", tone: "bg-mission-ink" },
   { slug: "physical-security", icon: LockClosedIcon, tag: "Physical security", title: "Cameras and access control, connected", text: "How modern camera, door, network, and user systems work together across a facility.", time: "9 min read", tone: "bg-mission-navy" },
