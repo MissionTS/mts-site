@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
-import { ArrowRightIcon, CheckCircleIcon, LightBulbIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
+import { ArrowRightIcon, CheckCircleIcon, LightBulbIcon, ShareIcon } from "@heroicons/react/24/outline";
 
 type Guide = { category: string; title: string; intro: string; items: string[] };
 type Section = { heading: string; body: string };
@@ -141,6 +143,12 @@ function defaultArticle(guide: Guide) {
 
 export function KnowledgeArticle({ slug, guide }: { slug: string; guide: Guide }) {
   const article = articles[slug] ?? defaultArticle(guide);
+  const [copied, setCopied] = useState(false);
+  const shareArticle = async () => {
+    const url = window.location.href;
+    if (navigator.share) await navigator.share({ title: guide.title, text: article.lead, url });
+    else { await navigator.clipboard.writeText(url); setCopied(true); window.setTimeout(() => setCopied(false), 2200); }
+  };
   return (
     <>
       <article className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-12 lg:p-14">
@@ -153,7 +161,7 @@ export function KnowledgeArticle({ slug, guide }: { slug: string; guide: Guide }
             </section>
           ))}
         </div>
-        <div className="mt-10 flex gap-4 rounded-2xl bg-mission-mist p-6">
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200 pt-6"><p className="text-sm font-bold text-slate-500">Found this useful?</p><button type="button" onClick={shareArticle} className="inline-flex items-center gap-2 rounded-xl border border-mission-navy/20 px-4 py-2.5 text-sm font-extrabold text-mission-navy transition hover:border-mission-gold hover:bg-mission-mist"><ShareIcon className="h-4 w-4" /> {copied ? "Link copied" : "Share this article"}</button></div><div className="mt-10 flex gap-4 rounded-2xl bg-mission-mist p-6">
           <LightBulbIcon className="h-7 w-7 shrink-0 text-mission-gold" />
           <p className="font-bold leading-7 text-mission-ink">{article.takeaway}</p>
         </div>
@@ -166,3 +174,4 @@ export function KnowledgeArticle({ slug, guide }: { slug: string; guide: Guide }
     </>
   );
 }
+
