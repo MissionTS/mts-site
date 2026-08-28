@@ -66,6 +66,19 @@ const proofPoints = [
   ["Secure", "Identity, endpoint, email, and network layers"],
 ];
 
+const testimonials = [
+  {
+    quote: "Mission Technology Solutions modernized our organization and has always been a reliable and attentive partner. Their amazing and quick support, mixed with invaluable strategic consulting, helped us make sure IT was always helping the organization, not hurting it.",
+    name: "Troy",
+    organization: "Kokomo Rescue Mission",
+  },
+  {
+    quote: "The team at Mission have been incredibly helpful, responsive, and created an environment where we feel in control of our technology.",
+    name: "Coordinated Assistance Ministries",
+    organization: "Mission Technology Solutions client",
+  },
+];
+
 const outcomeCards = [
   {
     icon: LifebuoyIcon,
@@ -197,6 +210,30 @@ export default function Home() {
                 <div className="text-3xl font-black text-mission-navy">{title}</div>
                 <div className="mt-2 text-sm font-bold leading-6 text-slate-600">{text}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-mission-mist py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Client perspective</p>
+              <h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Technology support should leave your team feeling more in control.</h2>
+            </div>
+            <Link href="/#contact" className="inline-flex shrink-0 items-center gap-2 font-extrabold text-mission-navy transition hover:text-mission-gold">Start a conversation <ArrowRightIcon className="h-4 w-4" /></Link>
+          </div>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {testimonials.map((testimonial) => (
+              <figure key={testimonial.organization} className="relative rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
+                <div className="text-6xl font-black leading-none text-mission-gold" aria-hidden="true">“</div>
+                <blockquote className="mt-3 text-xl font-semibold leading-8 text-slate-700">{testimonial.quote}</blockquote>
+                <figcaption className="mt-8 border-t border-slate-200 pt-5">
+                  <div className="font-black text-mission-ink">{testimonial.name}</div>
+                  <div className="mt-1 text-sm font-bold text-mission-navy">{testimonial.organization}</div>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>
