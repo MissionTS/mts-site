@@ -112,8 +112,10 @@ function defaultArticle(guide: Guide) {
     sections: [
       { heading: "Why this matters", body: "Technology decisions become easier when the organization understands the business impact, the people involved, and the risk of leaving the issue unresolved." },
       { heading: "Build a repeatable approach", body: "Document the current state, assign ownership, and define what a successful outcome looks like. A repeatable process is more valuable than a one-time fix." },
+      { heading: "Turn guidance into a decision", body: "Start with the smallest next step that creates useful evidence: confirm availability, document a gap, ask a provider a specific question, or test the current process. Then use what you learn to prioritize the next investment." },
+      { heading: "Keep the conversation moving", body: "The strongest technology programs are reviewed over time. Revisit assumptions, measure outcomes, and adjust the plan as your team, systems, and risk profile change." },
     ],
-    takeaway: "Use the action plan below to turn the topic into a clear next step for your team.",
+    takeaway: "Use the action plan below to turn the topic into a clear next step for your team, then revisit it as circumstances change.",
   };
 }
 
