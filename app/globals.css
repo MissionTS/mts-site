@@ -66,11 +66,22 @@ body {
 .hero-motion > * { animation: mission-hero-rise 1000ms cubic-bezier(.2,.75,.25,1) both; }
 .hero-motion > *:nth-child(2) { animation-delay: 180ms; }
 .hero-motion > *:nth-child(3) { animation-delay: 320ms; }
+.hero-motion h1,
+.hero-motion h2,
+.hero-motion p,
+.hero-motion a { animation: mission-hero-rise 800ms cubic-bezier(.2,.75,.25,1) both; }
+.hero-motion h1 { animation-delay: 180ms; }
+.hero-motion p { animation-delay: 320ms; }
+.hero-motion a { animation-delay: 460ms; }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-signal,
   .animate-data-bar,
-  .hero-motion > * {
+  .hero-motion > *,
+  .hero-motion h1,
+  .hero-motion h2,
+  .hero-motion p,
+  .hero-motion a {
     animation: none;
   }
 }
