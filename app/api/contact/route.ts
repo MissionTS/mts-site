@@ -47,12 +47,15 @@ export async function POST(request: NextRequest) {
   const sender = process.env.M365_SENDER_EMAIL || "sales@missionts.com";
   const recipient = process.env.CONTACT_TO_EMAIL || "sales@missionts.com";
 
-  if (!tenantId || !clientId || !clientSecret) {
-    console.error("Microsoft 365 contact form credentials are not configured.");
+  const hubspotKey = process.env.HUBSPOT_SERVICE_KEY;
+
+  if ((!tenantId || !clientId || !clientSecret) && !hubspotKey) {
+    console.error("No contact delivery credentials are configured.");
     return NextResponse.json({ error: "Online messaging is temporarily unavailable." }, { status: 503 });
   }
 
   try {
+    if (tenantId && clientId && clientSecret) {
     const tokenResponse = await fetch(`https://login.microsoftonline.com/${encodeURIComponent(tenantId)}/oauth2/v2.0/token`, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -81,7 +84,8 @@ export async function POST(request: NextRequest) {
 
     if (!sendResponse.ok) throw new Error(`Microsoft sendMail request failed: ${sendResponse.status}`);
 
-    const hubspotKey = process.env.HUBSPOT_SERVICE_KEY;
+    }
+
     if (hubspotKey) {
       const nameParts = name.split(/\s+/);
       const hubspotResponse = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
