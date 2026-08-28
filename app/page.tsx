@@ -77,6 +77,16 @@ const testimonials = [
     name: "Coordinated Assistance Ministries",
     organization: "Mission Technology Solutions client",
   },
+  {
+    quote: "Mission's team has been amazing and has helped rapidly modernize and secure our IT systems. They assisted us with updating our network equipment, moving us to the cloud, deploying town-wide security, and streamlining our operations. We really appreciate Mission's commitment and partnership in helping keep us safe and secure. The peace of mind aspect itself is enough of a burden lifted from our shoulders.",
+    name: "Medium NW Indiana Municipality",
+    organization: "Mission Technology Solutions client",
+  },
+  {
+    quote: "The MTS team came in and completely changed the way we do IT in aspects we didn't even consider. They had such a deep understanding of our systems, assisted heavily with our budgeting, and made sure that we got an amazing value out of our investment. The helpdesk team also made sure that we never spent any amount of time longer than necessary facing an issue. Truly an amazing team to work with.",
+    name: "Large Factory in Northern Indiana",
+    organization: "Mission Technology Solutions client",
+  },
 ];
 
 const outcomeCards = [
