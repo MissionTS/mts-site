@@ -66,7 +66,7 @@ export default function ResourcesPage() {
   const [activeTopic, setActiveTopic] = useState("All guides");
   const [query, setQuery] = useState("");
   const filteredGuides = useMemo(() => guides.filter((guide) => {
-    const topicMatch = activeTopic === "All guides" || guide.tag === activeTopic;
+    const topicMatch = activeTopic === "All guides" || guide.tag === activeTopic || (activeTopic === "Security" && guide.tag === "Cybersecurity");
     const haystack = `${guide.title} ${guide.text} ${guide.tag}`.toLowerCase();
     return topicMatch && haystack.includes(query.toLowerCase());
   }), [activeTopic, query]);
