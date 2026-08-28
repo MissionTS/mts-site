@@ -234,14 +234,14 @@ export default function Home() {
             </div>
             <Link href="/#contact" className="inline-flex shrink-0 items-center gap-2 font-extrabold text-mission-navy transition hover:text-mission-gold">Start a conversation <ArrowRightIcon className="h-4 w-4" /></Link>
           </div>
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          <div className="mt-10 divide-y divide-slate-300/80 border-y border-slate-300/80">
             {testimonials.map((testimonial) => (
-              <figure key={testimonial.organization} className="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
-                <div className="text-5xl font-black leading-none text-mission-gold" aria-hidden="true">“</div>
-                <blockquote className="mt-2 text-lg font-semibold leading-7 text-slate-700">{testimonial.quote}</blockquote>
-                <figcaption className="mt-6 border-t border-slate-200 pt-4">
-                  <div className="font-black text-mission-ink">{testimonial.name}</div>
-                  <div className="mt-1 text-sm font-bold text-mission-navy">{testimonial.organization}</div>
+              <figure key={testimonial.organization} className="grid gap-4 py-7 lg:grid-cols-[auto_1fr_auto] lg:items-start lg:gap-8">
+                <div className="text-4xl font-black leading-none text-mission-gold" aria-hidden="true">“</div>
+                <blockquote className="text-base font-semibold leading-7 text-slate-700">{testimonial.quote}</blockquote>
+                <figcaption className="lg:min-w-48 lg:border-l lg:border-slate-300 lg:pl-6">
+                  <div className="text-sm font-black text-mission-ink">{testimonial.name}</div>
+                  <div className="mt-1 text-xs font-bold leading-5 text-mission-navy">{testimonial.organization}</div>
                 </figcaption>
               </figure>
             ))}
