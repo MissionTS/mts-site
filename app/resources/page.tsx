@@ -73,7 +73,7 @@ export default function ResourcesPage() {
   return (
     <main>
       <SiteHeader />
-      <section className="relative overflow-hidden bg-mission-ink text-white">
+      <section className="hero-motion relative overflow-hidden bg-mission-ink text-white">
         <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-mission-gold/20 blur-3xl" />
         <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-mission-navy/70 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">

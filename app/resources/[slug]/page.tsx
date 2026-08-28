@@ -57,7 +57,7 @@ export default function ChecklistPage({ params }: { params: { slug: string } }) 
   return (
     <main>
       <SiteHeader />
-      <section className="bg-mission-ink py-20 text-white lg:py-28">
+      <section className="hero-motion bg-mission-ink py-20 text-white lg:py-28">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <Link href="/resources" className="inline-flex items-center gap-2 text-sm font-bold text-slate-300 hover:text-mission-gold"><ArrowLeftIcon className="h-4 w-4" /> Back to Knowledge Hub</Link>
           <p className="mt-10 text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">{guide.category} guide</p>

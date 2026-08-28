@@ -28,7 +28,7 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
     <main>
       <SiteHeader />
 
-      <section className="relative overflow-hidden bg-mission-ink text-white">
+      <section className="hero-motion relative overflow-hidden bg-mission-ink text-white">
         {heroBackgroundImage && <><Image src={heroBackgroundImage} alt="" fill sizes="100vw" className="object-cover opacity-20" /><div className="absolute inset-0 bg-mission-ink/85" /></>}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(48,80,108,0.9),_transparent_42%)]" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-24">

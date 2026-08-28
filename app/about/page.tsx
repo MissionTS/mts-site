@@ -35,7 +35,7 @@ const team: TeamProfile[] = [
 export default function AboutPage() {
   return <main>
     <SiteHeader />
-    <section className="relative overflow-hidden bg-mission-ink py-20 text-white lg:py-28">
+    <section className="hero-motion relative overflow-hidden bg-mission-ink py-20 text-white lg:py-28">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(48,80,108,0.9),_transparent_42%)]" />
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div>

@@ -146,7 +146,7 @@ export default function Home() {
     <main>
       <SiteHeader />
 
-      <section className="relative overflow-hidden bg-mission-ink text-white">
+      <section className="hero-motion relative overflow-hidden bg-mission-ink text-white">
         <div className="absolute inset-0">
           <Image src="/photos/managed-it-team.jpg" alt="" fill priority sizes="100vw" className="object-cover opacity-20" />
           <div className="absolute inset-0 bg-mission-ink/85" />

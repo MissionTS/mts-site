@@ -58,9 +58,19 @@ body {
   animation: data-bar 8s ease both;
 }
 
+@keyframes mission-hero-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-motion > * { animation: mission-hero-rise 700ms cubic-bezier(.2,.75,.25,1) both; }
+.hero-motion > *:nth-child(2) { animation-delay: 120ms; }
+.hero-motion > *:nth-child(3) { animation-delay: 220ms; }
+
 @media (prefers-reduced-motion: reduce) {
   .animate-signal,
-  .animate-data-bar {
+  .animate-data-bar,
+  .hero-motion > * {
     animation: none;
   }
 }
