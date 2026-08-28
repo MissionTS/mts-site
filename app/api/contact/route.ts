@@ -80,6 +80,19 @@ export async function POST(request: NextRequest) {
     });
 
     if (!sendResponse.ok) throw new Error(`Microsoft sendMail request failed: ${sendResponse.status}`);
+
+    const hubspotKey = process.env.HUBSPOT_SERVICE_KEY;
+    if (hubspotKey) {
+      const nameParts = name.split(/\s+/);
+      const hubspotResponse = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${hubspotKey}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ properties: { email, firstname: nameParts[0], lastname: nameParts.slice(1).join(" "), company, phone } }),
+        cache: "no-store",
+      });
+      if (!hubspotResponse.ok && hubspotResponse.status !== 409) console.error(`HubSpot contact sync failed: ${hubspotResponse.status}`);
+    }
+
     recentSubmissions.set(forwardedFor, Date.now());
     return NextResponse.json({ ok: true });
   } catch (error) {
