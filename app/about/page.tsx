@@ -29,7 +29,7 @@ const team: TeamProfile[] = [
   { name: "Colton Langley", role: "Installation Technician", bio: "Colton helps deliver dependable technology installations for Mission clients. His work supports the infrastructure, cabling, and on-site details that create a strong foundation for daily operations.", image: "/photos/team-colton.jpg" },
   { name: "Alyssa Hopen", role: "Service Coordinator", bio: "Alyssa helps keep service moving smoothly from the first request through follow-up. She coordinates communication, helps connect clients with the right Mission resources, and keeps the service experience organized and approachable.", image: "/photos/team-alyssa.jpg" },
   { name: "Jacob Bohlmann", role: "Helpdesk Technician", bio: "Jacob supports clients with friendly, practical technical help. He works to make everyday technology issues less disruptive so teams can stay focused on the work that matters most." },
-  { name: "Dylan Wyatt", role: "Helpdesk Technician", bio: "Dylan helps Mission clients navigate technology questions and day-to-day support needs with a service-first mindset. He is focused on clear communication, reliable troubleshooting, and a better experience for every user." },
+  { name: "Dylan Wyatt", role: "Helpdesk Technician", bio: "Dylan helps Mission clients navigate technology questions and day-to-day support needs with a service-first mindset. He is focused on clear communication, reliable troubleshooting, and a better experience for every user.", image: "/photos/team-dylan.jpg" },
 ];
 
 export default function AboutPage() {
