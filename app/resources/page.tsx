@@ -43,7 +43,7 @@ const lookingForItGuides = [
   { slug: "what-is-a-vcio", title: "What Does a vCIO Do—and When Do You Need One?", text: "Learn how strategic technology leadership can help a small business plan with confidence.", time: "6 min read" },
   { slug: "co-managed-it", title: "Co-Managed IT: How It Works with Internal Staff", text: "Explore a flexible model that adds capacity and specialized expertise to your existing team.", time: "6 min read" },
   { slug: "msp-vs-internal-it", title: "MSP vs. Hiring an Internal IT Person: Cost Comparison", text: "Compare total cost, coverage, depth, and scalability—not just salary.", time: "8 min read" },
-  { slug: "it-onboarding-transition", title: "What Happens During an IT Onboarding or Transition?", text: "See the milestones a thoughtful provider should complete in the first 30–90 days.", time: "7 min read" },
+  { slug: "it-onboarding-transition", title: "What Happens During an IT Onboarding/Transition?", text: "See the milestones a thoughtful provider should complete in the first 30–90 days.", time: "7 min read" },
 ];
 
 const topics = ["All guides", "Cybersecurity", "Microsoft 365", "Managed IT", "Infrastructure", "Leadership"];
