@@ -45,6 +45,14 @@ const featuredServices: {
     bullets: ["Helpdesk & onsite support", "Monitoring and maintenance", "Technology roadmap planning"],
   },
   {
+    icon: CpuChipIcon,
+    eyebrow: "Connectivity",
+    title: "Networking",
+    text: "Business-grade wired and wireless networks, Wi-Fi planning, switching, firewalls, monitoring, and infrastructure support.",
+    href: "/networking",
+    bullets: ["Wi-Fi planning and heat mapping", "Switching and network design", "Performance monitoring and cleanup"],
+  },
+  {
     icon: ShieldCheckIcon,
     eyebrow: "Protection",
     title: "Cybersecurity",
