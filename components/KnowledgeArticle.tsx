@@ -107,6 +107,17 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
 };
 
 function defaultArticle(guide: Guide) {
+  if (guide.category === "Local resources") {
+    return {
+      lead: guide.intro,
+      sections: [
+        { heading: "Local context changes the answer", body: "Indiana businesses do not all have the same provider availability, building layouts, workforce patterns, or response needs. A useful technology plan starts with the exact address, the systems the organization depends on, and the people responsible for acting when something goes wrong." },
+        { heading: "Look beyond the monthly service", body: "When comparing providers or resources, evaluate response coverage, internet resilience, Microsoft 365 and endpoint support, cybersecurity, backup recovery, and documentation. A lower headline price can become expensive if a business still has to coordinate every vendor or emergency." },
+        { heading: "Build a practical local plan", body: "Begin with a short discovery conversation, verify what is available at each location, and prioritize the improvements that reduce operational risk first. The right partner should be able to support remote work while still providing local context and onsite coordination when the situation calls for it." },
+      ],
+      takeaway: "Use the local checklist below to turn community-specific conditions into a clear, supportable technology plan.",
+    };
+  }
   return {
     lead: guide.intro,
     sections: [
