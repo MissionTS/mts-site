@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={montserrat.variable}>
-      <body>{children}</body>
+      <body>{children}<Script id="hs-script-loader" src="https://js-na1.hs-scripts.com/50569444.js" strategy="afterInteractive" /></body>
     </html>
   );
 }
