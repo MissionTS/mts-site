@@ -26,7 +26,12 @@ const guides = [
   { slug: "physical-security", icon: LockClosedIcon, tag: "Physical security", title: "Cameras and access control, connected", text: "How modern camera, door, network, and user systems work together across a facility.", time: "9 min read", tone: "bg-mission-navy" },
   { slug: "network-closet", icon: BookOpenIcon, tag: "Infrastructure", title: "A network closet field guide", text: "The signs of a healthy closet: labeling, power, cooling, switching, cabling, and documentation.", time: "5 min read", tone: "bg-mission-gold" },
   { slug: "90-day-plan", icon: CheckCircleIcon, tag: "Leadership", title: "Your next 90-day technology plan", text: "A simple way to prioritize urgent fixes, meaningful improvements, and the investments that can wait.", time: "10 min read", tone: "bg-mission-ink" },
-];
+  { slug: "intune-business", icon: CloudIcon, tag: "Microsoft 365", title: "Why Is Intune Important for Your Business?", text: "How modern device management helps secure laptops, standardize settings, and support a growing team.", time: "7 min read", tone: "bg-mission-navy" },
+  { slug: "more-than-helpdesk", icon: WrenchScrewdriverIcon, tag: "Managed IT", title: "Why a Good IT Firm Is More Than Just a Helpdesk", text: "The planning, prevention, security, and strategy that should happen before the next ticket arrives.", time: "6 min read", tone: "bg-mission-gold" },
+  { slug: "edr-and-mdr", icon: ShieldCheckIcon, tag: "Cybersecurity", title: "What Are EDR and MDR?", text: "A clear explanation of endpoint detection, response, monitoring, and where these layers fit in a security program.", time: "8 min read", tone: "bg-mission-ink" },
+  { slug: "unique-passwords", icon: LockClosedIcon, tag: "Cybersecurity", title: "How You Can Protect Your Accounts with Unique Passwords", text: "Why password reuse is risky and how a password manager and multifactor authentication change the equation.", time: "5 min read", tone: "bg-mission-navy" },
+  { slug: "passkeys", icon: CheckCircleIcon, tag: "Cybersecurity", title: "What Are Passkeys?", text: "A practical introduction to phishing-resistant sign-ins and what passkeys mean for your team.", time: "5 min read", tone: "bg-mission-gold" },
+]; 
 
 const topics = ["All guides", "Cybersecurity", "Microsoft 365", "Managed IT", "Infrastructure", "Leadership"];
 
