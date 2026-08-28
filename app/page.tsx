@@ -225,23 +225,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-mission-mist py-14 lg:py-16">
+      <section className="bg-mission-ink py-14 text-white lg:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Client perspective</p>
-              <h2 className="mt-3 max-w-3xl text-3xl font-black tracking-tight text-mission-ink sm:text-4xl">Technology support should leave your team feeling more in control.</h2>
+              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Client perspective</p>
+              <h2 className="mt-3 max-w-3xl text-3xl font-black tracking-tight text-white sm:text-4xl">Technology support should leave your team feeling more in control.</h2>
             </div>
-            <Link href="/#contact" className="inline-flex shrink-0 items-center gap-2 font-extrabold text-mission-navy transition hover:text-mission-gold">Start a conversation <ArrowRightIcon className="h-4 w-4" /></Link>
+            <Link href="/#contact" className="inline-flex shrink-0 items-center gap-2 font-extrabold text-mission-gold transition hover:text-white">Start a conversation <ArrowRightIcon className="h-4 w-4" /></Link>
           </div>
-          <div className="mt-10 divide-y divide-slate-300/80 border-y border-slate-300/80">
+          <div className="mt-10 grid gap-8 border-y border-white/15 py-2 lg:grid-cols-2 lg:gap-0">
             {testimonials.map((testimonial) => (
-              <figure key={testimonial.organization} className="grid gap-4 py-7 lg:grid-cols-[auto_1fr_auto] lg:items-start lg:gap-8">
+              <figure key={testimonial.organization} className="relative py-7 lg:px-8 lg:first:pl-0 lg:last:border-l lg:last:border-white/15">
                 <div className="text-4xl font-black leading-none text-mission-gold" aria-hidden="true">“</div>
-                <blockquote className="text-base font-semibold leading-7 text-slate-700">{testimonial.quote}</blockquote>
-                <figcaption className="lg:min-w-48 lg:border-l lg:border-slate-300 lg:pl-6">
-                  <div className="text-sm font-black text-mission-ink">{testimonial.name}</div>
-                  <div className="mt-1 text-xs font-bold leading-5 text-mission-navy">{testimonial.organization}</div>
+                <blockquote className="mt-2 max-w-xl text-base font-semibold leading-7 text-slate-200">{testimonial.quote}</blockquote>
+                <figcaption className="mt-5">
+                  <div className="text-sm font-black text-white">{testimonial.name}</div>
+                  <div className="mt-1 text-xs font-bold leading-5 text-mission-gold">{testimonial.organization}</div>
                 </figcaption>
               </figure>
             ))}
