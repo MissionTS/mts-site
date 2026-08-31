@@ -21,6 +21,7 @@ const values = [
 const certificationGroups = [
   ["Networking", ["Network+", "Cisco CCNA", "Cisco Certified Network Professional (CCNP) Enterprise", "Cisco Certified Network Professional (CCNP) Wireless", "Aruba Architect for Network Architecture"]],
   ["Security & Incident Response", ["Security+", "Cisco Certified Network Professional (CCNP) Security", "Cisco Certified Network Professional (CCNP) Cybersecurity", "eCIR Incident Response", "CISSP"]],
+  ["Microsoft Cloud & Endpoint", ["MS-102: Microsoft 365 Administrator", "MD-102: Endpoint Administrator"]],
   ["Systems & Support", ["A+", "Server+"]],
 ];
 
