@@ -42,11 +42,11 @@ export function TeamProfiles({ title, people }: { title: string; people: TeamPro
     </div>
 
     {selected && (
-      <div className="fixed inset-0 z-[100] flex items-center justify-center bg-mission-ink/80 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label={`${selected.name} profile`} onMouseDown={() => setSelected(null)}>
-        <div className="relative w-full max-w-2xl overflow-hidden rounded-3xl bg-white shadow-2xl" onMouseDown={(event) => event.stopPropagation()}>
+      <div className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-mission-ink/80 p-4 backdrop-blur-sm sm:items-center" role="dialog" aria-modal="true" aria-label={`${selected.name} profile`} onMouseDown={() => setSelected(null)}>
+        <div className="relative my-2 w-full max-w-4xl max-h-[calc(100vh-2rem)] overflow-y-auto rounded-3xl bg-white shadow-2xl sm:my-8 sm:max-h-[90vh]" onMouseDown={(event) => event.stopPropagation()}>
           <button type="button" onClick={() => setSelected(null)} aria-label="Close profile" className="absolute right-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/95 text-mission-navy shadow-lg transition hover:bg-mission-mist"><XMarkIcon className="h-6 w-6" /></button>
           <div className="grid sm:grid-cols-[1fr_1.35fr]">
-            <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-mission-navy to-mission-ink text-7xl font-black text-mission-gold sm:aspect-auto sm:min-h-[420px]">
+            <div className="flex aspect-[4/3] max-h-[45vh] items-center justify-center bg-gradient-to-br from-mission-navy to-mission-ink text-7xl font-black text-mission-gold sm:aspect-auto sm:max-h-none sm:min-h-[420px]">
               {selected.image ? <Image src={selected.image} alt={selected.name} width={900} height={675} className="h-full w-full object-cover object-top" /> : selected.name.split(" ").map((part) => part[0]).join("")}
             </div>
             <div className="max-h-[70vh] overflow-y-auto p-7 sm:p-10">
