@@ -152,7 +152,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-mission-ink/85" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-mission-ink to-transparent" />
         </div>
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-16 pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:pb-20 lg:pt-20">
+        <div className="relative mx-auto grid max-w-[1440px] items-center gap-12 px-6 pb-16 pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:pb-20 lg:pt-20">
           <div className="max-w-4xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-slate-100 shadow-lg shadow-black/10 backdrop-blur">
               <BoltIcon className="h-4 w-4 text-mission-gold" />
@@ -213,7 +213,7 @@ export default function Home() {
       </section>
 
       <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="grid divide-y border-y border-slate-200 md:grid-cols-4 md:divide-x md:divide-y-0">
             {proofPoints.map(([title, text]) => (
               <div key={title} className="flex items-baseline justify-between gap-4 px-1 py-5 md:block md:px-6 md:first:pl-0">
@@ -226,7 +226,7 @@ export default function Home() {
       </section>
 
       <section className="bg-mission-ink py-14 text-white lg:py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Client perspective</p>
@@ -250,7 +250,7 @@ export default function Home() {
       </section>
 
       <section className="overflow-hidden bg-mission-mist py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Solutions by role</p>
@@ -276,7 +276,7 @@ export default function Home() {
       </section>
 
       <section id="services" className="bg-white py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">What we solve</p>
@@ -321,7 +321,7 @@ export default function Home() {
       </section>
 
       <section id="why-mission" className="bg-mission-ink py-24 text-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">How Mission works</p>
@@ -346,7 +346,7 @@ export default function Home() {
       </section>
 
       <section className="bg-white py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="relative overflow-hidden rounded-2xl">
               <Image src="/photos/cybersecurity-operations.jpg" alt="Cybersecurity operations and monitoring workspace" width={1100} height={760} className="h-[520px] w-full object-cover" />
@@ -374,7 +374,7 @@ export default function Home() {
       </section>
 
       <section id="industries" className="bg-white py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Who we serve</p>
@@ -397,7 +397,7 @@ export default function Home() {
       </section>
 
       <section id="resources" className="bg-mission-mist py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Resources</p>
@@ -417,7 +417,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="bg-mission-navy py-20 text-white">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:px-8">
+        <div className="mx-auto grid max-w-[1440px] gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:px-8">
           <div className="lg:sticky lg:top-28">
             <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Ready when you are</p>
             <h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Let’s make your technology easier to run, easier to secure, and easier to grow.</h2>
