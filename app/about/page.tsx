@@ -20,7 +20,7 @@ const values = [
 
 const leadership: TeamProfile[] = [
   { name: "Westin Padgett", role: "Chief Executive Officer & Founder", bio: "What I do: Account management and customer relations, staff and vendor management, sales, and network and AV systems design. Why I do it: I started Mission to equip businesses and nonprofits with the tools and knowledge they need to protect themselves and function efficiently. Most interesting fact: I have a wife, son, and three awesome dogs that are all significantly more talented and better looking than I am. Least interesting fact: I got to work on a world-famous studio for Bon Iver…one time, but I still mention it at about every sales meeting.", image: "/photos/team-westin.png" },
-  { name: "Derrick Gatt", role: "Lead Installation Technician", bio: "What I do: I lead and oversee installation projects for structured cabling, network infrastructure, and physical security systems across the division. I coordinate with the Projects Team to ensure smooth, efficient technology deployments and provide expert onsite support for complex security installations and system integrations. Why I do it: I like working with my hands, working with technology, and making systems that people can rely on. Most interesting fact: I am occasionally vegan when I choose it. Least interesting fact: I am 30% Ginger—can’t even be a full carrot top.", image: "/photos/team-derrick.jpg" },
+  { name: "Derrick Gatt", role: "Director of Installation", bio: "What I do: I lead and oversee installation projects for structured cabling, network infrastructure, and physical security systems across the division. I coordinate with the Projects Team to ensure smooth, efficient technology deployments and provide expert onsite support for complex security installations and system integrations. Why I do it: I like working with my hands, working with technology, and making systems that people can rely on. Most interesting fact: I am occasionally vegan when I choose it. Least interesting fact: I am 30% Ginger—can’t even be a full carrot top.", image: "/photos/team-derrick.jpg" },
 ];
 
 const team: TeamProfile[] = [
@@ -60,3 +60,4 @@ export default function AboutPage() {
     <SiteFooter />
   </main>;
 }
+
