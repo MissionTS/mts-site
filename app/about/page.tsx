@@ -19,7 +19,7 @@ const values = [
 ];
 
 const leadership: TeamProfile[] = [
-  { name: "Westin Padgett", role: "Chief Executive Officer & Founder", bio: "Westin founded Mission Technology Solutions to make capable, community-minded technology support easier to access. He focuses on helping organizations turn technology decisions into practical next steps that support both their people and long-term goals.", image: "/photos/team-westin.png" },
+  { name: "Westin Padgett", role: "Chief Executive Officer & Founder", bio: "What I do: Account management and customer relations, staff and vendor management, sales, and network and AV systems design. Why I do it: I started Mission to equip businesses and nonprofits with the tools and knowledge they need to protect themselves and function efficiently. Most interesting fact: I have a wife, son, and three awesome dogs that are all significantly more talented and better looking than I am. Least interesting fact: I got to work on a world-famous studio for Bon Iver…one time, but I still mention it at about every sales meeting.", image: "/photos/team-westin.png" },
   { name: "Derrick Gatt", role: "Director of Installation", bio: "Derrick leads Mission’s installation work with a focus on thoughtful planning, clean execution, and dependable results. He helps turn the details behind networks, infrastructure, and physical security into systems clients can rely on every day.", image: "/photos/team-derrick.jpg" },
 ];
 
