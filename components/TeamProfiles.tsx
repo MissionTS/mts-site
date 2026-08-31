@@ -53,7 +53,7 @@ export function TeamProfiles({ title, people }: { title: string; people: TeamPro
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Mission Technology Solutions</p>
               <h2 className="mt-3 text-3xl font-black tracking-tight text-mission-ink">{selected.name}</h2>
               <p className="mt-2 font-bold text-mission-gold">{selected.role}</p>
-              <p className="mt-6 leading-8 text-slate-600">{selected.bio}</p>
+              <div className="mt-6 space-y-5">{selected.bio.split(/(?=What I do:|Why I do it:|Most interesting fact:|Least interesting fact:)/).map((part, index) => { const split = part.indexOf(":"); const heading = split > -1 ? part.slice(0, split + 1) : index === 0 ? "About" : ""; const body = split > -1 ? part.slice(split + 1).trim() : part.trim(); return <div key={`${heading}-${index}`} className="rounded-2xl border border-slate-200 bg-slate-50 p-4"><p className="text-xs font-black uppercase tracking-[0.16em] text-mission-navy">{heading}</p><p className="mt-2 leading-7 text-slate-600">{body}</p></div>; })}</div>
             </div>
           </div>
         </div>
@@ -61,3 +61,4 @@ export function TeamProfiles({ title, people }: { title: string; people: TeamPro
     )}
   </>;
 }
+
