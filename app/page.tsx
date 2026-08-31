@@ -214,11 +214,11 @@ export default function Home() {
 
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid gap-4 md:grid-cols-4">
+          <div className="grid divide-y border-y border-slate-200 md:grid-cols-4 md:divide-x md:divide-y-0">
             {proofPoints.map(([title, text]) => (
-              <div key={title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div key={title} className="flex items-baseline justify-between gap-4 px-1 py-5 md:block md:px-6 md:first:pl-0">
                 <div className="text-3xl font-black text-mission-navy">{title}</div>
-                <div className="mt-2 text-sm font-bold leading-6 text-slate-600">{text}</div>
+                <div className="text-right text-sm font-bold leading-6 text-slate-600 md:mt-2 md:text-left">{text}</div>
               </div>
             ))}
           </div>
@@ -257,15 +257,17 @@ export default function Home() {
               <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Different teams feel technology problems differently.</h2>
               <p className="mt-5 text-lg leading-8 text-slate-600">The homepage can guide each visitor toward the problems they recognize fastest, then route them into the right service.</p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="divide-y divide-slate-300 border-y border-slate-300">
               {organizationPaths.map((path, index) => (
-                <article key={path.title} className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-                  <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl bg-mission-navy/10 text-mission-navy transition group-hover:bg-mission-gold group-hover:text-mission-ink">
-                    <CursorArrowRaysIcon className="h-5 w-5" />
-                  </div>
+                <article key={path.title} className="group grid gap-4 py-7 transition hover:bg-white/60 sm:grid-cols-[3rem_1fr] sm:items-start">
                   <div className="text-sm font-black text-mission-gold">0{index + 1}</div>
-                  <h3 className="mt-5 max-w-xs text-2xl font-black text-mission-ink">{path.title}</h3>
-                  <p className="mt-4 leading-7 text-slate-600">{path.text}</p>
+                  <div>
+                    <div className="flex items-center justify-between gap-4">
+                      <h3 className="text-2xl font-black text-mission-ink">{path.title}</h3>
+                      <CursorArrowRaysIcon className="h-5 w-5 shrink-0 text-mission-navy transition group-hover:text-mission-gold" />
+                    </div>
+                    <p className="mt-3 max-w-xl leading-7 text-slate-600">{path.text}</p>
+                  </div>
                 </article>
               ))}
             </div>
@@ -282,14 +284,13 @@ export default function Home() {
             </div>
             <p className="text-lg leading-8 text-slate-600">The old site says it well: Mission is not just IT support, it is IT partnership. This section now frames your services around the problems clients actually feel first.</p>
           </div>
-          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          <div className="mt-14 grid gap-8 lg:grid-cols-3">
             {outcomeCards.map(({ icon: Icon, eyebrow, title, text, href }) => (
-              <article key={title} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-                <div className="h-2 bg-mission-gold" />
-                <div className="p-7">
+              <article key={title} className="group border-t-4 border-mission-gold pt-6 transition hover:-translate-y-1">
+                <div>
                   <div className="flex items-center justify-between gap-4">
                     <div className="text-sm font-black uppercase tracking-[0.18em] text-mission-navy">{eyebrow}</div>
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-mission-navy text-white transition group-hover:bg-mission-gold group-hover:text-mission-ink">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-mission-navy text-white transition group-hover:bg-mission-gold group-hover:text-mission-ink">
                       <Icon className="h-6 w-6" />
                     </div>
                   </div>
@@ -302,11 +303,11 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-10 grid gap-x-8 gap-y-5 border-t border-slate-200 pt-7 md:grid-cols-3">
             {services.slice(3).map(({ icon: Icon, title, text, href }) => (
-              <article key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <article key={title} className="border-b border-slate-200 pb-5">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-mission-navy shadow-sm"><Icon className="h-6 w-6" /></div>
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mission-mist text-mission-navy"><Icon className="h-5 w-5" /></div>
                   <div>
                     <h3 className="font-black text-mission-ink">{title}</h3>
                     <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
@@ -330,10 +331,11 @@ export default function Home() {
                 Start with a consult <ArrowRightIcon className="h-4 w-4" />
               </Link>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="relative grid gap-7 pl-8 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-10 sm:pl-0">
+              <div className="absolute bottom-2 left-3 top-2 w-px bg-white/20 sm:left-1/2 sm:top-0 sm:h-full" />
               {operatingModel.map(([title, text], index) => (
-                <div key={title} className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-                  <div className="text-sm font-black text-mission-gold">0{index + 1}</div>
+                <div key={title} className="relative">
+                  <div className="absolute -left-8 top-0 flex h-7 w-7 items-center justify-center rounded-full border border-mission-gold bg-mission-ink text-xs font-black text-mission-gold sm:static sm:mb-4">0{index + 1}</div>
                   <div className="mt-5 text-2xl font-black">{title}</div>
                   <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
                 </div>
@@ -356,7 +358,7 @@ export default function Home() {
             </div>
             <div className="grid gap-4">
               {authorityPanels.map((panel) => (
-                <article key={panel.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <article key={panel.title} className="border-l-4 border-mission-gold py-2 pl-5">
                   <div className="flex gap-4">
                     <ClipboardDocumentCheckIcon className="mt-1 h-6 w-6 shrink-0 text-mission-gold" />
                     <div>
@@ -382,7 +384,7 @@ export default function Home() {
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => (
-              <div key={industry} className="group rounded-2xl border border-slate-200 px-6 py-5 transition hover:-translate-y-1 hover:border-mission-gold hover:shadow-lg">
+              <div key={industry} className="group border-b border-slate-200 px-1 py-5 transition hover:border-mission-gold">
                 <div className="flex items-center justify-between gap-4">
                   <div className="font-black text-slate-800">{industry}</div>
                   <ServerStackIcon className="h-5 w-5 text-mission-navy transition group-hover:text-mission-gold" />
@@ -404,7 +406,7 @@ export default function Home() {
             </div>
             <div className="grid gap-4">
               {faqItems.map(([question, answer]) => (
-                <div key={question} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div key={question} className="border-b border-slate-300 py-6 first:border-t">
                   <h3 className="text-xl font-black text-mission-ink">{question}</h3>
                   <p className="mt-3 leading-7 text-slate-600">{answer}</p>
                 </div>
