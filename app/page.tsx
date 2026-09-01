@@ -159,7 +159,7 @@ export default function Home() {
 
       <section className="hero-motion relative overflow-hidden bg-mission-ink text-white">
         <div className="absolute inset-0">
-          <Image src="/photos/managed-it-team.jpg" alt="" fill priority sizes="100vw" className="object-cover opacity-20" />
+          <Image src="/photos/managed-it-team.jpg" alt="Mission team collaborating in an office" fill priority sizes="100vw" className="object-cover opacity-20" />
           <div className="absolute inset-0 bg-mission-ink/85" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-mission-ink to-transparent" />
         </div>
@@ -261,7 +261,7 @@ export default function Home() {
       </section>
 
       <section className="relative overflow-hidden bg-mission-mist py-24">
-        <Image src="/photos/managed-it-team.jpg" alt="" fill sizes="100vw" className="object-cover opacity-[0.08]" />
+        <Image src="/photos/managed-it-team.jpg" alt="Mission team collaborating in an office" fill sizes="100vw" className="object-cover opacity-[0.08]" />
         <div className="absolute inset-0 bg-mission-mist/80" />
         <div className="relative mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">

@@ -45,13 +45,13 @@ const guides = [
 const lookingForItGuides = [
   { slug: "managed-it-cost-per-user", title: "What Does Managed IT Actually Cost Per User Per Month?", text: "Understand the factors behind MSP pricing and how to compare proposals fairly.", time: "7 min read" },
   { slug: "break-fix-vs-managed", title: "Break-Fix vs. Managed Services: The Real Math", text: "See the full cost of reactive support, downtime, risk, and predictable service.", time: "6 min read" },
-  { slug: "managed-it-contract", title: "What's Included in a Managed IT Contract?", text: "A plain-language look at what is commonly included—and what usually is not.", time: "8 min read" },
+  { slug: "managed-it-contract", title: "What's Included in a Managed IT Contract?", text: "A plain-language look at what is commonly included, and what usually is not.", time: "8 min read" },
   { slug: "questions-for-an-msp", title: "Questions to Ask Before Signing with an MSP", text: "Use this practical list to evaluate communication, security, coverage, and accountability.", time: "6 min read" },
   { slug: "outgrown-computer-guy", title: "Signs You've Outgrown Your \"Computer Guy\"", text: "Recognize when informal support no longer matches your risk, growth, or compliance needs.", time: "5 min read" },
   { slug: "switch-msps-without-downtime", title: "How to Switch MSPs Without Downtime", text: "A transition plan for changing providers while keeping people productive and protected.", time: "7 min read" },
-  { slug: "what-is-a-vcio", title: "What Does a vCIO Do—and When Do You Need One?", text: "Learn how strategic technology leadership can help a small business plan with confidence.", time: "6 min read" },
+  { slug: "what-is-a-vcio", title: "What Does a vCIO Do, and When Do You Need One?", text: "Learn how strategic technology leadership can help a small business plan with confidence.", time: "6 min read" },
   { slug: "co-managed-it", title: "Co-Managed IT: How It Works with Internal Staff", text: "Explore a flexible model that adds capacity and specialized expertise to your existing team.", time: "6 min read" },
-  { slug: "msp-vs-internal-it", title: "MSP vs. Hiring an Internal IT Person: Cost Comparison", text: "Compare total cost, coverage, depth, and scalability—not just salary.", time: "8 min read" },
+  { slug: "msp-vs-internal-it", title: "MSP vs. Hiring an Internal IT Person: Cost Comparison", text: "Compare total cost, coverage, depth, and scalability, not just salary.", time: "8 min read" },
   { slug: "it-onboarding-transition", title: "What Happens During an IT Onboarding/Transition?", text: "See the milestones a thoughtful provider should complete in the first 30–90 days.", time: "7 min read" },
 ];
 

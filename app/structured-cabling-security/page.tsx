@@ -36,9 +36,9 @@ export default function StructuredCablingSecurityPage() {
       { title: "A move or renovation is coming", text: "New construction, expansions, and office changes are the right time to plan pathways, drops, cameras, and access points together." },
     ]}
     process={[
-      { step: "01 — Walkthrough", title: "Survey the site", text: "We review the space, existing infrastructure, coverage goals, security priorities, and project constraints." },
-      { step: "02 — Design", title: "Build the right plan", text: "We define locations, pathways, equipment, responsibilities, and a clear installation scope." },
-      { step: "03 — Install", title: "Finish and document", text: "We install carefully, test the system, label and document the work, and make sure your team can use it." },
+      { step: "01 , Walkthrough", title: "Survey the site", text: "We review the space, existing infrastructure, coverage goals, security priorities, and project constraints." },
+      { step: "02 , Design", title: "Build the right plan", text: "We define locations, pathways, equipment, responsibilities, and a clear installation scope." },
+      { step: "03 , Install", title: "Finish and document", text: "We install carefully, test the system, label and document the work, and make sure your team can use it." },
     ]}
     faqs={[
       { question: "Can you work with our general contractor or electrician?", answer: "Yes. Cabling and security projects often depend on coordinated pathways, power, doors, ceilings, and construction schedules. Mission can define responsibilities and communicate with the other trades involved." },

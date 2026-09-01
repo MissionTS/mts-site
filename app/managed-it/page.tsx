@@ -11,7 +11,7 @@ export default function ManagedITPage() {
     eyebrow="Managed IT Services"
     title="Less downtime. More momentum."
     accent="IT that simply works."
-    introduction="Your team should be able to focus on the work that matters—not recurring technology problems. Mission combines responsive human support with proactive management to keep your systems reliable, secure, and ready for what’s next."
+    introduction="Your team should be able to focus on the work that matters, not recurring technology problems. Mission combines responsive human support with proactive management to keep your systems reliable, secure, and ready for what’s next."
     heroImage="/photos/managed-it-team.jpg"
     heroImageAlt="Coworkers collaborating around a laptop in a bright office"
     outcomes={["Fast support from technicians who learn your environment", "Predictable technology costs and fewer disruptive surprises", "Healthier devices, networks, and cloud systems", "A practical roadmap aligned to your priorities and budget"]}
@@ -30,9 +30,9 @@ export default function ManagedITPage() {
       { title: "Growth is exposing weak spots", text: "New employees, locations, applications, or compliance needs are making the current approach harder to sustain." },
     ]}
     process={[
-      { step: "01 — Discover", title: "Understand your environment", text: "We learn your people, systems, priorities, pain points, and existing vendor relationships." },
-      { step: "02 — Stabilize", title: "Address risk and friction", text: "We document, standardize, secure, and resolve the issues creating the most operational drag." },
-      { step: "03 — Improve", title: "Build the roadmap", text: "We manage the day-to-day while helping you plan smarter investments and continuous improvements." },
+      { step: "01 , Discover", title: "Understand your environment", text: "We learn your people, systems, priorities, pain points, and existing vendor relationships." },
+      { step: "02 , Stabilize", title: "Address risk and friction", text: "We document, standardize, secure, and resolve the issues creating the most operational drag." },
+      { step: "03 , Improve", title: "Build the roadmap", text: "We manage the day-to-day while helping you plan smarter investments and continuous improvements." },
     ]}
     faqs={[
       { question: "Can Mission work with our existing internal IT employee?", answer: "Yes. Co-managed support can add helpdesk capacity, specialized expertise, monitoring, documentation, project assistance, and coverage while your internal team retains the responsibilities that make sense." },

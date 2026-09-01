@@ -12,7 +12,7 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
     sections: [
       { heading: "The physical attack surface", body: "Server rooms, wiring closets, laptops, printers, access controllers, and cameras all hold information or provide a route into the environment. If they are easy to reach, digital controls may be bypassed entirely." },
       { heading: "Connect the controls", body: "Physical security and cybersecurity work best together: access permissions should match identity roles, devices should be patched and monitored, and camera footage should support investigations when an account or facility is compromised." },
-      { heading: "Make it part of the routine", body: "Review badge access, visitor processes, equipment locations, privacy zones, and incident contacts alongside MFA, endpoint security, and backups. The goal is one risk picture—not separate checklists owned by disconnected teams." },
+      { heading: "Make it part of the routine", body: "Review badge access, visitor processes, equipment locations, privacy zones, and incident contacts alongside MFA, endpoint security, and backups. The goal is one risk picture, not separate checklists owned by disconnected teams." },
     ],
     takeaway: "A secure organization protects the places, devices, people, and accounts that make its technology possible.",
   },
@@ -26,7 +26,7 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
     takeaway: "Security improves fastest when a short list of controls is owned, measured, and reviewed regularly.",
   },
   "microsoft-365-setup": {
-    lead: "Microsoft 365 can be a clean, secure operating system for a business—or a maze of duplicate files, abandoned Teams, and confusing permissions. The difference is usually governance, not licensing.",
+    lead: "Microsoft 365 can be a clean, secure operating system for a business, or a maze of duplicate files, abandoned Teams, and confusing permissions. The difference is usually governance, not licensing.",
     sections: [
       { heading: "Give information a clear home", body: "Teams, SharePoint, and OneDrive solve different problems. Define where departmental files, collaborative work, and personal drafts belong so employees do not create a new storage pattern for every project." },
       { heading: "Design access intentionally", body: "Standardize multifactor authentication, guest access, sharing rules, and administrator roles. Access should follow the person’s job and device health rather than depending on someone remembering to remove permissions later." },
@@ -44,7 +44,7 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
     takeaway: "The goal is not zero tickets. It is fewer surprises, faster recovery, and technology that supports the business plan.",
   },
   "physical-security": {
-    lead: "Modern cameras and access control work best as one connected security layer. The design should begin with people, doors, workflows, and response expectations—not a catalog of devices.",
+    lead: "Modern cameras and access control work best as one connected security layer. The design should begin with people, doors, workflows, and response expectations, not a catalog of devices.",
     sections: [
       { heading: "Design around real events", body: "Map entrances, deliveries, cash handling, sensitive areas, and after-hours activity. Each camera and controlled door should answer a specific operational or security question." },
       { heading: "Build the supporting infrastructure", body: "Camera quality depends on lighting, placement, bandwidth, PoE capacity, storage, and retention. Access control depends on reliable power, door hardware, credentials, schedules, and safe emergency behavior." },
@@ -66,7 +66,7 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
     sections: [
       { heading: "Separate risk from irritation", body: "An unstable backup, exposed administrator account, or unsupported server deserves different treatment than a slow printer. Rank issues by business impact, likelihood, and recovery difficulty." },
       { heading: "Choose three measurable outcomes", body: "Limit the quarter to a few priorities such as enabling MFA, replacing an aging firewall, or documenting recovery. Give each outcome an owner, budget range, and definition of done." },
-      { heading: "Review and reset", body: "At the end of the period, measure what changed, capture new risks, and move unfinished work deliberately. A roadmap is useful because it evolves—not because the first version was perfect." },
+      { heading: "Review and reset", body: "At the end of the period, measure what changed, capture new risks, and move unfinished work deliberately. A roadmap is useful because it evolves, not because the first version was perfect." },
     ],
     takeaway: "A credible plan explains what happens now, what waits, who owns it, and why that order makes sense.",
   },
@@ -83,7 +83,7 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
     lead: "A helpdesk solves visible problems. A strong IT firm also works on the less visible systems that prevent those problems, protect the organization, and help leadership plan.",
     sections: [
       { heading: "Support is the front door", body: "Fast, thoughtful user support matters, but ticket resolution is only one measure. The provider should also review patterns, improve documentation, manage vendors, and remove recurring sources of frustration." },
-      { heading: "Prevention is part of the service", body: "Monitoring, patching, backups, identity controls, lifecycle management, and incident preparation reduce the number and severity of emergencies. These activities should be scheduled and reported—not performed only after a failure." },
+      { heading: "Prevention is part of the service", body: "Monitoring, patching, backups, identity controls, lifecycle management, and incident preparation reduce the number and severity of emergencies. These activities should be scheduled and reported, not performed only after a failure." },
       { heading: "Strategy connects IT to the business", body: "Roadmap meetings should translate technical issues into timing, cost, risk, and business outcomes. The goal is to help leadership make informed decisions before a renewal, expansion, or crisis forces the issue." },
     ],
     takeaway: "The right IT firm supports users today while steadily improving the environment they will depend on tomorrow.",

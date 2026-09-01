@@ -137,7 +137,7 @@ export default function ServicesPage() {
 
       <section className="relative overflow-hidden bg-mission-ink text-white">
         <div className="absolute inset-0">
-          <Image src="/photos/managed-it-team.jpg" alt="" fill priority sizes="100vw" className="object-cover opacity-20" />
+          <Image src="/photos/managed-it-team.jpg" alt="Mission team collaborating in an office" fill priority sizes="100vw" className="object-cover opacity-20" />
           <div className="absolute inset-0 bg-mission-ink/90" />
           <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-mission-gold/20 blur-3xl" />
           <div className="absolute right-0 top-20 h-[420px] w-[420px] rounded-full bg-mission-navy/50 blur-3xl" />

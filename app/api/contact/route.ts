@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
       headers: { Authorization: `Bearer ${token.access_token}`, "Content-Type": "application/json" },
       body: JSON.stringify({
         message: {
-          subject: `Website inquiry: ${service} — ${name}`,
+          subject: `Website inquiry: ${service} , ${name}`,
           body: { contentType: "HTML", content: `<h2>New Mission website inquiry</h2><p><strong>Name:</strong> ${safe.name}</p><p><strong>Company:</strong> ${safe.company}</p><p><strong>Email:</strong> ${safe.email}</p><p><strong>Phone:</strong> ${safe.phone}</p><p><strong>Service:</strong> ${safe.service}</p><p><strong>Message:</strong><br />${safe.message}</p>` },
           toRecipients: [{ emailAddress: { address: recipient } }],
           replyTo: [{ emailAddress: { address: email, name } }],
