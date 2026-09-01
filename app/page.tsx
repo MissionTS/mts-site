@@ -142,8 +142,19 @@ const faqItems = [
 ];
 
 export default function Home() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Mission Technology Solutions",
+    url: "https://missionts.com/",
+    telephone: "+1-765-245-8515",
+    email: "sales@missionts.com",
+    areaServed: ["Kokomo, Indiana", "Howard County, Indiana", "Tipton, Indiana", "Logansport, Indiana", "Noblesville, Indiana", "Westfield, Indiana", "Carmel, Indiana", "Lafayette, Indiana"],
+    serviceType: ["Managed IT Services", "Cybersecurity", "Business Networking", "Microsoft 365 Support", "Structured Cabling", "Physical Security"],
+  };
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <SiteHeader />
 
       <section className="hero-motion relative overflow-hidden bg-mission-ink text-white">
@@ -159,10 +170,10 @@ export default function Home() {
               IT support that moves at your speed
             </div>
             <h1 className="text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl">
-              Technology that works <span className="text-mission-gold">for your mission.</span>
+              Managed IT and cybersecurity <span className="text-mission-gold">that move your mission forward.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-              Managed IT, cybersecurity, cloud, communications, and strategic technology services for organizations that need dependable systems and a partner they can actually reach.
+              Indiana-based managed IT services, cybersecurity, networking, Microsoft 365, cloud, communications, and physical security for businesses, nonprofits, healthcare teams, schools, and local government.
             </p>
             <div className="mt-8 flex max-w-3xl flex-wrap gap-3">
               {heroHighlights.map((item) => (
@@ -280,7 +291,7 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">What we solve</p>
-              <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Turn disconnected technology into one operating system.</h2>
+              <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Managed IT, cybersecurity, and infrastructure that work as one.</h2>
             </div>
             <p className="text-lg leading-8 text-slate-600">The old site says it well: Mission is not just IT support, it is IT partnership. This section now frames your services around the problems clients actually feel first.</p>
           </div>

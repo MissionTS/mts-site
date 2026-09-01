@@ -10,9 +10,23 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Mission Technology Solutions | Managed IT & Cybersecurity",
+  metadataBase: new URL("https://missionts.com"),
+  title: "Managed IT Services & Cybersecurity | Mission Technology Solutions",
   description:
-    "Mission Technology Solutions provides managed IT, cybersecurity, cloud, communications, and strategic technology services for growing organizations.",
+    "Indiana-based managed IT services, cybersecurity, networking, Microsoft 365, cloud, communications, and physical security for businesses and organizations.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: "Managed IT Services & Cybersecurity | Mission Technology Solutions",
+    description: "Indiana-based managed IT, cybersecurity, networking, Microsoft 365, and physical security for organizations that need technology to work.",
+    siteName: "Mission Technology Solutions",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Managed IT Services & Cybersecurity | Mission Technology Solutions",
+    description: "Indiana-based managed IT, cybersecurity, networking, Microsoft 365, and physical security.",
+  },
   icons: {
     icon: "/brand/mission-mark-blue.png",
     apple: "/brand/mission-mark-blue.png",
