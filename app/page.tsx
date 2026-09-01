@@ -260,8 +260,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-mission-mist py-24">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-mission-mist py-24">
+        <Image src="/photos/managed-it-team.jpg" alt="" fill sizes="100vw" className="object-cover opacity-[0.08]" />
+        <div className="absolute inset-0 bg-mission-mist/80" />
+        <div className="relative mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Solutions by role</p>
