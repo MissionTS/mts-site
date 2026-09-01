@@ -8,7 +8,7 @@ import { TeamProfiles, type TeamProfile } from "@/components/TeamProfiles";
 
 export const metadata: Metadata = {
   title: "About Us | Mission Technology Solutions",
-  description: "Learn about Mission Technology Solutions, our community-focused roots, values, and Indiana-based team.",
+  description: "Learn how Mission Technology Solutions grew from a 2019 home-based startup into an Indiana IT and cybersecurity partner supporting more than 1,000 devices.",
 };
 
 const values = [
@@ -55,7 +55,24 @@ export default function AboutPage() {
       </div>
     </section>
 
-    <section className="bg-white py-20 lg:py-24"><div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8"><div><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Why we exist</p><h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">How can we help?</h2></div><div className="space-y-6 text-lg leading-8 text-slate-600"><p><strong className="text-mission-ink">Our mission:</strong> empowering businesses with innovative technology solutions and friendly, efficient IT support so they can better serve their communities.</p><p>Mission was first dreamed up to serve nonprofits. Our team had experience in both IT and nonprofit work and saw how much stronger support, security awareness, and practical guidance could change an organization’s ability to serve.</p><p>Today, Mission supports a wider client base while holding onto those community-oriented roots. We listen to needs, recommend solutions with efficiency and friendliness, and aim to help organizations work with more clarity and confidence.</p></div></div></section>
+    <section className="bg-white py-20 lg:py-24">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+        <div>
+          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Our origin</p>
+          <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Built from a conviction that technology should serve people.</h2>
+          <div className="mt-8 border-l-4 border-mission-gold pl-5">
+            <div className="text-4xl font-black text-mission-navy">2019</div>
+            <p className="mt-1 text-sm font-bold leading-6 text-slate-600">Founded as Mission MSP by Westin Padgett</p>
+          </div>
+        </div>
+        <div className="space-y-6 text-lg leading-8 text-slate-600">
+          <p>Mission was founded in 2019 under the name Mission MSP by Westin Padgett. With experience in cybersecurity, network architecture, and ministry, Westin had seen too many churches and nonprofits struggle to find a reliable technology partner—and too many vendors take advantage of organizations that were simply trying to serve their communities well.</p>
+          <p>So he decided to build something different. Mission began as a small, part-time operation run from his home outside of another job. Through patience, care, and a commitment to doing the work right, it grew into an Indiana technology firm trusted by local businesses, churches, and not-for-profits, as well as municipalities, enterprises, and large organizations.</p>
+          <p>Today, Mission supports more than 1,000 devices and brings its team into high-stakes work—from multi-million-dollar incident response scenarios to large-scale network and access-control installations, managed IT, and cybersecurity programs for complex environments.</p>
+          <p>Our ministry values have been part of Mission from the beginning. They shape how we communicate, how we recommend solutions, and how we show up when a client needs help. The name is a reminder of that purpose: technology is not the mission. It is one of the tools that helps people carry theirs forward.</p>
+        </div>
+      </div>
+    </section>
 
     <section id="values" className="bg-mission-mist py-20 lg:py-24"><div className="mx-auto max-w-7xl px-6 lg:px-8"><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Our values</p><h2 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">How we show up for our clients and community.</h2><div className="mt-12 grid gap-6 md:grid-cols-2">{values.map(([title, text]) => <article key={title} className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm"><CheckCircleIcon className="h-8 w-8 text-mission-gold" /><h3 className="mt-5 text-2xl font-extrabold text-mission-ink">{title}</h3><p className="mt-3 leading-7 text-slate-600">{text}</p></article>)}</div></div></section>
 
