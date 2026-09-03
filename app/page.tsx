@@ -60,10 +60,10 @@ const organizationPaths = [
 ];
 
 const proofPoints = [
-  ["Local", "Indiana-based team"],
-  ["One partner", "IT, cloud, network, voice, cameras"],
-  ["Proactive", "Monitoring, patching, lifecycle planning"],
-  ["Secure", "Identity, endpoint, email, and network layers"],
+  ["Local expertise", "Indiana-based team"],
+  ["One partner", "IT, cloud, network, voice, and cameras"],
+  ["Proactive by default", "Monitoring, patching, and lifecycle planning"],
+  ["Security-minded", "Identity, endpoint, email, and network layers"],
 ];
 
 const testimonials = [
@@ -223,13 +223,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="bg-white py-14">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
+          <p className="mb-5 text-xs font-black uppercase tracking-[0.2em] text-mission-navy">The Mission difference</p>
           <div className="grid divide-y border-y border-slate-200 md:grid-cols-4 md:divide-x md:divide-y-0">
             {proofPoints.map(([title, text]) => (
-              <div key={title} className="flex items-baseline justify-between gap-4 px-1 py-5 md:block md:px-6 md:first:pl-0">
-                <div className="text-3xl font-black text-mission-navy">{title}</div>
-                <div className="text-right text-sm font-bold leading-6 text-slate-600 md:mt-2 md:text-left">{text}</div>
+              <div key={title} className="relative flex items-baseline justify-between gap-4 px-1 py-5 md:block md:px-6 md:first:pl-0">
+                <span className="absolute left-1 top-0 h-1 w-10 bg-mission-gold md:left-6" />
+                <div className="text-xl font-black text-mission-navy sm:text-2xl">{title}</div>
+                <div className="text-right text-xs font-bold leading-5 text-slate-600 md:mt-2 md:text-left sm:text-sm">{text}</div>
               </div>
             ))}
           </div>
