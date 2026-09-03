@@ -20,6 +20,7 @@ const serviceLinks = [
   ["Cybersecurity", "Layered protection and recovery planning", "/cybersecurity"],
   ["Networking", "Business Wi-Fi, switching, and architecture", "/networking"],
   ["Microsoft 365 & Cloud", "Secure identity, devices, and collaboration", "/kokomo-microsoft-365"],
+  ["Mission Connect", "Business voice and unified communications", "/mission-connect"],
   ["Cabling & Physical Security", "Cameras, access control, and infrastructure", "/structured-cabling-security"],
 ];
 

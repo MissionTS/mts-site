@@ -82,21 +82,25 @@ const supportingServices = [
   {
     icon: CloudIcon,
     title: "Microsoft 365 & Cloud",
+    href: "/kokomo-microsoft-365",
     text: "Teams, SharePoint, OneDrive, Exchange, Entra ID, Intune, migrations, licensing guidance, and secure collaboration.",
   },
   {
     icon: PhoneIcon,
     title: "Mission Connect",
+    href: "/mission-connect",
     text: "Business VoIP, mobile calling, auto attendants, call routing, and communications that fit how your staff actually works.",
   },
   {
     icon: BuildingOffice2Icon,
     title: "Strategic IT & vCIO",
+    href: "/#contact",
     text: "Roadmaps, budgets, lifecycle planning, compliance conversations, vendor alignment, and plain-language executive guidance.",
   },
   {
     icon: LifebuoyIcon,
     title: "Projects & Onsite Work",
+    href: "/#contact",
     text: "New offices, expansions, refreshes, moves, hardware rollouts, network upgrades, cleanup, documentation, and hands-on execution.",
   },
 ];
@@ -283,12 +287,13 @@ export default function ServicesPage() {
             </Link>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {supportingServices.map(({ icon: Icon, title, text }) => (
-              <article key={title} className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur">
+            {supportingServices.map(({ icon: Icon, title, text, href }) => (
+              <Link key={title} href={href} className="group rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur transition hover:-translate-y-1 hover:border-mission-gold/60 hover:bg-white/15">
                 <Icon className="h-8 w-8 text-mission-gold" />
                 <h3 className="mt-5 text-xl font-black">{title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
-              </article>
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-mission-gold">Explore <ArrowRightIcon className="h-4 w-4 transition group-hover:translate-x-1" /></span>
+              </Link>
             ))}
           </div>
         </div>
