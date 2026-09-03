@@ -159,8 +159,8 @@ export default function Home() {
 
       <section className="hero-motion relative overflow-hidden bg-mission-ink text-white">
         <div className="absolute inset-0">
-          <Image src="/photos/managed-it-team.jpg" alt="Mission team collaborating in an office" fill priority sizes="100vw" className="object-cover opacity-20" />
-          <div className="absolute inset-0 bg-mission-ink/85" />
+          <Image src="/photos/managed-it-team.jpg" alt="Mission team collaborating in an office" fill priority sizes="100vw" className="object-cover opacity-35" />
+          <div className="absolute inset-0 bg-mission-ink/75" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-mission-ink to-transparent" />
         </div>
         <div className="relative mx-auto grid max-w-[1440px] items-center gap-12 px-6 pb-16 pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:pb-20 lg:pt-20">
