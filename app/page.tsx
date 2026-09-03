@@ -238,8 +238,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-mission-ink py-14 text-white lg:py-16">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-mission-ink py-14 text-white lg:py-16">
+        <Image src="/photos/managed-it-team.jpg" alt="Mission team consulting together around a laptop" fill sizes="100vw" className="object-cover opacity-20" />
+        <div className="absolute inset-0 bg-mission-ink/85" />
+        <div className="relative mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Client perspective</p>
