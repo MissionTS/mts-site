@@ -96,6 +96,7 @@ const outcomeCards = [
     title: "Your team knows exactly who to call.",
     text: "Friendly helpdesk, remote support, onsite escalation, onboarding, and recurring issue cleanup so daily work keeps moving.",
     href: "/managed-it",
+    linkLabel: "Explore managed IT support",
   },
   {
     icon: ShieldCheckIcon,
@@ -103,6 +104,7 @@ const outcomeCards = [
     title: "Protection is part of the operating plan.",
     text: "Endpoint security, email protection, awareness, backup planning, identity controls, and practical insurance-readiness guidance.",
     href: "/cybersecurity",
+    linkLabel: "Explore cybersecurity services",
   },
   {
     icon: CpuChipIcon,
@@ -110,6 +112,7 @@ const outcomeCards = [
     title: "The physical layer is handled with care.",
     text: "Structured cabling, wireless, cameras, door access, network closets, and clean documentation from the same team.",
     href: "/structured-cabling-security",
+    linkLabel: "Explore cabling and physical security",
   },
 ];
 
@@ -302,7 +305,7 @@ export default function Home() {
             <p className="text-lg leading-8 text-slate-600">The old site says it well: Mission is not just IT support, it is IT partnership. This section now frames your services around the problems clients actually feel first.</p>
           </div>
           <div className="mt-14 grid gap-8 lg:grid-cols-3">
-            {outcomeCards.map(({ icon: Icon, eyebrow, title, text, href }) => (
+            {outcomeCards.map(({ icon: Icon, eyebrow, title, text, href, linkLabel }) => (
               <article key={title} className="group border-t-4 border-mission-gold pt-6 transition hover:-translate-y-1">
                 <div>
                   <div className="flex items-center justify-between gap-4">
@@ -314,7 +317,7 @@ export default function Home() {
                   <h3 className="mt-8 text-2xl font-black leading-tight text-mission-ink">{title}</h3>
                   <p className="mt-4 leading-7 text-slate-600">{text}</p>
                   <Link href={href} className="mt-7 inline-flex items-center gap-2 font-bold text-mission-navy transition hover:text-mission-gold">
-                    See how it works <ArrowRightIcon className="h-4 w-4" />
+                    {linkLabel} <ArrowRightIcon className="h-4 w-4" />
                   </Link>
                 </div>
               </article>
@@ -328,7 +331,7 @@ export default function Home() {
                   <div>
                     <h3 className="font-black text-mission-ink">{title}</h3>
                     <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
-                    {href && <Link href={href} className="mt-3 inline-flex text-sm font-bold text-mission-navy">Learn more</Link>}
+                    {href && <Link href={href} className="mt-3 inline-flex text-sm font-bold text-mission-navy">Explore {title}</Link>}
                   </div>
                 </div>
               </article>
