@@ -21,6 +21,7 @@ const coreRoutes = [
   "/kokomo-microsoft-365",
   "/kokomo-structured-cabling",
   "/kokomo-security-installation",
+  "/healthcare",
 ];
 
 const resourceSlugs = [

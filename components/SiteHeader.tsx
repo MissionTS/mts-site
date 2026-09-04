@@ -25,7 +25,7 @@ const serviceLinks = [
 ];
 
 const industryLinks = [
-  ["Healthcare", "Reliable systems for the pace of care"],
+  ["Healthcare", "Reliable systems for the pace of care", "/healthcare"],
   ["Government & Municipalities", "Clear, accountable technology planning"],
   ["Manufacturing", "Connected operations and secure facilities"],
   ["Schools & Education", "Safer, easier-to-manage environments"],
