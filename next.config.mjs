@@ -27,11 +27,6 @@ const nextConfig = {
         destination: "/contact",
         permanent: true,
       },
-      {
-        source: "/vcio",
-        destination: "/services",
-        permanent: true,
-      },
     ];
   },
 };

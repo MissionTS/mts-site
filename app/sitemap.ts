@@ -13,6 +13,7 @@ const coreRoutes = [
   "/cybersecurity",
   "/networking",
   "/mission-connect",
+  "/vcio",
   "/structured-cabling-security",
   "/kokomo-in",
   "/kokomo-managed-it",
