@@ -1,0 +1,26 @@
+# Mission Technology Solutions
+
+> Mission Technology Solutions is an Indiana-based technology partner providing managed IT, cybersecurity, networking, Microsoft 365, business communications, structured cabling, cameras, and access control.
+
+## Primary pages
+
+- [Home](https://missionts.com/): Overview of Mission Technology Solutions.
+- [Services](https://missionts.com/services): Full service overview.
+- [Industries](https://missionts.com/industries): Organizations and sectors Mission supports.
+- [Healthcare IT](https://missionts.com/healthcare): Technology support for healthcare organizations.
+- [Knowledge Hub](https://missionts.com/resources): Practical technology and security guides.
+- [About](https://missionts.com/about): Mission history, people, and certifications.
+- [Contact](https://missionts.com/contact): Start a conversation with the Mission team.
+
+## Service pages
+
+- [Managed IT](https://missionts.com/managed-it)
+- [Cybersecurity](https://missionts.com/cybersecurity)
+- [Networking](https://missionts.com/networking)
+- [Mission Connect](https://missionts.com/mission-connect)
+- [Structured Cabling and Physical Security](https://missionts.com/structured-cabling-security)
+- [Microsoft 365 and Cloud](https://missionts.com/kokomo-microsoft-365)
+
+## Service area
+
+Mission is based in Indiana and serves Kokomo, Howard County, and organizations across Indiana.
