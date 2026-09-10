@@ -275,7 +275,7 @@ export default function Home() {
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Solutions by role</p>
               <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Different teams feel technology problems differently.</h2>
-              <p className="mt-5 text-lg leading-8 text-slate-600">The homepage can guide each visitor toward the problems they recognize fastest, then route them into the right service.</p>
+              <p className="mt-5 text-lg leading-8 text-slate-600">Whether you lead the business, keep operations moving, or manage a growing team, Mission connects the technology challenges you see every day to a practical path forward.</p>
             </div>
             <div className="divide-y divide-slate-300 border-y border-slate-300">
               {organizationPaths.map((path, index) => (
@@ -422,7 +422,7 @@ export default function Home() {
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Resources</p>
               <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Give buyers answers before they have to ask.</h2>
-              <p className="mt-5 text-lg leading-8 text-slate-600">This builds authority lower on the page and helps visitors understand the scope of Mission before they submit the form.</p>
+              <p className="mt-5 text-lg leading-8 text-slate-600">Get clear, useful guidance on the decisions that shape your technology. Our Knowledge Hub covers security, managed IT, Microsoft 365, local considerations, and the questions worth asking before you invest.</p>
             </div>
             <div className="grid gap-4">
               {faqItems.map(([question, answer]) => (
