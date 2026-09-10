@@ -302,7 +302,7 @@ export default function Home() {
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">What we solve</p>
               <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Managed IT, cybersecurity, and infrastructure that work as one.</h2>
             </div>
-            <p className="text-lg leading-8 text-slate-600">The old site says it well: Mission is not just IT support, it is IT partnership. This section now frames your services around the problems clients actually feel first.</p>
+            <p className="text-lg leading-8 text-slate-600">Mission is more than a helpdesk. We bring support, security, infrastructure, and long-term planning together so your technology keeps pace with the work your organization needs to do.</p>
           </div>
           <div className="mt-14 grid gap-8 lg:grid-cols-3">
             {outcomeCards.map(({ icon: Icon, eyebrow, title, text, href, linkLabel }) => (
