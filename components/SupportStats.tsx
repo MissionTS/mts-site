@@ -1,0 +1,88 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+// Illustrative values only. Replace these series with verified support data
+// before changing the sample-data disclosure or describing this as live.
+const metrics = [
+  { id: "email", title: "Email First Response", unit: "min", values: [7, 8, 6, 9, 7, 4, 8, 7, 6, 8], min: 0, max: 10, ticks: [0, 5, 10] },
+  { id: "phone", title: "Phone Call Response Time", unit: "min", values: [3, 2, 4, 1, 3, 5, 2, 4, 3, 3], min: 0, max: 6, ticks: [0, 3, 6] },
+  { id: "satisfaction", title: "Average Satisfaction Score", unit: "%", values: [98, 96, 99, 95, 100, 92, 98, 99, 95, 98], min: 90, max: 100, ticks: [90, 95, 100] },
+];
+
+function weekdays(now: Date) {
+  const localDay = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Indiana/Indianapolis", year: "numeric", month: "2-digit", day: "2-digit",
+  }).format(now);
+  const cursor = new Date(`${localDay}T12:00:00Z`);
+  const days: Date[] = [];
+  while (days.length < 10) {
+    if (cursor.getUTCDay() !== 0 && cursor.getUTCDay() !== 6) days.unshift(new Date(cursor));
+    cursor.setUTCDate(cursor.getUTCDate() - 1);
+  }
+  return days;
+}
+
+const dateLabel = (date: Date) => new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(date);
+
+export function SupportStats() {
+  const [days, setDays] = useState<Date[]>([]);
+  useEffect(() => {
+    const update = () => setDays(weekdays(new Date()));
+    update();
+    const timer = window.setInterval(update, 60_000);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  return (
+    <section id="support-stats" aria-labelledby="support-stats-title" className="bg-white py-20 sm:py-24">
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
+        <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <div className="max-w-3xl">
+            <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Support, by the numbers</p>
+            <h2 id="support-stats-title" className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Real people. Ready to help.</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">Less time waiting. More time moving your mission forward.</p>
+          </div>
+          <div className="text-sm text-slate-600">
+            <span className="inline-flex rounded-full bg-mission-mist px-3 py-1.5 font-bold text-mission-navy">Illustrative support metrics</span>
+            <p className="mt-3">Latest 10 weekdays · Eastern time</p>
+          </div>
+        </div>
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          {metrics.map((metric) => {
+            const average = metric.values.reduce((sum, value) => sum + value, 0) / metric.values.length;
+            const points = metric.values.map((value, index) => ({ x: 36 + index * 28, y: 128 - ((value - metric.min) / (metric.max - metric.min)) * 104 }));
+            const line = points.map((point) => `${point.x},${point.y}`).join(" ");
+            return (
+              <article key={metric.id} className="min-w-0 rounded-2xl border border-slate-200 bg-mission-mist/40 p-6">
+                <h3 className="min-h-12 text-base font-bold text-mission-navy">{metric.title}</h3>
+                <p className="mt-3 text-6xl font-black tracking-tight text-mission-ink">{average}<span className="ml-2 text-2xl font-bold">{metric.unit}</span></p>
+                <p className="mt-2 text-xs font-semibold text-slate-500">10-weekday sample average</p>
+                {days.length > 0 ? <>
+                  <svg viewBox="0 0 310 164" role="img" aria-labelledby={`${metric.id}-chart-title`} className="mt-7 w-full">
+                    <title id={`${metric.id}-chart-title`}>{metric.title}: illustrative weekday trend, {dateLabel(days[0])} through {dateLabel(days[9])}. Daily values are available below.</title>
+                    <defs><linearGradient id={`${metric.id}-fill`} x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#d3a63b" stopOpacity=".25"/><stop offset="100%" stopColor="#d3a63b" stopOpacity="0"/></linearGradient></defs>
+                    {metric.ticks.map((tick) => {
+                      const y = 128 - ((tick - metric.min) / (metric.max - metric.min)) * 104;
+                      return <g key={tick}><line x1="36" x2="288" y1={y} y2={y} stroke="#dce3e8" strokeDasharray="3 4"/><text x="26" y={y + 4} textAnchor="end" fontSize="10" fill="#526171">{tick}</text></g>;
+                    })}
+                    <polygon points={`36,128 ${line} 288,128`} fill={`url(#${metric.id}-fill)`}/>
+                    <polyline points={line} fill="none" stroke="#30506c" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round"/>
+                    {points.map((point, index) => <circle key={index} cx={point.x} cy={point.y} r="3.5" fill="#d3a63b" stroke="white" strokeWidth="1.5"><title>{dateLabel(days[index])}: {metric.values[index]} {metric.unit}</title></circle>)}
+                    {[0, 4, 9].map((index) => <text key={index} x={points[index].x} y="154" textAnchor={index === 0 ? "start" : index === 9 ? "end" : "middle"} fontSize="10" fill="#526171">{dateLabel(days[index])}</text>)}
+                  </svg>
+                  <details className="mt-3 text-xs text-slate-600">
+                    <summary className="cursor-pointer rounded py-2 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-mission-navy">View daily sample values</summary>
+                    <table className="mt-2 w-full text-left"><caption className="sr-only">{metric.title} illustrative data</caption><thead><tr><th scope="col" className="py-2">Date</th><th scope="col" className="text-right">{metric.unit === "%" ? "Score" : "Minutes"}</th></tr></thead><tbody>{days.map((day, index) => <tr key={day.toISOString()} className="border-t border-slate-200"><th scope="row" className="py-2 font-normal">{dateLabel(day)}, {day.getUTCFullYear()}</th><td className="text-right">{metric.values[index]}{metric.unit === "%" ? "%" : ""}</td></tr>)}</tbody></table>
+                  </details>
+                </> : <div className="mt-7 h-48" aria-label="Loading weekday chart" />}
+              </article>
+            );
+          })}
+        </div>
+        <p className="mt-6 max-w-3xl text-sm leading-6 text-slate-500">Sample data shown for illustration; these charts are not a live performance report. Dates roll forward automatically, excluding Saturdays and Sundays.</p>
+      </div>
+    </section>
+  );
+}
+
