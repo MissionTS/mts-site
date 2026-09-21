@@ -36,7 +36,7 @@ export function SupportStats() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <h2 className="text-base font-medium">Support at a glance</h2>
-              <p className="mt-1 text-xs text-slate-500">Illustrative averages</p>
+              <p className="mt-1 text-xs text-slate-500">How Fast Our Support Is (Live)</p><p className="mt-1 text-[11px] text-slate-500">Sample data</p>
             </div>
             <div className="grid grid-cols-3 divide-x divide-slate-200 lg:min-w-[540px]">
               {metrics.map((metric, index) => (
@@ -45,7 +45,7 @@ export function SupportStats() {
                   <p className="mt-1 text-xs leading-5 text-slate-600">{["Email response", "Phone response", "Satisfaction"][index]}</p>
                   <svg aria-hidden="true" focusable="false" viewBox="0 0 160 32" className="mt-2 h-7 w-full max-w-40 overflow-hidden" fill="none">
                     <path d="M2 18H42L49 14L56 21L64 4L72 28L80 12L87 18H158" stroke="currentColor" strokeOpacity=".18" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    <path className={styles.pulse} style={{ animationDelay: `${index * -0.8}s` }} d="M2 18H42L49 14L56 21L64 4L72 28L80 12L87 18H158" pathLength="100" stroke="var(--mission-gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path className={styles.pulse} style={{ animationDelay: `${index * -0.8}s` }} d="M2 18H42L49 14L56 21L64 4L72 28L80 12L87 18H158" pathLength="100" stroke="var(--mission-blue)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
               ))}
