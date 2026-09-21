@@ -19,6 +19,7 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ContactForm } from "@/components/ContactForm";
+import { SupportStats } from "@/components/SupportStats";
 
 const services = [
   { icon: WrenchScrewdriverIcon, title: "Managed IT", text: "Responsive helpdesk, lifecycle management, patching, monitoring, and proactive support.", href: "/managed-it" },
@@ -267,6 +268,8 @@ export default function Home() {
         </div>
       </section>
 
+      <SupportStats />
+
       <section className="relative overflow-hidden bg-mission-mist py-24">
         <Image src="/photos/managed-it-team.jpg" alt="Mission team collaborating in an office" fill sizes="100vw" className="object-cover opacity-[0.08]" />
         <div className="absolute inset-0 bg-mission-mist/80" />
@@ -455,3 +458,4 @@ export default function Home() {
     </main>
   );
 }
+
