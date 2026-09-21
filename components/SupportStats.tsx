@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import styles from "./SupportStats.module.css";
 
 // Illustrative values only. Replace these series with verified support data
 // before changing the sample-data disclosure or describing this as live.
@@ -42,6 +43,10 @@ export function SupportStats() {
                 <div key={metric.id} className="px-3 first:pl-0 sm:px-6 lg:first:pl-6">
                   <p className="text-3xl font-normal tabular-nums tracking-tight">{metric.values.reduce((sum, value) => sum + value, 0) / metric.values.length}<span className="ml-1 text-sm text-slate-500">{metric.unit}</span></p>
                   <p className="mt-1 text-xs leading-5 text-slate-600">{["Email response", "Phone response", "Satisfaction"][index]}</p>
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 160 32" className="mt-2 h-7 w-full max-w-40 overflow-hidden" fill="none">
+                    <path d="M2 18H42L49 14L56 21L64 4L72 28L80 12L87 18H158" stroke="currentColor" strokeOpacity=".18" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path className={styles.pulse} style={{ animationDelay: `${index * -0.8}s` }} d="M2 18H42L49 14L56 21L64 4L72 28L80 12L87 18H158" pathLength="100" stroke="var(--mission-gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </div>
               ))}
             </div>
