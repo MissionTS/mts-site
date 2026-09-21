@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 // Illustrative values only. Replace these series with verified support data
 // before changing the sample-data disclosure or describing this as live.
@@ -26,6 +28,32 @@ function weekdays(now: Date) {
 const dateLabel = (date: Date) => new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(date);
 
 export function SupportStats() {
+  return (
+    <section id="support-stats" aria-label="Support at a glance" className="scroll-mt-28 bg-white py-8 sm:py-10">
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-8">
+        <Link href="/support-stats" className="group block rounded-sm py-2 text-mission-navy transition hover:bg-mission-mist/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-mission-navy">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h2 className="text-base font-medium">Support at a glance</h2>
+              <p className="mt-1 text-xs text-slate-500">Illustrative averages</p>
+            </div>
+            <div className="grid grid-cols-3 divide-x divide-slate-200 lg:min-w-[540px]">
+              {metrics.map((metric, index) => (
+                <div key={metric.id} className="px-3 first:pl-0 sm:px-6 lg:first:pl-6">
+                  <p className="text-3xl font-normal tabular-nums tracking-tight">{metric.values.reduce((sum, value) => sum + value, 0) / metric.values.length}<span className="ml-1 text-sm text-slate-500">{metric.unit}</span></p>
+                  <p className="mt-1 text-xs leading-5 text-slate-600">{["Email response", "Phone response", "Satisfaction"][index]}</p>
+                </div>
+              ))}
+            </div>
+            <span className="inline-flex items-center gap-2 text-sm font-medium">View support metrics <ArrowRightIcon aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1 motion-reduce:transform-none" /></span>
+          </div>
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+export function SupportStatsDetail() {
   const [days, setDays] = useState<Date[]>([]);
   useEffect(() => {
     const update = () => setDays(weekdays(new Date()));
@@ -40,7 +68,7 @@ export function SupportStats() {
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div className="max-w-3xl">
             <p className="text-xs font-medium uppercase tracking-[0.14em] text-mission-navy">Support, by the numbers</p>
-            <h2 id="support-stats-title" className="mt-3 text-3xl font-medium leading-tight tracking-tight text-mission-navy sm:text-4xl">Real people. Ready to help.</h2>
+            <h1 id="support-stats-title" className="mt-3 text-3xl font-medium leading-tight tracking-tight text-mission-navy sm:text-4xl">Real people. Ready to help.</h1>
             <p className="mt-4 text-base leading-7 text-slate-600">Less time waiting. More time moving your mission forward.</p>
           </div>
           <div className="text-sm text-slate-600">
