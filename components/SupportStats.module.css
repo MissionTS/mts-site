@@ -1,0 +1,22 @@
+.pulse {
+  stroke-dasharray: 22 100;
+  stroke-dashoffset: 22;
+  animation: heartbeat-trace 3.6s linear infinite;
+}
+
+@keyframes heartbeat-trace {
+  0% { stroke-dashoffset: 22; opacity: 0; }
+  8% { opacity: 1; }
+  76% { stroke-dashoffset: -100; opacity: 1; }
+  84%, 100% { stroke-dashoffset: -100; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    opacity: .6;
+  }
+}
+
