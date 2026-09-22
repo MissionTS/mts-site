@@ -67,10 +67,11 @@ export default function ChecklistPage({ params }: { params: { slug: string } }) 
         </div>
       </section>
       <section className="bg-mission-mist py-16 lg:py-24">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8"><KnowledgeArticle slug={params.slug} guide={guide} /></div>
+        <div className="mx-auto max-w-6xl px-6 lg:px-8"><KnowledgeArticle slug={params.slug} guide={guide} />{params.slug === "it-support-peru" && <aside className="mt-10 border-t border-slate-200 pt-6"><h2 className="text-xl font-medium text-mission-navy">Need IT support for your Peru business?</h2><p className="mt-3 leading-7 text-slate-600">Explore Mission’s managed IT, cybersecurity and onsite services for Peru and Miami County.</p><Link href="/peru-in" className="mt-4 inline-block font-medium text-mission-navy underline underline-offset-4">View IT services in Peru, Indiana</Link></aside>}</div>
       </section>
       <SiteFooter />
     </main>
   );
 }
+
 
