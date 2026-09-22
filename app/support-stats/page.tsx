@@ -6,7 +6,7 @@ import { SupportStatsDetail } from "@/components/SupportStats";
 
 export const metadata: Metadata = {
   title: "Support Metrics | Mission Technology Solutions",
-  description: "Explore illustrative email response, phone response, and customer satisfaction trends for Mission Technology Solutions.",
+  description: "Explore email response, phone response, and customer satisfaction trends for Mission Technology Solutions.",
   alternates: { canonical: "/support-stats" },
 };
 
