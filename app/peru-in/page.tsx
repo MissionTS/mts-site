@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { ContactForm } from "@/components/ContactForm";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SupportStats } from "@/components/SupportStats";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const title = "IT Services in Peru, Indiana | Mission Technology Solutions";
@@ -55,6 +56,8 @@ export default function PeruPage() {
           
         </div>
       </section>
+
+      <SupportStats />
 
       <section className="px-6 py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
