@@ -16,6 +16,7 @@ const coreRoutes = [
   "/vcio",
   "/structured-cabling-security",
   "/kokomo-in",
+  "/peru-in",
   "/kokomo-managed-it",
   "/kokomo-cybersecurity",
   "/kokomo-networking",
@@ -45,3 +46,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...resourceSlugs.map((slug) => ({ url: `${baseUrl}/resources/${slug}`, lastModified: new Date() })),
   ];
 }
+
