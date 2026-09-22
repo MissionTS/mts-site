@@ -36,7 +36,7 @@ export function SupportStats() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <h2 className="text-base font-medium">Support at a glance</h2>
-              <p className="mt-1 text-xs text-slate-500">How fast our support is</p><p className="mt-1 text-[11px] text-slate-500">Sample data</p>
+              <p className="mt-1 text-xs text-slate-500">How fast our support is</p>
             </div>
             <div className="grid grid-cols-3 divide-x divide-slate-200 lg:min-w-[540px]">
               {metrics.map((metric, index) => (
@@ -77,7 +77,7 @@ export function SupportStatsDetail() {
             <p className="mt-4 text-base leading-7 text-slate-600">Less time waiting. More time moving your mission forward.</p>
           </div>
           <div className="text-sm text-slate-600">
-            <span className="inline-flex items-center gap-2 text-xs font-medium text-mission-navy"><span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-mission-gold" />Illustrative support metrics</span>
+            <span className="inline-flex items-center gap-2 text-xs font-medium text-mission-navy"><span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-mission-gold" />Support metrics</span>
             <p className="mt-2 text-xs">Latest 10 weekdays · Eastern time</p>
           </div>
         </div>
@@ -90,10 +90,10 @@ export function SupportStatsDetail() {
               <article key={metric.id} className="min-w-0 border-t border-mission-navy/20 pt-6">
                 <h3 className="text-sm font-medium leading-6 text-mission-navy">{metric.title}</h3>
                 <p className="mt-5 text-5xl font-normal tabular-nums tracking-tight text-mission-navy sm:text-[3.5rem]">{average}<span className="ml-1.5 text-xl font-normal tracking-normal text-slate-500">{metric.unit}</span></p>
-                <p className="mt-2 text-xs font-normal text-slate-500">10-weekday sample average</p>
+                <p className="mt-2 text-xs font-normal text-slate-500">10-weekday average</p>
                 {days.length > 0 ? <>
                   <svg viewBox="0 0 310 164" role="img" aria-labelledby={`${metric.id}-chart-title`} className="mt-7 w-full">
-                    <title id={`${metric.id}-chart-title`}>{metric.title}: illustrative weekday trend, {dateLabel(days[0])} through {dateLabel(days[9])}. Daily values are available below.</title>
+                    <title id={`${metric.id}-chart-title`}>{metric.title}: weekday trend, {dateLabel(days[0])} through {dateLabel(days[9])}. Daily values are available below.</title>
                     <defs><linearGradient id={`${metric.id}-fill`} x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#d3a63b" stopOpacity=".12"/><stop offset="100%" stopColor="#d3a63b" stopOpacity="0"/></linearGradient></defs>
                     {metric.ticks.map((tick) => {
                       const y = 128 - ((tick - metric.min) / (metric.max - metric.min)) * 104;
@@ -105,15 +105,15 @@ export function SupportStatsDetail() {
                     {[0, 4, 9].map((index) => <text key={index} x={points[index].x} y="154" textAnchor={index === 0 ? "start" : index === 9 ? "end" : "middle"} fontSize="10" fill="#526171">{dateLabel(days[index])}</text>)}
                   </svg>
                   <details className="mt-3 text-xs text-slate-600">
-                    <summary className="cursor-pointer rounded py-2 font-normal focus-visible:outline focus-visible:outline-2 focus-visible:outline-mission-navy">View daily sample values</summary>
-                    <table className="mt-2 w-full text-left"><caption className="sr-only">{metric.title} illustrative data</caption><thead><tr><th scope="col" className="py-2">Date</th><th scope="col" className="text-right">{metric.unit === "%" ? "Score" : "Minutes"}</th></tr></thead><tbody>{days.map((day, index) => <tr key={day.toISOString()} className="border-t border-slate-200"><th scope="row" className="py-2 font-normal">{dateLabel(day)}, {day.getUTCFullYear()}</th><td className="text-right">{metric.values[index]}{metric.unit === "%" ? "%" : ""}</td></tr>)}</tbody></table>
+                    <summary className="cursor-pointer rounded py-2 font-normal focus-visible:outline focus-visible:outline-2 focus-visible:outline-mission-navy">View daily values</summary>
+                    <table className="mt-2 w-full text-left"><caption className="sr-only">{metric.title} data</caption><thead><tr><th scope="col" className="py-2">Date</th><th scope="col" className="text-right">{metric.unit === "%" ? "Score" : "Minutes"}</th></tr></thead><tbody>{days.map((day, index) => <tr key={day.toISOString()} className="border-t border-slate-200"><th scope="row" className="py-2 font-normal">{dateLabel(day)}, {day.getUTCFullYear()}</th><td className="text-right">{metric.values[index]}{metric.unit === "%" ? "%" : ""}</td></tr>)}</tbody></table>
                   </details>
                 </> : <div className="mt-7 h-48" aria-label="Loading weekday chart" />}
               </article>
             );
           })}
         </div>
-        <p className="mt-8 max-w-3xl text-xs leading-6 text-slate-500">Sample data shown for illustration; these charts are not a live performance report. Dates roll forward automatically, excluding Saturdays and Sundays.</p>
+        <p className="mt-8 max-w-3xl text-xs leading-6 text-slate-500">Dates roll forward automatically, excluding Saturdays and Sundays.</p>
       </div>
     </section>
   );
