@@ -10,8 +10,8 @@ const title = "IT Services in Peru, Indiana | Mission Technology Solutions";
 const description = "Business IT support for Peru and Miami County, Indiana. Managed IT, cybersecurity, Microsoft 365 and onsite projects from Mission’s Kokomo-based team.";
 export const metadata: Metadata = {
   title, description, alternates: { canonical: "/peru-in" },
-  openGraph: { title, description, url: "https://missionts.com/peru-in", type: "website", images: [{ url: "/photos/managed-it-team.jpg", alt: "Mission team collaborating in an office" }] },
-  twitter: { card: "summary_large_image", title, description, images: ["/photos/managed-it-team.jpg"] },
+  openGraph: { title, description, url: "https://missionts.com/peru-in", type: "website", images: [{ url: "/photos/peru-indiana-downtown.webp", width: 1920, height: 857, alt: "Downtown Peru, Indiana, with the Miami County Museum" }] },
+  twitter: { card: "summary_large_image", title, description, images: ["/photos/peru-indiana-downtown.webp"] },
 };
 
 const services = [
@@ -42,8 +42,8 @@ export default function PeruPage() {
     <main>
       <SiteHeader />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
-      <section className="bg-mission-ink text-white">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:py-24">
+      <section className="relative isolate overflow-hidden bg-mission-ink text-white"><Image src="/photos/peru-indiana-downtown.webp" alt="Downtown Peru, Indiana, with the Miami County Museum along Broadway" fill priority sizes="100vw" quality={80} className="-z-20 object-cover object-[65%_center]" /><div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-mission-ink/95 via-mission-ink/85 to-mission-ink/40" />
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div>
             <nav aria-label="Breadcrumb" className="mb-8 text-xs text-slate-300"><Link href="/" className="underline-offset-4 hover:underline">Home</Link><span aria-hidden="true"> / </span>Peru, Indiana</nav>
             <p className="text-xs font-medium uppercase tracking-[0.16em] text-mission-gold">Serving Peru & Miami County</p>
@@ -52,7 +52,7 @@ export default function PeruPage() {
             <div className="mt-8 flex flex-wrap gap-4"><Link href="#contact" className="inline-flex items-center gap-2 rounded-lg bg-mission-gold px-5 py-3 font-semibold text-mission-ink">Talk about your IT <ArrowRightIcon aria-hidden="true" className="h-4 w-4" /></Link><a href="tel:+17652458515" className="rounded-lg border border-white/30 px-5 py-3 font-medium">(765) 245-8515</a></div>
             <p className="mt-5 text-sm text-slate-300">Remote support · Coordinated onsite service · Long-term planning</p>
           </div>
-          <div className="overflow-hidden rounded-xl border border-white/15"><Image src="/photos/managed-it-team.jpg" alt="Mission team collaborating in an office" width={1100} height={800} priority sizes="(min-width: 1024px) 42vw, 100vw" className="aspect-[4/3] w-full object-cover" /><p className="bg-mission-navy px-6 py-4 text-sm leading-6">One partner for your people, systems and facilities.</p></div>
+          
         </div>
       </section>
 
