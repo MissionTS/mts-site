@@ -11,7 +11,7 @@ export type TeamProfile = {
   image?: string;
 };
 
-export function TeamProfiles({ title, people }: { title: string; people: TeamProfile[] }) {
+export function TeamProfiles({ title, people }: { title?: string; people: TeamProfile[] }) {
   const [selected, setSelected] = useState<TeamProfile | null>(null);
 
   useEffect(() => {
@@ -24,8 +24,8 @@ export function TeamProfiles({ title, people }: { title: string; people: TeamPro
 
   return <>
     <div>
-      <h3 className="text-xl font-extrabold text-mission-ink">{title}</h3>
-      <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {title && <h3 className="text-xl font-extrabold text-mission-ink">{title}</h3>}
+      <div className={`${title ? "mt-5 " : ""}grid gap-4 sm:grid-cols-2 lg:grid-cols-3`}>
         {people.map((person) => (
           <button key={person.name} type="button" onClick={() => setSelected(person)} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:border-mission-gold hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-mission-navy focus:ring-offset-2">
             <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-mission-navy to-mission-ink text-5xl font-black tracking-tight text-mission-gold">
