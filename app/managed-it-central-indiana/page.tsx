@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 const title = "Managed IT Services in Central Indiana | Mission Technology Solutions";
-const description = "Managed IT services for Central Indiana businesses and organizations. Get responsive helpdesk support, proactive maintenance, cybersecurity, Microsoft 365, and practical technology planning from Mission.";
+const description = "Managed IT services for Indianapolis and Central Indiana businesses. Get responsive helpdesk support, proactive maintenance, cybersecurity, Microsoft 365, and practical technology planning from Mission.";
 
 export const metadata: Metadata = {
   title,
@@ -31,11 +31,11 @@ const services = [
   { icon: CheckCircleIcon, title: "IT planning & vCIO guidance", text: "Connect technology decisions to business priorities with budgeting, lifecycle planning, vendor coordination, and a clear roadmap." },
 ];
 
-const communities = ["Kokomo", "Peru", "Logansport", "Tipton", "Lafayette", "Carmel", "Noblesville", "Westfield"];
+const communities = ["Indianapolis", "Kokomo", "Peru", "Logansport", "Tipton", "Lafayette", "Carmel", "Noblesville", "Westfield"];
 
 const faqs = [
   ["What does managed IT include?", "Managed IT can combine helpdesk support, monitoring, maintenance, device and account management, security coordination, backup planning, and long-term technology guidance. We scope services around your environment and agree on responsibilities before work begins."],
-  ["Do you support businesses across Central Indiana?", "Mission is based in Kokomo and serves businesses and organizations across Central Indiana, including Kokomo, Peru, Logansport, Tipton, Lafayette, Carmel, Noblesville, Westfield, and nearby communities. Remote support and onsite work are coordinated based on the need and service arrangement."],
+  ["Do you support businesses across Central Indiana?", "Mission is based in Kokomo and serves businesses and organizations across Central Indiana, including Indianapolis, Kokomo, Peru, Logansport, Tipton, Lafayette, Carmel, Noblesville, Westfield, and nearby communities. Remote support and onsite work are coordinated based on the need and service arrangement."],
   ["Can you work with an internal IT employee?", "Yes. Co-managed IT can give an internal technology lead more helpdesk capacity, specialized expertise, monitoring, documentation, project support, or coverage. We define who owns each responsibility together."],
   ["Do you provide onsite IT support?", "Yes. Many requests can be handled remotely, while hands-on troubleshooting, installations, network work, and other projects can be scheduled onsite. Timing depends on the issue, location, and service arrangement."],
   ["How do we get started?", "Tell us about your team, locations, systems, and current challenges. We will discuss what you need, answer questions, and outline a practical next step."],
@@ -99,9 +99,9 @@ export default function CentralIndianaManagedITPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 lg:px-8 lg:py-20">
+      <section id="service-area" className="bg-white px-6 py-16 lg:px-8 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
-          <div><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Serving Central Indiana</p><h2 className="mt-3 text-3xl font-black tracking-tight text-mission-ink sm:text-4xl">Local knowledge, regional reach.</h2><p className="mt-5 leading-7 text-slate-600">Mission is based in Kokomo and works with organizations across Central Indiana. Support is delivered remotely when it is the quickest fit, with onsite work scheduled for needs that call for hands-on help.</p></div>
+          <div><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Serving Indianapolis & Central Indiana</p><h2 className="mt-3 text-3xl font-black tracking-tight text-mission-ink sm:text-4xl">Local knowledge, regional reach.</h2><p className="mt-5 leading-7 text-slate-600">Mission is based in Kokomo and works with organizations in Indianapolis and across Central Indiana. Support is delivered remotely when it is the quickest fit, with onsite work scheduled for needs that call for hands-on help.</p></div>
           <div><ul className="grid gap-3 sm:grid-cols-2">{communities.map((community) => <li key={community} className="flex items-center gap-3 border-b border-slate-200 py-3 text-lg font-semibold text-mission-navy"><CheckCircleIcon aria-hidden="true" className="h-5 w-5 text-mission-gold" />{community}, Indiana</li>)}</ul><p className="mt-5 text-sm text-slate-500">Also serving nearby communities. Onsite scheduling depends on your location, needs, and service arrangement.</p></div>
         </div>
       </section>
