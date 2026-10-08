@@ -60,7 +60,7 @@ const organizationPaths = [
 ];
 
 const proofPoints = [
-  ["Local expertise", "Indiana-based team"],
+  ["Regional coverage", "Kokomo, Indianapolis & nearby areas"],
   ["One partner", "IT, cloud, network, voice, and cameras"],
   ["Proactive by default", "Monitoring, patching, and lifecycle planning"],
   ["Security-minded", "Identity, endpoint, email, and network layers"],
@@ -152,7 +152,7 @@ export default function Home() {
     url: "https://missionts.com/",
     telephone: "+1-765-245-8515",
     email: "sales@missionts.com",
-    areaServed: ["Kokomo, Indiana", "Howard County, Indiana", "Tipton, Indiana", "Logansport, Indiana", "Noblesville, Indiana", "Westfield, Indiana", "Carmel, Indiana", "Lafayette, Indiana"],
+    areaServed: ["Indianapolis, Indiana", "Kokomo, Indiana", "Howard County, Indiana", "Tipton, Indiana", "Logansport, Indiana", "Noblesville, Indiana", "Westfield, Indiana", "Carmel, Indiana", "Lafayette, Indiana"],
     serviceType: ["Managed IT Services", "Cybersecurity", "Business Networking", "Microsoft 365 Support", "Structured Cabling", "Physical Security"],
   };
   return (
