@@ -23,7 +23,7 @@ export function SiteFooter() {
         <div>
           <div className="text-sm font-bold uppercase tracking-wider text-slate-400">Based in Indiana</div>
           <p className="mt-3 text-sm leading-6 text-slate-300">Serving organizations that want technology to be reliable, secure, and easy to manage.</p>
-          <nav aria-label="Local IT services" className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-200"><Link href="/kokomo-in" className="underline-offset-4 hover:underline">Kokomo IT services</Link><Link href="/peru-in" className="underline-offset-4 hover:underline">Peru IT services</Link></nav>
+          <nav aria-label="Local IT services" className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-200"><Link href="/kokomo-in" className="underline-offset-4 hover:underline">Kokomo IT services</Link><Link href="/peru-in" className="underline-offset-4 hover:underline">Peru IT services</Link><Link href="/managed-it-central-indiana" className="underline-offset-4 hover:underline">Central Indiana managed IT</Link></nav>
         </div>
       </div>
       <div className="border-t border-white/10 px-6 py-5 text-center text-xs text-slate-400">© {new Date().getFullYear()} Mission Technology Solutions. All rights reserved.</div>
