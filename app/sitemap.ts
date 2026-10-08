@@ -17,6 +17,7 @@ const coreRoutes = [
   "/structured-cabling-security",
   "/kokomo-in",
   "/peru-in",
+  "/managed-it-central-indiana",
   "/kokomo-managed-it",
   "/kokomo-cybersecurity",
   "/kokomo-networking",
