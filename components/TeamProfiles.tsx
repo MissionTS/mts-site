@@ -9,6 +9,7 @@ export type TeamProfile = {
   role: string;
   bio: string;
   image?: string;
+  experience?: string;
 };
 
 export function TeamProfiles({ title, people }: { title?: string; people: TeamProfile[] }) {
@@ -34,6 +35,7 @@ export function TeamProfiles({ title, people }: { title?: string; people: TeamPr
             <div className="p-5">
               <div className="text-lg font-extrabold text-mission-ink">{person.name}</div>
               <div className="mt-1 text-sm leading-6 text-slate-600">{person.role}</div>
+              {person.experience && <div className="mt-1 text-xs font-semibold text-mission-navy">{person.experience}</div>}
               <div className="mt-4 text-sm font-bold text-mission-navy transition group-hover:text-mission-gold">Meet {person.name.split(" ")[0]} →</div>
             </div>
           </button>
