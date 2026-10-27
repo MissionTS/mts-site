@@ -4,9 +4,154 @@ import { useState } from "react";
 import { ArrowRightIcon, CheckCircleIcon, LightBulbIcon, ShareIcon } from "@heroicons/react/24/outline";
 
 type Guide = { category: string; title: string; intro: string; items: string[] };
-type Section = { heading: string; body: string };
+type Section = { heading: string; body: string | string[]; sources?: { label: string; href: string }[] };
 
 const articles: Record<string, { lead: string; sections: Section[]; takeaway: string }> = {
+  "cyber-insurance-small-business": {
+    "lead": "A cyber incident can create expenses well beyond the cost of repairing a computer. For a small business, clinic, professional practice, or nonprofit, a compromised mailbox or unavailable line-of-business system can mean forensic work, legal questions, lost operating time, customer communication, and pressure to restore service quickly. Cyber insurance may help absorb some covered costs and connect an organization with response resources. It is a financial risk-transfer tool, not a security product, a guarantee of payment, or a substitute for a recovery plan. The useful question is not simply whether you have a policy. It is whether its coverage, limits, conditions, and required controls fit the way your organization actually operates.",
+    "sections": [
+      {
+        "heading": "What cyber insurance is designed to do",
+        "body": [
+          "Cyber insurance is business insurance for certain losses tied to covered technology, privacy, network-security, or data incidents. Depending on its wording, a policy can combine first-party coverage for the insured organization’s own response and interruption costs with third-party coverage for claims made by customers, patients, employees, vendors, or other affected parties. Policies may be standalone, or cyber coverage may be added as an endorsement to another policy. The label alone does not tell you how broad that protection is.",
+          "Think of the policy as one part of a response plan. It may help fund specific costs after a covered event, but it does not prevent account takeover, restore every lost dollar, or remove an organization’s obligations to clients and regulators. Insurers and forms differ, so use your actual policy and a licensed insurance professional to determine what applies to your business."
+        ],
+        "sources": [
+          {
+            "label": "Indiana Cyber Insurance Toolkit",
+            "href": "https://www.in.gov/cybersecurity/education/cyber-law-and-insurance/cyber-insurance-toolkit/"
+          },
+          {
+            "label": "NAIC 2026 Report on the Cybersecurity Insurance Market",
+            "href": "https://content.naic.org/resource-center/2026-report-cybersecurity-insurance-market"
+          }
+        ]
+      },
+      {
+        "heading": "What a policy may cover",
+        "body": [
+          "First-party coverage may help pay eligible costs that your organization incurs responding to an incident. Common examples can include forensic investigation to understand what happened, legal counsel and breach-response coordination, required notification, call-center or credit-monitoring services where appropriate, data or system restoration, crisis communications, and certain extra expenses or lost income while operations are interrupted. Some policies also address cyber extortion or ransomware events, subject to the wording, conditions, limits, and applicable law.",
+          "Third-party coverage may help with covered claims alleging that a security failure or privacy event harmed someone else. Depending on the form, this could include defense costs, settlements, or judgments related to unauthorized disclosure, failure to protect information, or certain network-security events. A business that handles patient records, payroll, payment data, student information, or customer accounts should understand how its policy treats the information it holds and the role of outside service providers.",
+          "These are examples, not promises. A policy may define a covered event narrowly, put a smaller sublimit on a particular service, require insurer approval before a vendor is engaged, or exclude an incident type. Social-engineering scams, fraudulent funds transfers, vendor outages, hardware failure, intellectual-property disputes, and ordinary technology upgrades may be treated differently from a network breach. Ask your broker to point to the exact section that answers each question."
+        ],
+        "sources": [
+          {
+            "label": "Indiana Cyber Insurance Toolkit FAQ",
+            "href": "https://www.in.gov/cybersecurity/education/cyber-law-and-insurance/cyber-insurance-toolkit/cyber-insurance-toolkit-faq/"
+          },
+          {
+            "label": "NAIC 2026 Report on the Cybersecurity Insurance Market",
+            "href": "https://content.naic.org/resource-center/2026-report-cybersecurity-insurance-market"
+          }
+        ]
+      },
+      {
+        "heading": "What to check in the policy—not just the declarations page",
+        "body": [
+          "The declarations page shows important numbers, but the policy wording explains when those numbers can be used. Review the total limit and any sublimits; the deductible or self-insured retention; waiting periods for business interruption; how the policy defines a security or privacy event; and whether lost income must follow a particular kind of interruption. Check whether an outage at a cloud, telecom, payroll, or other critical provider can trigger dependent-business-interruption protection, and what proof or waiting period applies.",
+          "Ask whether ransomware, cyber extortion, social engineering, funds-transfer fraud, and invoice manipulation are covered, excluded, or limited, and whether each requires a separate endorsement. Clarify how the policy treats an incident involving a vendor or cloud platform, what breach-response providers you are expected to use, and how quickly you must report a suspected event. Some policies are written on a claims-made basis or include specific reporting conditions; your agent or broker can explain the effect of those terms for your situation.",
+          "Also review exclusions, conditions, territory, policy dates, retroactive dates if applicable, and coordination with crime, property, professional-liability, and general-liability coverage. Do not assume two policies work together or that one policy fills a gap in another. Ask the broker to explain a realistic example, such as a staff member approving a fraudulent wire after an email account is compromised, or a ransomware incident that takes your scheduling system offline."
+        ],
+        "sources": [
+          {
+            "label": "NAIC 2026 Report: coverage gaps and policy questions",
+            "href": "https://content.naic.org/resource-center/2026-report-cybersecurity-insurance-market"
+          },
+          {
+            "label": "Indiana Cyber Insurance Toolkit",
+            "href": "https://www.in.gov/cybersecurity/education/cyber-law-and-insurance/cyber-insurance-toolkit/"
+          }
+        ]
+      },
+      {
+        "heading": "What underwriting and renewal entail",
+        "body": [
+          "When you apply or renew, the insurer is trying to understand your organization’s risk and whether its controls meet the insurer’s eligibility and pricing criteria. The application may ask about revenue, employee count, locations, sensitive records, cloud and remote access, payment workflows, prior incidents, vendors, and the safeguards protecting accounts and devices. A longer form is not necessarily a better policy, and a short form does not remove the need to understand the resulting coverage.",
+          "Questions often ask whether multifactor authentication is enabled, how endpoints are protected, how software is patched, how backups are isolated and tested, how privileged accounts are controlled, and whether the organization has an incident-response plan. The exact questions and required answers change by carrier and policy. An answer should describe what is actually in place across the organization—not what is planned, partly deployed, or true only for a subset of systems.",
+          "Treat the application as a point-in-time statement that needs ownership. Assign someone to gather evidence from IT, operations, finance, and leadership. Keep the submitted copy, supporting evidence, quote, endorsements, and final policy together. If a material change occurs during the policy term, ask your broker whether and how it should be reported. At renewal, revisit the answers rather than reusing last year’s form without checking."
+        ],
+        "sources": [
+          {
+            "label": "Indiana Cyber Insurance Toolkit and underwriting questions",
+            "href": "https://www.in.gov/cybersecurity/education/cyber-law-and-insurance/cyber-insurance-toolkit/"
+          },
+          {
+            "label": "CISA guidance for MSPs and small and mid-sized businesses",
+            "href": "https://www.cisa.gov/sites/default/files/publications/CISA%20Insights_Guidance-for-MSPs-and-Small-and-Mid-sized-Businesses_S508C.pdf"
+          }
+        ]
+      },
+      {
+        "heading": "The controls that make an organization more prepared",
+        "body": [
+          "The same practical safeguards that reduce everyday cyber risk also make it easier to give accurate underwriting answers. Start with identity: require MFA for email, remote access, administrators, and other important systems; remove old accounts promptly; and limit administrator access to people and tasks that need it. Protect laptops and servers with supported endpoint security, timely operating-system and application updates, disk encryption where appropriate, and alert review that has a named owner.",
+          "Backups deserve special attention. Confirm that important data and configurations are included, that backup access is protected separately, and that a copy cannot simply be erased by an attacker using a compromised administrator account. Test a restore—not just the job report—and write down how long restoration took and what had to be done. CISA’s small and mid-sized business guidance specifically emphasizes MFA and backups that are protected from the organization’s network.",
+          "Then look at email and business processes. Train staff to report suspicious messages, use a second verification channel before changing payment instructions, and make sure finance knows who to call when a wire or bank-detail request feels unusual. Document key systems, vendors, incident contacts, and recovery priorities. A control that is installed but unmonitored, inconsistently applied, or unknown to staff may not perform as expected during a real event."
+        ],
+        "sources": [
+          {
+            "label": "CISA guidance for MSPs and small and mid-sized businesses",
+            "href": "https://www.cisa.gov/sites/default/files/publications/CISA%20Insights_Guidance-for-MSPs-and-Small-and-Mid-sized-Businesses_S508C.pdf"
+          },
+          {
+            "label": "CISA StopRansomware Guide",
+            "href": "https://www.cisa.gov/stopransomware/ransomware-guide"
+          }
+        ]
+      },
+      {
+        "heading": "How Mission helps align IT with the policy",
+        "body": [
+          "Mission can help translate a carrier’s technical questions into a practical picture of your environment. We can review the application with your team, identify which accounts, devices, locations, and services each answer refers to, and help gather evidence such as MFA coverage, endpoint status, backup scope, restore-test results, patching reports, and incident-response documentation. That makes it easier to spot the difference between a control that is fully deployed and one that still has gaps.",
+          "If we find a gap, we can help prioritize it by business impact and work with you on a remediation plan. Depending on your environment, that may mean rolling out MFA more consistently, closing unmanaged-device gaps, improving backup isolation and recovery testing, tightening administrative access, documenting vendor dependencies, or clarifying who responds when an alert arrives. The goal is a security program that works day to day and can be explained clearly at renewal—not a last-minute checkbox exercise.",
+          "Our role is the technology and operational side. Your licensed insurance agent or broker should interpret coverage language, explain exclusions and limits, recommend policy options, and advise how to complete or amend an application. Mission cannot promise that a control will qualify you for coverage, lower a premium, or cause a future claim to be paid. The insurer makes underwriting and claim decisions under the policy."
+        ],
+        "sources": [
+          {
+            "label": "Indiana Cyber Insurance Toolkit",
+            "href": "https://www.in.gov/cybersecurity/education/cyber-law-and-insurance/cyber-insurance-toolkit/"
+          }
+        ]
+      },
+      {
+        "heading": "Why it can be valuable for a small business or practice",
+        "body": [
+          "A smaller organization may have fewer internal specialists to investigate a breach, restore systems, coordinate legal advice, communicate with affected people, and keep daily work moving at the same time. A suitable policy may provide a source of funding for certain covered response costs and access to a defined response process. That can matter to a medical, dental, therapy, accounting, legal, or other professional practice whose work depends on timely access to records, scheduling, billing, email, and trusted client relationships.",
+          "For a small or mid-sized business, even a short outage can interrupt sales, payroll, delivery, and customer service. For a practice, an unavailable scheduling or record system may affect appointments and the staff’s ability to serve people. Cyber coverage can be one way to plan for eligible incident expenses and some interruption losses, while the organization preserves cash for payroll, vendors, and recovery. The value depends on the actual policy, the organization’s exposures, and the costs it could absorb itself.",
+          "Insurance is most useful when paired with prevention and recovery. Strong controls reduce the chance and impact of incidents; tested recovery limits downtime; clear policy terms help the organization know which response expenses might qualify. A policy with a large headline limit can still be a poor fit if key events are excluded, relevant sublimits are too low, or required controls do not match reality. The right conversation balances realistic risk, budget, coverage, and the ability to recover."
+        ],
+        "sources": [
+          {
+            "label": "NAIC 2026 Report on the Cybersecurity Insurance Market",
+            "href": "https://content.naic.org/resource-center/2026-report-cybersecurity-insurance-market"
+          },
+          {
+            "label": "Indiana Cyber Insurance Toolkit FAQ",
+            "href": "https://www.in.gov/cybersecurity/education/cyber-law-and-insurance/cyber-insurance-toolkit/cyber-insurance-toolkit-faq/"
+          }
+        ]
+      },
+      {
+        "heading": "A practical plan before your next renewal",
+        "body": [
+          "Start by asking your broker for the current application, quote, declarations, policy form, endorsements, and any security requirements. Have leadership identify the systems and information that must be available to serve clients and keep the business operating. Then map the application questions to evidence: where MFA is on, which devices report to endpoint security, how patching is tracked, what backups include, and when the most recent restore test succeeded.",
+          "Create a short gap list with an owner and target date. Address the highest-impact issues first, track which answers change after remediation, and keep documentation where the people who handle renewal can find it. Ask your broker to explain key exclusions, waiting periods, sublimits, reporting deadlines, and whether cyber coverage coordinates with other policies. Schedule the review early enough to resolve questions before the renewal deadline.",
+          "If an incident occurs, use the insurer’s reporting instructions and breach hotline shown in your policy, and coordinate with your IT provider, leadership, and legal counsel. Before hiring a vendor, paying a ransom, or making a coverage assumption, check the policy’s instructions and get guidance from the insurer and broker. Preserving evidence and keeping a clear timeline can help the response team understand what happened."
+        ],
+        "sources": [
+          {
+            "label": "Indiana Cyber Insurance Toolkit",
+            "href": "https://www.in.gov/cybersecurity/education/cyber-law-and-insurance/cyber-insurance-toolkit/"
+          },
+          {
+            "label": "NAIC: questions to ask before buying cyber insurance",
+            "href": "https://content.naic.org/resource-center/2026-report-cybersecurity-insurance-market"
+          }
+        ]
+      }
+    ],
+    "takeaway": "Cyber insurance can help with specific covered losses, but good outcomes depend on a policy that fits your risks, accurate applications, practical security controls, and a response plan people can follow."
+  },
   "physical-security-cybersecurity": {
     lead: "Cybersecurity does not stop at the login screen. A stolen badge, unlocked network closet, or exposed camera controller can give an intruder a path to the same systems protected by passwords and firewalls.",
     sections: [
@@ -158,7 +303,24 @@ export function KnowledgeArticle({ slug, guide }: { slug: string; guide: Guide }
           {article.sections.map((section, index) => (
             <section key={section.heading} className={`rounded-2xl p-5 sm:p-7 ${index % 2 ? "border-l-4 border-mission-gold bg-amber-50/40" : "bg-slate-50/70"}`}>
               <h2 className="text-3xl font-black tracking-tight text-mission-ink">{section.heading}</h2>
-              <p className="mt-4 text-lg leading-8 text-slate-600">{section.body}</p>
+              <div className="mt-4 space-y-4 text-lg leading-8 text-slate-600">
+                {(Array.isArray(section.body) ? section.body : [section.body]).map((paragraph, paragraphIndex) => (
+                  <p key={paragraphIndex}>{paragraph}</p>
+                ))}
+              </div>
+              {section.sources?.length ? (
+                <p className="mt-4 text-sm leading-6 text-slate-500">
+                  Further reading:{" "}
+                  {section.sources.map((source, sourceIndex) => (
+                    <span key={source.href}>
+                      {sourceIndex > 0 ? "; " : ""}
+                      <a href={source.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-mission-navy underline decoration-mission-gold underline-offset-4 hover:text-mission-ink">
+                        {source.label}
+                      </a>
+                    </span>
+                  ))}
+                </p>
+              ) : null}
             </section>
           ))}
         </div>

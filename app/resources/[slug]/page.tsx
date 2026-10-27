@@ -46,9 +46,24 @@ const localGuides: Record<string, { category: string; title: string; intro: stri
 Object.assign(checklists, localGuides);
 
 const securityTopics: Record<string, string> = {
-  "what-is-phishing": "What Is Phishing and How Attacks Actually Reach Your Inbox", "mfa-app-text-key": "MFA Explained: App vs. Text vs. Hardware Key", "first-hour-ransomware": "What to Do in the First Hour of a Ransomware Attack", "cyber-insurance-questionnaires": "Cyber Insurance Questionnaires: What the Questions Really Mean", "password-managers-small-teams": "Password Managers for Small Teams", "why-antivirus-isnt-enough": "Why Antivirus Alone Isn't Enough Anymore", "business-email-compromise": "Business Email Compromise: How Wire Fraud Happens", "security-awareness-training": "Employee Security Awareness Training: What Actually Reduces Incidents", "dark-web-monitoring": "Dark Web Monitoring: What It Can and Can't Tell You", "backed-up-or-synced": "Is Your Data Backed Up or Just Synced?", "three-two-one-backup": "The 3-2-1 Backup Rule", "test-backup-restore": "How to Test a Backup Restore",
+  "what-is-phishing": "What Is Phishing and How Attacks Actually Reach Your Inbox", "mfa-app-text-key": "MFA Explained: App vs. Text vs. Hardware Key", "first-hour-ransomware": "What to Do in the First Hour of a Ransomware Attack", "cyber-insurance-questionnaires": "Cyber Insurance Questionnaires: What the Questions Really Mean", "cyber-insurance-small-business": "Cyber Insurance for Small Businesses: What It Covers and How to Prepare", "password-managers-small-teams": "Password Managers for Small Teams", "why-antivirus-isnt-enough": "Why Antivirus Alone Isn't Enough Anymore", "business-email-compromise": "Business Email Compromise: How Wire Fraud Happens", "security-awareness-training": "Employee Security Awareness Training: What Actually Reduces Incidents", "dark-web-monitoring": "Dark Web Monitoring: What It Can and Can't Tell You", "backed-up-or-synced": "Is Your Data Backed Up or Just Synced?", "three-two-one-backup": "The 3-2-1 Backup Rule", "test-backup-restore": "How to Test a Backup Restore",
 };
 Object.assign(checklists, Object.fromEntries(Object.entries(securityTopics).map(([slug, title]) => [slug, { category: "Security", title, intro: "A practical, plain-language guide to reducing risk and responding with confidence.", items: ["Identify the people, accounts, devices, and systems involved.", "Confirm the right safeguards are enabled and monitored.", "Define what users should do when something looks suspicious.", "Document ownership, escalation, and recovery steps.", "Test the process before a real incident or urgent decision.", "Review what happened and turn lessons into the next improvement."] }])));
+
+checklists["cyber-insurance-small-business"] = {
+  category: "Security",
+  title: "Cyber Insurance for Small Businesses: What It Covers and How to Prepare",
+  intro: "Understand common cyber insurance coverage, the application process, and practical steps to align your security program before renewal.",
+  items: [
+    "Ask your licensed broker for the current application, full policy form, declarations, and endorsements.",
+    "List the systems, information, vendors, and workflows your business depends on most.",
+    "Verify the actual coverage of MFA, endpoint protection, patching, and administrative access controls.",
+    "Confirm backup scope, protected access, and the date and result of your latest restore test.",
+    "Gather accurate evidence for every application answer and document any exceptions.",
+    "Identify who contacts your insurer, broker, IT provider, legal counsel, and leadership after an incident.",
+    "Review limits, sublimits, retentions, waiting periods, exclusions, and reporting requirements with your broker.",
+  ],
+};
 
 export function generateStaticParams() { return Object.keys(checklists).map((slug) => ({ slug })); }
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata { const guide = checklists[params.slug]; return { title: guide ? `${guide.title} | Mission Knowledge Hub` : "Mission Knowledge Hub", description: guide?.intro }; }
