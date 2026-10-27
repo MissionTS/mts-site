@@ -30,7 +30,7 @@ const coreRoutes = [
 
 const resourceSlugs = [
   "90-day-plan", "backed-up-or-synced", "break-fix-vs-managed", "business-email-compromise",
-  "co-managed-it", "cyber-insurance-questionnaires", "dark-web-monitoring", "edr-and-mdr",
+  "co-managed-it", "cyber-insurance-questionnaires", "cyber-insurance-small-business", "dark-web-monitoring", "edr-and-mdr",
   "first-hour-ransomware", "howard-county-internet", "indiana-breach-notification", "indiana-tech-grants",
   "intune-business", "it-onboarding-transition", "it-support-carmel", "it-support-kokomo",
   "it-support-lafayette", "it-support-logansport", "it-support-noblesville", "it-support-peru",
