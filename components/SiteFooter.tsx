@@ -26,7 +26,7 @@ export function SiteFooter() {
           <nav aria-label="Local IT services" className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-200"><Link href="/kokomo-in" className="underline-offset-4 hover:underline">Kokomo IT services</Link><Link href="/peru-in" className="underline-offset-4 hover:underline">Peru IT services</Link><Link href="/managed-it-central-indiana#service-area" className="underline-offset-4 hover:underline">Indianapolis & Central Indiana IT</Link></nav>
         </div>
       </div>
-      <div className="border-t border-white/10 px-6 py-5 text-center text-xs text-slate-400">© {new Date().getFullYear()} Mission Technology Solutions. All rights reserved.</div>
+      <div className="flex flex-col items-center justify-center gap-3 border-t border-white/10 px-6 py-5 text-center text-xs text-slate-400 sm:flex-row sm:gap-5"><span>© {new Date().getFullYear()} Mission Technology Solutions. All rights reserved.</span><Link href="/legal" className="underline-offset-4 hover:text-white hover:underline">Legal</Link></div>
     </footer>
   );
 }
