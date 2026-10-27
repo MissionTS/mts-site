@@ -9,6 +9,7 @@ const coreRoutes = [
   "/resources",
   "/about",
   "/contact",
+  "/legal",
   "/managed-it",
   "/cybersecurity",
   "/networking",
