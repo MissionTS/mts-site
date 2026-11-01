@@ -1,13 +1,15 @@
+import { withSeoMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeoMetadata({
   title: "Structured Cabling, Cameras & Access Control | Mission Technology Solutions",
   description: "Professional structured cabling, camera systems, and access control installation for dependable, secure facilities.",
-};
+}, "/structured-cabling-security"); "/structured-cabling-security");
 
 export default function StructuredCablingSecurityPage() {
   return <ServicePage
+    breadcrumbPath="/structured-cabling-security"
     eyebrow="Structured Cabling & Physical Security"
     title="A stronger foundation for"
     accent="connected, secure facilities."

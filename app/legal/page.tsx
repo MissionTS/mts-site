@@ -1,14 +1,15 @@
+import { withSeoMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeoMetadata({
   title: "Legal | Mission Technology Solutions",
   description:
     "Review Mission Technology Solutions' terms and conditions, Master Services Agreement, service attachments, and data processing terms.",
   alternates: { canonical: "/legal" },
-};
+}, "/legal"); "/legal");
 
 const exhibits = [
   { label: "Master Services Agreement", href: "https://ourterms.live/missionmsp/MSA" },

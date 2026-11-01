@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { BreadcrumbJsonLd, FaqPageJsonLd } from "@/components/StructuredData";
 
 type ServicePageProps = {
   eyebrow: string;
@@ -21,15 +22,18 @@ type ServicePageProps = {
   certifications?: string[];
   heroBackgroundImage?: string;
   ctaBackgroundImage?: string;
+  breadcrumbPath?: string;
 };
 
-export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs, partnerShowcase, industryExperience, certifications, heroBackgroundImage, ctaBackgroundImage }: ServicePageProps) {
+export function ServicePage({ eyebrow, title, accent, introduction, heroImage, heroImageAlt, outcomes, services, situations, process, faqs, partnerShowcase, industryExperience, certifications, heroBackgroundImage, ctaBackgroundImage, breadcrumbPath }: ServicePageProps) {
   return (
     <main>
       <SiteHeader />
+      <FaqPageJsonLd items={faqs} />
+      {breadcrumbPath && <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: eyebrow, path: breadcrumbPath }]} />}
 
       <section className="hero-motion relative overflow-hidden bg-mission-ink text-white">
-        <><Image src={heroBackgroundImage ?? heroImage} alt="Technology infrastructure supporting a Mission client" fill sizes="100vw" className="object-cover opacity-20" /><div className="absolute inset-0 bg-mission-ink/85" /></>
+        <><Image src={heroBackgroundImage ?? heroImage} alt="" fill sizes="100vw" className="object-cover opacity-20" /><div className="absolute inset-0 bg-mission-ink/85" /></>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(48,80,108,0.9),_transparent_42%)]" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-24">
           <div>
@@ -209,7 +213,7 @@ export function ServicePage({ eyebrow, title, accent, introduction, heroImage, h
       </section>
 
       <section id="contact" className="relative overflow-hidden bg-mission-navy py-20 text-white">
-        <><Image src={ctaBackgroundImage ?? heroImage} alt="Mission technology installation in a client environment" fill sizes="100vw" className="object-cover opacity-20" /><div className="absolute inset-0 bg-mission-navy/90" /></>
+        <><Image src={ctaBackgroundImage ?? heroImage} alt="" fill sizes="100vw" className="object-cover opacity-20" /><div className="absolute inset-0 bg-mission-navy/90" /></>
         <div className="relative mx-auto flex max-w-7xl flex-col justify-between gap-8 px-6 lg:flex-row lg:items-center lg:px-8">
           <div>
             <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">Let’s get started</p>

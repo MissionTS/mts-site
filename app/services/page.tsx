@@ -1,3 +1,5 @@
+import { BreadcrumbJsonLd } from "@/components/StructuredData";
+import { withSeoMetadata } from "@/lib/seo";
 import type { ComponentType } from "react";
 import type { Metadata } from "next";
 import {
@@ -21,10 +23,10 @@ import { ContactForm } from "@/components/ContactForm";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeoMetadata({
   title: "Services | Mission Technology Solutions",
   description: "Explore Mission Technology Solutions services including Managed IT, cybersecurity, Microsoft 365, structured cabling, physical security, communications, and strategic IT planning.",
-};
+}, "/services"); "/services");
 
 type Icon = ComponentType<{ className?: string }>;
 
@@ -138,10 +140,11 @@ export default function ServicesPage() {
   return (
     <main>
       <SiteHeader />
+      <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]} />
 
       <section className="relative overflow-hidden bg-mission-ink text-white">
         <div className="absolute inset-0">
-          <Image src="/photos/managed-it-team.jpg" alt="Mission team collaborating in an office" fill priority sizes="100vw" className="object-cover opacity-20" />
+          <Image src="/photos/managed-it-team.jpg" alt="Mission employees working together on business technology" fill priority sizes="100vw" className="object-cover opacity-20" />
           <div className="absolute inset-0 bg-mission-ink/90" />
           <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-mission-gold/20 blur-3xl" />
           <div className="absolute right-0 top-20 h-[420px] w-[420px] rounded-full bg-mission-navy/50 blur-3xl" />

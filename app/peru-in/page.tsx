@@ -1,3 +1,5 @@
+import { withSeoMetadata } from "@/lib/seo";
+import { FaqPageJsonLd } from "@/components/StructuredData";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,11 +11,11 @@ import { SiteFooter } from "@/components/SiteFooter";
 
 const title = "IT Services in Peru, Indiana | Mission Technology Solutions";
 const description = "Business IT support for Peru and Miami County, Indiana. Managed IT, cybersecurity, Microsoft 365 and onsite projects from Mission’s Kokomo-based team.";
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeoMetadata({
   title, description, alternates: { canonical: "/peru-in" },
   openGraph: { title, description, url: "https://missionts.com/peru-in", type: "website", images: [{ url: "/photos/peru-indiana-downtown.webp", width: 1920, height: 857, alt: "Downtown Peru, Indiana, with the Miami County Museum" }] },
   twitter: { card: "summary_large_image", title, description, images: ["/photos/peru-indiana-downtown.webp"] },
-};
+}, "/peru-in");
 
 const services = [
   ["Managed IT & helpdesk", "Give employees one place to turn for account, device, email and application issues. Pair day-to-day support with monitoring, patching and a plan for aging equipment.", "/managed-it"],
@@ -42,6 +44,7 @@ export default function PeruPage() {
   return (
     <main>
       <SiteHeader />
+      <FaqPageJsonLd items={faqs.map(([question, answer]) => ({ question, answer }))} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
       <section className="relative isolate overflow-hidden bg-mission-ink text-white"><Image src="/photos/peru-indiana-downtown.webp" alt="Downtown Peru, Indiana, with the Miami County Museum along Broadway" fill priority sizes="100vw" quality={80} className="-z-20 object-cover object-[65%_center]" /><div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-mission-ink/95 via-mission-ink/85 to-mission-ink/40" />
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">

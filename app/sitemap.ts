@@ -19,7 +19,8 @@ const coreRoutes = [
   "/kokomo-in",
   "/peru-in",
   "/managed-it-central-indiana",
-  "/kokomo-managed-it",
+  "/support-stats",
+
   "/kokomo-cybersecurity",
   "/kokomo-networking",
   "/kokomo-microsoft-365",
@@ -32,7 +33,7 @@ const resourceSlugs = [
   "90-day-plan", "backed-up-or-synced", "break-fix-vs-managed", "business-email-compromise",
   "co-managed-it", "cyber-insurance-questionnaires", "cyber-insurance-small-business", "dark-web-monitoring", "edr-and-mdr",
   "first-hour-ransomware", "howard-county-internet", "indiana-breach-notification", "indiana-tech-grants",
-  "intune-business", "it-onboarding-transition", "it-support-carmel", "it-support-kokomo",
+  "intune-business", "it-onboarding-transition", "it-support-carmel", 
   "it-support-lafayette", "it-support-logansport", "it-support-noblesville", "it-support-peru",
   "it-support-tipton", "it-support-westfield", "managed-it-contract", "managed-it-cost-per-user",
   "mfa-app-text-key", "microsoft-365-setup", "more-than-helpdesk", "msp-vs-internal-it", "network-closet",
@@ -44,8 +45,8 @@ const resourceSlugs = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    ...coreRoutes.map((route) => ({ url: `${baseUrl}${route}`, lastModified: new Date() })),
-    ...resourceSlugs.map((slug) => ({ url: `${baseUrl}/resources/${slug}`, lastModified: new Date() })),
+    ...coreRoutes.map((route) => ({ url: `${baseUrl}${route}` })),
+    ...resourceSlugs.map((slug) => ({ url: `${baseUrl}/resources/${slug}` })),
   ];
 }
 
