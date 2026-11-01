@@ -7,6 +7,166 @@ type Guide = { category: string; title: string; intro: string; items: string[] }
 type Section = { heading: string; body: string | string[]; sources?: { label: string; href: string }[] };
 
 const articles: Record<string, { lead: string; sections: Section[]; takeaway: string }> = {
+  {
+    "switch-msps-without-downtime": {
+      "lead": "Changing managed IT providers is a controlled handoff of access, documentation, monitoring, backups, vendor relationships, and open work. Downtime is avoidable when the transition is planned around business operations and both providers know who owns each step. Start early, keep executive oversight, and never assume critical credentials or recovery data will transfer automatically.",
+      "sections": [
+        {
+          "heading": "Before giving notice",
+          "body": [
+            "Review the current agreement for notice periods, renewal dates, transition assistance, fees, data ownership, documentation, equipment, and access to backups. Identify the people authorized to approve the change and choose the incoming provider before ending the current relationship. If the organization has internal IT staff, assign a transition lead.",
+            "Make a list of business-critical systems, locations, key vendors, recurring issues, scheduled changes, and upcoming deadlines. Record what cannot be interrupted, such as payroll, patient scheduling, production, or month-end accounting. Use this list to set transition windows and escalation contacts."
+          ]
+        },
+        {
+          "heading": "Create a written handoff plan",
+          "body": [
+            "Name an owner and due date for each workstream: administrator accounts, device-management agents, endpoint security, email and identity, network equipment, backups, domains and DNS, licensing, internet and voice vendors, documentation, and open support tickets. Track the current state, requested action, validation evidence, and escalation contact in one shared transition log.",
+            "Plan for least-privilege access and secure transfer. Use a password vault or approved secure method rather than sending credentials in ordinary email. Confirm ownership and recovery methods for tenant-global accounts, domain registrars, firewall consoles, backup portals, and vendor billing. Do not remove the outgoing provider’s access until replacement monitoring and support are working, unless an immediate security concern requires a coordinated exception."
+          ]
+        },
+        {
+          "heading": "Protect continuity during cutover",
+          "body": [
+            "Schedule changes around business hours and critical dates. Agree on how users will request help during the transition and who handles urgent incidents. Avoid changing multiple major systems at once if that makes problems difficult to isolate. Before disabling old agents or access, confirm the incoming provider can monitor the devices, receive security alerts, and reach the systems it is contracted to support.",
+            "Validate recovery before depending on it. Confirm the incoming team can access backup copies, understand retention and restore procedures, and perform an agreed test. Document any system that cannot be transferred, has an unknown owner, or depends on a third party. Test phones, remote access, email, line-of-business applications, and network connectivity after material changes."
+          ]
+        },
+        {
+          "heading": "Use the first 30 to 90 days well",
+          "body": [
+            "The new provider needs to learn the environment and validate what it inherited. Expect an inventory, documentation review, access cleanup, security baseline, backup review, open-issue list, and prioritized roadmap. Ask for brief status updates and make decisions about risk and budget promptly.",
+            "Do not expect every legacy problem to disappear during onboarding. Agree on what is urgent, what is deferred, and how project work will be authorized. Measure whether users know how to get help, alerts reach an owner, and critical systems have tested recovery paths. Keep a record of unresolved dependencies and the person responsible for each."
+          ]
+        },
+        {
+          "heading": "A practical transition checklist",
+          "body": "Confirm contract timing and leadership approval; choose the incoming provider; list critical systems and business blackout dates; name transition contacts; inventory credentials, vendors, backups, agents, and open issues; set secure handoff and cutover steps; test support and recovery; then review progress at 30, 60, and 90 days. If a provider relationship is contentious or access is disputed, involve appropriate legal counsel and avoid disrupting service without a continuity plan."
+        }
+      ],
+      "takeaway": "A smooth MSP transition is planned, documented, and verified. Transfer access securely, overlap support where appropriate, test backups and monitoring, and assign an owner to every unresolved item."
+    }
+  },
+  {
+    "cyber-insurance-questionnaires": {
+      "lead": "A cyber insurance questionnaire is the insurer’s snapshot of how your organization manages technology risk. Answers about multifactor authentication, backups, endpoint protection, patching, access, vendors, and incident response can affect eligibility, terms, or renewal. Treat each answer as a factual statement about the systems in scope—not as a goal or an assumption.",
+      "sections": [
+        {
+          "heading": "What the insurer is trying to understand",
+          "body": [
+            "Applications commonly ask about your organization’s size, revenue, locations, data, cloud services, remote access, vendors, prior incidents, and security controls. The carrier is assessing exposure and whether required safeguards are present. The exact questions differ by insurer and policy, so use the current form and ask your licensed agent or broker how an answer affects coverage.",
+            "Some questions are broad, while others have important qualifiers: all users or only administrators; all remote access or a particular platform; every endpoint or only company-owned devices; backups of which systems and how often. Read the full question and identify its population, time period, and meaning before responding."
+          ]
+        },
+        {
+          "heading": "Build an accurate answer with evidence",
+          "body": [
+            "Assign an owner for the application and gather input from IT, operations, finance, and leadership. For each control, record what is deployed, where it applies, how exceptions are handled, and what evidence supports the statement. Examples include MFA policy reports, endpoint inventory, patch status, backup logs, restore-test records, access reviews, and an incident-response contact list.",
+            "Distinguish fully implemented from partially implemented or planned. A control active for office employees but absent for contractors is not necessarily an all-user control. A backup job reporting success is not the same as a recent restore test. If the answer is uncertain, investigate or ask the broker rather than guessing."
+          ]
+        },
+        {
+          "heading": "Common control areas to review",
+          "body": [
+            "Identity: MFA for email, remote access, administrators, and critical applications; separate admin accounts; prompt removal of former users. Devices: supported operating systems, patching cadence, endpoint security coverage, encryption, and alert ownership. Backups: covered systems, frequency, retention, separate credentials, offsite or immutable protection, and test restores.",
+            "Operations: phishing reporting, payment-change verification, incident escalation, vendor dependencies, and recovery priorities. Document exceptions—for example, a legacy system that cannot support MFA—and explain compensating safeguards and a remediation owner. These details help the business understand risk even if the form only allows a yes-or-no response."
+          ]
+        },
+        {
+          "heading": "What to do when you find a gap",
+          "body": [
+            "Prioritize gaps by exposure and business impact. An unprotected administrator account, untested backup, or unmanaged remote access usually deserves faster attention than a low-impact policy-documentation issue. Create a short remediation list with an owner, target date, and proof of completion. Do not claim that a control is active until it is actually in place across the scope described.",
+            "If a submitted answer changes during the policy term, contact your broker promptly to ask whether the insurer needs to be notified. Keep the application, supporting evidence, policy, endorsements, and correspondence together. At renewal, review prior answers against the current environment; do not copy forward statements without checking."
+          ]
+        },
+        {
+          "heading": "Separate technical guidance from insurance advice",
+          "body": "Your IT provider can help inventory controls, gather technical evidence, explain deployment gaps, and implement agreed safeguards. A licensed insurance professional should interpret policy wording, advise on coverage and disclosures, and explain what the insurer requires. Honest, supported answers matter more than polished answers; an application is not a security certification, and no IT provider can promise a particular underwriting or claims outcome."
+        }
+      ],
+      "takeaway": "Answer each questionnaire from current evidence. Confirm who and what each question covers, document exceptions, remediate gaps, and ask your broker about coverage or disclosure questions."
+    }
+  },
+  {
+    "break-fix-vs-managed": {
+      "lead": "Break-fix IT means you call for help when something breaks and generally pay for the work performed. Managed IT is a recurring service relationship in which a provider supports users and maintains agreed parts of the environment. The choice is not simply hourly billing versus monthly billing; compare the total cost, risk, coverage, and operating model.",
+      "sections": [
+        {
+          "heading": "What break-fix typically includes",
+          "body": [
+            "In a break-fix arrangement, the business contacts a technician for a specific problem. Charges may be hourly, per incident, or subject to a minimum. The arrangement can work when needs are rare, systems are simple, and the organization can tolerate delays or downtime. It may also suit a project that has a clear beginning and end.",
+            "The tradeoff is that work may begin only after a problem appears. Preventive maintenance, documentation, cybersecurity monitoring, backup checks, and planning may not happen unless separately requested. The business may also need to coordinate software vendors, internet providers, and internal staff during an incident."
+          ]
+        },
+        {
+          "heading": "What managed services typically include",
+          "body": [
+            "A managed-services agreement usually provides a defined support channel and recurring oversight for specified users, devices, and systems. Depending on the contract, it may include monitoring, patching, endpoint protection, account administration, backup monitoring, vendor coordination, reporting, and technology planning. No two agreements are identical, so verify the actual service description and exclusions.",
+            "Managed IT shifts some routine work into planned operations and gives the provider an ongoing relationship with the environment. That can improve continuity and make costs more predictable, but it does not mean every project, outage, security event, or third-party issue is included in the monthly fee."
+          ]
+        },
+        {
+          "heading": "Calculate the real cost of reactive support",
+          "body": [
+            "Review a full year of invoices, emergency visits, and recurring issues. Add internal time spent diagnosing problems, waiting for help, coordinating vendors, and rebuilding context for a technician who does not know the environment. Estimate the operational impact of outages using reasonable assumptions: affected employees, hours lost, missed appointments or orders, and recovery effort.",
+            "Include costs that may be hidden until something goes wrong: unsupported equipment, overdue replacements, weak backup retention, security gaps, or missing documentation. Do not count every hypothetical incident as a guaranteed saving from managed service. Use a range and label assumptions so leadership can compare scenarios honestly."
+          ]
+        },
+        {
+          "heading": "Compare the agreement details",
+          "body": [
+            "For each model, identify who responds, during what hours, and what response targets mean. Confirm whether maintenance and security are covered, how after-hours and onsite service works, how projects are quoted, what third-party dependencies exist, and who is responsible for backups and restores. Check contract terms, annual increases, minimum charges, and transition responsibilities.",
+            "Ask a managed provider to explain onboarding: inventory, administrator access, documentation, backup validation, security baseline, open issues, and the first roadmap. Ask a break-fix provider what preventive work is available and how the business will keep records current."
+          ]
+        },
+        {
+          "heading": "Which approach fits",
+          "body": "Break-fix can make sense for organizations with very low support needs and the capacity to accept irregular costs. Managed service can fit teams that depend on technology daily and want consistent support, maintenance, and planning. A hybrid or co-managed model may fit a business with internal IT staff that needs extra coverage or specialized security help. Compare actual workload and risk; the right model is the one that makes responsibilities and tradeoffs clear."
+        }
+      ],
+      "takeaway": "Break-fix pays for response after an issue; managed service funds an agreed, ongoing support and maintenance model. Compare total cost, prevention, coverage, and accountability against the needs of your business."
+    }
+  },
+  {
+    "managed-it-cost-per-user": {
+      "lead": "Managed IT is commonly priced per user, per device, or as a flat monthly agreement, but the monthly rate alone does not tell you what the service will cost or whether it fits. A useful comparison starts with scope: what people, devices, locations, security services, support hours, and projects are included, and which costs remain separate.",
+      "sections": [
+        {
+          "heading": "How per-user pricing works",
+          "body": [
+            "A provider sets a monthly price for each supported employee or user. The bundle may include helpdesk support, endpoint monitoring, patching, Microsoft 365 administration, and security tools. The definition of a user matters: a full-time employee with a laptop and phone may be treated differently from a seasonal worker, shared workstation, contractor, or mailbox-only account.",
+            "Per-user pricing can make budgeting easier when staffing is stable, but confirm whether accounts are billed even when inactive, how new hires and departures are handled, and whether multiple devices per person are included. Ask how the provider treats servers, network equipment, conference rooms, shared devices, and business applications."
+          ]
+        },
+        {
+          "heading": "What makes the price change",
+          "body": [
+            "Price reflects service coverage and the work required to support the environment. After-hours response, onsite visits, multiple locations, complex line-of-business systems, compliance needs, legacy equipment, and a high volume of unmanaged devices can affect scope. Security services such as managed detection, email protection, identity controls, backup, and security awareness may be included, optional, or contracted separately.",
+            "Licenses and consumption charges are another common source of variation. Microsoft 365 subscriptions, backup storage, internet circuits, hardware, project labor, and third-party software may not be part of a managed-services fee. The proposal should distinguish recurring service from pass-through licensing and one-time projects."
+          ]
+        },
+        {
+          "heading": "Build an apples-to-apples comparison",
+          "body": [
+            "Ask each provider to state the monthly fee, billing unit, included users and devices, minimums, service hours, response commitments, onsite approach, and exclusions. Request a line-item list of security, backup, licensing, project, and after-hours charges. Clarify whether response targets mean acknowledgement or resolution; these are different measures.",
+            "Then compare the quoted scope with your current total cost: invoices, emergency labor, internal employee time spent coordinating vendors, productivity lost while systems are down, and deferred maintenance. Avoid assuming that all downtime can be eliminated or that every benefit has a precise dollar value. Instead, note the business impact and the assumptions behind your estimate."
+          ]
+        },
+        {
+          "heading": "Questions to ask before signing",
+          "body": [
+            "Who is covered by the monthly price, and how are changes in headcount reconciled? Which devices and locations are managed? What does the helpdesk cover, and what is considered a project? Are endpoint security, MFA administration, backup monitoring, recovery tests, vendor coordination, and technology planning included? How are after-hours and onsite requests billed? What are the term, renewal, price-change, and transition provisions?",
+            "Ask for a sample service report and a description of onboarding. A transparent proposal explains responsibilities and dependencies instead of relying on a low headline price. Make sure the agreement says who owns the data, administrator accounts, documentation, and backups if you leave."
+          ]
+        },
+        {
+          "heading": "Choosing for value",
+          "body": "The lowest monthly price may leave important work outside the agreement; the most expensive offer may include services your organization does not need. Choose a provider whose scope matches your risk, support needs, and internal capacity. For a small business, predictable access to experienced support, consistent maintenance, clearer accountability, and a practical improvement plan can be more valuable than a bare per-user rate. Revisit the comparison when your workforce, locations, or systems change."
+        }
+      ],
+      "takeaway": "Compare the complete scope and excluded costs, not just the per-user number. The right proposal makes clear who is supported, what is included, what costs extra, and who owns the next step."
+    }
+  },
   "three-two-one-backup": {
     lead: "The 3-2-1 backup rule is a practical starting point for protecting business data: keep at least three copies, store them on two different types of storage, and keep one copy offsite. The goal is to avoid a single device failure, mistake, cyberattack, or building disaster taking out every usable copy. The rule only helps when the copies are independent, protected, and regularly tested.",
     sections: [
