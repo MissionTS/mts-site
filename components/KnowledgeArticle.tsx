@@ -7,8 +7,7 @@ type Guide = { category: string; title: string; intro: string; items: string[] }
 type Section = { heading: string; body: string | string[]; sources?: { label: string; href: string }[] };
 
 const articles: Record<string, { lead: string; sections: Section[]; takeaway: string }> = {
-  {
-    "it-support-kokomo": {
+  "it-support-kokomo": {
       "lead": "Choosing IT support in Kokomo is a practical decision about how quickly your team can get help, how systems are maintained, and who coordinates onsite work and third-party vendors. Local fit matters, but the provider should also explain remote coverage, service boundaries, security responsibilities, and recovery planning.",
       "sections": [
         {
@@ -38,10 +37,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
-    }
   },
-  {
-    "network-security-small-business": {
+  "network-security-small-business": {
       "lead": "Small-business network security starts with knowing what is connected, limiting access, keeping infrastructure current, and separating systems that do not need to trust one another. The right controls depend on the business, but unmanaged equipment and broad access make problems harder to contain.",
       "sections": [
         {
@@ -71,10 +68,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
-    }
   },
-  {
-    "backups-small-business": {
+  "backups-small-business": {
       "lead": "A backup plan should answer what data is protected, how often copies are made, how long they are retained, who can restore them, and how recovery is tested. A dashboard showing successful jobs is only one piece of evidence; the business needs a repeatable way to restore work.",
       "sections": [
         {
@@ -104,10 +99,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
-    }
   },
-  {
-    "it-onboarding-transition": {
+  "it-onboarding-transition": {
       "lead": "A managed IT onboarding is the structured process of learning an environment, securing access, documenting systems, validating monitoring and backups, and moving users into a support workflow. A good transition has named owners, milestones, and a prioritized list of inherited risks.",
       "sections": [
         {
@@ -137,10 +130,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
-    }
   },
-  {
-    "msp-vs-internal-it": {
+  "msp-vs-internal-it": {
       "lead": "Choosing between an MSP and an employee is a comparison of coverage, skills, availability, accountability, and total cost—not just a salary against a monthly invoice. Some businesses choose one model; others combine internal IT ownership with external support.",
       "sections": [
         {
@@ -170,10 +161,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
-    }
   },
-  {
-    "co-managed-it": {
+  "co-managed-it": {
       "lead": "Co-managed IT combines an internal technology team with outside provider support. The business keeps internal ownership and context while adding capacity or specialist expertise for areas such as security monitoring, projects, after-hours coverage, or routine device management.",
       "sections": [
         {
@@ -203,10 +192,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
-    }
   },
-  {
-    "what-is-a-vcio": {
+  "what-is-a-vcio": {
       "lead": "A virtual chief information officer (vCIO) provides technology planning and leadership without being a full-time executive employee. The role connects business goals to priorities, budgets, risks, vendor decisions, and a practical roadmap. The title varies by provider, so evaluate the work and deliverables.",
       "sections": [
         {
@@ -236,10 +223,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
-    }
   },
-  {
-    "outgrown-computer-guy": {
+  "outgrown-computer-guy": {
       "lead": "A trusted independent technician may be exactly right for a very small organization. The question is whether one person’s time, availability, and range of expertise still match your business’s operating needs. Growth, new compliance duties, multiple locations, and security expectations can make informal arrangements harder to sustain.",
       "sections": [
         {
@@ -269,10 +254,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
-    }
   },
-  {
-    "questions-for-an-msp": {
+  "questions-for-an-msp": {
       "lead": "A good MSP evaluation tests more than response speed. Ask how support is delivered, who owns security and backups, how projects are quoted, what reporting leadership receives, and how a handoff works if you leave. Request specific examples and written scope so you can compare the answers.",
       "sections": [
         {
@@ -302,10 +285,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
-    }
   },
-  {
-    "managed-it-contract": {
+  "managed-it-contract": {
       "lead": "A managed IT contract defines which users, devices, locations, and services a provider agrees to support, how requests are handled, how recurring fees work, and what happens when the relationship ends. The title “managed services” does not guarantee a standard package. The service description, pricing schedule, and exclusions determine what you are buying.",
       "sections": [
         {
@@ -335,10 +316,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
-    }
   },
-  {
-    "test-backup-restore": {
+  "test-backup-restore": {
       "lead": "A backup is dependable only when the organization can restore the right data within an acceptable time. A restore test checks more than whether a job reported success: it confirms the copy exists, is readable, includes what matters, and can be recovered by the people who may need it during an outage.",
       "sections": [
         {
@@ -371,10 +350,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Test restores to prove that protected data is complete, readable, and recoverable in time. Record results, fix gaps, and repeat after meaningful system changes."
-    }
   },
-  {
-    "backed-up-or-synced": {
+  "backed-up-or-synced": {
       "lead": "A synced file and a backup can look similar because both may let you retrieve a file from another device. They solve different problems. Synchronization keeps copies aligned for collaboration; backup preserves recoverable versions so you can restore after deletion, corruption, ransomware, or a system failure.",
       "sections": [
         {
@@ -404,10 +381,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Sync helps current work follow users and devices; backup preserves independent recovery points. Confirm retention, access separation, and restore capability instead of assuming sync alone is enough."
-    }
   },
-  {
-    "dark-web-monitoring": {
+  "dark-web-monitoring": {
       "lead": "Dark-web monitoring searches selected illicit or exposed sources for information such as email addresses, passwords, or business domains. It can alert an organization that credentials may have appeared in a breach dataset, but it cannot show every source, confirm that a credential still works, or prevent an attacker from using it.",
       "sections": [
         {
@@ -437,10 +412,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Treat dark-web alerts as leads, not proof. Confirm what is exposed, secure the affected accounts, and use MFA, unique passwords, and sign-in monitoring to reduce credential risk."
-    }
   },
-  {
-    "security-awareness-training": {
+  "security-awareness-training": {
       "lead": "Security awareness is most useful when employees know how to recognize a risky situation, take a safe next step, and report it without delay. A yearly slideshow or a high-stakes phishing test by itself is unlikely to change how a team handles real requests.",
       "sections": [
         {
@@ -470,10 +443,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Effective awareness training is role-specific, brief, supported by clear reporting, and measured by safer actions—not just quiz scores or simulation clicks."
-    }
   },
-  {
-    "business-email-compromise": {
+  "business-email-compromise": {
       "lead": "Business email compromise (BEC) is fraud that abuses trust in email or business workflows. A criminal may impersonate an executive, compromise a vendor’s mailbox, or quietly take over an employee account to redirect payments, change bank details, or obtain sensitive information. BEC may involve no malware at all.",
       "sections": [
         {
@@ -503,10 +474,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "BEC succeeds by manipulating ordinary business trust. Verify payment and account changes using a known separate channel, use dual approval, and report suspected compromise immediately."
-    }
   },
-  {
-    "why-antivirus-isnt-enough": {
+  "why-antivirus-isnt-enough": {
       "lead": "Traditional antivirus is useful, but it is not a complete cybersecurity program. It can detect known malicious files and some suspicious behavior, yet many incidents begin with stolen credentials, abused legitimate tools, unpatched services, or a user persuaded to approve a fraudulent request.",
       "sections": [
         {
@@ -536,10 +505,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Antivirus is an important control, but it cannot prevent every credential, cloud, or human-driven attack. Pair endpoint protection with identity security, patching, backups, monitoring, and a response plan."
-    }
   },
-  {
-    "password-managers-small-teams": {
+  "password-managers-small-teams": {
       "lead": "A password manager stores unique credentials in an encrypted vault so employees do not have to reuse passwords or keep them in spreadsheets, notes, or email. For a small team, it can also provide controlled sharing, offboarding, and visibility into important service accounts—but only when ownership and recovery are planned.",
       "sections": [
         {
@@ -569,10 +536,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "A business password manager helps replace reuse and informal sharing with unique credentials and controlled access. Plan ownership, MFA, recovery, onboarding, and offboarding before rollout."
-    }
   },
-  {
-    "first-hour-ransomware": {
+  "first-hour-ransomware": {
       "lead": "If ransomware is suspected, the first hour is about containing spread, protecting evidence, and getting the right people involved—not rushing to pay or restore. Follow your incident response plan and make decisions with your IT/security provider, leadership, legal counsel, and insurer as appropriate.",
       "sections": [
         {
@@ -602,10 +567,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "In the first hour, report, isolate affected systems as your response plan directs, preserve evidence, contact the response team and insurer, and protect backups. Avoid improvised cleanup or rushed restoration."
-    }
   },
-  {
-    "mfa-app-text-key": {
+  "mfa-app-text-key": {
       "lead": "Multifactor authentication (MFA) asks for another proof of identity beyond a password. That second factor may be an authenticator-app code, a push approval, a texted code, a hardware security key, or a passkey. They do not provide equal protection, and the best choice depends on the system, user risk, and recovery options.",
       "sections": [
         {
@@ -635,10 +598,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "MFA methods vary in phishing resistance. Choose stronger factors for high-impact accounts, protect recovery paths, and treat an unexpected sign-in prompt as a possible attack."
-    }
   },
-  {
-    "what-is-phishing": {
+  "what-is-phishing": {
       "lead": "Phishing is a deceptive message or interaction designed to make someone reveal credentials, approve access, open a harmful file, or send money. It often arrives by email, but the same tactic appears in text messages, collaboration tools, voice calls, QR codes, and fake login pages. The message may be polished and may appear to come from a known person or service.",
       "sections": [
         {
@@ -668,10 +629,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Phishing is a trust trick delivered through many channels. Pause on unusual requests, verify through a separate trusted route, and report mistakes quickly so the organization can contain the impact."
-    }
   },
-  {
-    "switch-msps-without-downtime": {
+  "switch-msps-without-downtime": {
       "lead": "Changing managed IT providers is a controlled handoff of access, documentation, monitoring, backups, vendor relationships, and open work. Downtime is avoidable when the transition is planned around business operations and both providers know who owns each step. Start early, keep executive oversight, and never assume critical credentials or recovery data will transfer automatically.",
       "sections": [
         {
@@ -708,10 +667,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "A smooth MSP transition is planned, documented, and verified. Transfer access securely, overlap support where appropriate, test backups and monitoring, and assign an owner to every unresolved item."
-    }
   },
-  {
-    "cyber-insurance-questionnaires": {
+  "cyber-insurance-questionnaires": {
       "lead": "A cyber insurance questionnaire is the insurer’s snapshot of how your organization manages technology risk. Answers about multifactor authentication, backups, endpoint protection, patching, access, vendors, and incident response can affect eligibility, terms, or renewal. Treat each answer as a factual statement about the systems in scope—not as a goal or an assumption.",
       "sections": [
         {
@@ -748,10 +705,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Answer each questionnaire from current evidence. Confirm who and what each question covers, document exceptions, remediate gaps, and ask your broker about coverage or disclosure questions."
-    }
   },
-  {
-    "break-fix-vs-managed": {
+  "break-fix-vs-managed": {
       "lead": "Break-fix IT means you call for help when something breaks and generally pay for the work performed. Managed IT is a recurring service relationship in which a provider supports users and maintains agreed parts of the environment. The choice is not simply hourly billing versus monthly billing; compare the total cost, risk, coverage, and operating model.",
       "sections": [
         {
@@ -788,10 +743,8 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Break-fix pays for response after an issue; managed service funds an agreed, ongoing support and maintenance model. Compare total cost, prevention, coverage, and accountability against the needs of your business."
-    }
   },
-  {
-    "managed-it-cost-per-user": {
+  "managed-it-cost-per-user": {
       "lead": "Managed IT is commonly priced per user, per device, or as a flat monthly agreement, but the monthly rate alone does not tell you what the service will cost or whether it fits. A useful comparison starts with scope: what people, devices, locations, security services, support hours, and projects are included, and which costs remain separate.",
       "sections": [
         {
@@ -828,7 +781,6 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
         }
       ],
       "takeaway": "Compare the complete scope and excluded costs, not just the per-user number. The right proposal makes clear who is supported, what is included, what costs extra, and who owns the next step."
-    }
   },
   "three-two-one-backup": {
     lead: "The 3-2-1 backup rule is a practical starting point for protecting business data: keep at least three copies, store them on two different types of storage, and keep one copy offsite. The goal is to avoid a single device failure, mistake, cyberattack, or building disaster taking out every usable copy. The rule only helps when the copies are independent, protected, and regularly tested.",
