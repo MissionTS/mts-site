@@ -21,7 +21,7 @@ export function withSeoMetadata(metadata: Metadata, pathname: string): Metadata 
     },
     twitter: {
       ...twitter,
-      card: twitter.card ?? "summary_large_image",
+      card: "summary_large_image",
       title,
       description,
     },
