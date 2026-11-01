@@ -9,7 +9,7 @@ export const metadata: Metadata = withSeoMetadata({
   title: "Support Metrics | Mission Technology Solutions",
   description: "Explore email response, phone response, and customer satisfaction trends for Mission Technology Solutions.",
   alternates: { canonical: "/support-stats" },
-}, "/support-stats"); "/support-stats");
+}, "/support-stats");
 
 export default function SupportStatsPage() {
   return (

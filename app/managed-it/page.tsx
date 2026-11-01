@@ -5,7 +5,7 @@ import { ServicePage } from "@/components/ServicePage";
 export const metadata: Metadata = withSeoMetadata({
   title: "Managed IT Services | Mission Technology Solutions",
   description: "Responsive managed IT support, monitoring, maintenance, lifecycle planning, and strategic guidance for organizations in Indiana.",
-}, "/managed-it"); "/managed-it");
+}, "/managed-it");
 
 export default function ManagedITPage() {
   return <ServicePage

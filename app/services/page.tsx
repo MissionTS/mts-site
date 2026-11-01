@@ -26,7 +26,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 export const metadata: Metadata = withSeoMetadata({
   title: "Services | Mission Technology Solutions",
   description: "Explore Mission Technology Solutions services including Managed IT, cybersecurity, Microsoft 365, structured cabling, physical security, communications, and strategic IT planning.",
-}, "/services"); "/services");
+}, "/services");
 
 type Icon = ComponentType<{ className?: string }>;
 

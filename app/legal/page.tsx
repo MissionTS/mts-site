@@ -9,7 +9,7 @@ export const metadata: Metadata = withSeoMetadata({
   description:
     "Review Mission Technology Solutions' terms and conditions, Master Services Agreement, service attachments, and data processing terms.",
   alternates: { canonical: "/legal" },
-}, "/legal"); "/legal");
+}, "/legal");
 
 const exhibits = [
   { label: "Master Services Agreement", href: "https://ourterms.live/missionmsp/MSA" },

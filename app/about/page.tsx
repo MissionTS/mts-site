@@ -10,7 +10,7 @@ import { TeamProfiles, type TeamProfile } from "@/components/TeamProfiles";
 export const metadata: Metadata = withSeoMetadata({
   title: "About Us | Mission Technology Solutions",
   description: "Learn how Mission Technology Solutions grew from a 2019 home-based startup into an Indiana IT and cybersecurity partner supporting more than 1,000 devices.",
-}, "/about"); "/about");
+}, "/about");
 
 const values = [
   ["Committed to Quality", "We are meticulous. From installations to documentation, we put care and patience into every detail so the work is not merely complete, it is done well."],
