@@ -8,6 +8,339 @@ type Section = { heading: string; body: string | string[]; sources?: { label: st
 
 const articles: Record<string, { lead: string; sections: Section[]; takeaway: string }> = {
   {
+    "test-backup-restore": {
+      "lead": "A backup is dependable only when the organization can restore the right data within an acceptable time. A restore test checks more than whether a job reported success: it confirms the copy exists, is readable, includes what matters, and can be recovered by the people who may need it during an outage.",
+      "sections": [
+        {
+          "heading": "Choose a test that matches the risk",
+          "body": [
+            "Start with a low-risk file restore to a separate location, then schedule deeper tests for critical applications and systems. Include the systems whose loss would disrupt payroll, scheduling, patient or client service, production, accounting, or communications. Use a non-production environment when a full recovery could affect active operations.",
+            "Test a recent recovery point and, periodically, an older point within the required retention window. Confirm that the backup covers configuration and dependencies—not only user documents."
+          ]
+        },
+        {
+          "heading": "Define pass criteria before starting",
+          "body": [
+            "Set a recovery point objective (how much recent data the business can lose) and a recovery time objective (how quickly a system must return). Record the source system, selected restore point, data scope, start and finish times, responsible people, and outcome. Define what “usable” means: files open, application starts, data reconciles, and access permissions are correct.",
+            "A test is not successful just because data copied. Have the business owner validate a sample and confirm that the restored system supports the work it is supposed to support."
+          ]
+        },
+        {
+          "heading": "Run the test safely",
+          "body": [
+            "Coordinate with the provider and system owner. Restore to an alternate folder, isolated network, or test environment to avoid overwriting production or reintroducing malware. Use approved credentials and protect sensitive restored data. If you are investigating an active incident, follow responder instructions and preserve evidence before restoring.",
+            "Track friction: missing encryption keys, expired admin access, unclear vendor dependencies, slow transfer speeds, insufficient storage, or undocumented steps. These findings are the value of the exercise; assign owners and dates rather than treating them as a failed test to hide."
+          ]
+        },
+        {
+          "heading": "Keep improving the process",
+          "body": [
+            "Retest after major changes to applications, identity, storage, or vendors and on a recurring schedule based on business risk. Update runbooks, contact information, and recovery priorities. Keep evidence of tests for leadership, auditors, and insurance applications, while avoiding claims that a single successful test guarantees future recovery.",
+            "Coordinate restore tests with security, legal, compliance, and operational stakeholders when the data is regulated or subject to contractual retention requirements."
+          ]
+        }
+      ],
+      "takeaway": "Test restores to prove that protected data is complete, readable, and recoverable in time. Record results, fix gaps, and repeat after meaningful system changes."
+    }
+  },
+  {
+    "backed-up-or-synced": {
+      "lead": "A synced file and a backup can look similar because both may let you retrieve a file from another device. They solve different problems. Synchronization keeps copies aligned for collaboration; backup preserves recoverable versions so you can restore after deletion, corruption, ransomware, or a system failure.",
+      "sections": [
+        {
+          "heading": "What sync is designed to do",
+          "body": [
+            "Services such as OneDrive or SharePoint synchronize or version files so users can work across devices and share changes. This helps collaboration and may provide a recycle bin or version history. Those protections can be valuable, but their retention and recovery behavior depends on configuration and service terms.",
+            "If a user deletes a file, sync may propagate the deletion. If malware encrypts documents and those changes upload, the synchronized copy may also be affected. Version history can help in some cases, but it has limits and may be unavailable, expired, or difficult to restore at scale."
+          ]
+        },
+        {
+          "heading": "What a backup adds",
+          "body": [
+            "A backup is a separate recovery copy with defined scope, schedule, retention, and restore process. It should include the data and systems the organization needs, preserve earlier recovery points, and be protected so a compromised everyday account cannot erase every copy. Backup products differ; verify what is actually covered rather than assuming every cloud service includes business-grade backup for all data.",
+            "For Microsoft 365, confirm coverage for Exchange, SharePoint, OneDrive, Teams-related content, retention needs, and deleted accounts. Microsoft’s native service resilience is not the same thing as a customer-managed backup strategy for every recovery scenario."
+          ]
+        },
+        {
+          "heading": "How to tell whether you are protected",
+          "body": [
+            "Pick an important file and ask: can we restore a version from before accidental deletion? What if a user’s account is compromised? What if an administrator deletes the data? How far back can we recover? Who can initiate a restore, how long does it take, and does the restored content retain the right permissions?",
+            "Check backup job reports, retention settings, account separation, immutability or offline copies, and the date of the last restore test. Test with representative files and a critical system, not just a sample success notification."
+          ]
+        },
+        {
+          "heading": "Build a recovery approach",
+          "body": "Use sync for collaboration and a separate, monitored backup for recovery where the data’s importance warrants it. Map business-critical information, set recovery targets, restrict backup administration, and test restores regularly. Keep the instructions and emergency contacts accessible if the normal email or network is unavailable."
+        }
+      ],
+      "takeaway": "Sync helps current work follow users and devices; backup preserves independent recovery points. Confirm retention, access separation, and restore capability instead of assuming sync alone is enough."
+    }
+  },
+  {
+    "dark-web-monitoring": {
+      "lead": "Dark-web monitoring searches selected illicit or exposed sources for information such as email addresses, passwords, or business domains. It can alert an organization that credentials may have appeared in a breach dataset, but it cannot show every source, confirm that a credential still works, or prevent an attacker from using it.",
+      "sections": [
+        {
+          "heading": "What a monitoring alert can tell you",
+          "body": [
+            "An alert may identify an email address or password associated with a known breach dataset, along with the source or approximate discovery date. Treat it as a signal to investigate. The data can be old, incomplete, duplicated, or already changed; it may not prove that the person’s current account is compromised.",
+            "Monitoring coverage varies by vendor and source. A clean report does not mean no credentials or data are circulating. Criminal forums are fragmented, some information is private or short-lived, and some exposure never appears in the monitored sources."
+          ]
+        },
+        {
+          "heading": "Respond to exposed credentials",
+          "body": [
+            "If a business password may have been exposed, change it from a trusted device, make sure it is unique, and revoke active sessions where the service supports it. Enable or verify MFA, review sign-in logs and recovery methods, and check for unexpected mailbox rules or connected applications. Prioritize administrators, email, finance, remote access, and vendor accounts.",
+            "If the exposed password was reused, change it anywhere else it was used. A password manager helps prevent repeat reuse. Notify the account owner through an appropriate private channel and follow the organization’s incident process if there are signs of active access."
+          ]
+        },
+        {
+          "heading": "Use it as one part of credential security",
+          "body": [
+            "Preventive controls matter more than watching for leaked secrets: unique passwords, MFA, password managers, secure onboarding and offboarding, least privilege, and monitoring of sign-in activity reduce the value of stolen credentials. Staff should know how to report unexpected MFA prompts and suspected account compromise.",
+            "Ask a monitoring provider what sources it checks, how often it searches, how quickly alerts arrive, what evidence accompanies an alert, and who is responsible for acting. Clarify whether the service looks for personal employee details and how it handles privacy and retention."
+          ]
+        },
+        {
+          "heading": "Set realistic expectations",
+          "body": "Dark-web monitoring can provide useful exposure intelligence, especially when paired with a defined response workflow. It is not a breach-prevention guarantee, a full inventory of stolen data, or a substitute for incident response. Evaluate whether alerts lead to prompt credential changes and access reviews; otherwise, the service may produce reports without reducing risk."
+        }
+      ],
+      "takeaway": "Treat dark-web alerts as leads, not proof. Confirm what is exposed, secure the affected accounts, and use MFA, unique passwords, and sign-in monitoring to reduce credential risk."
+    }
+  },
+  {
+    "security-awareness-training": {
+      "lead": "Security awareness is most useful when employees know how to recognize a risky situation, take a safe next step, and report it without delay. A yearly slideshow or a high-stakes phishing test by itself is unlikely to change how a team handles real requests.",
+      "sections": [
+        {
+          "heading": "Teach the situations people actually face",
+          "body": [
+            "Use examples from your organization’s work: an invoice with new bank details, an MFA prompt the user did not initiate, a shared document link, a voicemail from a supposed vendor, or a request to buy gift cards. Explain the warning signs and the verification step employees should use.",
+            "Tailor guidance to roles. Finance staff need payment-verification procedures; executives need account-protection and impersonation examples; general staff need clear instructions for suspicious attachments, links, and lost devices. Keep the policy practical and easy to find."
+          ]
+        },
+        {
+          "heading": "Make reporting easy and safe",
+          "body": [
+            "Provide one clear reporting route, such as a mail-client button or known security contact. Tell staff what information to include and reassure them that quick reporting matters more than perfect diagnosis. If someone clicked or approved a prompt, encourage immediate disclosure; shame and delay give attackers more time.",
+            "A report should create a response: acknowledge it, investigate when appropriate, and share a short lesson without exposing personal details. If employees never hear what happened after reporting, they may stop reporting."
+          ]
+        },
+        {
+          "heading": "Practice, measure, improve",
+          "body": [
+            "Use short, periodic refreshers and realistic exercises rather than one large annual session. Measure reporting rates, time to report, repeat friction points, and whether staff can find the procedure. Interpret simulation results carefully; a click rate alone does not show whether the team can identify and report an actual attack.",
+            "When a test identifies confusion, improve the workflow, technical safeguards, or training. Repeatedly targeting the same individuals without fixing confusing processes may reduce trust instead of risk."
+          ]
+        },
+        {
+          "heading": "Training complements technical controls",
+          "body": "Filtering, MFA, endpoint protection, least privilege, payment controls, and secure recovery reduce the number of incidents that depend on perfect human judgment. Review the program after incidents, staffing changes, new software, and changes to financial workflows. The goal is safer decisions and faster reporting, not blaming employees for sophisticated deception."
+        }
+      ],
+      "takeaway": "Effective awareness training is role-specific, brief, supported by clear reporting, and measured by safer actions—not just quiz scores or simulation clicks."
+    }
+  },
+  {
+    "business-email-compromise": {
+      "lead": "Business email compromise (BEC) is fraud that abuses trust in email or business workflows. A criminal may impersonate an executive, compromise a vendor’s mailbox, or quietly take over an employee account to redirect payments, change bank details, or obtain sensitive information. BEC may involve no malware at all.",
+      "sections": [
+        {
+          "heading": "How the fraud happens",
+          "body": [
+            "In an impersonation scheme, an attacker sends a message that appears to come from a leader or vendor and asks for an urgent payment or confidential file. In an account takeover, criminals use stolen credentials or session access to monitor real conversations and time a convincing request. They may create mailbox rules that hide replies or send messages from a lookalike domain.",
+            "Invoice fraud often targets the normal process: a supplier says its banking information has changed, or a fake invoice arrives during a busy period. The request can look routine, especially when it lands in an active thread."
+          ]
+        },
+        {
+          "heading": "Make payment changes hard to spoof",
+          "body": [
+            "Require out-of-band verification for new vendors, bank-detail changes, urgent wires, and changes to payroll information. Use a phone number already on file—not the number or link in the request—and require a second approver for high-risk payments. Establish a written callback procedure and never waive it solely because a request appears to come from an executive.",
+            "Limit who can initiate and approve payments. Use unique accounts, MFA, and payment alerts. Train finance and operations staff to stop and verify changes, even when a senior person is applying pressure."
+          ]
+        },
+        {
+          "heading": "Protect email and identity",
+          "body": [
+            "Require MFA for email and administrative accounts, protect sign-in recovery, disable legacy authentication where feasible, and review unusual sign-ins. Keep endpoints and browsers updated. Configure email authentication records with qualified guidance, while understanding that these controls reduce some spoofing but do not stop a compromised legitimate mailbox.",
+            "Monitor for unexpected forwarding rules, delegate access, suspicious inbox rules, and unusual OAuth app consent. Make it easy for employees to report suspicious messages."
+          ]
+        },
+        {
+          "heading": "If funds or access may be compromised",
+          "body": "Contact the bank immediately if a payment was sent; fast recall attempts may matter. Notify the IT/security lead through a known channel. Preserve the message and payment records. The response team should secure the mailbox from a trusted device, revoke active sessions, reset credentials, inspect forwarding rules and access grants, and assess whether other accounts or data were exposed. Follow legal, insurance, and incident-response guidance."
+        }
+      ],
+      "takeaway": "BEC succeeds by manipulating ordinary business trust. Verify payment and account changes using a known separate channel, use dual approval, and report suspected compromise immediately."
+    }
+  },
+  {
+    "why-antivirus-isnt-enough": {
+      "lead": "Traditional antivirus is useful, but it is not a complete cybersecurity program. It can detect known malicious files and some suspicious behavior, yet many incidents begin with stolen credentials, abused legitimate tools, unpatched services, or a user persuaded to approve a fraudulent request.",
+      "sections": [
+        {
+          "heading": "What antivirus does well",
+          "body": [
+            "Antivirus compares files and activity against known threat patterns and may block malware before it runs. Modern endpoint security products add behavior monitoring, cloud analysis, and response features. They are an important layer for laptops, desktops, and servers.",
+            "The product still needs coverage, current policies, updates, alert review, and a clear response owner. An agent that is missing, disabled, outdated, or generating alerts nobody examines offers less protection than its dashboard suggests."
+          ]
+        },
+        {
+          "heading": "Where attackers work around it",
+          "body": [
+            "A criminal who signs in using a valid password may not need to drop a traditional virus. Attackers can exploit weak MFA, use remote-management tools already installed, abuse email forwarding, steal session tokens, or take advantage of an unpatched public-facing service. Business email compromise can move money without infecting a device at all.",
+            "Ransomware operators may use legitimate administrative tools, disable security controls, or move laterally before encrypting systems. No single endpoint product can guarantee detection of every tactic or recover the business after an incident."
+          ]
+        },
+        {
+          "heading": "Build a layered baseline",
+          "body": [
+            "Protect identity with MFA, separate administrator accounts, least privilege, and prompt offboarding. Keep systems and applications patched, filter email, secure remote access, inventory devices, and monitor endpoint alerts. Protect backups with separate access and test restores. Train staff to verify sensitive financial changes through a trusted second channel.",
+            "Define who investigates alerts, isolates a device, resets credentials, contacts leadership, and coordinates recovery. Practice the process. Include cloud accounts, network equipment, and third-party services in the security picture; endpoint protection alone may not cover them."
+          ]
+        },
+        {
+          "heading": "Check whether protection is working",
+          "body": "Review endpoint coverage against the device inventory, confirm tamper protection and update status, identify alert ownership and escalation hours, and ask when the last incident-response exercise occurred. Look for unmanaged devices and repeated exceptions. The goal is a set of controls that work together and can be maintained—not the largest collection of security tools."
+        }
+      ],
+      "takeaway": "Antivirus is an important control, but it cannot prevent every credential, cloud, or human-driven attack. Pair endpoint protection with identity security, patching, backups, monitoring, and a response plan."
+    }
+  },
+  {
+    "password-managers-small-teams": {
+      "lead": "A password manager stores unique credentials in an encrypted vault so employees do not have to reuse passwords or keep them in spreadsheets, notes, or email. For a small team, it can also provide controlled sharing, offboarding, and visibility into important service accounts—but only when ownership and recovery are planned.",
+      "sections": [
+        {
+          "heading": "Why a small team benefits",
+          "body": [
+            "When one password is reused across email, banking, vendors, and software, a breach at one site can expose others. A password manager generates long, unique passwords for each service and fills them into the intended site, reducing both reuse and typing errors.",
+            "Teams also inherit credentials for firewalls, utilities, web hosting, social accounts, and vendor portals. A business vault can store shared credentials with access limited to the people who need them, instead of passing passwords through chats or keeping a file on a shared drive."
+          ]
+        },
+        {
+          "heading": "Choose based on business controls",
+          "body": [
+            "Evaluate MFA for the vault, encryption and recovery design, administrator controls, shared collections, audit history, secure sharing, device support, and how accounts are recovered if an owner leaves. Consider whether the product supports company-managed accounts rather than personal vaults employees own themselves.",
+            "Decide how emergency access works and who controls the recovery method. A single person’s personal email or phone should not be the only way to restore company access. Use individual accounts for each employee so activity can be attributed and access revoked separately."
+          ]
+        },
+        {
+          "heading": "Roll out in manageable steps",
+          "body": [
+            "Start with administrators, finance, email recovery, network equipment, and key vendor accounts. Inventory where credentials currently live, change reused or exposed passwords, then store the new values in the managed vault. Enable MFA and train staff on approving vault prompts, sharing access, and reporting suspicious requests.",
+            "Do not move passwords into a new system and assume the work is over. Remove old shared files and notes, rotate credentials for former employees or vendors, review access periodically, and document the emergency process. For systems that support passkeys or SSO, consider those options alongside password management."
+          ]
+        },
+        {
+          "heading": "Common mistakes to avoid",
+          "body": "Avoid shared master logins, unprotected exports, storing the vault recovery key in the vault itself, and granting every user access to every collection. Confirm that emergency access is tested and that the business can retain control if the champion or administrator departs. A password manager is one part of identity security, alongside MFA, least privilege, patching, and account offboarding."
+        }
+      ],
+      "takeaway": "A business password manager helps replace reuse and informal sharing with unique credentials and controlled access. Plan ownership, MFA, recovery, onboarding, and offboarding before rollout."
+    }
+  },
+  {
+    "first-hour-ransomware": {
+      "lead": "If ransomware is suspected, the first hour is about containing spread, protecting evidence, and getting the right people involved—not rushing to pay or restore. Follow your incident response plan and make decisions with your IT/security provider, leadership, legal counsel, and insurer as appropriate.",
+      "sections": [
+        {
+          "heading": "First minutes: alert and isolate carefully",
+          "body": [
+            "Report the event through your designated emergency channel. Identify affected devices, users, locations, and what you observed. If a workstation is actively encrypting files and your response plan permits it, disconnect it from Wi-Fi or the network to limit spread; do not power it off unless responders instruct you, because volatile evidence may be lost.",
+            "Do not plug backup drives into an affected device, delete suspicious files, run cleanup tools, or reconnect systems simply to see if they work. Preserve the ransom note, alerts, timestamps, and screenshots where safe. Keep a written timeline of actions and observations."
+          ]
+        },
+        {
+          "heading": "First 15–30 minutes: activate response roles",
+          "body": [
+            "Contact the incident lead, IT/security provider, leadership, and the insurer’s breach hotline if your policy directs you to do so. Insurer policies may require approved vendors or prompt notice; check instructions before engaging outside responders if possible. Bring in qualified legal counsel to advise on legal obligations and communications.",
+            "Use a trusted device and communication channel if email or collaboration accounts may be compromised. Identify who can authorize isolation, account resets, public communication, and recovery decisions. Avoid speculative statements about scope or attribution."
+          ]
+        },
+        {
+          "heading": "First hour: understand scope without destroying evidence",
+          "body": [
+            "Responders should determine whether the event is limited to one device or may involve identity systems, servers, cloud services, backups, remote access, or a third-party provider. Check for suspicious administrator activity, new accounts, altered mailbox rules, disabled security tools, and unusual data transfers, using appropriate logs and tools.",
+            "Secure unaffected critical accounts from a clean device, prioritize administrator and remote access credentials, and revoke sessions or tokens as directed. Keep backup systems protected from the affected network. Do not begin a broad restore until responders have confidence that the threat is contained and recovery points are appropriate."
+          ]
+        },
+        {
+          "heading": "What leadership should avoid",
+          "body": "Do not assume that paying guarantees decryption, prevents data disclosure, or restores trustworthy systems. Do not negotiate, make coverage decisions, or notify affected people without the responsible response, legal, and insurance guidance. Preserve evidence and decisions. The priorities are safe containment, accurate scope, continuity planning, and a controlled recovery."
+        }
+      ],
+      "takeaway": "In the first hour, report, isolate affected systems as your response plan directs, preserve evidence, contact the response team and insurer, and protect backups. Avoid improvised cleanup or rushed restoration."
+    }
+  },
+  {
+    "mfa-app-text-key": {
+      "lead": "Multifactor authentication (MFA) asks for another proof of identity beyond a password. That second factor may be an authenticator-app code, a push approval, a texted code, a hardware security key, or a passkey. They do not provide equal protection, and the best choice depends on the system, user risk, and recovery options.",
+      "sections": [
+        {
+          "heading": "Text message codes",
+          "body": [
+            "A one-time code sent by SMS is substantially better than password-only sign-in, but it can be vulnerable to phone-number takeover, SIM swapping, message interception, or convincing a user to disclose the code. SMS may be a practical step for an account that offers no stronger option, but avoid treating it as the preferred method for administrators, finance, email, or remote access.",
+            "Never tell a caller or email contact an MFA code. A legitimate support person should not need you to read out a login code to them."
+          ]
+        },
+        {
+          "heading": "Authenticator apps and push prompts",
+          "body": [
+            "An authenticator app generates time-based codes on a device. It is generally harder to intercept than SMS, but a user can still be tricked into typing a code into a fake site. Push notifications are convenient; attackers may exploit repeated prompts until someone approves one. Number matching and clear sign-in details help users distinguish a real request.",
+            "Use app-based MFA broadly where practical, require users to deny and report unexpected prompts, and monitor repeated denials or unusual sign-ins. Protect recovery methods so a lost phone does not become a shortcut around MFA."
+          ]
+        },
+        {
+          "heading": "Hardware keys and passkeys",
+          "body": [
+            "A FIDO security key or passkey uses cryptography tied to the legitimate website or service. It is resistant to ordinary phishing because the credential is not a reusable code that can be typed into a fake page. Hardware keys can be especially useful for privileged users, though the organization must issue, inventory, and recover them.",
+            "Support varies by service and device. Maintain a secure backup method and a documented process for replacement, lost devices, employee departure, and account recovery."
+          ]
+        },
+        {
+          "heading": "Choose and roll out the right factor",
+          "body": "Prioritize email, administrator accounts, financial systems, VPN or remote access, and cloud consoles. Prefer passkeys or hardware keys for high-risk accounts, then authenticator apps with number matching where supported. Use SMS as a fallback where stronger methods are unavailable. Pilot the process, train staff, test account recovery, and ensure emergency administrators do not depend on one person’s phone."
+        }
+      ],
+      "takeaway": "MFA methods vary in phishing resistance. Choose stronger factors for high-impact accounts, protect recovery paths, and treat an unexpected sign-in prompt as a possible attack."
+    }
+  },
+  {
+    "what-is-phishing": {
+      "lead": "Phishing is a deceptive message or interaction designed to make someone reveal credentials, approve access, open a harmful file, or send money. It often arrives by email, but the same tactic appears in text messages, collaboration tools, voice calls, QR codes, and fake login pages. The message may be polished and may appear to come from a known person or service.",
+      "sections": [
+        {
+          "heading": "How phishing reaches an inbox",
+          "body": [
+            "Attackers send messages that imitate vendors, executives, Microsoft 365, banks, delivery services, or coworkers. They create urgency—an invoice is overdue, a mailbox will close, a document needs review—and ask the recipient to click a link, open an attachment, sign in, or change payment details.",
+            "Some messages come from compromised legitimate accounts, making sender names and ongoing email threads look authentic. A link can lead to a fake sign-in page that captures a password and MFA approval, while an attachment may exploit a vulnerability or persuade a user to run a file. Phishing can also start with a phone call that asks the target to complete a step on their computer."
+          ]
+        },
+        {
+          "heading": "Clues that deserve a pause",
+          "body": [
+            "Unexpected requests, unusual payment instructions, unfamiliar links, mismatched domains, pressure to keep a request secret, and messages that bypass normal approval processes should be verified. But spelling errors are not a reliable test: modern phishing can be well-written, personalized, and timed to a real business event.",
+            "Look at the actual link destination before opening it, and do not approve an MFA prompt you did not initiate. For payment or bank-detail changes, verify through a known phone number or a separate trusted channel—not by replying to the same email."
+          ]
+        },
+        {
+          "heading": "What to do with a suspicious message",
+          "body": [
+            "Use the organization’s report-phishing option or send it to the designated security contact. Do not forward it broadly or click links to investigate. If you already entered a password, approved a prompt, opened a file, or sent money, report that immediately; speed gives the response team more options.",
+            "IT staff should preserve the message and relevant sign-in details, reset affected credentials from a trusted device, revoke active sessions where appropriate, review mailbox rules and forwarding, and contact the bank quickly if funds may have moved. Follow the incident plan rather than improvising a cleanup that could erase evidence."
+          ]
+        },
+        {
+          "heading": "Reduce exposure without blaming users",
+          "body": "Use MFA resistant to phishing where supported, secure email filtering, endpoint protection, prompt patching, and least-privilege access. Establish a simple reporting route and practice realistic examples with staff. Make verification normal for financial changes and sensitive requests. Training helps, but it should complement technical safeguards and a response process that treats reporting quickly as the right action."
+        }
+      ],
+      "takeaway": "Phishing is a trust trick delivered through many channels. Pause on unusual requests, verify through a separate trusted route, and report mistakes quickly so the organization can contain the impact."
+    }
+  },
+  {
     "switch-msps-without-downtime": {
       "lead": "Changing managed IT providers is a controlled handoff of access, documentation, monitoring, backups, vendor relationships, and open work. Downtime is avoidable when the transition is planned around business operations and both providers know who owns each step. Start early, keep executive oversight, and never assume critical credentials or recovery data will transfer automatically.",
       "sections": [
