@@ -11,7 +11,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 export const metadata: Metadata = withSeoMetadata({
   title: "IT Support for Healthcare Organizations | Mission Technology Solutions",
   description: "Reliable managed IT, cybersecurity, networking, Microsoft 365, and physical security for Indiana healthcare organizations.",
-}, "/healthcare"); "/healthcare");
+}, "/healthcare");
 
 const priorities = [
   ["Keep care moving", "Reliable workstations, Wi-Fi, phones, applications, and support for clinical and administrative teams."],

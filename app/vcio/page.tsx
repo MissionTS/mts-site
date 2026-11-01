@@ -5,7 +5,7 @@ import { ServicePage } from "@/components/ServicePage";
 export const metadata: Metadata = withSeoMetadata({
   title: "Virtual CIO Services | Mission Technology Solutions",
   description: "Virtual CIO and strategic IT leadership for Indiana organizations that need clearer technology decisions, budgets, security, and roadmaps.",
-}, "/vcio"); "/vcio");
+}, "/vcio");
 
 export default function VcioPage() {
   return <ServicePage

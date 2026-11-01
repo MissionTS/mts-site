@@ -5,7 +5,7 @@ import { ServicePage } from "@/components/ServicePage";
 export const metadata: Metadata = withSeoMetadata({
   title: "Business Networking & Wi-Fi Services | Mission Technology Solutions",
   description: "Expert-designed business networking, Wi-Fi planning, heat mapping, switching, firewall, and network support for Central Indiana organizations.",
-}, "/networking"); "/networking");
+}, "/networking");
 
 export default function NetworkingPage() {
   return <ServicePage

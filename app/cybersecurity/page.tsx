@@ -5,7 +5,7 @@ import { ServicePage } from "@/components/ServicePage";
 export const metadata: Metadata = withSeoMetadata({
   title: "Cybersecurity Services | Mission Technology Solutions",
   description: "Layered cybersecurity services for identity, endpoints, email, networks, users, and business operations.",
-}, "/cybersecurity"); "/cybersecurity");
+}, "/cybersecurity");
 
 export default function CybersecurityPage() {
   return <ServicePage
