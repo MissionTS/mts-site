@@ -41,10 +41,22 @@ export function KokomoServicePage({
   localDescription: string;
   faqs: FAQ[];
 }) {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `https://missionts.com${breadcrumbPath}#service`,
+    name: `${service} in Kokomo, Indiana`,
+    serviceType: service,
+    areaServed: [{ "@type": "City", name: "Kokomo, Indiana" }, { "@type": "AdministrativeArea", name: "Howard County, Indiana" }],
+    provider: { "@type": "Organization", name: "Mission Technology Solutions", url: "https://missionts.com", telephone: "+1-765-245-8515" },
+    url: `https://missionts.com${breadcrumbPath}`,
+  };
+
   return (
     <main>
       <SiteHeader />
       <FaqPageJsonLd items={faqs} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/</g, "\\u003c") }} />
       <BreadcrumbJsonLd items={[
         { name: "Home", path: "/" },
         { name: "IT services in Kokomo", path: "/kokomo-in" },
