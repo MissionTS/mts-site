@@ -6,6 +6,12 @@ function JsonLd({ value }: { value: Record<string, unknown> }) {
 }
 
 export function LocalBusinessJsonLd() {
+  const sameAs = [
+    process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL,
+    process.env.NEXT_PUBLIC_LINKEDIN_URL,
+    process.env.NEXT_PUBLIC_FACEBOOK_URL,
+    process.env.NEXT_PUBLIC_BBB_URL,
+  ].filter((url): url is string => Boolean(url));
   const business = {
     "@context": "https://schema.org",
     "@type": ["ProfessionalService", "LocalBusiness"],
@@ -33,12 +39,7 @@ export function LocalBusinessJsonLd() {
     // Add official profile URLs here; empty placeholders are omitted from the live schema.
     ...(process.env.NEXT_PUBLIC_BUSINESS_GEO_LATITUDE && process.env.NEXT_PUBLIC_BUSINESS_GEO_LONGITUDE ? { geo: { "@type": "GeoCoordinates", latitude: Number(process.env.NEXT_PUBLIC_BUSINESS_GEO_LATITUDE), longitude: Number(process.env.NEXT_PUBLIC_BUSINESS_GEO_LONGITUDE) } } : {}),
     ...(process.env.NEXT_PUBLIC_BUSINESS_OPENING_HOURS ? { openingHours: process.env.NEXT_PUBLIC_BUSINESS_OPENING_HOURS.split(",").map((value) => value.trim()).filter(Boolean) } : {}),
-    sameAs: [
-      process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL,
-      process.env.NEXT_PUBLIC_LINKEDIN_URL,
-      process.env.NEXT_PUBLIC_FACEBOOK_URL,
-      process.env.NEXT_PUBLIC_BBB_URL,
-    ].filter((url): url is string => Boolean(url)),
+    ...(sameAs.length ? { sameAs } : {}),
   };
   return <JsonLd value={business} />;
 }
