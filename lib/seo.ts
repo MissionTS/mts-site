@@ -13,7 +13,7 @@ export function withSeoMetadata(metadata: Metadata, pathname: string): Metadata 
     alternates: { ...metadata.alternates, canonical: pathname },
     openGraph: {
       ...openGraph,
-      type: openGraph.type ?? "website",
+      type: "website",
       url: pathname,
       title,
       description,
