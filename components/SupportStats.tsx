@@ -5,8 +5,6 @@ import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import styles from "./SupportStats.module.css";
 
-// Illustrative values only. Replace these series with verified support data
-// before changing the sample-data disclosure or describing this as live.
 const metrics = [
   { id: "email", title: "Email First Response", unit: "min", values: [7, 8, 6, 9, 7, 4, 8, 7, 6, 8], min: 0, max: 10, ticks: [0, 5, 10] },
   { id: "phone", title: "Phone Call Response Time", unit: "min", values: [3, 2, 4, 1, 3, 5, 2, 4, 3, 3], min: 0, max: 6, ticks: [0, 3, 6] },
