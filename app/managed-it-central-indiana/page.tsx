@@ -1,3 +1,5 @@
+import { withSeoMetadata } from "@/lib/seo";
+import { FaqPageJsonLd } from "@/components/StructuredData";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +11,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 const title = "Managed IT Services in Central Indiana | Mission Technology Solutions";
 const description = "Managed IT services for Indianapolis and Central Indiana businesses. Get responsive helpdesk support, proactive maintenance, cybersecurity, Microsoft 365, and practical technology planning from Mission.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeoMetadata({
   title,
   description,
   alternates: { canonical: "/managed-it-central-indiana" },
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/photos/managed-it-team.jpg", alt: "Mission team collaborating around a laptop" }],
   },
-};
+}, "/managed-it-central-indiana");
 
 const services = [
   { icon: LifebuoyIcon, title: "Helpdesk & user support", text: "Give your employees a clear place to turn for account, device, email, application, and connectivity issues." },
@@ -67,6 +69,7 @@ export default function CentralIndianaManagedITPage() {
   return (
     <main>
       <SiteHeader />
+      <FaqPageJsonLd items={faqs.map(([question, answer]) => ({ question, answer }))} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
 
       <section className="relative isolate overflow-hidden bg-mission-ink text-white">

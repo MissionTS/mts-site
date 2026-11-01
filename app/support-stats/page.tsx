@@ -1,14 +1,15 @@
+import { withSeoMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SupportStatsDetail } from "@/components/SupportStats";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeoMetadata({
   title: "Support Metrics | Mission Technology Solutions",
   description: "Explore email response, phone response, and customer satisfaction trends for Mission Technology Solutions.",
   alternates: { canonical: "/support-stats" },
-};
+}, "/support-stats"); "/support-stats");
 
 export default function SupportStatsPage() {
   return (

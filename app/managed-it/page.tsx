@@ -1,13 +1,15 @@
+import { withSeoMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeoMetadata({
   title: "Managed IT Services | Mission Technology Solutions",
   description: "Responsive managed IT support, monitoring, maintenance, lifecycle planning, and strategic guidance for organizations in Indiana.",
-};
+}, "/managed-it"); "/managed-it");
 
 export default function ManagedITPage() {
   return <ServicePage
+    breadcrumbPath="/managed-it"
     eyebrow="Managed IT Services"
     title="Less downtime. More momentum."
     accent="IT that simply works."

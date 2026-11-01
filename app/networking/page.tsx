@@ -1,13 +1,15 @@
+import { withSeoMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeoMetadata({
   title: "Business Networking & Wi-Fi Services | Mission Technology Solutions",
   description: "Expert-designed business networking, Wi-Fi planning, heat mapping, switching, firewall, and network support for Central Indiana organizations.",
-};
+}, "/networking"); "/networking");
 
 export default function NetworkingPage() {
   return <ServicePage
+    breadcrumbPath="/networking"
     eyebrow="Business networking"
     title="Networks that keep your team"
     accent="moving."

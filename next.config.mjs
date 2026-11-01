@@ -2,6 +2,8 @@
 const nextConfig = {
   async redirects() {
     return [
+      { source: "/kokomo-managed-it", destination: "/kokomo-in", statusCode: 301 },
+      { source: "/resources/it-support-kokomo", destination: "/kokomo-in", statusCode: 301 },
       {
         source: "/about-us",
         destination: "/about",

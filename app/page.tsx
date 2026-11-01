@@ -1,3 +1,5 @@
+import { withSeoMetadata } from "@/lib/seo";
+import { FaqPageJsonLd } from "@/components/StructuredData";
 import {
   ArrowRightIcon,
   BoltIcon,
@@ -144,20 +146,13 @@ const faqItems = [
   ["Can you help us plan a budget?", "Yes. Our strategic IT work helps turn urgent technology spending into a clearer roadmap with priorities, timing, and lifecycle planning."],
 ];
 
+export const metadata = withSeoMetadata({ title: "Managed IT Services & Cybersecurity | Mission Technology Solutions", description: "Indiana-based managed IT services, cybersecurity, networking, Microsoft 365, cloud, communications, and physical security for businesses and organizations." }, "/");
+
 export default function Home() {
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Mission Technology Solutions",
-    url: "https://missionts.com/",
-    telephone: "+1-765-245-8515",
-    email: "sales@missionts.com",
-    areaServed: ["Indianapolis, Indiana", "Kokomo, Indiana", "Howard County, Indiana", "Tipton, Indiana", "Logansport, Indiana", "Noblesville, Indiana", "Westfield, Indiana", "Carmel, Indiana", "Lafayette, Indiana"],
-    serviceType: ["Managed IT Services", "Cybersecurity", "Business Networking", "Microsoft 365 Support", "Structured Cabling", "Physical Security"],
-  };
+  const faqSchemaItems = faqItems.map(([question, answer]) => ({ question, answer }));
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <FaqPageJsonLd items={faqSchemaItems} />
       <SiteHeader />
 
       <section className="hero-motion relative overflow-hidden bg-mission-ink text-white">
@@ -268,7 +263,7 @@ export default function Home() {
       </section>
 
       <section className="relative overflow-hidden bg-mission-mist py-24">
-        <Image src="/photos/managed-it-team.jpg" alt="Mission team collaborating in an office" fill sizes="100vw" className="object-cover opacity-[0.08]" />
+        <Image src="/photos/managed-it-team.jpg" alt="Mission team reviewing technology plans together" fill sizes="100vw" className="object-cover opacity-[0.08]" />
         <div className="absolute inset-0 bg-mission-mist/80" />
         <div className="relative mx-auto max-w-[1440px] px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">

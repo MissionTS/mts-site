@@ -1,3 +1,5 @@
+import { withSeoMetadata } from "@/lib/seo";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/StructuredData";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
@@ -5,7 +7,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { KnowledgeArticle } from "@/components/KnowledgeArticle";
 
-const checklists: Record<string, { category: string; title: string; intro: string; items: string[] }> = {
+const checklists: Record<string, { category: string; title: string; intro: string; items: string[]; publishedAt?: string; modifiedAt?: string }> = {
   "physical-security-cybersecurity": { category: "Cybersecurity", title: "Why Physical Security Is Part of Cybersecurity", intro: "A stolen badge, unlocked closet, or exposed camera can create the same kind of access problem as a compromised password. Strong security connects the physical and digital layers.", items: ["Inventory doors, server rooms, network closets, workstations, and other sensitive areas.", "Review who can enter each space and remove access that no longer matches a person’s role.", "Protect cameras, access controllers, switches, and other security devices with strong accounts and updates.", "Connect physical events with digital incident response so teams know when to preserve footage and logs.", "Train staff to report tailgating, lost badges, unattended devices, and suspicious activity.", "Review physical and cybersecurity controls together during quarterly risk planning."] },
   "security-baseline": { category: "Cybersecurity", title: "The Practical Security Baseline", intro: "Use this as a first-pass review of the safeguards that protect people, systems, and customer trust.", items: ["Turn on multifactor authentication for every user and administrator.", "Confirm endpoint protection, patching, and encryption are active on every managed device.", "Review admin accounts and remove access people no longer need.", "Test backups by restoring a real file, not just checking that a job completed.", "Run a short phishing and incident-reporting refresher with staff.", "Write down who makes the call if an account, device, or mailbox is compromised."] },
   "microsoft-365-setup": { category: "Microsoft 365", title: "A calmer Microsoft 365 setup", intro: "A focused checklist for making Microsoft 365 easier to use and safer to manage.", items: ["Choose a clear naming and ownership pattern for Teams and SharePoint sites.", "Review guest access, external sharing, and inactive accounts.", "Standardize MFA, sign-in policies, and device enrollment.", "Define where files belong so staff are not emailing duplicate versions.", "Create retention, backup, and recovery expectations for critical data.", "Give users a short guide for Teams, OneDrive, and reporting suspicious messages."] },
@@ -66,13 +68,15 @@ checklists["cyber-insurance-small-business"] = {
 };
 
 export function generateStaticParams() { return Object.keys(checklists).map((slug) => ({ slug })); }
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata { const guide = checklists[params.slug]; return { title: guide ? `${guide.title} | Mission Knowledge Hub` : "Mission Knowledge Hub", description: guide?.intro }; }
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata { const guide = checklists[params.slug]; return withSeoMetadata({ title: guide ? `${guide.title} | Mission Knowledge Hub` : "Mission Knowledge Hub", description: guide?.intro ?? "Technology and cybersecurity resources for Indiana businesses." }, `/resources/${params.slug}`); }
 
 export default function ChecklistPage({ params }: { params: { slug: string } }) {
   const guide = checklists[params.slug] ?? checklists["security-baseline"];
   return (
     <main>
       <SiteHeader />
+      <ArticleJsonLd title={guide.title} slug={params.slug} published={guide.publishedAt} modified={guide.modifiedAt} />
+      <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Knowledge Hub", path: "/resources" }, { name: guide.title, path: `/resources/${params.slug}` }]} />
       <section className="hero-motion bg-mission-ink py-20 text-white lg:py-28">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <Link href="/resources" className="inline-flex items-center gap-2 text-sm font-bold text-slate-300 hover:text-mission-gold"><ArrowLeftIcon className="h-4 w-4" /> Back to Knowledge Hub</Link>

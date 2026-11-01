@@ -21,8 +21,8 @@ export function SiteFooter() {
           <p className="mt-1 text-sm text-slate-300">sales@missionts.com</p>
         </div>
         <div>
-          <div className="text-sm font-bold uppercase tracking-wider text-slate-400">Based in Indiana</div>
-          <p className="mt-3 text-sm leading-6 text-slate-300">Serving organizations that want technology to be reliable, secure, and easy to manage.</p>
+          <div className="text-sm font-bold uppercase tracking-wider text-slate-400">Office</div>
+          <p className="mt-3 text-sm leading-6 text-slate-300"><a href="https://www.google.com/maps/search/?api=1&query=400+N+Main+St+Kokomo+IN+46901" target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline">400 N Main St, Kokomo, IN 46901</a></p><p className="mt-3 text-sm leading-6 text-slate-300">Serving organizations that want technology to be reliable, secure, and easy to manage.</p>
           <nav aria-label="Local IT services" className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-200"><Link href="/kokomo-in" className="underline-offset-4 hover:underline">Kokomo IT services</Link><Link href="/peru-in" className="underline-offset-4 hover:underline">Peru IT services</Link><Link href="/managed-it-central-indiana#service-area" className="underline-offset-4 hover:underline">Indianapolis & Central Indiana IT</Link></nav>
         </div>
       </div>

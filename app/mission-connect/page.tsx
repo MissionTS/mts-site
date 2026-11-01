@@ -1,13 +1,15 @@
+import { withSeoMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeoMetadata({
   title: "Mission Connect Business VoIP | Mission Technology Solutions",
   description: "Business VoIP and unified communications with calling, mobile access, auto attendants, and support from Mission Technology Solutions.",
-};
+}, "/mission-connect"); "/mission-connect");
 
 export default function MissionConnectPage() {
   return <ServicePage
+    breadcrumbPath="/mission-connect"
     eyebrow="Mission Connect"
     title="A phone system that"
     accent="works the way you do."

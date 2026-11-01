@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
+import { LocalBusinessJsonLd } from "@/components/StructuredData";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -14,19 +15,6 @@ export const metadata: Metadata = {
   title: "Managed IT Services & Cybersecurity | Mission Technology Solutions",
   description:
     "Indiana-based managed IT services, cybersecurity, networking, Microsoft 365, cloud, communications, and physical security for businesses and organizations.",
-  alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    url: "/",
-    title: "Managed IT Services & Cybersecurity | Mission Technology Solutions",
-    description: "Indiana-based managed IT, cybersecurity, networking, Microsoft 365, and physical security for organizations that need technology to work.",
-    siteName: "Mission Technology Solutions",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Managed IT Services & Cybersecurity | Mission Technology Solutions",
-    description: "Indiana-based managed IT, cybersecurity, networking, Microsoft 365, and physical security.",
-  },
   icons: {
     icon: "/brand/mission-mark-blue.png",
     apple: "/brand/mission-mark-blue.png",
@@ -37,6 +25,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={montserrat.variable}>
       <body>
+        <LocalBusinessJsonLd />
         {children}
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-760137266" strategy="afterInteractive" />
         <Script id="google-ads-tag" strategy="afterInteractive">
