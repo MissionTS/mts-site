@@ -8,6 +8,336 @@ type Section = { heading: string; body: string | string[]; sources?: { label: st
 
 const articles: Record<string, { lead: string; sections: Section[]; takeaway: string }> = {
   {
+    "it-support-kokomo": {
+      "lead": "Choosing IT support in Kokomo is a practical decision about how quickly your team can get help, how systems are maintained, and who coordinates onsite work and third-party vendors. Local fit matters, but the provider should also explain remote coverage, service boundaries, security responsibilities, and recovery planning.",
+      "sections": [
+        {
+          "heading": "Start with the operating reality",
+          "body": [
+            "List the users, locations, systems, business hours, recurring incidents, vendor dependencies, and changes planned for the next year. Identify what would stop work, delay customers, or create a safety or privacy concern if it failed. This gives you a concrete basis for choosing a model or provider.",
+            "Separate current pain from future risk. Slow support, unsupported systems, missing documentation, inconsistent onboarding, and an untested recovery plan need different remedies. Rank them by business impact and agree on which problems must be addressed first."
+          ]
+        },
+        {
+          "heading": "Make scope and ownership explicit",
+          "body": [
+            "Document who handles user support, account administration, endpoint protection, patching, backups, recovery, network changes, vendor escalations, projects, and after-hours incidents. Specify what is included in recurring service and what requires a separate quote. Ask how response targets are measured and how urgent issues are escalated.",
+            "Confirm administrator account ownership, security alert routing, data access, documentation, licensing, and transition assistance. A reliable arrangement should not depend on one person keeping essential information in their private inbox or memory."
+          ]
+        },
+        {
+          "heading": "Evaluate the working relationship",
+          "body": [
+            "Ask for a sample report, onboarding outline, escalation path, and a realistic example of how the provider handled a recurring problem. Confirm who will communicate with your team, how often leadership reviews priorities, and how the provider coordinates with internal employees and other vendors.",
+            "Look for clarity and follow-through. A provider should explain tradeoffs in plain terms, acknowledge uncertainty, document decisions, and distinguish urgent risk from optional improvements. Do not rely on broad promises where written service boundaries are available."
+          ]
+        },
+        {
+          "heading": "A practical next step",
+          "body": "For it support in kokomo, indiana, begin with a short inventory and a focused conversation about your operating requirements, risk tolerance, and budget. Ask the provider to show how the proposed approach addresses your top three needs and what evidence you will receive that the work is happening. Review the plan after onboarding and update it as the organization changes."
+        }
+      ],
+      "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
+    }
+  },
+  {
+    "network-security-small-business": {
+      "lead": "Small-business network security starts with knowing what is connected, limiting access, keeping infrastructure current, and separating systems that do not need to trust one another. The right controls depend on the business, but unmanaged equipment and broad access make problems harder to contain.",
+      "sections": [
+        {
+          "heading": "Start with the operating reality",
+          "body": [
+            "List the users, locations, systems, business hours, recurring incidents, vendor dependencies, and changes planned for the next year. Identify what would stop work, delay customers, or create a safety or privacy concern if it failed. This gives you a concrete basis for choosing a model or provider.",
+            "Separate current pain from future risk. Slow support, unsupported systems, missing documentation, inconsistent onboarding, and an untested recovery plan need different remedies. Rank them by business impact and agree on which problems must be addressed first."
+          ]
+        },
+        {
+          "heading": "Make scope and ownership explicit",
+          "body": [
+            "Document who handles user support, account administration, endpoint protection, patching, backups, recovery, network changes, vendor escalations, projects, and after-hours incidents. Specify what is included in recurring service and what requires a separate quote. Ask how response targets are measured and how urgent issues are escalated.",
+            "Confirm administrator account ownership, security alert routing, data access, documentation, licensing, and transition assistance. A reliable arrangement should not depend on one person keeping essential information in their private inbox or memory."
+          ]
+        },
+        {
+          "heading": "Evaluate the working relationship",
+          "body": [
+            "Ask for a sample report, onboarding outline, escalation path, and a realistic example of how the provider handled a recurring problem. Confirm who will communicate with your team, how often leadership reviews priorities, and how the provider coordinates with internal employees and other vendors.",
+            "Look for clarity and follow-through. A provider should explain tradeoffs in plain terms, acknowledge uncertainty, document decisions, and distinguish urgent risk from optional improvements. Do not rely on broad promises where written service boundaries are available."
+          ]
+        },
+        {
+          "heading": "A practical next step",
+          "body": "For network security for small businesses, begin with a short inventory and a focused conversation about your operating requirements, risk tolerance, and budget. Ask the provider to show how the proposed approach addresses your top three needs and what evidence you will receive that the work is happening. Review the plan after onboarding and update it as the organization changes."
+        }
+      ],
+      "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
+    }
+  },
+  {
+    "backups-small-business": {
+      "lead": "A backup plan should answer what data is protected, how often copies are made, how long they are retained, who can restore them, and how recovery is tested. A dashboard showing successful jobs is only one piece of evidence; the business needs a repeatable way to restore work.",
+      "sections": [
+        {
+          "heading": "Start with the operating reality",
+          "body": [
+            "List the users, locations, systems, business hours, recurring incidents, vendor dependencies, and changes planned for the next year. Identify what would stop work, delay customers, or create a safety or privacy concern if it failed. This gives you a concrete basis for choosing a model or provider.",
+            "Separate current pain from future risk. Slow support, unsupported systems, missing documentation, inconsistent onboarding, and an untested recovery plan need different remedies. Rank them by business impact and agree on which problems must be addressed first."
+          ]
+        },
+        {
+          "heading": "Make scope and ownership explicit",
+          "body": [
+            "Document who handles user support, account administration, endpoint protection, patching, backups, recovery, network changes, vendor escalations, projects, and after-hours incidents. Specify what is included in recurring service and what requires a separate quote. Ask how response targets are measured and how urgent issues are escalated.",
+            "Confirm administrator account ownership, security alert routing, data access, documentation, licensing, and transition assistance. A reliable arrangement should not depend on one person keeping essential information in their private inbox or memory."
+          ]
+        },
+        {
+          "heading": "Evaluate the working relationship",
+          "body": [
+            "Ask for a sample report, onboarding outline, escalation path, and a realistic example of how the provider handled a recurring problem. Confirm who will communicate with your team, how often leadership reviews priorities, and how the provider coordinates with internal employees and other vendors.",
+            "Look for clarity and follow-through. A provider should explain tradeoffs in plain terms, acknowledge uncertainty, document decisions, and distinguish urgent risk from optional improvements. Do not rely on broad promises where written service boundaries are available."
+          ]
+        },
+        {
+          "heading": "A practical next step",
+          "body": "For small business backup planning, begin with a short inventory and a focused conversation about your operating requirements, risk tolerance, and budget. Ask the provider to show how the proposed approach addresses your top three needs and what evidence you will receive that the work is happening. Review the plan after onboarding and update it as the organization changes."
+        }
+      ],
+      "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
+    }
+  },
+  {
+    "it-onboarding-transition": {
+      "lead": "A managed IT onboarding is the structured process of learning an environment, securing access, documenting systems, validating monitoring and backups, and moving users into a support workflow. A good transition has named owners, milestones, and a prioritized list of inherited risks.",
+      "sections": [
+        {
+          "heading": "Start with the operating reality",
+          "body": [
+            "List the users, locations, systems, business hours, recurring incidents, vendor dependencies, and changes planned for the next year. Identify what would stop work, delay customers, or create a safety or privacy concern if it failed. This gives you a concrete basis for choosing a model or provider.",
+            "Separate current pain from future risk. Slow support, unsupported systems, missing documentation, inconsistent onboarding, and an untested recovery plan need different remedies. Rank them by business impact and agree on which problems must be addressed first."
+          ]
+        },
+        {
+          "heading": "Make scope and ownership explicit",
+          "body": [
+            "Document who handles user support, account administration, endpoint protection, patching, backups, recovery, network changes, vendor escalations, projects, and after-hours incidents. Specify what is included in recurring service and what requires a separate quote. Ask how response targets are measured and how urgent issues are escalated.",
+            "Confirm administrator account ownership, security alert routing, data access, documentation, licensing, and transition assistance. A reliable arrangement should not depend on one person keeping essential information in their private inbox or memory."
+          ]
+        },
+        {
+          "heading": "Evaluate the working relationship",
+          "body": [
+            "Ask for a sample report, onboarding outline, escalation path, and a realistic example of how the provider handled a recurring problem. Confirm who will communicate with your team, how often leadership reviews priorities, and how the provider coordinates with internal employees and other vendors.",
+            "Look for clarity and follow-through. A provider should explain tradeoffs in plain terms, acknowledge uncertainty, document decisions, and distinguish urgent risk from optional improvements. Do not rely on broad promises where written service boundaries are available."
+          ]
+        },
+        {
+          "heading": "A practical next step",
+          "body": "For what happens during an it onboarding or transition?, begin with a short inventory and a focused conversation about your operating requirements, risk tolerance, and budget. Ask the provider to show how the proposed approach addresses your top three needs and what evidence you will receive that the work is happening. Review the plan after onboarding and update it as the organization changes."
+        }
+      ],
+      "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
+    }
+  },
+  {
+    "msp-vs-internal-it": {
+      "lead": "Choosing between an MSP and an employee is a comparison of coverage, skills, availability, accountability, and total cost—not just a salary against a monthly invoice. Some businesses choose one model; others combine internal IT ownership with external support.",
+      "sections": [
+        {
+          "heading": "Start with the operating reality",
+          "body": [
+            "List the users, locations, systems, business hours, recurring incidents, vendor dependencies, and changes planned for the next year. Identify what would stop work, delay customers, or create a safety or privacy concern if it failed. This gives you a concrete basis for choosing a model or provider.",
+            "Separate current pain from future risk. Slow support, unsupported systems, missing documentation, inconsistent onboarding, and an untested recovery plan need different remedies. Rank them by business impact and agree on which problems must be addressed first."
+          ]
+        },
+        {
+          "heading": "Make scope and ownership explicit",
+          "body": [
+            "Document who handles user support, account administration, endpoint protection, patching, backups, recovery, network changes, vendor escalations, projects, and after-hours incidents. Specify what is included in recurring service and what requires a separate quote. Ask how response targets are measured and how urgent issues are escalated.",
+            "Confirm administrator account ownership, security alert routing, data access, documentation, licensing, and transition assistance. A reliable arrangement should not depend on one person keeping essential information in their private inbox or memory."
+          ]
+        },
+        {
+          "heading": "Evaluate the working relationship",
+          "body": [
+            "Ask for a sample report, onboarding outline, escalation path, and a realistic example of how the provider handled a recurring problem. Confirm who will communicate with your team, how often leadership reviews priorities, and how the provider coordinates with internal employees and other vendors.",
+            "Look for clarity and follow-through. A provider should explain tradeoffs in plain terms, acknowledge uncertainty, document decisions, and distinguish urgent risk from optional improvements. Do not rely on broad promises where written service boundaries are available."
+          ]
+        },
+        {
+          "heading": "A practical next step",
+          "body": "For msp vs. hiring an internal it person: cost comparison, begin with a short inventory and a focused conversation about your operating requirements, risk tolerance, and budget. Ask the provider to show how the proposed approach addresses your top three needs and what evidence you will receive that the work is happening. Review the plan after onboarding and update it as the organization changes."
+        }
+      ],
+      "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
+    }
+  },
+  {
+    "co-managed-it": {
+      "lead": "Co-managed IT combines an internal technology team with outside provider support. The business keeps internal ownership and context while adding capacity or specialist expertise for areas such as security monitoring, projects, after-hours coverage, or routine device management.",
+      "sections": [
+        {
+          "heading": "Start with the operating reality",
+          "body": [
+            "List the users, locations, systems, business hours, recurring incidents, vendor dependencies, and changes planned for the next year. Identify what would stop work, delay customers, or create a safety or privacy concern if it failed. This gives you a concrete basis for choosing a model or provider.",
+            "Separate current pain from future risk. Slow support, unsupported systems, missing documentation, inconsistent onboarding, and an untested recovery plan need different remedies. Rank them by business impact and agree on which problems must be addressed first."
+          ]
+        },
+        {
+          "heading": "Make scope and ownership explicit",
+          "body": [
+            "Document who handles user support, account administration, endpoint protection, patching, backups, recovery, network changes, vendor escalations, projects, and after-hours incidents. Specify what is included in recurring service and what requires a separate quote. Ask how response targets are measured and how urgent issues are escalated.",
+            "Confirm administrator account ownership, security alert routing, data access, documentation, licensing, and transition assistance. A reliable arrangement should not depend on one person keeping essential information in their private inbox or memory."
+          ]
+        },
+        {
+          "heading": "Evaluate the working relationship",
+          "body": [
+            "Ask for a sample report, onboarding outline, escalation path, and a realistic example of how the provider handled a recurring problem. Confirm who will communicate with your team, how often leadership reviews priorities, and how the provider coordinates with internal employees and other vendors.",
+            "Look for clarity and follow-through. A provider should explain tradeoffs in plain terms, acknowledge uncertainty, document decisions, and distinguish urgent risk from optional improvements. Do not rely on broad promises where written service boundaries are available."
+          ]
+        },
+        {
+          "heading": "A practical next step",
+          "body": "For co-managed it: how it works with internal staff, begin with a short inventory and a focused conversation about your operating requirements, risk tolerance, and budget. Ask the provider to show how the proposed approach addresses your top three needs and what evidence you will receive that the work is happening. Review the plan after onboarding and update it as the organization changes."
+        }
+      ],
+      "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
+    }
+  },
+  {
+    "what-is-a-vcio": {
+      "lead": "A virtual chief information officer (vCIO) provides technology planning and leadership without being a full-time executive employee. The role connects business goals to priorities, budgets, risks, vendor decisions, and a practical roadmap. The title varies by provider, so evaluate the work and deliverables.",
+      "sections": [
+        {
+          "heading": "Start with the operating reality",
+          "body": [
+            "List the users, locations, systems, business hours, recurring incidents, vendor dependencies, and changes planned for the next year. Identify what would stop work, delay customers, or create a safety or privacy concern if it failed. This gives you a concrete basis for choosing a model or provider.",
+            "Separate current pain from future risk. Slow support, unsupported systems, missing documentation, inconsistent onboarding, and an untested recovery plan need different remedies. Rank them by business impact and agree on which problems must be addressed first."
+          ]
+        },
+        {
+          "heading": "Make scope and ownership explicit",
+          "body": [
+            "Document who handles user support, account administration, endpoint protection, patching, backups, recovery, network changes, vendor escalations, projects, and after-hours incidents. Specify what is included in recurring service and what requires a separate quote. Ask how response targets are measured and how urgent issues are escalated.",
+            "Confirm administrator account ownership, security alert routing, data access, documentation, licensing, and transition assistance. A reliable arrangement should not depend on one person keeping essential information in their private inbox or memory."
+          ]
+        },
+        {
+          "heading": "Evaluate the working relationship",
+          "body": [
+            "Ask for a sample report, onboarding outline, escalation path, and a realistic example of how the provider handled a recurring problem. Confirm who will communicate with your team, how often leadership reviews priorities, and how the provider coordinates with internal employees and other vendors.",
+            "Look for clarity and follow-through. A provider should explain tradeoffs in plain terms, acknowledge uncertainty, document decisions, and distinguish urgent risk from optional improvements. Do not rely on broad promises where written service boundaries are available."
+          ]
+        },
+        {
+          "heading": "A practical next step",
+          "body": "For what does a vcio do, and when do you need one?, begin with a short inventory and a focused conversation about your operating requirements, risk tolerance, and budget. Ask the provider to show how the proposed approach addresses your top three needs and what evidence you will receive that the work is happening. Review the plan after onboarding and update it as the organization changes."
+        }
+      ],
+      "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
+    }
+  },
+  {
+    "outgrown-computer-guy": {
+      "lead": "A trusted independent technician may be exactly right for a very small organization. The question is whether one person’s time, availability, and range of expertise still match your business’s operating needs. Growth, new compliance duties, multiple locations, and security expectations can make informal arrangements harder to sustain.",
+      "sections": [
+        {
+          "heading": "Start with the operating reality",
+          "body": [
+            "List the users, locations, systems, business hours, recurring incidents, vendor dependencies, and changes planned for the next year. Identify what would stop work, delay customers, or create a safety or privacy concern if it failed. This gives you a concrete basis for choosing a model or provider.",
+            "Separate current pain from future risk. Slow support, unsupported systems, missing documentation, inconsistent onboarding, and an untested recovery plan need different remedies. Rank them by business impact and agree on which problems must be addressed first."
+          ]
+        },
+        {
+          "heading": "Make scope and ownership explicit",
+          "body": [
+            "Document who handles user support, account administration, endpoint protection, patching, backups, recovery, network changes, vendor escalations, projects, and after-hours incidents. Specify what is included in recurring service and what requires a separate quote. Ask how response targets are measured and how urgent issues are escalated.",
+            "Confirm administrator account ownership, security alert routing, data access, documentation, licensing, and transition assistance. A reliable arrangement should not depend on one person keeping essential information in their private inbox or memory."
+          ]
+        },
+        {
+          "heading": "Evaluate the working relationship",
+          "body": [
+            "Ask for a sample report, onboarding outline, escalation path, and a realistic example of how the provider handled a recurring problem. Confirm who will communicate with your team, how often leadership reviews priorities, and how the provider coordinates with internal employees and other vendors.",
+            "Look for clarity and follow-through. A provider should explain tradeoffs in plain terms, acknowledge uncertainty, document decisions, and distinguish urgent risk from optional improvements. Do not rely on broad promises where written service boundaries are available."
+          ]
+        },
+        {
+          "heading": "A practical next step",
+          "body": "For signs you've outgrown your computer guy, begin with a short inventory and a focused conversation about your operating requirements, risk tolerance, and budget. Ask the provider to show how the proposed approach addresses your top three needs and what evidence you will receive that the work is happening. Review the plan after onboarding and update it as the organization changes."
+        }
+      ],
+      "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
+    }
+  },
+  {
+    "questions-for-an-msp": {
+      "lead": "A good MSP evaluation tests more than response speed. Ask how support is delivered, who owns security and backups, how projects are quoted, what reporting leadership receives, and how a handoff works if you leave. Request specific examples and written scope so you can compare the answers.",
+      "sections": [
+        {
+          "heading": "Start with the operating reality",
+          "body": [
+            "List the users, locations, systems, business hours, recurring incidents, vendor dependencies, and changes planned for the next year. Identify what would stop work, delay customers, or create a safety or privacy concern if it failed. This gives you a concrete basis for choosing a model or provider.",
+            "Separate current pain from future risk. Slow support, unsupported systems, missing documentation, inconsistent onboarding, and an untested recovery plan need different remedies. Rank them by business impact and agree on which problems must be addressed first."
+          ]
+        },
+        {
+          "heading": "Make scope and ownership explicit",
+          "body": [
+            "Document who handles user support, account administration, endpoint protection, patching, backups, recovery, network changes, vendor escalations, projects, and after-hours incidents. Specify what is included in recurring service and what requires a separate quote. Ask how response targets are measured and how urgent issues are escalated.",
+            "Confirm administrator account ownership, security alert routing, data access, documentation, licensing, and transition assistance. A reliable arrangement should not depend on one person keeping essential information in their private inbox or memory."
+          ]
+        },
+        {
+          "heading": "Evaluate the working relationship",
+          "body": [
+            "Ask for a sample report, onboarding outline, escalation path, and a realistic example of how the provider handled a recurring problem. Confirm who will communicate with your team, how often leadership reviews priorities, and how the provider coordinates with internal employees and other vendors.",
+            "Look for clarity and follow-through. A provider should explain tradeoffs in plain terms, acknowledge uncertainty, document decisions, and distinguish urgent risk from optional improvements. Do not rely on broad promises where written service boundaries are available."
+          ]
+        },
+        {
+          "heading": "A practical next step",
+          "body": "For questions to ask before signing with an msp, begin with a short inventory and a focused conversation about your operating requirements, risk tolerance, and budget. Ask the provider to show how the proposed approach addresses your top three needs and what evidence you will receive that the work is happening. Review the plan after onboarding and update it as the organization changes."
+        }
+      ],
+      "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
+    }
+  },
+  {
+    "managed-it-contract": {
+      "lead": "A managed IT contract defines which users, devices, locations, and services a provider agrees to support, how requests are handled, how recurring fees work, and what happens when the relationship ends. The title “managed services” does not guarantee a standard package. The service description, pricing schedule, and exclusions determine what you are buying.",
+      "sections": [
+        {
+          "heading": "Start with the operating reality",
+          "body": [
+            "List the users, locations, systems, business hours, recurring incidents, vendor dependencies, and changes planned for the next year. Identify what would stop work, delay customers, or create a safety or privacy concern if it failed. This gives you a concrete basis for choosing a model or provider.",
+            "Separate current pain from future risk. Slow support, unsupported systems, missing documentation, inconsistent onboarding, and an untested recovery plan need different remedies. Rank them by business impact and agree on which problems must be addressed first."
+          ]
+        },
+        {
+          "heading": "Make scope and ownership explicit",
+          "body": [
+            "Document who handles user support, account administration, endpoint protection, patching, backups, recovery, network changes, vendor escalations, projects, and after-hours incidents. Specify what is included in recurring service and what requires a separate quote. Ask how response targets are measured and how urgent issues are escalated.",
+            "Confirm administrator account ownership, security alert routing, data access, documentation, licensing, and transition assistance. A reliable arrangement should not depend on one person keeping essential information in their private inbox or memory."
+          ]
+        },
+        {
+          "heading": "Evaluate the working relationship",
+          "body": [
+            "Ask for a sample report, onboarding outline, escalation path, and a realistic example of how the provider handled a recurring problem. Confirm who will communicate with your team, how often leadership reviews priorities, and how the provider coordinates with internal employees and other vendors.",
+            "Look for clarity and follow-through. A provider should explain tradeoffs in plain terms, acknowledge uncertainty, document decisions, and distinguish urgent risk from optional improvements. Do not rely on broad promises where written service boundaries are available."
+          ]
+        },
+        {
+          "heading": "A practical next step",
+          "body": "For what's included in a managed it contract (and what usually isn't), begin with a short inventory and a focused conversation about your operating requirements, risk tolerance, and budget. Ask the provider to show how the proposed approach addresses your top three needs and what evidence you will receive that the work is happening. Review the plan after onboarding and update it as the organization changes."
+        }
+      ],
+      "takeaway": "Good technology support depends on clear scope, named owners, useful documentation, and a plan tied to how the business operates. Ask for specifics before committing and revisit the arrangement as your needs change."
+    }
+  },
+  {
     "test-backup-restore": {
       "lead": "A backup is dependable only when the organization can restore the right data within an acceptable time. A restore test checks more than whether a job reported success: it confirms the copy exists, is readable, includes what matters, and can be recovered by the people who may need it during an outage.",
       "sections": [
