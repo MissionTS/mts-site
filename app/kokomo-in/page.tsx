@@ -63,9 +63,9 @@ export default function KokomoPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
 
       <section className="relative isolate overflow-hidden bg-mission-ink text-white">
-        <Image src="/photos/kokomo-downtown.jpg" alt="Downtown Kokomo, Indiana, with historic storefronts along the street" fill priority sizes="100vw" quality={80} className="-z-20 object-cover object-center" />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-mission-ink/95 via-mission-ink/82 to-mission-ink/40" />
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+        <Image src="/photos/kokomo-downtown.jpg" alt="Downtown Kokomo, Indiana, with historic storefronts along the street" fill priority sizes="100vw" quality={80} className="object-cover object-center" />
+        <div aria-hidden="true" className="absolute inset-0 z-10 bg-gradient-to-r from-mission-ink/95 via-mission-ink/82 to-mission-ink/40" />
+        <div className="relative z-20 mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
           <nav aria-label="Breadcrumb" className="mb-7 text-xs text-slate-300"><Link href="/" className="underline-offset-4 hover:underline">Home</Link><span aria-hidden="true"> / </span>Kokomo, Indiana</nav>
           <div className="max-w-3xl">
             <p className="text-xs font-medium uppercase tracking-[0.16em] text-mission-gold">Serving Kokomo & Howard County</p>
