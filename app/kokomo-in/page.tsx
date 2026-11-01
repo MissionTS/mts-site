@@ -20,7 +20,7 @@ export const metadata: Metadata = withSeoMetadata({
 }, "/kokomo-in");
 
 const services = [
-  { title: "Managed IT & helpdesk", text: "Give employees a clear place to turn for account, device, email, application, and connectivity issues. Pair everyday support with monitoring and a plan for aging systems.", href: "/managed-it" },
+  { title: "Managed IT & helpdesk", text: "Give employees a clear place to turn for account, device, email, application, and connectivity issues. Add proactive monitoring, maintenance, Microsoft 365 administration, device lifecycle planning, and coordinated onsite help.", href: "/managed-it" },
   { title: "Cybersecurity & recovery", text: "Strengthen sign-ins, protect devices and email, and review backup and recovery needs with a security plan built around the work your organization does.", href: "/kokomo-cybersecurity" },
   { title: "Microsoft 365 & cloud", text: "Make email, Teams, SharePoint, OneDrive, identity, and device management easier to use and administer.", href: "/kokomo-microsoft-365" },
   { title: "Business networks & Wi-Fi", text: "Address weak wireless, network bottlenecks, and connected equipment across your office, shop floor, or facility.", href: "/kokomo-networking" },
