@@ -34,7 +34,7 @@ export function SupportStats() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <h2 className="text-base font-medium">Support at a glance</h2>
-              <p className="mt-1 text-xs text-slate-500">How fast our support is</p>
+              <p className="mt-1 text-xs text-slate-500">How Fast Our Support Is (Live)</p>
             </div>
             <div className="grid grid-cols-3 divide-x divide-slate-200 lg:min-w-[540px]">
               {metrics.map((metric, index) => (
