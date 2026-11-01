@@ -47,6 +47,24 @@ const localGuides: Record<string, { category: string; title: string; intro: stri
 };
 Object.assign(checklists, localGuides);
 
+const articleModifiedDates: Record<string, string> = {
+  "physical-security-cybersecurity": "2026-09-01",
+  "security-baseline": "2026-09-01",
+  "microsoft-365-setup": "2026-09-01",
+  "physical-security": "2026-09-01",
+  "90-day-plan": "2026-09-01",
+  "more-than-helpdesk": "2026-09-01",
+};
+const localResourceLastModified = "2026-09-22";
+const articleSourceDate = (slug: string, guide: { category: string }) => {
+  const published = slug === "cyber-insurance-small-business" ? "2026-10-27" : "2026-08-28";
+  const modified = slug === "cyber-insurance-small-business"
+    ? "2026-10-27"
+    : articleModifiedDates[slug] ?? (guide.category === "Local resources" ? localResourceLastModified : published);
+  return { published, modified };
+};
+
+
 const securityTopics: Record<string, string> = {
   "what-is-phishing": "What Is Phishing and How Attacks Actually Reach Your Inbox", "mfa-app-text-key": "MFA Explained: App vs. Text vs. Hardware Key", "first-hour-ransomware": "What to Do in the First Hour of a Ransomware Attack", "cyber-insurance-questionnaires": "Cyber Insurance Questionnaires: What the Questions Really Mean", "cyber-insurance-small-business": "Cyber Insurance for Small Businesses: What It Covers and How to Prepare", "password-managers-small-teams": "Password Managers for Small Teams", "why-antivirus-isnt-enough": "Why Antivirus Alone Isn't Enough Anymore", "business-email-compromise": "Business Email Compromise: How Wire Fraud Happens", "security-awareness-training": "Employee Security Awareness Training: What Actually Reduces Incidents", "dark-web-monitoring": "Dark Web Monitoring: What It Can and Can't Tell You", "backed-up-or-synced": "Is Your Data Backed Up or Just Synced?", "three-two-one-backup": "The 3-2-1 Backup Rule", "test-backup-restore": "How to Test a Backup Restore",
 };
@@ -75,7 +93,7 @@ export default function ChecklistPage({ params }: { params: { slug: string } }) 
   return (
     <main>
       <SiteHeader />
-      <ArticleJsonLd title={guide.title} slug={params.slug} published={guide.publishedAt} modified={guide.modifiedAt} />
+      <ArticleJsonLd title={guide.title} slug={params.slug} {...articleSourceDate(params.slug, guide)} />
       <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Knowledge Hub", path: "/resources" }, { name: guide.title, path: `/resources/${params.slug}` }]} />
       <section className="hero-motion bg-mission-ink py-20 text-white lg:py-28">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
