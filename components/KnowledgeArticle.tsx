@@ -2635,6 +2635,209 @@ const additionalGuideSections: Record<string, Section[]> = {
 };
 for (const [slug, sections] of Object.entries(additionalGuideSections)) articles[slug]?.sections.push(...sections);
 
+const additionalSecuritySections: Record<string, Section[]> = {
+  "what-is-phishing": [
+    {
+      "heading": "A quick way to assess a suspicious message",
+      "body": [
+        "Pause before clicking, replying, opening an attachment, scanning a QR code, or following payment instructions. Check the sender using a known contact method, examine the actual link destination, and ask whether the request fits the normal business process. A familiar name or logo is not proof that a message is real.",
+        "Do not use the contact number or reply address supplied in a suspicious message to verify it. Open the company’s known website or use the phone number already on file. If a message claims a coworker needs urgent help, contact them through a separate trusted channel."
+      ]
+    },
+    {
+      "heading": "Respond safely after a click",
+      "body": [
+        "If a user entered a password, approved an unexpected prompt, or opened a suspicious file, report it quickly. IT staff can revoke sessions, reset credentials, isolate a device, inspect sign-in and endpoint records, and determine whether email rules or other access were changed.",
+        "Keep the original message when possible and note the time, actions taken, and any information entered. Do not forward suspicious attachments to coworkers. Treat reporting as a normal safety step, not a reason to blame the employee; fast reports give responders more options."
+      ]
+    }
+  ],
+  "mfa-app-text-key": [
+    {
+      "heading": "Choose a factor for the account’s risk",
+      "body": [
+        "SMS codes are familiar but depend on phone-number security and can be exposed through social engineering or number transfer. Authenticator apps avoid delivery over the phone network, while number-matching or verified push can reduce accidental approval. Hardware security keys and passkeys can offer stronger protection against fake sign-in pages when services support them.",
+        "Consider account value, user devices, recovery, and accessibility. Use stronger methods for administrators, finance, email, and remote access. Avoid relying on a single person’s phone for a critical shared business account; plan for device loss and staff turnover."
+      ]
+    },
+    {
+      "heading": "Protect the approval and recovery process",
+      "body": [
+        "Train users to deny prompts they did not initiate and to report repeated unexpected requests. Review sign-in methods and remove old phone numbers, devices, and backup codes. Secure administrators with separate accounts and retain a controlled emergency route that is monitored.",
+        "Test recovery before enforcing MFA broadly. Confirm who verifies identity when someone loses a device, what evidence is required to add a new factor, and how the organization prevents support impersonation. A weak reset process can undo the protection provided by a strong second factor."
+      ]
+    }
+  ],
+  "first-hour-ransomware": [
+    {
+      "heading": "Contain carefully and preserve evidence",
+      "body": [
+        "Follow the incident plan and use an established method to isolate suspected infected endpoints from wired and wireless networks. Avoid powering off systems automatically unless responders direct it; volatile evidence may help determine the scope. Do not connect backup storage or administrator workstations to affected devices.",
+        "Record system names, users, alert times, observed ransom notes, and actions already taken. Preserve suspicious messages, endpoint alerts, and relevant logs. If a third-party provider or cloud service is involved, contact its incident channel and note the case number and instructions."
+      ]
+    },
+    {
+      "heading": "Use the response team and insurer process",
+      "body": [
+        "Notify designated leadership, IT/security responders, legal counsel, and the insurer according to the policy instructions. Coverage may require approved vendors or timely notice. Do not assume an insurance hotline or IT provider has made every required call on the organization’s behalf.",
+        "Do not negotiate, restore systems, delete files, or make public statements without coordinated advice. Establish who is authorized to communicate with employees, customers, regulators, and vendors. Technical responders can investigate and contain; legal and business leaders make notification and continuity decisions."
+      ]
+    }
+  ],
+  "cyber-insurance-questionnaires": [
+    {
+      "heading": "Build evidence before answering",
+      "body": [
+        "Create a control inventory tied to the exact wording of the application. Evidence might include MFA enrollment reports, endpoint coverage, patch records, backup scope and restore tests, incident contacts, and documented vendor responsibilities. Record the report date and systems included so an answer is not based on an outdated screenshot.",
+        "If a control is only partially deployed, describe the limitation accurately and ask the broker how the insurer wants it represented. Do not turn a future project, written policy, or vendor capability into a claim that the control is already operating across the business."
+      ]
+    },
+    {
+      "heading": "Resolve gaps and keep versions",
+      "body": [
+        "Prioritize requirements by both security benefit and the insurer’s stated conditions. An application may require a particular control or notice, but only the issued policy and endorsements define coverage; have a licensed broker explain insurance wording and counsel advise on legal questions.",
+        "Keep the submitted application, supporting evidence, broker correspondence, exceptions, and final policy together. Assign an owner and target date to each planned improvement. Recheck answers after an acquisition, major cloud change, new location, or renewal so material changes are not hidden by an old form."
+      ]
+    }
+  ],
+  "cyber-insurance-small-business": [
+    {
+      "heading": "Map common coverage to business scenarios",
+      "body": [
+        "A policy may include incident response, forensic investigation, legal consultation, notification support, credit monitoring, data restoration, business interruption, cyber extortion, and liability claims. Coverage, sublimits, waiting periods, retentions, and definitions differ, so match each benefit to the actual policy language and discuss scenarios with the broker.",
+        "Think through a compromised email account that redirects a payment, ransomware that interrupts operations, a cloud vendor outage, or exposure of personal information. Ask which costs are first-party losses, which involve claims from others, and which require insurer approval before an expense is incurred."
+      ]
+    },
+    {
+      "heading": "Connect readiness to policy conditions",
+      "body": [
+        "Review application answers against current evidence for MFA, endpoint protection, patching, privileged access, backups, and incident response. Assign control owners and set a reminder to revisit the evidence before renewal. If a promised safeguard is not in place, tell the broker and seek direction rather than assuming the application can be corrected later without consequence.",
+        "Store the insurer’s breach hotline and approved response instructions where leadership can reach them during an outage. Include the broker, IT provider, legal counsel, and decision-makers in a tabletop exercise. Confirm who can authorize a response vendor and what documentation the insurer expects."
+      ]
+    },
+    {
+      "heading": "Treat insurance as one layer of resilience",
+      "body": [
+        "Insurance can fund or coordinate defined services after an event, but it does not prevent an incident or guarantee every loss will be paid. Security controls, independent backups, continuity procedures, and clear authority help the organization recover whether or not a particular expense is covered.",
+        "After renewal or an incident, review the policy with a qualified broker and compare it with the organization’s actual exposure. Update the continuity plan, address control gaps, and document tradeoffs. Avoid buying limits based only on headline price without understanding exclusions and response obligations."
+      ]
+    }
+  ],
+  "password-managers-small-teams": [
+    {
+      "heading": "Set vault structure and governance",
+      "body": [
+        "Create team vaults that match working groups or functions, and keep highly privileged credentials in a smaller restricted collection. Name at least two organization-controlled administrators, enable MFA, and decide whether individual items require approval or can be shared directly.",
+        "Document how employees request access, how vendors receive temporary access, and how emergency credentials are used. Audit who can view, edit, or export vault content. Treat the password manager as a critical service with a recovery plan and an owner for billing and account administration."
+      ]
+    },
+    {
+      "heading": "Migrate without losing control",
+      "body": [
+        "Prioritize accounts by risk and remove duplicate, stale, or personal credentials during migration. Replace shared logins with named accounts where the service permits it. For credentials that must remain shared, rotate them after migration and store them in a role-limited vault.",
+        "Test a new-user invitation, password reset, offline access if supported, and employee departure. Confirm that the business can recover administrative control without depending on one person’s personal account. Teach users how to store passkeys, secure notes, and recovery codes according to company policy."
+      ]
+    }
+  ],
+  "why-antivirus-isnt-enough": [
+    {
+      "heading": "Understand the limits of one endpoint layer",
+      "body": [
+        "Endpoint protection can detect known malicious files and behavior, but attackers also use valid credentials, remote-management tools, unpatched applications, and convincing social engineering. A device may be compromised without a familiar virus file appearing, which is why identity and logging matter.",
+        "Confirm what the endpoint tool covers: supported computers and servers, agent health, alert review, containment, and escalation. Ask whether a person monitors detections and what happens after hours. An installed agent with no owner or response process may create a false sense of coverage."
+      ]
+    },
+    {
+      "heading": "Build complementary safeguards",
+      "body": [
+        "Pair endpoint controls with MFA, least-privilege access, secure email practices, timely patching, network restrictions, and backups protected from ordinary administrator credentials. Each measure addresses different ways a threat can enter or disrupt work.",
+        "Exercise incident response and file restoration. If the endpoint tool isolates a machine, staff should know how to continue essential work and recover data. Track exceptions, unsupported devices, and repeated alerts so the program improves beyond the antivirus renewal cycle."
+      ]
+    }
+  ],
+  "business-email-compromise": [
+    {
+      "heading": "Verify money and account changes out of band",
+      "body": [
+        "Use a known phone number or a second trusted channel to verify changes to bank details, payroll instructions, vendor payment routes, gift-card requests, and unusual wire transfers. Do not rely on a reply to the same email thread; attackers may control a real mailbox or imitate a familiar address.",
+        "Set a two-person approval process for high-value or urgent payments and document the callback standard. Include a rule that staff must not be pressured into bypassing verification because a request claims an executive is traveling, a deal is confidential, or a payment is overdue."
+      ]
+    },
+    {
+      "heading": "Detect and respond to mailbox compromise",
+      "body": [
+        "Review suspicious forwarding rules, delegates, sign-in sessions, connected apps, and recovery methods. Revoke active sessions, reset credentials, re-establish MFA, and investigate mail sent or received during the suspected compromise. Determine whether a vendor or customer received fraudulent instructions.",
+        "Contact the bank immediately if funds may have moved and preserve the relevant emails, headers, logs, and timeline. Notify leadership, legal counsel, insurer, and law enforcement as appropriate to the situation. After containment, review payment controls and message-authentication protections."
+      ]
+    }
+  ],
+  "security-awareness-training": [
+    {
+      "heading": "Train around real job decisions",
+      "body": [
+        "Tailor examples to the work people perform: finance teams verify payment instructions, executives protect account-recovery methods, front-desk staff handle visitors, and clinical or service teams protect client data. Short, timely guidance can be more useful than an annual slide deck detached from daily tasks.",
+        "Teach a simple response path for suspicious email, unexpected MFA prompts, lost devices, accidental data sharing, and urgent wire requests. Staff should know what to report, where to report it, and what details responders need without forwarding harmful files."
+      ]
+    },
+    {
+      "heading": "Measure safer behavior, not shame",
+      "body": [
+        "Use reporting volume, time to report, repeat incident patterns, and completion of targeted follow-up to understand whether training is useful. Click rates alone can be misleading; a good exercise can prompt employees to identify and report a convincing message.",
+        "Make reporting easy and respond constructively. If employees fear punishment for admitting a mistake, they may delay and allow an attacker more time. Share anonymized lessons, recognize useful reports, and update controls when repeated behavior reveals a confusing business process."
+      ]
+    }
+  ],
+  "dark-web-monitoring": [
+    {
+      "heading": "Interpret an alert with context",
+      "body": [
+        "A match may indicate that an email address, password, or other record appeared in an exposed dataset. It does not prove that the information is current, that an attacker accessed your business systems, or that the alert’s source is complete. Check the alert date, data type, and affected account with the monitoring provider.",
+        "Treat exposed credentials as a reason to investigate, especially if a password was reused. Reset the credential through the legitimate service, revoke sessions, verify MFA and recovery methods, and check sign-in activity. Prioritize email, administrative, financial, and remote-access accounts."
+      ]
+    },
+    {
+      "heading": "Use monitoring as a trigger, not a control",
+      "body": [
+        "Monitoring cannot remove exposed data from the internet, prevent every account takeover, or verify that no breach occurred. It is a signal that can help direct response. Pair it with unique passwords, MFA, least privilege, secure account recovery, and an easy way for staff to report suspicious activity.",
+        "Review whether alerts are routed to someone who can act and whether closure is recorded. Document false positives and recurring sources. If the service generates more alerts than the team can handle, adjust scope and escalation rather than treating an unread dashboard as protection."
+      ]
+    }
+  ],
+  "backed-up-or-synced": [
+    {
+      "heading": "Compare the recovery behavior",
+      "body": [
+        "Ask what happens when a file is deleted, overwritten, encrypted by ransomware, or removed when an account is closed. Sync often mirrors the current state between devices and cloud storage; it may propagate deletion or unwanted changes. A backup should provide independent, retained recovery points with defined restoration steps.",
+        "Check version history, recycle-bin retention, user permissions, and administrative recovery for the specific platform. These features can be helpful, but their time limits and access controls differ from a separate backup. Verify the configuration instead of assuming every cloud account has long-term recovery."
+      ]
+    },
+    {
+      "heading": "Test restoring an independent copy",
+      "body": [
+        "Choose an important folder or mailbox, restore it to a safe location, and verify file contents, permissions, timestamps, and usability. Record how long the process took and whether the restore required a vendor or administrator. Protect backup credentials and copies from the same accounts used for everyday file sync.",
+        "Set recovery expectations with business owners and repeat tests after major changes. Keep a contact for urgent restoration and define how staff will work during recovery. A practical backup plan is one the organization can use under pressure, not just a setting enabled in a dashboard."
+      ]
+    }
+  ],
+  "test-backup-restore": [
+    {
+      "heading": "Create a safe, measurable test",
+      "body": [
+        "Select a representative file, mailbox, application, or system and agree on the test’s scope, owner, and maintenance window. Restore to a separate location or isolated environment so the exercise cannot overwrite live data. Define what successful recovery means before starting.",
+        "Measure elapsed time from the request through usable recovery, not only the time a job runs. Verify data integrity, permissions, dependencies, and whether the recovered item opens in the real workflow. Record the backup date used and any steps that required outside assistance."
+      ]
+    },
+    {
+      "heading": "Turn findings into recovery improvements",
+      "body": [
+        "Compare the result with the organization’s accepted data-loss and downtime objectives. If the restore was too slow or incomplete, identify whether the cause was retention, bandwidth, permissions, missing application configuration, or lack of a clear approver. Assign corrective work and a date for retesting.",
+        "Test different recovery paths over time: a deleted file, a compromised account, a larger dataset, and a critical service. Keep the procedure where authorized responders can reach it during an outage. Share a concise result with leadership so risk and investment decisions are based on evidence."
+      ]
+    }
+  ]
+};
+for (const [slug, sections] of Object.entries(additionalSecuritySections)) articles[slug]?.sections.push(...sections);
+
 export function hasKnowledgeArticle(slug: string) { return Boolean(articles[slug]); }
 
 export function KnowledgeArticle({ slug, guide }: { slug: string; guide: Guide }) {
