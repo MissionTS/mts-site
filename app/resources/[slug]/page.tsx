@@ -69,7 +69,22 @@ const articleSourceDate = (slug: string, guide: { category: string }) => {
 const securityTopics: Record<string, string> = {
   "what-is-phishing": "What Is Phishing and How Attacks Actually Reach Your Inbox", "mfa-app-text-key": "MFA Explained: App vs. Text vs. Hardware Key", "first-hour-ransomware": "What to Do in the First Hour of a Ransomware Attack", "cyber-insurance-questionnaires": "Cyber Insurance Questionnaires: What the Questions Really Mean", "cyber-insurance-small-business": "Cyber Insurance for Small Businesses: What It Covers and How to Prepare", "password-managers-small-teams": "Password Managers for Small Teams", "why-antivirus-isnt-enough": "Why Antivirus Alone Isn't Enough Anymore", "business-email-compromise": "Business Email Compromise: How Wire Fraud Happens", "security-awareness-training": "Employee Security Awareness Training: What Actually Reduces Incidents", "dark-web-monitoring": "Dark Web Monitoring: What It Can and Can't Tell You", "backed-up-or-synced": "Is Your Data Backed Up or Just Synced?", "three-two-one-backup": "The 3-2-1 Backup Rule", "test-backup-restore": "How to Test a Backup Restore",
 };
-Object.assign(checklists, Object.fromEntries(Object.entries(securityTopics).map(([slug, title]) => [slug, { category: "Security", title, intro: "A practical, plain-language guide to reducing risk and responding with confidence.", items: ["Identify the people, accounts, devices, and systems involved.", "Confirm the right safeguards are enabled and monitored.", "Define what users should do when something looks suspicious.", "Document ownership, escalation, and recovery steps.", "Test the process before a real incident or urgent decision.", "Review what happened and turn lessons into the next improvement."] }])));
+const securityIntroductions: Record<string, string> = {
+  "what-is-phishing": "Learn how phishing messages, fake sign-in pages, and impersonation trick people—and how to verify and report a suspicious request.",
+  "mfa-app-text-key": "Compare text codes, authenticator apps, push approvals, and security keys by usability, recovery, and phishing resistance.",
+  "first-hour-ransomware": "A first-response sequence for containing suspected ransomware, preserving evidence, and involving the right responders.",
+  "cyber-insurance-questionnaires": "Translate insurer control questions into evidence you can verify, document, and discuss with your broker.",
+  "cyber-insurance-small-business": "Understand common cyber policy coverage, insurer requirements, and practical preparation for renewal.",
+  "password-managers-small-teams": "Plan team vaults, access controls, MFA, recovery ownership, and credential offboarding.",
+  "why-antivirus-isnt-enough": "See what antivirus can catch, where threats get around it, and which other safeguards reduce risk.",
+  "business-email-compromise": "Learn how payment and vendor impersonation fraud works and how to verify sensitive requests.",
+  "security-awareness-training": "Build role-specific security habits and reporting practices that help prevent incidents.",
+  "dark-web-monitoring": "Understand what an exposure alert can tell you, what it cannot prove, and how to respond.",
+  "backed-up-or-synced": "Compare file synchronization with independent backup and test which recovery points are available.",
+  "three-two-one-backup": "Learn the 3-2-1 rule: three copies of important data, two storage types, and one copy kept offsite.",
+  "test-backup-restore": "A practical process for checking restored data, recovery time, permissions, and response ownership.",
+};
+Object.assign(checklists, Object.fromEntries(Object.entries(securityTopics).map(([slug, title]) => [slug, { category: "Security", title, intro: securityIntroductions[slug] ?? title, items: ["Identify the people, accounts, devices, and systems involved.", "Confirm the right safeguards are enabled and monitored.", "Define what users should do when something looks suspicious.", "Document ownership, escalation, and recovery steps.", "Test the process before a real incident or urgent decision.", "Review what happened and turn lessons into the next improvement."] }])));
 
 checklists["cyber-insurance-small-business"] = {
   category: "Security",
