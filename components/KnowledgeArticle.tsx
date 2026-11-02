@@ -1409,6 +1409,352 @@ Object.assign(articles, {
 
 export function getKnowledgeArticleLead(slug: string) { return articles[slug]?.lead; }
 
+Object.assign(articles, {
+  "it-support-tipton": {
+    "lead": "IT support for a Tipton business should reflect the systems and connectivity the organization actually relies on. A useful provider relationship covers employee help, account and device maintenance, security, backups, and a clear way to coordinate onsite work when remote support is not enough.",
+    "sections": [
+      {
+        "heading": "Begin with your locations and work patterns",
+        "body": [
+          "List the business addresses, number of employees, work schedules, remote users, and systems needed for daily operations. Note which work stops when internet, phones, shared files, or line-of-business software is unavailable. This is more useful than selecting a provider based only on a town name.",
+          "For a business with a primary office and smaller satellite site, ask how remote monitoring and support will work at each address and what onsite scheduling looks like. Verify vendor availability for each specific location before planning a circuit, cloud service, or hardware replacement."
+        ]
+      },
+      {
+        "heading": "Make connectivity and recovery part of the plan",
+        "body": [
+          "Document the internet circuit, firewall, Wi-Fi, phones, cloud services, and any backup connection. Ask whether a secondary path uses a separate carrier or physical route and test failover instead of assuming it will work.",
+          "Identify where critical data is stored, who administers backups, what retention is configured, and when a restore was last tested. A recovery plan should explain what happens if the office connection or a key system is unavailable."
+        ]
+      },
+      {
+        "heading": "Clarify support responsibilities",
+        "body": [
+          "Ask which users and devices are included, the support channels and hours, how urgent issues are escalated, and whether service covers Microsoft 365, identity, endpoint protection, patching, and vendor coordination. Define what qualifies as a project and what costs extra.",
+          "If the business already has an employee or independent technician, map who owns each task. A written responsibility list helps avoid duplicate work or an alert that each party assumed the other was handling."
+        ]
+      },
+      {
+        "heading": "Start with a short prioritized review",
+        "body": "Bring the provider your system list, recurring issues, upcoming changes, and outage priorities. Ask for a concise review of the biggest support and recovery gaps, plus owners and next steps. Make improvements in an order the organization can absorb rather than replacing equipment without a clear operational reason."
+      }
+    ],
+    "takeaway": "Choose Tipton IT support by the business’s addresses, connectivity, systems, and support needs. Confirm coverage and recovery responsibilities in writing."
+  },
+  "it-support-peru": {
+    "lead": "A practical IT support plan for a Peru organization begins with the people, buildings, and services that depend on technology. It should make help easy to request, keep accounts and devices maintained, protect important information, and clarify when onsite service is needed.",
+    "sections": [
+      {
+        "heading": "Map the organization before comparing providers",
+        "body": [
+          "List employees and locations, core applications, Microsoft 365 use, phones, wireless networks, connected equipment, and recurring support issues. Note seasonal schedules, public-facing services, and the systems that cannot be down during a busy workday.",
+          "Availability and installation options can vary by exact address. Confirm internet and vendor service for each location instead of relying on a city-level listing. Record circuit speed, upload needs, repair contacts, contract dates, and any single point of failure."
+        ]
+      },
+      {
+        "heading": "Plan for local and remote support together",
+        "body": [
+          "Remote support can resolve many account, application, and device issues quickly. Ask how an onsite request is prioritized, who schedules it, what travel or project charges apply, and how the provider will communicate if a problem is waiting on a site visit.",
+          "For buildings with several work areas, confirm Wi-Fi coverage, network closet documentation, cable labeling, equipment power, and physical access controls. A site visit is more effective when the provider knows the layout and the business workflow."
+        ]
+      },
+      {
+        "heading": "Protect data and continuity",
+        "body": [
+          "Identify the files and systems necessary to continue serving customers, clients, or community members. Verify backup scope, access protection, retention, and the most recent restore test. Make sure recovery instructions and vendor contacts remain available if email or the normal network is unavailable.",
+          "Review MFA, administrator accounts, endpoint protection, patching, and employee offboarding. Pair technical controls with a clear reporting route for suspicious emails, lost devices, or unusual sign-in prompts."
+        ]
+      },
+      {
+        "heading": "Set shared expectations",
+        "body": "Before an engagement, define who manages each account, application, vendor, and backup task. Request a written support scope, escalation process, onboarding checklist, and sample report. If internal staff or another provider remain involved, document the handoffs so issues do not sit between teams."
+      }
+    ],
+    "takeaway": "Peru IT support should combine address-specific planning, remote help, coordinated onsite service, and tested recovery. Start with an inventory and a clear ownership map."
+  },
+  "it-support-logansport": {
+    "lead": "Logansport businesses need IT support that connects everyday employee requests with the systems that keep operations running. A provider should explain the helpdesk, maintenance, security, network, vendor, and recovery work it will own—and what remains the organization’s responsibility.",
+    "sections": [
+      {
+        "heading": "Identify operational dependencies",
+        "body": [
+          "Document the devices, applications, internet services, phones, and shared information the organization uses. Note whether work depends on one building, multiple departments, a shop floor, a service counter, or staff working away from the office.",
+          "Rank systems by impact. A slow printer may be inconvenient; a down scheduling, accounting, or production system may interrupt revenue or service. This ranking helps set reasonable support priorities and recovery targets."
+        ]
+      },
+      {
+        "heading": "Review the network and equipment lifecycle",
+        "body": [
+          "Ask whether the provider maintains diagrams, warranty dates, configuration backups, and a device inventory. Check Wi-Fi coverage in work areas, network closet labeling, power protection, and whether critical equipment is still supported by its manufacturer.",
+          "Plan replacements before equipment becomes an emergency. Include firewall, wireless, switching, endpoints, servers, and specialized devices, while coordinating changes around operational schedules."
+        ]
+      },
+      {
+        "heading": "Make support and security measurable",
+        "body": [
+          "Confirm support hours, urgent escalation, onsite coordination, endpoint coverage, patching, MFA administration, backup monitoring, and vendor responsibilities. Clarify whether response targets measure acknowledgement or service restoration.",
+          "Request a sample report that shows recurring ticket patterns, patch or device exceptions, backup test results, and recommended actions. A useful report identifies owners and dates rather than simply listing tools."
+        ]
+      },
+      {
+        "heading": "Prepare for disruptions",
+        "body": "Agree on who can isolate a device, contact leadership, reach the internet provider, approve a restore, and communicate with employees. Test a representative backup recovery and keep contact instructions available outside the systems that might be down. Review the plan after major changes or incidents."
+      }
+    ],
+    "takeaway": "A strong Logansport support plan ties service priorities to business operations, maintains network documentation, and assigns owners for security and recovery."
+  },
+  "it-support-noblesville": {
+    "lead": "As a Noblesville organization adds employees, locations, or cloud services, technology support needs to scale without losing clear ownership. The right IT plan aligns helpdesk support, identity, devices, security, networking, and vendor coordination with the organization’s growth.",
+    "sections": [
+      {
+        "heading": "Design for change, not just today’s headcount",
+        "body": [
+          "Inventory users, devices, locations, software, shared workstations, and third-party services. Identify which teams are growing, how new employees are onboarded, and what access should be removed when someone leaves.",
+          "Ask how the provider handles new sites, acquisitions, seasonal staffing, remote users, and device refreshes. A consistent onboarding and offboarding workflow reduces delays and lingering access."
+        ]
+      },
+      {
+        "heading": "Standardize the foundation",
+        "body": [
+          "Establish consistent MFA, administrator accounts, endpoint security, operating system updates, device encryption, and recovery methods. Document exceptions for legacy equipment or specialized applications and assign a plan to address them.",
+          "For multi-site operations, review firewall configuration, Wi-Fi design, guest access, network segmentation, and internet failover. Standardization makes support more predictable while leaving room for real differences between locations."
+        ]
+      },
+      {
+        "heading": "Align service scope with internal capacity",
+        "body": [
+          "If the organization has internal IT staff, define whether the MSP handles service desk, monitoring, security operations, projects, or after-hours coverage. If it does not, confirm who owns vendor escalations, technology planning, and staff communication.",
+          "Clarify recurring fees, project estimates, licensing, onsite work, and after-hours charges. Growth can expose pricing assumptions; request a clear process for adding users and services."
+        ]
+      },
+      {
+        "heading": "Create a growth-aware roadmap",
+        "body": "Set quarterly priorities for capacity, security, lifecycle replacement, and application changes. For each item, identify a business owner, cost range, dependency, and target window. Review progress regularly so expansion does not turn every technology change into an emergency."
+      }
+    ],
+    "takeaway": "Scalable Noblesville IT support combines repeatable onboarding, consistent security, clear service boundaries, and a roadmap that adjusts as the organization grows."
+  },
+  "it-support-westfield": {
+    "lead": "Westfield organizations should evaluate IT support around their actual offices, staff, and service expectations. A growing workplace or newly occupied building can bring new network, Wi-Fi, access, device, and vendor responsibilities that are easy to overlook during move-in.",
+    "sections": [
+      {
+        "heading": "Plan for the building and the people in it",
+        "body": [
+          "Inventory work areas, conference rooms, phones, printers, wireless access points, cameras, and access-control devices. Confirm which systems rely on the business network and who owns their support.",
+          "For a new or renovated space, document cable pathways, network closets, switch capacity, Wi-Fi coverage, internet handoff, UPS, and equipment access. Coordinate technology work with construction and facilities schedules before ceilings and walls close."
+        ]
+      },
+      {
+        "heading": "Make new employee support repeatable",
+        "body": [
+          "Define the steps for account creation, device setup, MFA enrollment, application access, training, and offboarding. Use role-based access rather than copying another employee’s permissions without review.",
+          "Set a clear helpdesk route and explain what information users should include when reporting an issue. Early clarity reduces repeat questions and helps the provider identify recurring problems."
+        ]
+      },
+      {
+        "heading": "Secure connected systems",
+        "body": [
+          "Apply updates and unique credentials to network, camera, and access-control equipment. Separate guest Wi-Fi and consider isolating building systems from employee devices. Limit vendor access and remove it when work is complete.",
+          "Check endpoint coverage, MFA, backup protection, and alert ownership. Identify who can act if an account or building system behaves unexpectedly and how to reach that person after hours."
+        ]
+      },
+      {
+        "heading": "Set expectations for remote and onsite service",
+        "body": "Ask how quickly routine issues are acknowledged, how urgent problems are escalated, when a technician visits, and which costs are outside the monthly agreement. Keep diagrams, vendor contacts, and system owners current as the building changes."
+      }
+    ],
+    "takeaway": "Westfield IT support should include the physical workplace, connected systems, employee onboarding, and a defined onsite process—not only remote helpdesk requests."
+  },
+  "it-support-carmel": {
+    "lead": "Carmel professional firms and growing businesses often depend on cloud accounts, client information, specialized applications, and reliable communications. IT support should make those services easier to manage while documenting who can access sensitive systems and how the organization recovers from an outage.",
+    "sections": [
+      {
+        "heading": "Understand the data and obligations",
+        "body": [
+          "List the information the business stores—client files, financial records, health information, contracts, or employee data—and identify where it lives and who can access it. Consult qualified legal or compliance professionals for obligations tied to your industry or contracts.",
+          "Use that inventory to prioritize account protection, retention, access reviews, device encryption, and recovery. Avoid collecting or retaining data without a clear business reason and owner."
+        ]
+      },
+      {
+        "heading": "Secure identity and cloud access",
+        "body": [
+          "Require MFA for email, remote access, administrator accounts, and important cloud applications. Use individual accounts, least privilege, and timely offboarding. Review external sharing and delegated access periodically.",
+          "Confirm that endpoint protection, patching, mobile access, and sign-in alert ownership are included in the support plan. A cloud service remains dependent on secure credentials and usable recovery methods."
+        ]
+      },
+      {
+        "heading": "Protect client work and continuity",
+        "body": [
+          "Identify applications and files required to serve clients. Verify backup scope, retention, restricted deletion access, and restore-test results. Document how staff continue essential work if email, phones, or a line-of-business application is unavailable.",
+          "Set escalation contacts and communications roles for a security event. Keep insurer and vendor instructions available, and coordinate incident response with legal counsel when client or regulated information may be involved."
+        ]
+      },
+      {
+        "heading": "Evaluate provider accountability",
+        "body": "Ask for written service scope, support hours, project rules, vendor coordination, reporting, and exit provisions. Request a sample risk or roadmap review. Recommendations should explain impact, ownership, and cost so leadership can prioritize work without relying on unexplained technical jargon."
+      }
+    ],
+    "takeaway": "Carmel IT support should protect identity and client workflows, verify recovery, and make service responsibilities visible to leadership."
+  },
+  "it-support-lafayette": {
+    "lead": "Lafayette organizations may coordinate office teams, remote employees, research or production systems, and a wide mix of vendors. IT support should begin with the systems and workflows the organization depends on, then establish clear boundaries for service, security, and recovery.",
+    "sections": [
+      {
+        "heading": "Map users, locations, and specialized systems",
+        "body": [
+          "Inventory users, endpoints, cloud services, network equipment, critical applications, and vendor-managed systems. Record which systems are business-critical and who can approve access or changes.",
+          "If a line-of-business, laboratory, production, or specialized system has its own vendor, identify support contacts, maintenance windows, network requirements, and data dependencies. Do not apply changes to specialized equipment without coordinating with its owner."
+        ]
+      },
+      {
+        "heading": "Make access and remote work consistent",
+        "body": [
+          "Use individual accounts, MFA, least privilege, and a defined offboarding process. Review remote-access methods and third-party accounts; remove access that is no longer needed and document exceptions for systems that cannot use standard controls.",
+          "Standardize laptop updates, endpoint protection, encryption, and support enrollment. Give employees one clear channel for requests and suspicious activity reports."
+        ]
+      },
+      {
+        "heading": "Plan network resilience and recovery",
+        "body": [
+          "Document circuits, firewalls, wireless, switches, and any secondary connection. Verify exact-address availability and test failover instead of relying on advertised coverage or a proposed design.",
+          "Set recovery expectations for important systems, check backup isolation and retention, and test restores. Record the time, outcome, and unresolved dependencies so leadership can make realistic continuity decisions."
+        ]
+      },
+      {
+        "heading": "Coordinate multiple providers",
+        "body": "Create a responsibility matrix showing which provider handles each system, who owns credentials, and how issues are escalated. This is especially important when software, internet, facilities, and IT vendors share a workflow. Review open issues and projects regularly with the internal business owner."
+      }
+    ],
+    "takeaway": "Lafayette IT support starts with accurate system ownership, special vendor dependencies, and tested continuity—not a one-size-fits-all device package."
+  },
+  "howard-county-internet": {
+    "lead": "Business internet availability and performance can vary from one street address to another, even within the same community. Compare service only after checking the exact location and the business requirements for upload capacity, reliability, repair, and public IP needs.",
+    "sections": [
+      {
+        "heading": "Check each address independently",
+        "body": [
+          "Use the FCC National Broadband Map and Indiana’s broadband map to identify reported options, then verify directly with the provider. Map data and provider listings are useful starting points, not a guarantee that a circuit can be installed on your timeline or at the quoted price.",
+          "Ask the provider to confirm serviceability, installation lead time, construction charges, equipment, contract term, and any building access requirements. For multi-location businesses, repeat this process for every address."
+        ]
+      },
+      {
+        "heading": "Compare business service details",
+        "body": [
+          "Ask about committed upload and download speeds, static IP availability, service-level commitments, repair windows, support hours, modem or router ownership, and price changes after introductory periods. Clarify whether the quote is dedicated or shared service and what happens during congestion.",
+          "For voice, cloud applications, video, or remote access, test actual performance and latency at busy times. A high advertised download speed does not guarantee adequate upload capacity or consistent performance for every workflow."
+        ]
+      },
+      {
+        "heading": "Design backup connectivity deliberately",
+        "body": [
+          "Identify which operations must continue during an outage and estimate how long the business can tolerate interruption. A secondary circuit, fixed wireless, or mobile connection may help, but the backup must support the required traffic and be tested with the firewall and phones.",
+          "Check whether the primary and secondary services share a carrier, entrance path, pole, or local infrastructure. A backup that depends on the same physical route may fail during the same event. Document who contacts each provider."
+        ]
+      },
+      {
+        "heading": "Use current maps and verify claims",
+        "body": "FCC availability maps show provider-reported service data and let users check specific locations; Indiana’s broadband maps provide state-specific information. When a listing appears inaccurate, use the map’s challenge or feedback process and retain provider correspondence. Review service before a move, renewal, or expansion."
+      }
+    ],
+    "takeaway": "Check business internet by exact address, verify claims with providers, compare upload and repair terms, and test any backup circuit. Maps help narrow options but do not replace a confirmed quote.",
+    "sources": [
+      {
+        "label": "FCC National Broadband Map guide",
+        "href": "https://help.bdc.fcc.gov/hc/en-us/articles/10467446103579-How-to-Use-the-FCC-s-National-Broadband-Map"
+      },
+      {
+        "label": "Indiana Broadband maps",
+        "href": "https://www.in.gov/indianabroadband/maps/"
+      }
+    ]
+  },
+  "indiana-breach-notification": {
+    "lead": "When personal information may have been exposed, an Indiana business should quickly contain the technical issue, preserve facts, and determine whether notification duties apply. Notification rules depend on the information, circumstances, affected people, and current law; involve qualified counsel rather than relying on a generic checklist.",
+    "sections": [
+      {
+        "heading": "Start the incident response",
+        "body": [
+          "Use the organization’s response plan and notify the designated IT/security lead, leadership, insurer, and legal counsel. Preserve relevant logs, affected messages, device details, and a timeline. Avoid deleting evidence or making public statements before the response team understands the facts.",
+          "Contain compromised accounts or devices using a controlled process. If a vendor or cloud service is involved, open an incident with that provider and record the scope and response information it supplies."
+        ]
+      },
+      {
+        "heading": "Establish what information and people may be affected",
+        "body": [
+          "Work with technical responders and counsel to determine which systems and records were involved, what categories of personal information may have been accessed, the period of exposure, and which Indiana residents or other individuals may be affected.",
+          "Distinguish confirmed facts from assumptions. Preserve the basis for scope decisions and revisit them if forensic findings change. The legal definition of a reportable breach and applicable exceptions should be assessed by counsel against current Indiana law and other relevant jurisdictions."
+        ]
+      },
+      {
+        "heading": "Coordinate notification decisions",
+        "body": [
+          "Indiana’s Attorney General provides business breach FAQs and a notification form. Counsel should review whether the circumstances trigger notice, who must be notified, timing, content, and any additional regulator or contractual obligations. Organizations with residents in multiple states may face multiple laws.",
+          "Do not assume that an IT provider, insurer, or hosting company will make every required notification on your behalf. Assign an owner to track decisions, deadlines, approvals, and copies of notices."
+        ]
+      },
+      {
+        "heading": "Prepare before an event",
+        "body": [
+          "Maintain a current data and vendor inventory, incident contacts, insurance instructions, and secure recovery access. Practice who investigates, who decides notification, who communicates with customers, and how systems are restored.",
+          "After the incident, review what delayed detection, containment, scope decisions, or communications. Turn those lessons into specific control or process changes and confirm responsibilities with leadership."
+        ]
+      }
+    ],
+    "takeaway": "Treat a suspected data breach as both a technical incident and a legal decision. Preserve facts, involve counsel early, and confirm current Indiana and other applicable notification requirements.",
+    "sources": [
+      {
+        "label": "Indiana Attorney General business security breach FAQs and form",
+        "href": "https://www.in.gov/attorneygeneral/consumer-protection-division/id-theft-prevention/security-breaches/security-breach-faqs-and-notification-form-for-businesses/"
+      },
+      {
+        "label": "Indiana Cybersecurity Hub privacy toolkit",
+        "href": "https://www.in.gov/cybersecurity/government/best-practices-standards-and-resources/got-privacy-new-indiana-privacy-toolkit-offers-practical-easy-to-use-resource-for-small-business-non-profits-and-local-government/"
+      }
+    ]
+  },
+  "indiana-tech-grants": {
+    "lead": "Technology grants can reduce the cost of some projects, but programs have specific applicants, uses, deadlines, matching requirements, and reporting obligations. A small business should verify that a current program accepts its project before treating grant funding as part of the technology budget.",
+    "sections": [
+      {
+        "heading": "Define the project before searching",
+        "body": [
+          "Write down the business problem, proposed technology, total cost, measurable outcome, implementation schedule, and who will manage the work. Potential projects might involve research and commercialization, export activity, workforce capability, or a community partnership—but each funding program defines eligible uses differently.",
+          "Separate eligible project costs from routine operating costs, subscriptions, unrelated hardware, and work completed before approval. Do not assume that a general technology upgrade qualifies simply because a program supports innovation or small business growth."
+        ]
+      },
+      {
+        "heading": "Search official state and local sources",
+        "body": [
+          "Start with the Indiana Economic Development Corporation’s current entrepreneur and business programs, the Indiana Small Business Development Center, and the relevant city or county economic development office. Check program status directly with the administrator; older articles and third-party listings may describe expired funding.",
+          "Some Indiana programs are tied to federal SBIR/STTR research awards or export-related activity rather than general IT purchases. Read the applicant criteria and contact the program before spending time preparing an application."
+        ]
+      },
+      {
+        "heading": "Build an application-ready package",
+        "body": [
+          "Prepare a clear scope, vendor quotes, budget, timeline, business registration information, match-funding plan if required, and measurable milestones. Explain how the project supports the program’s stated objective and how progress will be reported.",
+          "Ask whether reimbursement occurs after expenses, what records are required, whether procurement rules apply, and what happens if costs or timelines change. Assign an owner to track documents, deadlines, approvals, and final reporting."
+        ]
+      },
+      {
+        "heading": "Budget as if funding is uncertain",
+        "body": "Grants are competitive and may be restricted, delayed, or unavailable. Keep a viable plan that does not depend on an award unless the program has formally approved it. Treat grant administration as project work and confirm the tax and accounting implications with qualified advisors."
+      }
+    ],
+    "takeaway": "Verify a grant’s current status and eligible uses with the official program administrator before budgeting around it. A well-defined project and documented outcomes improve readiness, but do not guarantee an award.",
+    "sources": [
+      {
+        "label": "IEDC entrepreneurship programs",
+        "href": "https://iedc.in.gov/entrepreneurship/programs"
+      },
+      {
+        "label": "Indiana SBIR/STTR program",
+        "href": "https://iedc.in.gov/sbir"
+      }
+    ]
+  }
+} );
+
 function defaultArticle(guide: Guide) {
   if (guide.category === "Local resources") {
     return {
