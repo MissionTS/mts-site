@@ -1407,6 +1407,8 @@ Object.assign(articles, {
   }
 } );
 
+export function getKnowledgeArticleLead(slug: string) { return articles[slug]?.lead; }
+
 function defaultArticle(guide: Guide) {
   if (guide.category === "Local resources") {
     return {
