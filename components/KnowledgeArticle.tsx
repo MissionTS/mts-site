@@ -2355,6 +2355,8 @@ Object.assign(articles, {
   }
 });
 
+articles["three-two-one-backup"].lead = "The 3-2-1 backup rule is a simple resilience pattern: keep three copies of important data, store them on at least two types of media, and keep one copy offsite. This guide explains how to apply the rule, where modern cloud backups fit, and how to test recovery.";
+
 const additionalGuideSections: Record<string, Section[]> = {
   "physical-security-cybersecurity": [
     {
