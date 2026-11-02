@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { hasKnowledgeArticle, KnowledgeArticle, getKnowledgeArticleLead } from "@/components/KnowledgeArticle";
+import { KnowledgeArticle } from "@/components/KnowledgeArticle";
 
 const checklists: Record<string, { category: string; title: string; intro: string; items: string[]; publishedAt?: string; modifiedAt?: string }> = {
   "physical-security-cybersecurity": { category: "Cybersecurity", title: "Why Physical Security Is Part of Cybersecurity", intro: "A stolen badge, unlocked closet, or exposed camera can create the same kind of access problem as a compromised password. Strong security connects the physical and digital layers.", items: ["Inventory doors, server rooms, network closets, workstations, and other sensitive areas.", "Review who can enter each space and remove access that no longer matches a person’s role.", "Protect cameras, access controllers, switches, and other security devices with strong accounts and updates.", "Connect physical events with digital incident response so teams know when to preserve footage and logs.", "Train staff to report tailgating, lost badges, unattended devices, and suspicious activity.", "Review physical and cybersecurity controls together during quarterly risk planning."] },
@@ -87,11 +87,11 @@ checklists["cyber-insurance-small-business"] = {
 };
 
 export function generateStaticParams() { return Object.keys(checklists).map((slug) => ({ slug })); }
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata { const guide = checklists[params.slug]; return withSeoMetadata({ title: guide ? `${guide.title} | Mission Knowledge Hub` : "Mission Knowledge Hub", description: getKnowledgeArticleLead(params.slug) ?? guide?.intro ?? "Technology and cybersecurity resources for Indiana businesses." }, `/resources/${params.slug}`); }
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata { const guide = checklists[params.slug]; return withSeoMetadata({ title: guide ? `${guide.title} | Mission Knowledge Hub` : "Mission Knowledge Hub", description: guide?.intro ?? "Technology and cybersecurity resources for Indiana businesses." }, `/resources/${params.slug}`); }
 
 export default function ChecklistPage({ params }: { params: { slug: string } }) {
   const guide = checklists[params.slug];
-  if (!guide || !hasKnowledgeArticle(params.slug)) notFound();
+  if (!guide) notFound();
   return (
     <main>
       <SiteHeader />
@@ -102,7 +102,7 @@ export default function ChecklistPage({ params }: { params: { slug: string } }) 
           <Link href="/resources" className="inline-flex items-center gap-2 text-sm font-bold text-slate-300 hover:text-mission-gold"><ArrowLeftIcon className="h-4 w-4" /> Back to Knowledge Hub</Link>
           <p className="mt-10 text-sm font-extrabold uppercase tracking-[0.18em] text-mission-gold">{guide.category} guide</p>
           <h1 className="mt-4 text-5xl font-black tracking-tight sm:text-6xl">{guide.title}</h1>
-          <p className="mt-6 max-w-3xl text-xl leading-8 text-slate-300">{getKnowledgeArticleLead(params.slug) ?? guide.intro}</p>
+          <p className="mt-6 max-w-3xl text-xl leading-8 text-slate-300">{guide.intro}</p>
         </div>
       </section>
       <section className="bg-mission-mist py-16 lg:py-24">
