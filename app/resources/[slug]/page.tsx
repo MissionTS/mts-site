@@ -1,6 +1,7 @@
 import { withSeoMetadata } from "@/lib/seo";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/StructuredData";
-import { notFound, type Metadata } from "next";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { SiteFooter } from "@/components/SiteFooter";
