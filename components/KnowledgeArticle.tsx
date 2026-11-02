@@ -1050,6 +1050,363 @@ const articles: Record<string, { lead: string; sections: Section[]; takeaway: st
   },
 };
 
+Object.assign(articles, {
+  "managed-it-contract": {
+    "lead": "A managed IT contract sets the service boundaries between your organization and its provider. It should explain what is covered, who is responsible, how support is requested, what carries a separate charge, and what happens at renewal or termination. Compare the actual agreement and service attachment, not just a sales summary.",
+    "sections": [
+      {
+        "heading": "Read the scope by people, devices, and locations",
+        "body": [
+          "Look for the billing unit and what counts as a supported user. Check whether shared workstations, mobile devices, servers, network equipment, conference rooms, contractors, or seasonal workers are included. Confirm which offices and remote locations are in scope, and how added or removed users affect billing.",
+          "Ask whether the service includes helpdesk, monitoring, patching, Microsoft 365 administration, endpoint protection, backup monitoring, vendor coordination, and onsite work. Agreements vary; a service name does not tell you what the provider has actually agreed to do."
+        ]
+      },
+      {
+        "heading": "Separate recurring work from projects and pass-through costs",
+        "body": [
+          "The monthly fee may cover routine support but exclude migrations, new locations, hardware, application changes, cabling, major remediation, or after-hours projects. Licensing, cloud consumption, backup storage, internet circuits, and third-party subscriptions can also be billed separately.",
+          "Request examples of work treated as a project, the approval process, and how estimates are produced. Clarify travel fees, minimum labor blocks, emergency charges, price increases, and whether the provider may change vendors or tools during the term."
+        ]
+      },
+      {
+        "heading": "Understand support and service targets",
+        "body": [
+          "Check the available channels and hours, how priority is assigned, and what a response-time target means. Acknowledging a ticket is not the same as restoring service. Ask how emergencies are escalated, how after-hours coverage works, and what happens when a problem depends on a software or internet vendor.",
+          "Ask what reporting you will receive and how recurring issues, unresolved risks, and recommendations are reviewed with leadership. Service-level commitments should be readable, measurable, and connected to the business impact of the issue."
+        ]
+      },
+      {
+        "heading": "Check security, data, and continuity responsibilities",
+        "body": [
+          "Identify who owns administrator accounts, documentation, backup copies, encryption keys, security alerts, incident coordination, and recovery decisions. Confirm who can access client or employee data, how access is removed, and what assistance is included during an incident.",
+          "Check the contract’s confidentiality, data handling, subcontractor, insurance, and breach-notification provisions with appropriate counsel. A technology provider can explain operational procedures but should not replace legal review of contract language."
+        ]
+      },
+      {
+        "heading": "Plan for renewal or exit before you need one",
+        "body": [
+          "Review the initial term, auto-renewal, notice deadline, termination rights, transition assistance, data return, credential transfer, and outstanding fees. Confirm what documentation and configuration exports will be supplied and whether the provider will support an orderly handoff.",
+          "Before signing, ask for a sample monthly report and onboarding plan. A clear agreement makes it easier to see who owns each task, what it costs, and how you can change course if the relationship no longer fits."
+        ]
+      }
+    ],
+    "takeaway": "A good managed IT contract defines scope, service hours, exclusions, costs, security responsibilities, and exit steps in writing. Resolve ambiguous terms before signing."
+  },
+  "questions-for-an-msp": {
+    "lead": "When evaluating an MSP, ask questions that reveal how the provider works after the sales meeting: who handles support, what security and maintenance are included, how projects are approved, and how you will know whether the environment is improving.",
+    "sections": [
+      {
+        "heading": "Ask how support actually works",
+        "body": [
+          "Who will answer requests day to day? What channels and hours are available? How are requests prioritized, escalated, and communicated? What does the stated response target measure, and how are urgent incidents handled outside business hours?",
+          "Ask for a realistic example of a recurring issue and how the provider would investigate its root cause. Request a sample service report so you can see what leadership would learn about tickets, patterns, open risks, and planned work."
+        ]
+      },
+      {
+        "heading": "Clarify the complete service scope",
+        "body": [
+          "Ask which users, locations, endpoints, servers, applications, and network devices are included. Clarify monitoring, patching, Microsoft 365 administration, identity, endpoint protection, backup checks, restore testing, vendor coordination, and onsite coverage.",
+          "Ask what is excluded or billed as a project. Confirm how licenses, hardware, cloud usage, after-hours work, emergency labor, and travel appear on invoices. Compare written proposals line by line rather than relying on broad terms such as all-inclusive."
+        ]
+      },
+      {
+        "heading": "Probe security and incident readiness",
+        "body": [
+          "Who reviews security alerts and when? How are MFA, privileged accounts, endpoint protection, email controls, patching, and backup isolation managed? If a device or account is compromised, who can isolate it, reset access, contact leadership, and coordinate recovery?",
+          "Ask how the provider handles suspected data exposure and whether it follows your insurer’s or counsel’s incident instructions. Request an example response workflow and identify the decisions that remain with your organization."
+        ]
+      },
+      {
+        "heading": "Understand onboarding and planning",
+        "body": [
+          "What happens in the first 30, 60, and 90 days? Ask about inventory, documentation, administrator access, backup validation, open issues, security baseline, and user communication. Confirm how inherited problems will be prioritized and quoted.",
+          "Who prepares a roadmap, how often will you review it, and how will recommendations connect to budget and business goals? Ask how the provider distinguishes urgent risks from longer-term improvements."
+        ]
+      },
+      {
+        "heading": "Check accountability and fit",
+        "body": [
+          "How does the provider measure response, recurring incidents, security coverage, and client satisfaction? Who is your escalation contact? How are staffing changes, subcontractors, and vendor dependencies handled?",
+          "Ask for a reference from an organization with a similar size or operating model. Look for clear answers, realistic commitments, and a willingness to document assumptions. A good fit is a provider whose process you understand and whose responsibilities are explicit."
+        ]
+      }
+    ],
+    "takeaway": "Ask for concrete examples, written scope, an onboarding plan, and a sample report. The best questions make service boundaries and accountability easy to compare."
+  },
+  "outgrown-computer-guy": {
+    "lead": "An independent technician can provide valuable personal support, especially when a business is small and its systems are simple. The question is whether the arrangement still provides enough coverage, documentation, security depth, and continuity for the organization’s current needs.",
+    "sections": [
+      {
+        "heading": "Signs the arrangement is under strain",
+        "body": [
+          "Support may depend on one person’s availability, memory, or access to undocumented accounts. Recurring issues may be fixed repeatedly without a root-cause plan. New hires, remote work, new locations, or additional software may increase complexity faster than the support model can adapt.",
+          "Leadership may not have an accurate view of device age, backup readiness, security gaps, vendor contracts, or upcoming costs. These are not criticisms of an individual; they are signs the business may need more structure or additional capacity."
+        ]
+      },
+      {
+        "heading": "Compare responsibilities, not labels",
+        "body": [
+          "A larger MSP is not automatically better. Map the actual work: user support, network maintenance, identity, endpoint protection, patching, backup and recovery, vendor coordination, projects, and planning. Identify which tasks are covered, who is the backup owner, and how urgent requests are handled when the primary technician is unavailable.",
+          "Some businesses retain a trusted technician and add managed security, documentation, or after-hours coverage. Others move to a provider with a broader service desk. The right decision depends on service needs, risk, budget, and internal capacity."
+        ]
+      },
+      {
+        "heading": "Build a safe transition if you change",
+        "body": [
+          "Before ending an arrangement, inventory accounts, domains, devices, network diagrams, licenses, backups, vendors, and open issues. Confirm ownership of administrator accounts and business data. Securely transfer credentials; do not rely on one person’s personal email or memory.",
+          "Select the replacement support model before removing access or tools. Coordinate monitoring, backups, incident contacts, and user instructions so coverage does not disappear between providers. Keep a written handoff list and validate each critical system."
+        ]
+      },
+      {
+        "heading": "A practical self-check",
+        "body": [
+          "Can another qualified person support the business if the primary technician is sick or unavailable? Can you find current credentials and vendor contacts? Do you know when backups were last restored successfully? Are security alerts reviewed by someone? Can leadership explain the next three technology priorities and their costs?",
+          "If several answers are no, start by documenting the environment and closing the highest-impact gaps. You may not need a complete provider change; you do need clear ownership and a support plan that can grow with the business."
+        ]
+      }
+    ],
+    "takeaway": "Outgrowing informal support is about coverage and continuity, not the value of a trusted technician. Measure current needs, identify gaps, and choose the smallest support change that addresses them."
+  },
+  "what-is-a-vcio": {
+    "lead": "A virtual chief information officer (vCIO) provides technology planning and leadership on a recurring or fractional basis. The role helps business leaders connect systems, security, budgets, vendors, and projects to organizational goals without hiring a full-time technology executive.",
+    "sections": [
+      {
+        "heading": "What the role should produce",
+        "body": [
+          "A useful vCIO learns how the organization operates, identifies the systems and risks that matter, and helps leadership prioritize technology decisions. Deliverables may include a roadmap, budget forecast, lifecycle plan, risk summary, project sequencing, and meeting notes with named owners.",
+          "The role should translate technical options into business tradeoffs: cost, operational impact, timing, risk reduction, and dependencies. It should also identify decisions that leadership must make rather than quietly treating every recommendation as an IT task."
+        ]
+      },
+      {
+        "heading": "What a vCIO is not",
+        "body": [
+          "The title is not a guarantee of executive-level work. Some providers use it for periodic account meetings or sales reviews. Ask what time is included, who attends, what information is prepared, and how recommendations are tracked after the meeting.",
+          "A vCIO does not automatically replace internal IT, compliance counsel, an insurance broker, or a security operations function. Clarify whether the person can approve spending, manage vendors, own projects, or only advise."
+        ]
+      },
+      {
+        "heading": "When fractional technology leadership can help",
+        "body": [
+          "A growing business may be juggling refresh cycles, security requirements, cloud changes, acquisitions, multiple locations, or vendor decisions without a technology leader. A vCIO can provide structure for these decisions and make priorities more visible to executives.",
+          "Organizations with internal IT staff may use the role to add strategic perspective, budgeting support, or an independent review. Smaller organizations may use it to create a roadmap and avoid making major purchases only in response to urgent failures."
+        ]
+      },
+      {
+        "heading": "How to evaluate a vCIO service",
+        "body": [
+          "Ask for a sample roadmap, risk report, meeting agenda, and follow-up log. Confirm how the provider learns the environment, how often meetings occur, how recommendations are ranked, and how conflicts of interest are handled when the provider sells the proposed technology.",
+          "Measure whether decisions become clearer: are projects sequenced, budgets forecast, risks assigned, and overdue actions revisited? A vCIO relationship is worthwhile when it helps leadership make better-informed decisions and improves follow-through."
+        ]
+      }
+    ],
+    "takeaway": "Evaluate a vCIO by the planning work and follow-through delivered: a practical roadmap, clear costs and risks, and decisions connected to business goals."
+  },
+  "co-managed-it": {
+    "lead": "Co-managed IT pairs an organization’s internal technology staff with an outside provider. The internal team keeps business context and day-to-day ownership, while the provider adds agreed capacity, specialist skills, tools, or coverage.",
+    "sections": [
+      {
+        "heading": "Common reasons to use a co-managed model",
+        "body": [
+          "An internal IT manager may need help with after-hours monitoring, security operations, patching, service desk volume, major projects, Microsoft 365 administration, or a skill gap. Co-management can also provide backup coverage during vacations or hiring transitions.",
+          "The model can be flexible: an outside provider may handle a defined technical layer while internal staff remain the primary contact for employees. It works best when the partnership adds capacity without creating two teams that assume the other owns an issue."
+        ]
+      },
+      {
+        "heading": "Define the service boundary",
+        "body": [
+          "Create a responsibility matrix for tickets, identity, devices, network, security alerts, backups, projects, vendors, and incident escalation. Identify who owns the final decision and who communicates with users. Define how tickets move between teams and what information must be documented.",
+          "Agree on tools and access. Decide which ticketing system, remote management tools, monitoring consoles, and documentation source are authoritative. Use individual accounts, least privilege, and a process to remove access when a person or provider changes."
+        ]
+      },
+      {
+        "heading": "Protect the internal team’s context",
+        "body": [
+          "The internal team understands business applications, user needs, operational calendars, and informal dependencies. Make that knowledge available through documented workflows and regular handoffs. External specialists should know when a change could affect production, compliance, or customer service.",
+          "Establish shared change windows, escalation paths, and an issue review cadence. Avoid parallel ticket queues that hide ownership or make employees repeat the same information."
+        ]
+      },
+      {
+        "heading": "Measure the partnership",
+        "body": [
+          "Track ticket handoffs, time to acknowledge and resolve, recurring incidents, alert ownership, project completion, and the internal team’s workload. Review whether the provider is covering the agreed gap or adding coordination overhead.",
+          "Revisit scope when staffing, systems, or risk changes. Co-managed service should make the internal team more effective and resilient; if work is routinely bounced between parties, clarify the matrix and adjust the operating model."
+        ]
+      }
+    ],
+    "takeaway": "Co-managed IT works when internal and external teams share tools, documentation, and clear ownership. Define the handoffs before incidents expose the gaps."
+  },
+  "msp-vs-internal-it": {
+    "lead": "Choosing between an MSP and an internal IT employee means comparing coverage, skills, continuity, accountability, and total cost. A salary and a monthly service fee are not directly comparable because each model includes different work and availability.",
+    "sections": [
+      {
+        "heading": "Calculate the full internal cost",
+        "body": [
+          "Include salary, payroll taxes, benefits, recruiting, training, equipment, software, security tools, and time spent coordinating vendors. Consider coverage during vacations, illness, evenings, and turnover. A single employee may be highly capable but cannot be available every hour or expert in every discipline.",
+          "Internal IT can provide deep organizational context and immediate collaboration. That value should be included in the comparison rather than treated as an invisible benefit."
+        ]
+      },
+      {
+        "heading": "Calculate the full MSP scope",
+        "body": [
+          "List the provider’s recurring fee, included users and devices, support hours, onsite expectations, security and backup services, licensing, project fees, after-hours charges, and exclusions. Confirm whether strategic planning and vendor coordination are included.",
+          "A provider may offer multiple technicians and specialized roles, but your organization still needs an internal owner to set priorities, approve changes, and communicate business requirements. The MSP’s price does not eliminate internal decision time."
+        ]
+      },
+      {
+        "heading": "Compare capability and continuity",
+        "body": [
+          "Map the work the business needs: helpdesk, endpoint and identity administration, network, cloud, cybersecurity, backups, compliance evidence, applications, projects, and planning. Identify the skills and service hours required for each and who provides backup coverage.",
+          "A hybrid model may be appropriate: an internal IT lead handles business-facing work while an MSP provides service desk capacity, managed security, or after-hours monitoring. Define ownership so employees know where to go and issues do not fall between teams."
+        ]
+      },
+      {
+        "heading": "Choose based on operating needs",
+        "body": [
+          "Estimate user count, system complexity, growth, regulatory requirements, and acceptable downtime. Ask how quickly the business needs support and how often technology changes require projects. Compare the models over a multi-year period, including onboarding, turnover, and transition costs.",
+          "Review the decision annually. The right model may change as the business grows or hires technical staff. A good choice provides reliable coverage, clear accountability, and skills that match the organization’s needs within its budget."
+        ]
+      }
+    ],
+    "takeaway": "Compare total cost and actual coverage, including internal coordination, after-hours needs, specialist skills, and continuity. Many organizations use a deliberate hybrid model."
+  },
+  "it-onboarding-transition": {
+    "lead": "IT onboarding is the controlled process of learning an environment, establishing support, and validating that key systems are protected and documented. It should give the provider and the client a shared view of what exists, what is covered, what is at risk, and what happens next.",
+    "sections": [
+      {
+        "heading": "Before day one: establish ownership and access",
+        "body": [
+          "Name business and technical contacts, define support channels, confirm users and locations, and schedule the transition around critical operations. Inventory domains, cloud tenants, network systems, vendors, applications, devices, and current projects.",
+          "Transfer access securely using individual accounts and least privilege. Confirm who owns global administrator accounts, backup consoles, domain registrars, firewall management, and vendor billing. Avoid shutting off existing tools until replacement coverage is ready."
+        ]
+      },
+      {
+        "heading": "First weeks: discover and document",
+        "body": [
+          "Build or validate the asset and software inventory, network diagrams, vendor contacts, support procedures, warranties, and known recurring issues. Identify systems that are unsupported, undocumented, or dependent on one person.",
+          "Check endpoint protection, patch status, MFA coverage, privileged access, backup scope, retention, and restore history. Record evidence and exceptions. Do not assume that an existing tool is functioning simply because it is installed."
+        ]
+      },
+      {
+        "heading": "Stabilize high-impact risks",
+        "body": [
+          "Prioritize work by business impact and likelihood: exposed accounts, failing backups, unsupported critical systems, security alerts without owners, or single points of failure. Agree on emergency fixes separately from longer projects and obtain approval before material changes.",
+          "Validate the service desk route with users. Test escalation contacts, remote access, monitoring, and backup restoration where appropriate. Capture application and vendor dependencies before a change could interrupt service."
+        ]
+      },
+      {
+        "heading": "The 30-, 60-, and 90-day review",
+        "body": [
+          "At 30 days, review inventory, access, urgent risks, and support intake. Around 60 days, examine recurring incidents, maintenance coverage, backup evidence, and documentation gaps. By 90 days, agree on a practical roadmap, budget assumptions, owners, and milestones.",
+          "A successful onboarding is not measured by the number of tools installed. It is measured by clear responsibilities, stable support, useful documentation, known risks, and a plan the organization can execute."
+        ]
+      }
+    ],
+    "takeaway": "A strong IT onboarding inventories, secures, documents, and validates the environment before major changes. Agree on priorities and review progress through the first 90 days."
+  },
+  "backups-small-business": {
+    "lead": "A small-business backup plan defines which information can be restored, how quickly it can be recovered, and who can perform the work during an outage. It should cover business priorities, not just the files that happen to be easiest to copy.",
+    "sections": [
+      {
+        "heading": "Decide what must be recoverable",
+        "body": [
+          "List shared files, accounting and payroll systems, customer records, Microsoft 365 data, databases, line-of-business applications, device configurations, and other information the business needs to operate. Note who owns each system and what happens if it is unavailable.",
+          "Set a recovery point objective (how much recent work can be lost) and recovery time objective (how long the business can be without the system). Different systems may need different targets; a daily file backup may not be adequate for a frequently updated operational database."
+        ]
+      },
+      {
+        "heading": "Choose independent, protected copies",
+        "body": [
+          "Use a backup design with separate copies and storage locations appropriate to the data. Synchronization helps collaboration but may replicate deletion or encryption. Protect backup administration with MFA, unique credentials, and limited delete permissions; consider offline or immutable retention for critical data.",
+          "Confirm scope, retention, encryption, restore options, storage limits, and provider responsibilities. Ask whether a compromised everyday administrator could delete both production data and recovery points."
+        ]
+      },
+      {
+        "heading": "Monitor and test",
+        "body": [
+          "Assign someone to review failed jobs and unexplained gaps. Test restores of representative files, then practice recovery for critical systems in a safe environment. Confirm the data opens, permissions are correct, and the recovery time meets business expectations.",
+          "Record test dates, systems, selected restore points, results, problems, and corrective actions. Retest after major changes to identity, applications, storage, or providers."
+        ]
+      },
+      {
+        "heading": "Plan for an outage",
+        "body": [
+          "Keep emergency contacts, recovery instructions, licensing details, encryption keys, and decision owners available if email or the normal network is down. Decide who can authorize restoration and how users will receive updates.",
+          "During a suspected ransomware incident, protect backup systems and coordinate restoration with responders. Restoring from the wrong point can reintroduce a threat or overwrite useful evidence."
+        ]
+      }
+    ],
+    "takeaway": "A business backup is a recoverable, protected copy with an owner and a tested restore path. Start with critical systems, set recovery targets, and practice the steps."
+  },
+  "network-security-small-business": {
+    "lead": "Network security for a small business is the work of controlling who and what can connect, reducing the reach of a compromised device, and maintaining the equipment that carries business traffic. It begins with a current picture of the network and the services that depend on it.",
+    "sections": [
+      {
+        "heading": "Know what is connected",
+        "body": [
+          "Inventory firewalls, switches, wireless access points, servers, printers, cameras, access control, phones, employee devices, guest devices, and internet circuits. Record who manages each item, its support status, configuration backup, and dependencies.",
+          "Unknown devices, default credentials, unpatched systems, and forgotten remote access are difficult to protect. Identify public-facing services and third-party connections, then confirm whether they are still needed."
+        ]
+      },
+      {
+        "heading": "Use access boundaries",
+        "body": [
+          "Separate guest wireless from business systems and consider segmenting sensitive or operational devices so they cannot freely reach employee workstations. Restrict administrative interfaces to trusted management paths and use unique credentials and MFA where supported.",
+          "Network segmentation is not a substitute for securing each device. Document permitted traffic and test business workflows so a new rule does not inadvertently disrupt phones, production, or building systems."
+        ]
+      },
+      {
+        "heading": "Maintain edge devices and wireless",
+        "body": [
+          "Update firewall and wireless firmware, review remote-access rules, remove unused accounts, back up configurations, and monitor security alerts. Use strong wireless encryption and change default administrator credentials. Confirm that vendor remote access is approved, time-limited where possible, and attributable to an individual.",
+          "Plan for internet resilience based on business impact. A secondary connection may help, but failover needs configuration and testing; a second circuit that shares the same physical route may not provide true diversity."
+        ]
+      },
+      {
+        "heading": "Prepare for incidents and change",
+        "body": [
+          "Keep a network diagram, vendor contacts, device backups, and escalation instructions. Know who can isolate a device, disable a remote-access account, contact the ISP, and approve restoration. Test the response before a real outage.",
+          "Review the network after office moves, new equipment, acquisitions, or security incidents. Small, documented changes are easier to troubleshoot than emergency adjustments made without a record."
+        ]
+      }
+    ],
+    "takeaway": "Secure small-business networks with an accurate inventory, restricted access, maintained equipment, and tested recovery. Design changes around the systems and workflows that depend on the network."
+  },
+  "it-support-kokomo": {
+    "lead": "Choosing IT support in Kokomo involves more than finding a nearby technician. A dependable arrangement should explain how employees get help, how systems are maintained, what security work is included, and how onsite needs and third-party vendors are coordinated.",
+    "sections": [
+      {
+        "heading": "Map the support your organization needs",
+        "body": [
+          "List users, locations, business hours, critical applications, network and wireless needs, recurring issues, and upcoming projects. Note which systems cannot be unavailable during production, appointments, customer service, payroll, or financial close.",
+          "Separate remote support needs from work that requires a site visit. Ask how urgent onsite requests are scheduled, what travel or project charges apply, and whether routine support is available outside standard business hours."
+        ]
+      },
+      {
+        "heading": "Look for complete operational coverage",
+        "body": [
+          "Ask how the provider handles helpdesk requests, device setup, Microsoft 365, identity, network equipment, patching, endpoint security, backup checks, and vendor escalations. Confirm whether your internal employee or current provider can work alongside the support team.",
+          "For manufacturing and facility teams, discuss wireless coverage, connected equipment, network closets, cameras, and access control. For professional offices and practices, ask about account security, access changes, reliable applications, and recovery of important information."
+        ]
+      },
+      {
+        "heading": "Evaluate accountability and local fit",
+        "body": [
+          "Clarify who owns administrator accounts, documentation, alerts, backup restoration, and incident communication. Request a sample report and ask how recurring tickets become permanent fixes. A local presence is useful when the provider also has a clear remote process and defined service area.",
+          "Confirm the response commitment in writing and distinguish acknowledgement from resolution. Ask how the provider works with internet, software, and equipment vendors when a problem spans multiple companies."
+        ]
+      },
+      {
+        "heading": "Plan a first conversation",
+        "body": [
+          "Prepare a list of systems, users, locations, recurring issues, and recent outages. Ask the provider to identify the first risks it would investigate, what information it needs, and what would be considered a separate project.",
+          "A responsible recommendation should explain assumptions, responsibilities, and costs before changes begin. Start with a discovery conversation and a short prioritized plan rather than committing to a tool or major replacement before the environment is understood."
+        ]
+      }
+    ],
+    "takeaway": "Choose Kokomo IT support by fit, written scope, local and remote coverage, security ownership, and a clear recovery plan. Bring your systems and operating needs into the first conversation."
+  }
+} );
+
 function defaultArticle(guide: Guide) {
   if (guide.category === "Local resources") {
     return {
