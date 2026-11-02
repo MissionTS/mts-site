@@ -2838,6 +2838,240 @@ const additionalSecuritySections: Record<string, Section[]> = {
 };
 for (const [slug, sections] of Object.entries(additionalSecuritySections)) articles[slug]?.sections.push(...sections);
 
+const additionalBuyingGuideSections: Record<string, Section[]> = {
+  "managed-it-cost-per-user": [
+    {
+      "heading": "Build an apples-to-apples comparison",
+      "body": [
+        "List the services included in each quote, the number of billable users and devices, locations, support hours, and price assumptions. Ask how seasonal workers, contractors, shared workstations, new offices, and acquisitions affect the monthly amount. Confirm whether minimums or tier changes apply as headcount changes.",
+        "Separate recurring service from licenses, hardware, cloud subscriptions, backup storage, security tools, projects, cabling, and onsite work. A low monthly fee can exclude costly services the business still needs. Ask for a sample invoice and a written schedule of out-of-scope rates."
+      ]
+    },
+    {
+      "heading": "Include internal effort and business risk",
+      "body": [
+        "Estimate the time your staff currently spend coordinating vendors, solving recurring issues, and recovering from outages. Include the opportunity cost of delayed work and the operational effect of support wait time. These costs may not appear in an IT invoice but affect the decision.",
+        "Compare what each model covers for monitoring, patching, identity, endpoint security, backup, incident response, and planning. Verify who reviews alerts and who can make urgent changes. Service terminology varies, so ask providers to describe the same real-world scenario."
+      ]
+    },
+    {
+      "heading": "Review price mechanics before signing",
+      "body": [
+        "Check contract length, renewal rules, annual increases, onboarding charges, early termination, transition fees, and user-count adjustments. Confirm what happens when a user is removed, a device is replaced, or the company adds a location. Ask the broker or counsel about legal terms as needed.",
+        "Choose a plan against a defined service outcome and budget, not just the lowest price per person. Revisit costs after onboarding when the actual inventory and work patterns are known, and compare planned improvements with the service’s recurring scope."
+      ]
+    }
+  ],
+  "break-fix-vs-managed": [
+    {
+      "heading": "Calculate the cost of reactive support",
+      "body": [
+        "Review 12 months of invoices, emergency visits, contractor hours, hardware failures, and repeat incidents. Add internal employee time spent waiting, rescheduling work, and coordinating providers. If exact downtime cost is unknown, estimate a range and identify which assumptions drive it.",
+        "Look for hidden delay costs: an unresolved root cause, a missed update, extended outage, rushed purchase, or staff workaround that increases error risk. Separate one-time emergencies from predictable maintenance so the comparison does not assume every month will be unusually expensive."
+      ]
+    },
+    {
+      "heading": "Compare the operating model",
+      "body": [
+        "Break-fix generally charges when work is requested; managed service typically funds a defined recurring scope and operating cadence. Neither name guarantees a particular quality. Compare response targets, monitoring, patching, endpoint protection, backup, documentation, vendor coordination, and strategic planning in writing.",
+        "Ask what is included when a problem originates with a third-party application or a project exceeds routine support. A managed agreement may exclude substantial work, while a break-fix provider may offer a maintenance plan. Compare responsibilities and escalation just as carefully as the fee."
+      ]
+    },
+    {
+      "heading": "Know when each model fits",
+      "body": [
+        "A small, stable environment with low dependence on technology may choose limited support, provided it accepts the risks and has a continuity plan. A growing organization, regulated practice, or business that cannot tolerate outages may value predictable coverage, prevention, and access to a broader skill set.",
+        "Set a review threshold: recurring incident costs, support delays, insurance requirements, staff growth, or unsupported systems may justify a different model. Make the switch based on evidence and operating needs, not only after the next emergency."
+      ]
+    }
+  ],
+  "managed-it-contract": [
+    {
+      "heading": "Ask how service quality is measured",
+      "body": [
+        "A contract should make support measurable enough for both parties to discuss performance. Clarify how priority is assigned, which events qualify as urgent, when the clock starts, and how the provider handles third-party delays or client dependencies. Ask for reporting on volume and age of open issues.",
+        "Confirm that onboarding, security remediation, projects, after-hours response, and onsite dispatch have a defined approval and pricing path. If the provider proposes an annual roadmap or account review, identify whether it is included and what information you will receive."
+      ]
+    },
+    {
+      "heading": "Align contract language with business requirements",
+      "body": [
+        "Map the contract’s service scope to your critical workflows. If a practice depends on a specialized application, or a manufacturer relies on a production network, clarify who supports the vendor relationship and who responds when the service is down. Do not assume common business software is automatically in scope.",
+        "Check data access, subcontracting, confidentiality, breach cooperation, insurance, liability, and change-management terms with qualified legal counsel. Maintain an attachment list and confirm which document controls if the proposal, master agreement, and service schedule differ."
+      ]
+    },
+    {
+      "heading": "Prepare for price changes and exit",
+      "body": [
+        "Understand how the fee changes when user numbers, devices, locations, or services change. Ask for notice of price adjustments and the process for disputing an invoice. Keep internal approval authority clear for projects and purchases that are billed separately.",
+        "A transition clause should cover notice, data return, administrator access, credentials, configurations, backups, licenses, and reasonable knowledge transfer. Verify that the client owns critical tenants and domains. Preserve a copy of the signed agreement and attachments in an internal repository."
+      ]
+    }
+  ],
+  "questions-for-an-msp": [
+    {
+      "heading": "Ask how they handle a difficult week",
+      "body": [
+        "Describe a realistic event: the email system is unavailable, an executive account may be compromised, or a location loses internet. Ask who receives the first call, how severity is set, what actions are authorized, what leadership hears, and how recovery is verified.",
+        "Ask what information the provider needs from your organization to respond well. Their answer should identify contacts, business priorities, access, vendor details, and decision authority. If response depends on one person being available, agree on alternates and after-hours coverage."
+      ]
+    },
+    {
+      "heading": "Check people, tooling, and continuity",
+      "body": [
+        "Ask whether technicians are employees or subcontractors, how staff are trained, how access is granted, and how the provider handles turnover. Learn where documentation is stored and how the client retrieves it. A mature service protects business continuity even when an individual technician leaves.",
+        "Request examples of monitoring and reporting without exposing another customer’s confidential information. Ask what the provider sees, what it does not see, how data is protected, and how the service responds to a tool outage or unavailable cloud platform."
+      ]
+    },
+    {
+      "heading": "Compare proposals with a scorecard",
+      "body": [
+        "Write your requirements before meetings and rate each proposal against support, security, recovery, communication, transition, cost, and accountability. Note unanswered questions and ask for written clarification. Ensure quotes use the same user, device, hours, and project assumptions.",
+        "Check references and verify the contract matches the presentation. During the sales process, notice whether the provider listens to constraints, explains tradeoffs, and acknowledges unknowns. The working relationship often resembles the clarity and follow-through you experience before signing."
+      ]
+    }
+  ],
+  "outgrown-computer-guy": [
+    {
+      "heading": "Use evidence to decide whether to change",
+      "body": [
+        "Review support history, unresolved risks, time to provision accounts, device coverage, restore-test results, and vendor coordination. Identify which problems repeatedly consume owner or employee time. Separate frustration with a specific incident from an ongoing gap in capacity or accountability.",
+        "Ask what work the current arrangement does well and what must improve. A trusted independent technician may continue in a defined role alongside internal staff or an MSP. The goal is continuity and reliable coverage, not a decision based only on a job title or company size."
+      ]
+    },
+    {
+      "heading": "Protect access and business continuity",
+      "body": [
+        "Before transitioning, confirm that domains, cloud tenants, backups, licenses, internet accounts, hardware warranties, and administrator identities are controlled by the business. Use organization-owned email addresses and secure documentation so an individual’s departure does not lock the company out.",
+        "Arrange a handoff of open tickets, configurations, vendor contacts, risks, and recovery steps. Avoid revoking access before replacement monitoring and support are working unless there is an immediate security concern. Maintain a named owner for each service while responsibilities are changing."
+      ]
+    },
+    {
+      "heading": "Choose a structure you can sustain",
+      "body": [
+        "Compare one internal hire, a managed provider, and a co-managed model against coverage, specialized skills, total cost, and decision speed. Determine who handles routine requests, security alerts, projects, lifecycle planning, and after-hours incidents. Write down what is included and how performance will be reviewed.",
+        "Start with a prioritized stabilization plan instead of asking a new provider to replace every tool immediately. Secure access, validate backups, inventory equipment, and address critical gaps first. Reassess after the first quarter using measurable outcomes and staff feedback."
+      ]
+    }
+  ],
+  "switch-msps-without-downtime": [
+    {
+      "heading": "Make the transition safe for credentials and data",
+      "body": [
+        "The organization should control its domain registrar, Microsoft or Google tenant, backup platform, endpoint console, firewall, phone provider, and other critical administrative accounts. Use a business-controlled password vault and confirm recovery contacts and billing ownership. Record credentials transferred and avoid sending secrets in ordinary email.",
+        "Agree on how data, logs, configurations, and documentation will be transferred or retained. Test the incoming provider’s access before removing the outgoing team. If ownership is disputed, accounts are shared improperly, or a termination fee is unclear, involve leadership and qualified counsel before disrupting service."
+      ]
+    },
+    {
+      "heading": "Stage the cutover by risk",
+      "body": [
+        "Group tasks into discovery, secure access, monitoring overlap, user support, and final access removal. Schedule high-impact changes separately where possible. Keep a rollback step for changes to DNS, firewall, identity, network equipment, or phone routing, and have the responsible vendor available during the cutover.",
+        "Define a go/no-go checkpoint: critical systems are inventoried, urgent alert routing works, backups are accessible, support requests reach the right team, and key vendors recognize the new contacts. Record any accepted gap and the person authorizing it."
+      ]
+    },
+    {
+      "heading": "Communicate with employees and vendors",
+      "body": [
+        "Tell staff when the support contact changes, how to report an urgent issue, whether they need to install software, and how to recognize legitimate IT messages. Notify vendors and update authorization contacts before a needed support case arises.",
+        "Review the transition daily during active cutover and weekly during stabilization. Track open work, access changes, risks, and decisions in a shared log. At 30, 60, and 90 days, confirm users know the process, documentation is current, and inherited issues have an owner."
+      ]
+    }
+  ],
+  "what-is-a-vcio": [
+    {
+      "heading": "Set governance and decision rights",
+      "body": [
+        "A vCIO can advise, recommend, and coordinate, but business leaders remain accountable for priorities, risk acceptance, and funding unless authority is explicitly delegated. Agree who approves technology purchases, who owns project delivery, and how security or continuity decisions are escalated.",
+        "Set a regular meeting cadence that fits the decision cycle: monthly operational review and quarterly roadmap or budget planning may be appropriate. Prepare an agenda with open risks, upcoming renewals, projects, costs, and decisions required so time is spent resolving issues rather than repeating status."
+      ]
+    },
+    {
+      "heading": "Ask for outcomes you can observe",
+      "body": [
+        "Useful deliverables include a prioritized roadmap, asset and lifecycle view, budget forecast, risk register, vendor review, and written decision log. The vCIO should explain dependencies and alternatives, including when a recommended change is not worth the cost right now.",
+        "Measure whether decisions become completed work: budget variance, overdue risks, project milestones, recovery readiness, and satisfaction of department leaders. If recommendations repeatedly remain unassigned, examine whether ownership, staffing, or scope needs to change."
+      ]
+    },
+    {
+      "heading": "Coordinate strategy with operations",
+      "body": [
+        "The vCIO relies on accurate support and security information. Agree how technical teams provide ticket patterns, endpoint status, backup results, incident reports, vendor performance, and project estimates. Strategy built on stale inventory or unverified claims will not guide sound investment.",
+        "During a merger, new location, cloud migration, or insurance renewal, use the vCIO to bring decision-makers together and track dependencies. Document assumptions, approvals, and accountable owners so the plan survives personnel changes."
+      ]
+    }
+  ],
+  "co-managed-it": [
+    {
+      "heading": "Write a responsibility matrix",
+      "body": [
+        "For each operational task, identify who performs the work, who approves it, who is consulted, and who is informed. Cover onboarding, offboarding, endpoint policies, backups, network changes, vulnerability response, software procurement, and incident communication. Avoid one task having two assumed owners or none.",
+        "Decide how internal staff and the MSP hand off tickets. Use a shared queue or agreed escalation path, document work in one accessible system, and set expectations for response during evenings, vacations, or staff turnover."
+      ]
+    },
+    {
+      "heading": "Control access and change management",
+      "body": [
+        "Use named administrative accounts and grant the minimum permissions needed for each role. Define when the MSP can make emergency changes and how it records and reports them. Review privileged access periodically and remove it when responsibilities change.",
+        "Coordinate planned changes through an agreed process that includes business impact, approval, timing, testing, and rollback. Shared work can create conflicting configuration changes if teams operate from different diagrams or assumptions, so keep documentation current and identify a change owner."
+      ]
+    },
+    {
+      "heading": "Review capacity and value together",
+      "body": [
+        "Track whether the partnership closes expertise gaps, reduces response delays, improves security coverage, and frees internal staff for higher-value projects. Discuss repeated handoff problems and unresolved work openly; neither party benefits if the arrangement only increases ticket routing.",
+        "Adjust the split when the organization hires, adds services, or changes its risk profile. Revisit service scope and pricing against actual workload, then update the responsibility matrix and access groups so the operating model stays current."
+      ]
+    }
+  ],
+  "msp-vs-internal-it": [
+    {
+      "heading": "Compare coverage hour by hour",
+      "body": [
+        "List the support demand by time of day, location, and skill type. Include employee help, systems maintenance, monitoring, security response, project work, vendor escalation, and leadership planning. Compare how each option covers normal hours, evenings, weekends, vacations, and simultaneous incidents.",
+        "An employee may be close to users but unavailable to perform project or security work while handling tickets. An MSP may have broader coverage but require clear onboarding, business context, and a defined escalation relationship. Model the actual schedule rather than assuming either option is automatically available."
+      ]
+    },
+    {
+      "heading": "Understand the tradeoffs in capability",
+      "body": [
+        "An internal hire can learn specialized workflows and build relationships, while an MSP may bring peer review, standardized tools, and specialists in areas the organization rarely needs. Ask each model how it handles a complex network change, a suspicious login, a restore, and a new employee at a second location.",
+        "Assess control and continuity. Internal management offers direct day-to-day oversight, while an MSP contract defines services through scope and targets. Both require documentation and governance. A single internal employee can also create a continuity risk unless there is backup coverage."
+      ]
+    },
+    {
+      "heading": "Model total cost under growth scenarios",
+      "body": [
+        "Compare a current-state budget and a growth scenario. Include labor, benefits, recruiting, tools, subscriptions, training, vendor time, and manager oversight for an internal role; include provider fees, excluded work, projects, onboarding, and transition costs for an MSP.",
+        "Consider a hybrid structure: an internal coordinator or IT lead can manage business context while an MSP supplies monitoring, security, specialist skills, or after-hours coverage. Reassess as headcount, regulatory obligations, and technology complexity change."
+      ]
+    }
+  ],
+  "it-onboarding-transition": [
+    {
+      "heading": "Protect continuity during knowledge transfer",
+      "body": [
+        "Keep a transition register for systems, owners, dependencies, credentials, vendors, open incidents, and required decisions. Prioritize services with no recovery path or single administrator. Store documentation in an organization-controlled system and validate it by asking a second authorized person to use it.",
+        "Maintain appropriate overlap between outgoing and incoming support, with explicit start and end dates for each access group. The outgoing provider should not retain unnecessary access after handoff, but removing access before replacement monitoring and recovery are verified can create a preventable outage."
+      ]
+    },
+    {
+      "heading": "Bring users into the new process",
+      "body": [
+        "Send a clear welcome message with support channels, operating hours, urgent issue instructions, and any expected device changes. Explain how to identify legitimate provider communications and what information to include in a ticket. Give managers a contact for service-impacting issues.",
+        "Watch for common first-month issues: devices not enrolled, missing application owners, stale access, unknown vendors, and backups that cover fewer systems than expected. Track each problem with a business impact and owner, not simply as a generic onboarding task."
+      ]
+    },
+    {
+      "heading": "Close onboarding with evidence",
+      "body": [
+        "At the 30-day review, confirm inventory and access; by 60 days, agree remediation and lifecycle priorities; by 90 days, review service trends, validated recovery, open risks, and roadmap funding. Adapt the schedule to the environment, but keep decision points explicit.",
+        "Do not declare transition complete just because endpoint agents are installed. Verify monitoring reaches a responder, administrators can access critical services, backup restoration works, employees know how to get support, and the organization can retrieve its own documentation."
+      ]
+    }
+  ]
+};
+for (const [slug, sections] of Object.entries(additionalBuyingGuideSections)) articles[slug]?.sections.push(...sections);
+
 export function hasKnowledgeArticle(slug: string) { return Boolean(articles[slug]); }
 
 export function KnowledgeArticle({ slug, guide }: { slug: string; guide: Guide }) {
