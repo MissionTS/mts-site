@@ -1,11 +1,11 @@
 import { withSeoMetadata } from "@/lib/seo";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/StructuredData";
-import type { Metadata } from "next";
+import { notFound, type Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { KnowledgeArticle, getKnowledgeArticleLead } from "@/components/KnowledgeArticle";
+import { hasKnowledgeArticle, KnowledgeArticle, getKnowledgeArticleLead } from "@/components/KnowledgeArticle";
 
 const checklists: Record<string, { category: string; title: string; intro: string; items: string[]; publishedAt?: string; modifiedAt?: string }> = {
   "physical-security-cybersecurity": { category: "Cybersecurity", title: "Why Physical Security Is Part of Cybersecurity", intro: "A stolen badge, unlocked closet, or exposed camera can create the same kind of access problem as a compromised password. Strong security connects the physical and digital layers.", items: ["Inventory doors, server rooms, network closets, workstations, and other sensitive areas.", "Review who can enter each space and remove access that no longer matches a person’s role.", "Protect cameras, access controllers, switches, and other security devices with strong accounts and updates.", "Connect physical events with digital incident response so teams know when to preserve footage and logs.", "Train staff to report tailgating, lost badges, unattended devices, and suspicious activity.", "Review physical and cybersecurity controls together during quarterly risk planning."] },
@@ -89,7 +89,8 @@ export function generateStaticParams() { return Object.keys(checklists).map((slu
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata { const guide = checklists[params.slug]; return withSeoMetadata({ title: guide ? `${guide.title} | Mission Knowledge Hub` : "Mission Knowledge Hub", description: getKnowledgeArticleLead(params.slug) ?? guide?.intro ?? "Technology and cybersecurity resources for Indiana businesses." }, `/resources/${params.slug}`); }
 
 export default function ChecklistPage({ params }: { params: { slug: string } }) {
-  const guide = checklists[params.slug] ?? checklists["security-baseline"];
+  const guide = checklists[params.slug];
+  if (!guide || !hasKnowledgeArticle(params.slug)) notFound();
   return (
     <main>
       <SiteHeader />
