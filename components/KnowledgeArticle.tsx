@@ -2355,32 +2355,11 @@ Object.assign(articles, {
   }
 });
 
-function defaultArticle(guide: Guide) {
-  if (guide.category === "Local resources") {
-    return {
-      lead: guide.intro,
-      sections: [
-        { heading: "Local context changes the answer", body: "Indiana businesses do not all have the same provider availability, building layouts, workforce patterns, or response needs. A useful technology plan starts with the exact address, the systems the organization depends on, and the people responsible for acting when something goes wrong." },
-        { heading: "Look beyond the monthly service", body: "When comparing providers or resources, evaluate response coverage, internet resilience, Microsoft 365 and endpoint support, cybersecurity, backup recovery, and documentation. A lower headline price can become expensive if a business still has to coordinate every vendor or emergency." },
-        { heading: "Build a practical local plan", body: "Begin with a short discovery conversation, verify what is available at each location, and prioritize the improvements that reduce operational risk first. The right partner should be able to support remote work while still providing local context and onsite coordination when the situation calls for it." },
-      ],
-      takeaway: "Use the local checklist below to turn community-specific conditions into a clear, supportable technology plan.",
-    };
-  }
-  return {
-    lead: guide.intro,
-    sections: [
-      { heading: "Why this matters", body: "Technology decisions become easier when the organization understands the business impact, the people involved, and the risk of leaving the issue unresolved." },
-      { heading: "Build a repeatable approach", body: "Document the current state, assign ownership, and define what a successful outcome looks like. A repeatable process is more valuable than a one-time fix." },
-      { heading: "Turn guidance into a decision", body: "Start with the smallest next step that creates useful evidence: confirm availability, document a gap, ask a provider a specific question, or test the current process. Then use what you learn to prioritize the next investment." },
-      { heading: "Keep the conversation moving", body: "The strongest technology programs are reviewed over time. Revisit assumptions, measure outcomes, and adjust the plan as your team, systems, and risk profile change." },
-    ],
-    takeaway: "Use the action plan below to turn the topic into a clear next step for your team, then revisit it as circumstances change.",
-  };
-}
+export function hasKnowledgeArticle(slug: string) { return Boolean(articles[slug]); }
 
 export function KnowledgeArticle({ slug, guide }: { slug: string; guide: Guide }) {
-  const article = articles[slug] ?? defaultArticle(guide);
+  const article = articles[slug];
+  if (!article) return null;
   const [copied, setCopied] = useState(false);
   const [completed, setCompleted] = useState<Set<number>>(new Set());
   const shareArticle = async () => {
