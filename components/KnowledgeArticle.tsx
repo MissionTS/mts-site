@@ -1755,6 +1755,333 @@ Object.assign(articles, {
   }
 } );
 
+Object.assign(articles, {
+  "physical-security-cybersecurity": {
+    "lead": "Physical security and cybersecurity meet anywhere a person, device, or building system can grant access. A stolen laptop, unprotected network closet, compromised camera, or shared badge can give an intruder a path into systems and data. Treat the building and the network as parts of one security program.",
+    "sections": [
+      [
+        "Map the paths into your systems",
+        [
+          "List sensitive rooms, work areas, network equipment, cameras, access-control panels, and devices that store or transmit business information. Note who can enter each location, how visitors are escorted, and what happens to badges and keys when someone changes roles or leaves.",
+          "Include equipment rooms and secondary locations that are easy to overlook, such as reception desks, conference rooms, wiring closets, and remote sites. A simple floor plan, access list, and device inventory help teams find weak points without turning the review into a major project."
+        ]
+      ],
+      [
+        "Connect physical events to cyber response",
+        [
+          "A lost laptop or forced door may require account revocation, device isolation, log review, and preservation of video or access records. Decide who can take each action and how security staff, IT, facilities, and leadership contact one another after hours.",
+          "Protect cameras and door controllers like other networked equipment: change default credentials, limit administration, apply supported updates, and place devices on appropriate network segments. A security appliance with broad access can become a foothold if its account or software is neglected."
+        ]
+      ],
+      [
+        "Build controls people can follow",
+        [
+          "Use individual badges, least-privilege access groups, visitor sign-in, automatic door schedules, and a documented process for temporary access. Review access lists on a regular schedule and after staffing changes. Keep emergency access possible while recording who used it and why.",
+          "Train staff to challenge tailgating politely, report missing badges, secure unattended devices, and avoid sharing door codes. Test camera views, retention, time synchronization, and alert routing so that evidence is usable when an incident needs investigation."
+        ]
+      ]
+    ],
+    "takeaway": "Physical security belongs in cybersecurity reviews because doors, badges, cameras, and networked building systems all affect access. Inventory them, assign owners, and connect physical incident procedures to account and device response."
+  },
+  "security-baseline": {
+    "lead": "A security baseline is a small, documented set of controls every organization expects to be in place before adding advanced tools. It reduces the common ways attackers enter, limits what a stolen account or infected laptop can reach, and gives leadership a way to track gaps.",
+    "sections": [
+      [
+        "Protect identities and devices first",
+        [
+          "Require multifactor authentication for email, remote access, administrator accounts, and other critical services. Use separate administrator accounts, remove stale access promptly, and make recovery methods belong to the organization rather than an individual employee.",
+          "Keep an inventory of company devices and supported software. Enable encryption, endpoint protection, automatic updates, and screen locking. Define how new devices are enrolled and how lost or retired devices are removed from access and data."
+        ]
+      ],
+      [
+        "Make recovery part of the baseline",
+        [
+          "Back up critical systems and business data using retention and access controls that match the impact of loss. Keep recovery credentials protected separately from everyday administrator accounts; if ransomware can delete both production data and backups, backup existence alone is not enough.",
+          "Select representative files and systems for restore tests. Record how long recovery took, what data was missing, who approved the process, and what needs correction. Establish a realistic recovery objective with business owners instead of assuming every system can be restored instantly."
+        ]
+      ],
+      [
+        "Measure ownership, not checkbox completion",
+        [
+          "For every control, name an owner, evidence source, review cadence, and exception process. A policy that says MFA is required is different from a report showing which accounts still lack it; collect evidence that demonstrates coverage and follow up on gaps.",
+          "Review the baseline quarterly and after major changes such as a new location, acquisition, cloud migration, or cyber-insurance renewal. Prioritize fixes according to business impact and exposure, then track overdue exceptions with a decision-maker and target date."
+        ]
+      ]
+    ],
+    "takeaway": "A useful security baseline is specific enough to verify. Start with identity, endpoints, and recoverable data, assign control owners, and use evidence and exceptions to drive the next round of improvements."
+  },
+  "microsoft-365-setup": {
+    "lead": "Microsoft 365 works best when identity, file storage, collaboration, devices, and retention are designed together. Default settings may not reflect how your team shares information or recovers from mistakes. A short design pass prevents scattered files, confusing Teams, and access that outlives a business need.",
+    "sections": [
+      [
+        "Set the rules for identity and access",
+        [
+          "Define how users are created, assigned licenses, secured with multifactor authentication, and disabled when they leave. Protect administrator accounts with separate credentials and limited use. Review guest access and external sharing so collaboration is available without leaving every site open by default.",
+          "Decide which devices may access company data and how you handle personal phones or computers. Pair access policies with a supportable enrollment process; an enforcement rule that blocks legitimate work without a recovery path often gets bypassed."
+        ]
+      ],
+      [
+        "Give files and Teams a clear home",
+        [
+          "Choose when work belongs in a SharePoint site, a Teams channel, or an individual OneDrive. Use ownership and naming rules that make it clear who maintains a workspace, what content it holds, and how a team member requests access.",
+          "Plan guest collaboration, confidential content, retention, and the lifecycle of inactive workspaces. Review permissions at the site or group level instead of sharing individual links indefinitely. Provide employees with a short guide for common tasks so they do not create duplicate storage to work around confusing structure."
+        ]
+      ],
+      [
+        "Plan operations and recovery",
+        [
+          "Document licensing, service administrators, device policies, key integrations, and escalation contacts. Establish who reviews sign-in alerts, handles suspected account compromise, and communicates an outage. Record configuration decisions so the environment does not depend on one administrator’s memory.",
+          "Test what happens when a file is deleted, a user leaves, a device is lost, or an administrator is unavailable. Retention, recycle bins, version history, and backup can serve different purposes; verify the recovery behavior and timeline for the data your organization cannot afford to lose."
+        ]
+      ]
+    ],
+    "takeaway": "Treat Microsoft 365 as an operating environment rather than a collection of apps. Clear identity rules, file ownership, device controls, and tested recovery make it easier for staff to collaborate securely."
+  },
+  "proactive-it": {
+    "lead": "Proactive IT is the recurring work that reduces avoidable interruptions before a user reports a failure. It combines monitoring with maintenance, pattern analysis, lifecycle planning, documentation, and conversations about what the business needs next.",
+    "sections": [
+      [
+        "Turn alerts into useful maintenance",
+        [
+          "Monitoring should identify a condition that needs action: a failing disk, a stopped backup, an exposed service, unusual device health, or a capacity trend. Define severity, who reviews the signal, and how the provider confirms the issue was resolved.",
+          "Patch operating systems, common applications, and network equipment on a published cadence. Test important changes where appropriate, communicate expected interruptions, and keep an exception log for devices or systems that cannot follow the standard schedule."
+        ]
+      ],
+      [
+        "Fix recurring causes, not only tickets",
+        [
+          "Review repeated tickets by application, location, device model, user workflow, or vendor. Several small requests may point to one underlying issue, such as poor wireless coverage, an unreliable integration, confusing permissions, or equipment reaching end of life.",
+          "Track change history and maintain practical documentation: device inventory, network diagrams, vendor contacts, license ownership, recovery steps, and administrator access. Documentation should be stored where authorized staff can reach it during an outage, not only inside the support system."
+        ]
+      ],
+      [
+        "Connect maintenance to a roadmap",
+        [
+          "Create a lifecycle view of warranties, operating-system support, device age, and recurring service risk. Forecast replacement costs and explain the impact of deferring a refresh. This allows leaders to schedule investment rather than react to a surprise failure.",
+          "Hold periodic reviews that cover operational risks, completed work, open issues, security posture, and upcoming projects. A useful report names owners and dates; a dashboard full of green indicators is not a substitute for explaining decisions and tradeoffs."
+        ]
+      ]
+    ],
+    "takeaway": "Proactive IT turns monitoring and support history into prevention, reliable documentation, and a roadmap. Ask for examples of recurring problems that were permanently resolved and how planned work is measured."
+  },
+  "physical-security": {
+    "lead": "A connected camera and access-control system is part of both facility operations and the business network. Good planning starts with what people need to see and control, then accounts for privacy, network capacity, power, retention, access roles, and incident response.",
+    "sections": [
+      [
+        "Design around actual facility needs",
+        [
+          "Map entrances, delivery areas, cash or inventory rooms, restricted workspaces, and routes people use after hours. Select camera views to answer specific questions while avoiding unnecessary capture of private spaces. Check lighting and sight lines at the times incidents are most likely to occur.",
+          "Set door schedules and access groups around job responsibilities, not broad convenience. Define visitor procedures, temporary credentials, lost badges, emergency egress, and how staff request a change. Decide who reviews access exceptions and footage requests."
+        ]
+      ],
+      [
+        "Check infrastructure before installation",
+        [
+          "Estimate the bandwidth and storage each camera needs at the selected resolution, frame rate, and retention period. Confirm switching, PoE budgets, cable routes, recording capacity, UPS coverage, and available rack space before buying equipment.",
+          "Place cameras, controllers, and recorders on a network design with restricted administration and only the connections they need. Change default credentials, apply updates, synchronize time, and document device ownership. Coordinate security-system changes with IT so new equipment does not introduce unmanaged access paths."
+        ]
+      ],
+      [
+        "Operate and review the system",
+        [
+          "Limit footage access to authorized roles and establish how viewing, exporting, retention, and deletion are logged. Keep recorded video only as long as policy and business needs require. Make sure the people responsible for incidents know how to preserve relevant footage quickly.",
+          "Test camera views, badge readers, alerts, recording, and recovery after installation and major changes. Review permissions when employees or vendors leave. Include system downtime and evidence preservation in the incident plan, with a fallback if the normal administrator is unavailable."
+        ]
+      ]
+    ],
+    "takeaway": "A reliable security system is designed for specific operational questions and maintained like business-critical IT. Confirm views, network capacity, access ownership, retention, and response procedures before deployment."
+  },
+  "network-closet": {
+    "lead": "A network closet that is labeled, powered, cooled, secured, and documented saves time during outages and makes future changes safer. The goal is not showroom neatness: technicians should be able to identify equipment and trace a connection without disturbing unrelated services.",
+    "sections": [
+      [
+        "Check power, cooling, and physical condition",
+        [
+          "Confirm equipment is supported by the intended circuit and UPS, and that battery capacity matches the time needed for safe shutdown or generator transfer. Look for overloaded power strips, blocked airflow, excessive dust, water exposure, and heat that shortens equipment life.",
+          "Restrict room access to people with a business need. Keep the area clear of storage, chemicals, and unrelated materials. Verify smoke detection and building access practices with facilities; network equipment cannot be made reliable through configuration alone if its environment is unsafe."
+        ]
+      ],
+      [
+        "Make the wiring understandable",
+        [
+          "Label both cable ends using a consistent scheme and maintain a simple port map. Identify uplinks, patch panels, access points, cameras, printers, and phone runs. Remove abandoned cable only after confirming it is not in service, then preserve enough slack for future maintenance.",
+          "Record switch names, management addresses, firmware, serial numbers, warranty dates, VLAN purposes, and vendor support details in the organization’s documentation system. Protect credentials and do not leave them on a paper note inside an unlocked room."
+        ]
+      ],
+      [
+        "Plan changes and capacity",
+        [
+          "Document what is connected before moving, adding, or replacing equipment. Photographing the rack can help, but it should supplement a port map and change record. Schedule changes, identify affected services, and define a rollback step for network changes that could interrupt operations.",
+          "Review available switch ports, PoE budget, UPS capacity, rack space, cooling, and uplink speed before adding cameras or wireless access points. Keep a known-good configuration backup and verify management access after firmware updates."
+        ]
+      ]
+    ],
+    "takeaway": "Treat a network closet like critical infrastructure: keep it clean, secured, labeled, and documented, and check power and capacity before making changes."
+  },
+  "90-day-plan": {
+    "lead": "A 90-day technology plan converts a broad backlog into a short sequence of work leaders can fund, assign, and review. It should connect each task to an operational outcome, explain dependencies, and leave room for urgent issues that emerge during delivery.",
+    "sections": [
+      [
+        "Establish the baseline",
+        [
+          "Ask department leaders what systems create the most friction, where a failure would stop service, and what projects are already committed. Review recent tickets, security findings, warranties, vendor contracts, backup results, and planned staffing or location changes.",
+          "Separate immediate exposure from improvement opportunities. A compromised admin account, failed backup, or unsupported critical server deserves a different priority from a request to add a new feature. Record assumptions and gather enough evidence to explain why a task is ranked."
+        ]
+      ],
+      [
+        "Choose a small number of outcomes",
+        [
+          "Pick three to five outcomes the organization can realistically complete or materially advance in one quarter. Examples include reducing account risk, making recovery measurable, replacing a failing network component, improving onboarding, or creating a lifecycle budget.",
+          "Break outcomes into deliverables with an owner, dependency, target date, estimated cost, and proof of completion. Avoid plans that contain only tool purchases; include configuration, staff communication, operational ownership, and how success will be measured."
+        ]
+      ],
+      [
+        "Review progress and reset priorities",
+        [
+          "Meet at regular intervals to discuss completed work, blockers, costs, incidents, and decisions needed from leadership. Escalate dependencies early, such as a vendor approval, user testing, or a change window that could delay a project.",
+          "At day 90, compare results with the original goals, document unfinished work and reasons, and choose the next priorities. Updating the plan is part of the process: business conditions change, so the roadmap should make tradeoffs visible rather than pretending every task remains equally important."
+        ]
+      ]
+    ],
+    "takeaway": "A useful 90-day plan is short, owned, and tied to evidence. Agree on measurable outcomes, review blockers regularly, and use the end-of-quarter review to reset the next set of priorities."
+  },
+  "intune-business": {
+    "lead": "Microsoft Intune is a cloud service for managing and protecting devices, applications, and access policies. For a business, the value comes from consistent configuration and visibility across laptops and mobile devices, but only when enrollment, privacy, support, and offboarding are designed for the workforce.",
+    "sections": [
+      [
+        "Know which devices you are managing",
+        [
+          "Decide which company-owned Windows, macOS, iOS, and Android devices are in scope and whether personally owned devices may access company data. Document enrollment requirements, ownership labels, minimum supported versions, and how a user requests help when a device fails compliance.",
+          "Choose a staged deployment. Pilot policies with representative users and applications, test remote and onsite workflows, and communicate what the company can see or control. Clear expectations reduce confusion, especially for personal devices where privacy boundaries matter."
+        ]
+      ],
+      [
+        "Apply a supportable configuration",
+        [
+          "Use policies for encryption, screen lock, updates, endpoint protection, firewall, and approved application access where supported. Coordinate device compliance rules with identity and conditional access so an outdated or compromised device can be restricted in a controlled way.",
+          "Assign policies using well-understood groups and document precedence and exceptions. Test application deployment, Wi-Fi or VPN profiles, certificates, and recovery methods before broad rollout. Maintain a way to reach users who cannot sign in because the device itself is out of policy."
+        ]
+      ],
+      [
+        "Operate through the device lifecycle",
+        [
+          "Connect onboarding to procurement and identity creation, and connect offboarding to access revocation, data retention, and device return or wipe. Record who can issue remote actions and require verification before destructive steps such as a full wipe.",
+          "Review compliance trends, enrollment failures, operating-system support, and exception age. Keep administrator roles limited, protect admin accounts with multifactor authentication, and periodically test whether a lost device can be contained without disrupting unrelated business data."
+        ]
+      ]
+    ],
+    "takeaway": "Intune can make device support and security more consistent, but the policies must fit how people work. Pilot enrollment and compliance rules, explain privacy boundaries, and document recovery and offboarding."
+  },
+  "more-than-helpdesk": {
+    "lead": "An IT provider should help the business operate and improve technology, not only close support tickets. Helpdesk response matters, but long-term value also depends on prevention, security, lifecycle planning, documentation, vendor coordination, and clear ownership.",
+    "sections": [
+      [
+        "Look at the work between tickets",
+        [
+          "Ask what the provider does to review patch status, endpoint health, backup alerts, identity risk, warranty dates, and recurring incidents. Request examples where ticket patterns led to a permanent fix or an investment that prevented disruption.",
+          "A provider should make the environment understandable through current inventories, network diagrams, vendor contacts, license records, and recovery instructions. Confirm where documentation lives, who can access it, and how it will be returned if the relationship ends."
+        ]
+      ],
+      [
+        "Expect planning and accountability",
+        [
+          "A technology roadmap translates business plans into dependencies, costs, and timing. It should help leaders decide whether to refresh devices, change a workflow, improve controls, or defer work. Ask how recommendations are prioritized and how the provider reports risks or overdue items.",
+          "Clarify service hours, response definitions, project boundaries, escalation owners, and after-hours procedures. Ask how performance is reviewed and what happens when a service target is missed. Good communication includes explaining a problem before it becomes a surprise."
+        ]
+      ],
+      [
+        "Keep the provider connected to the business",
+        [
+          "A strong partner learns which systems are mission-critical, what downtime costs, and who approves changes. They coordinate with software vendors, internet providers, facilities, insurers, and internal staff while keeping responsibility for each action clear.",
+          "Review the relationship on a regular cadence. Look at issue trends, security actions, major changes, budget forecasts, and user feedback together. If the only meaningful contact is when an employee has a problem, the service may be reactive even if monitoring tools are installed."
+        ]
+      ]
+    ],
+    "takeaway": "Evaluate an IT firm by what it prevents, documents, plans, and communicates as well as how it handles tickets. Ask for specific examples and written service boundaries."
+  },
+  "edr-and-mdr": {
+    "lead": "Endpoint detection and response (EDR) collects activity from computers and servers and helps investigate or contain suspicious behavior. Managed detection and response (MDR) adds a human monitoring and response service. The names vary by vendor, so compare actual coverage and responsibility rather than the label.",
+    "sections": [
+      [
+        "What EDR contributes",
+        [
+          "An EDR agent can record processes, connections, and other endpoint activity, identify suspicious patterns, and support actions such as isolating a device. This gives responders more evidence than a basic signature scan, but it cannot guarantee that every threat will be detected.",
+          "Coverage depends on what devices are enrolled, whether the agent is healthy, what operating systems are supported, and how alerts are configured. Inventory endpoints, verify reporting, and monitor devices that cannot run the selected tool."
+        ]
+      ],
+      [
+        "What MDR adds",
+        [
+          "An MDR provider may review alerts, investigate activity, contact your organization, and guide or perform containment under an agreed authorization. Ask whether analysts work continuously, what response is included, which events trigger a call, and how quickly the provider expects your team to act.",
+          "Agree on permissions before an incident. Decide whether responders can isolate a laptop, disable an account, or block a network connection without approval. Define who is reachable after hours and who owns restoration, legal decisions, customer communications, and insurer contact."
+        ]
+      ],
+      [
+        "Verify the operating model",
+        [
+          "Review a sample incident report and escalation workflow. Ask what telemetry is retained, how long it remains available, what integrations are required, how false positives are handled, and what happens when a vendor’s platform or your internet connection is unavailable.",
+          "Test response with a tabletop exercise or controlled alert. Confirm that a real person receives the escalation, knows the business context, and can reach the decision-maker. Include EDR/MDR in the broader program with MFA, patching, least privilege, backups, and incident response."
+        ]
+      ]
+    ],
+    "takeaway": "EDR is a technology layer; MDR is a service model whose precise duties vary. Confirm endpoint coverage, analyst availability, response authority, escalation timing, and how the service fits your incident plan."
+  },
+  "unique-passwords": {
+    "lead": "A unique password for every account limits the damage when a website or vendor is breached. If the same password protects email, banking, and a low-priority website, an attacker may try the exposed credential everywhere. A password manager makes unique credentials manageable for a team.",
+    "sections": [
+      [
+        "Why reuse creates risk",
+        [
+          "Attackers routinely test leaked username and password combinations against other services. This credential-stuffing attack can succeed even when the business account itself was never breached. Shared accounts create another problem: it can be difficult to tell who accessed a system or remove one person’s access.",
+          "Start with email, remote access, financial systems, administrator accounts, and software that stores sensitive data. Use a different long password for each service, and prioritize accounts with high business impact or access to password reset workflows."
+        ]
+      ],
+      [
+        "Set up a team manager safely",
+        [
+          "Select a reputable business password manager with individual accounts, multifactor authentication, administrative recovery, access groups, and audit history. Assign an owner and at least one backup administrator, then define how shared vendor credentials are stored and who can retrieve them.",
+          "Move credentials in priority order and remove old copies from spreadsheets, documents, chats, and personal vaults. Replace shared credentials with named accounts where possible. When sharing cannot be avoided, restrict the vault entry to people with a current need and record access."
+        ]
+      ],
+      [
+        "Protect recovery and employee changes",
+        [
+          "Secure the password manager itself with a strong unique master credential and MFA, and store emergency recovery material in an approved protected location. Test the recovery process with a backup administrator before a resignation or outage makes access urgent.",
+          "During onboarding and offboarding, grant or revoke vault access alongside other system permissions. Rotate a shared credential if an authorized user leaves or exposure is suspected. Review the manager’s access reports and educate staff to report phishing rather than approving unexpected sign-in prompts."
+        ]
+      ]
+    ],
+    "takeaway": "Unique passwords reduce the reach of a stolen credential. Use a managed vault with MFA, named user accounts, recovery ownership, and an offboarding process."
+  },
+  "passkeys": {
+    "lead": "Passkeys replace a typed password with a cryptographic credential stored on a device or security key. A sign-in is approved with a device PIN or biometric, and the website receives proof from the passkey rather than a reusable secret. This can make phishing harder, but rollout and recovery still need planning.",
+    "sections": [
+      [
+        "How passkeys differ from passwords",
+        [
+          "A passkey is created for a specific service and is designed not to be submitted to a look-alike website. That origin binding helps prevent credential theft through fake login pages. Depending on the platform, passkeys may be synced across a user’s devices or stored on a hardware security key.",
+          "Passkeys do not remove every risk. A compromised device, weak account-recovery process, or social engineering of an administrator can still create problems. Keep software updated, protect the device, and use strong identity checks for account recovery and support requests."
+        ]
+      ],
+      [
+        "Plan for devices and recovery",
+        [
+          "Inventory the services your organization uses and verify which support passkeys, which device types are supported, and how administrators enroll them. Pilot with a small group and write down what happens when someone loses a phone, replaces a laptop, or changes roles.",
+          "Offer at least one managed recovery path, such as a second registered device or approved hardware key, and test it before making passkeys mandatory. Set clear rules for lost keys, device wipe, employee departure, and helpdesk identity verification. Avoid a process that relies on bypassing security whenever a user is locked out."
+        ]
+      ],
+      [
+        "Roll out with layered controls",
+        [
+          "Explain to employees what a legitimate passkey prompt looks like and how to cancel unexpected approval requests. Maintain MFA and other controls during transition where appropriate; some services may use passkeys as one authentication factor within a larger sign-in policy.",
+          "Review available authentication and sign-in reports, measure adoption, and investigate unusual recovery events. Give priority to high-value administrator, email, and remote access accounts, then extend the approach as your applications and support process are ready."
+        ]
+      ]
+    ],
+    "takeaway": "Passkeys can make phishing-resistant sign-in easier, but the business needs a recovery plan and clear device policies. Pilot supported services and test lost-device scenarios before expanding."
+  }
+});
+
 function defaultArticle(guide: Guide) {
   if (guide.category === "Local resources") {
     return {
