@@ -27,6 +27,7 @@ const coreRoutes = [
   "/kokomo-structured-cabling",
   "/kokomo-security-installation",
   "/healthcare",
+  "/cyber-insurance-readiness-checklist",
 ];
 
 const resourceSlugs = [
