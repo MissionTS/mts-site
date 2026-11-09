@@ -103,7 +103,7 @@ export default function AboutPage() {
             ["Service", "We believe our work starts with service. We put client needs and the health of your organization ahead of our bottom line, taking time to understand what will genuinely help your team."],
             ["Excellence", "We do not settle for standing still. We keep learning, growing, and improving our skills and processes so we can provide better support and guidance to you."],
           ].map(([title, text], index) => (
-            <article key={title} className="border-b border-white/15 px-5 py-7 first:pl-0 sm:odd:border-r sm:odd:pl-0 sm:even:pl-5 lg:border-r lg:px-6 lg:py-8 lg:last:border-r-0">
+            <article key={title} className={`border-b border-white/15 px-5 py-7 first:pl-0 sm:odd:border-r lg:border-r lg:px-6 lg:py-8 lg:last:border-r-0 ${index % 2 === 0 ? "sm:pl-0" : "sm:pl-5"} ${index % 3 === 0 ? "lg:pl-0" : "lg:pl-6"}`}>
               <span aria-hidden="true" className="text-xs font-black tracking-[0.18em] text-mission-gold">0{index + 1}</span>
               <h3 className="mt-3 text-2xl font-extrabold text-white">{title}</h3>
               <p className="mt-3 leading-7 text-slate-200">{text}</p>
