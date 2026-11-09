@@ -82,16 +82,33 @@ export default function AboutPage() {
       </div>
     </section>
 
-    <section id="values" className="bg-mission-mist py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Our core values</p>
-        <h2 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">The principles behind every promise we make.</h2>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {values.map(([title, text], index) => <article key={title} className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
-            <span aria-hidden="true" className="text-sm font-black tracking-[0.18em] text-mission-gold">0{index + 1}</span>
-            <h3 className="mt-4 text-2xl font-extrabold text-mission-ink">{title}</h3>
-            <p className="mt-3 leading-7 text-slate-600">{text}</p>
-          </article>)}
+    <section id="values" className="relative isolate overflow-hidden bg-mission-ink py-16 text-white sm:py-20">
+      <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full border border-white/10" />
+      <div aria-hidden="true" className="pointer-events-none absolute -right-8 top-0 h-full w-1/2 bg-[radial-gradient(ellipse_at_top_right,rgba(217,167,55,0.18),transparent_62%)]" />
+      <div className="relative mx-auto max-w-[1440px] px-6 lg:px-8">
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-mission-gold">Our core values</p>
+            <h2 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-white sm:text-5xl">The principles behind every promise we make.</h2>
+          </div>
+          <p className="max-w-2xl text-lg leading-8 text-slate-200 lg:justify-self-end">These values shape how we communicate, protect your information, solve problems, and make decisions for your organization.</p>
+        </div>
+
+        <div className="mt-10 grid border-y border-white/15 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            ["Transparency", "You should not have to guess what a project will cost, when it will be complete, or what happens next. We communicate clearly about billing, timelines, expectations, and progress, so you can make informed decisions and plan with confidence."],
+            ["Integrity", "You trust us with systems and information central to your organization. We treat your data, sensitive information, and security with care, recommend what fits your needs, and act in the best interest of your team."],
+            ["Passion", "We stay with the problem until we understand what is getting in the way. Our team is dedicated to solving issues and helping your business function better, not just checking a ticket off the list."],
+            ["Quality", "We take care with the details, document the work, and finish the job well. From the first assessment through the final handoff, we aim for reliable results your team can count on."],
+            ["Service", "We believe our work starts with service. We put client needs and the health of your organization ahead of our bottom line, taking time to understand what will genuinely help your team."],
+            ["Excellence", "We do not settle for standing still. We keep learning, growing, and improving our skills and processes so we can provide better support and guidance to you."],
+          ].map(([title, text], index) => (
+            <article key={title} className="border-b border-white/15 px-5 py-7 first:pl-0 sm:odd:border-r sm:odd:pl-0 sm:even:pl-5 lg:border-r lg:px-6 lg:py-8 lg:last:border-r-0">
+              <span aria-hidden="true" className="text-xs font-black tracking-[0.18em] text-mission-gold">0{index + 1}</span>
+              <h3 className="mt-3 text-2xl font-extrabold text-white">{title}</h3>
+              <p className="mt-3 leading-7 text-slate-200">{text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
