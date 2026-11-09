@@ -13,10 +13,20 @@ export const metadata: Metadata = withSeoMetadata({
 }, "/about");
 
 const values = [
-  ["Committed to Quality", "We are meticulous. From installations to documentation, we put care and patience into every detail so the work is not merely complete, it is done well."],
-  ["Dedicated to Knowledge", "We are knowledge seekers. When a question needs research, we find the answer and bring it back in a way that is useful to your team."],
-  ["Focused on Customer Needs", "We listen first. Understanding your organization, goals, and constraints is how we recommend technology that fits instead of a generic stack."],
-  ["Determined to Help", "Mission began with a desire to make stronger, more affordable technology support available to organizations serving their communities."],
+  ["Transparency", "Clear recommendations, honest answers, and no surprises about the work or the bill."],
+  ["Integrity", "We do what is right for the people and organizations who trust us."],
+  ["Passion", "We love solving technology problems and keep learning as the work changes."],
+  ["Quality", "We take care with the details, document the work, and finish the job well."],
+  ["Excellence", "We keep improving our craft, our communication, and the experience we provide."],
+  ["Service", "We show up with patience, respect, and a commitment to help."],
+];
+
+const differences = [
+  ["Talk to the people who solve it", "No escalation maze. You can reach the technician who can move your issue forward."],
+  ["Get help without the long wait", "We work to respond quickly, keep you informed, and get you out of the hold queue."],
+  ["Work with friendly experts", "Our techs are real people who love technology, explain what happened, and help prevent a repeat."],
+  ["Know what your bill covers", "Straightforward, predictable billing makes it easier to plan and easier to trust."],
+  ["Get a partner beyond the helpdesk", "We guide your business on technology, operations, and security so your systems support where you are going."],
 ];
 
 const certificationGroups = [
@@ -29,7 +39,7 @@ const certificationGroups = [
 const team: TeamProfile[] = [
   { name: "Alyssa Hopen", role: "Service Coordinator", bio: "Alyssa helps keep service moving smoothly from the first request through follow-up. She coordinates communication, helps connect clients with the right Mission resources, and keeps the service experience organized and approachable.", image: "/photos/team-alyssa-20260924.jpg" },
   { name: "Ashley Padgett", role: "Billing & Executive Assistant", bio: "What I do: I handle accounts payable and receivable, payroll and internal accounting, project scheduling and customer communication, and assist the executive team with organization and documentation. Why I do it: I love being able to help my family and the organizations we serve. Most interesting fact: I have an extensive background working with dogs and horses, including training protection dogs to bite people, for fun. Least interesting fact: I am married to Westin.", image: "/photos/team-ashley.png" },
-  { name: "Brian Gaddie", role: "Director of Sales", bio: "I bring more than 20 years of experience in the technology field. What I do: I lead business sales and strategy, build collaborative business relationships with vendors and organizations, and provide excellent customer service to grow opportunities and revenue for Mission. Why I do it: I love technology and continuous learning. I’m a technologist who believes in bringing businesses across Indiana the latest IT, telecommunications, and software solutions. Most interesting fact: I’m pictured on my LinkedIn page beside Indiana University’s National Championship football trophy, the Big Ten trophy, the Heisman Trophy, and the Old Oaken Bucket.", image: "/photos/team-brian.jpg" },
+  { name: "Brian Gaddie", role: "Director of Sales", bio: "What I do: I lead business sales and strategy, build collaborative business relationships with vendors and organizations, and provide excellent customer service to grow opportunities and revenue for Mission. Why I do it: I love technology and continuous learning. I’m a technologist who believes in bringing businesses across Indiana the latest IT, telecommunications, and software solutions. Most interesting fact: I’m pictured on my LinkedIn page beside Indiana University’s National Championship football trophy, the Big Ten trophy, the Heisman Trophy, and the Old Oaken Bucket.", image: "/photos/team-brian.jpg" },
   { name: "Colton Langley", role: "Installation Technician", bio: "What I do: I assist with security system installations, PTZ and advanced 360 cameras and door access controls, as well as quality networking and cybersecurity systems. I provide great service for clients’ security needs, and go fishin’ every once in a while. Why I do it: I’m driven to provide quality work and give clients peace of mind that their property and cyber protection are in order. Most interesting fact: I have 13 pet tarantulas. Least interesting fact: I have red hair.", image: "/photos/team-colton.jpg" },
   { name: "Dylan Wyatt", role: "Helpdesk Technician", bio: "Dylan helps Mission clients navigate technology questions and day-to-day support needs with a service-first mindset. He is focused on clear communication, reliable troubleshooting, and a better experience for every user.", image: "/photos/team-dylan.jpg" },
   { name: "Jacob Bohlmann", role: "Helpdesk Technician", bio: "Jacob supports clients with friendly, practical technical help. He works to make everyday technology issues less disruptive so teams can stay focused on the work that matters most.", image: "/photos/team-jacob.jpg" },
@@ -57,10 +67,9 @@ export default function AboutPage() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
         <div>
           <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Our origin</p>
-          <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Built from a conviction that technology should serve people.</h2>
+          <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Technology should serve people. The companies behind it should lead with integrity. That is why we built Mission.</h2>
           <div className="mt-8 border-l-4 border-mission-gold pl-5">
             <div className="text-4xl font-black text-mission-navy">2019</div>
-            <p className="mt-1 text-sm font-bold leading-6 text-slate-600">Founded as Mission MSP by Westin Padgett</p>
           </div>
         </div>
         <div className="space-y-6 text-lg leading-8 text-slate-600">
@@ -73,7 +82,36 @@ export default function AboutPage() {
       </div>
     </section>
 
-    <section id="values" className="bg-mission-mist py-20 lg:py-24"><div className="mx-auto max-w-7xl px-6 lg:px-8"><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Our values</p><h2 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">How we show up for our clients and community.</h2><div className="mt-12 grid gap-6 md:grid-cols-2">{values.map(([title, text]) => <article key={title} className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm"><CheckCircleIcon className="h-8 w-8 text-mission-gold" /><h3 className="mt-5 text-2xl font-extrabold text-mission-ink">{title}</h3><p className="mt-3 leading-7 text-slate-600">{text}</p></article>)}</div></div></section>
+    <section id="values" className="bg-mission-mist py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Our core values</p>
+        <h2 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">The principles behind every promise we make.</h2>
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {values.map(([title, text], index) => <article key={title} className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+            <span aria-hidden="true" className="text-sm font-black tracking-[0.18em] text-mission-gold">0{index + 1}</span>
+            <h3 className="mt-4 text-2xl font-extrabold text-mission-ink">{title}</h3>
+            <p className="mt-3 leading-7 text-slate-600">{text}</p>
+          </article>)}
+        </div>
+      </div>
+    </section>
+
+    <section className="bg-white py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Relationship first</p>
+          <h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Why Working With Mission is Different</h2>
+          <p className="mt-5 text-lg leading-8 text-slate-600">Technology works best when the people behind it know your people, your goals, and what matters to your organization.</p>
+        </div>
+        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {differences.map(([title, text], index) => <article key={title} className="rounded-2xl border border-slate-200 bg-mission-mist/50 p-6">
+            <span aria-hidden="true" className="text-sm font-black text-mission-gold">0{index + 1}</span>
+            <h3 className="mt-3 text-lg font-extrabold text-mission-ink">{title}</h3>
+            <p className="mt-2 leading-7 text-slate-600">{text}</p>
+          </article>)}
+        </div>
+      </div>
+    </section>
 
     <section className="bg-white py-20 lg:py-24"><div className="mx-auto max-w-7xl px-6 lg:px-8"><div className="max-w-3xl"><p className="text-sm font-extrabold uppercase tracking-[0.18em] text-mission-navy">Certifications & expertise</p><h2 className="mt-3 text-4xl font-black tracking-tight text-mission-ink sm:text-5xl">Experience you can build on.</h2><p className="mt-5 text-lg leading-8 text-slate-600">Our team brings recognized credentials across infrastructure, wireless, cybersecurity, incident response, and enterprise networking.</p></div><div className="mt-10 grid items-center gap-5 rounded-3xl border border-slate-200 bg-mission-mist p-5 sm:grid-cols-2 lg:grid-cols-4"><div className="flex h-24 items-center justify-center rounded-2xl bg-white p-3"><Image src="/certifications/comptia.png" alt="CompTIA certification badges" width={1000} height={300} className="max-h-full w-auto object-contain" /></div><div className="flex h-24 items-center justify-center rounded-2xl bg-white p-3"><Image src="/certifications/cisco.png" alt="Cisco CCNA and CCNP certification marks" width={800} height={450} className="max-h-full w-auto object-contain" /></div><div className="flex h-24 items-center justify-center rounded-2xl bg-slate-950 p-3"><Image src="/certifications/cissp.png" alt="CISSP certification mark" width={500} height={500} className="max-h-full w-auto object-contain" /></div><div className="flex h-24 items-center justify-center rounded-2xl bg-white p-3"><Image src="/certifications/ecir.png" alt="eCIR Incident Response certification badge" width={256} height={304} className="max-h-full w-auto object-contain" /></div></div><div className="mt-12 space-y-10">{certificationGroups.map(([group, certs]) => <div key={group as string}><h3 className="text-2xl font-black text-mission-ink">{group}</h3><div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{(certs as string[]).map((cert) => <div key={cert} className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-mission-mist/60 p-5"><div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-mission-navy text-mission-gold"><ShieldCheckIcon className="h-5 w-5" /></div><p className="pt-1 text-sm font-extrabold leading-6 text-mission-ink">{cert}</p></div>)}</div></div>)}</div></div></section>
 

@@ -57,7 +57,7 @@ const lookingForItGuides = [
 ];
 
 const localGuides = [
-  ["it-support-kokomo", "IT Support in Kokomo, Indiana", "Local managed IT, cybersecurity, networking, and technology guidance for Kokomo businesses."],
+
   ["it-support-tipton", "IT Support in Tipton, Indiana", "Technology support and security for Tipton organizations that need a responsive local partner."],
   ["it-support-peru", "IT Support in Peru, Indiana", "Managed IT and infrastructure support for Peru businesses, nonprofits, and public organizations."],
   ["it-support-logansport", "IT Support in Logansport, Indiana", "Practical IT support, security, and modernization for Logansport teams."],

@@ -21,6 +21,7 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ContactForm } from "@/components/ContactForm";
+import { SupportStats } from "@/components/SupportStats";
 
 const services = [
   { icon: WrenchScrewdriverIcon, title: "Managed IT", text: "Responsive helpdesk, lifecycle management, patching, monitoring, and proactive support.", href: "/managed-it" },
@@ -235,6 +236,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="bg-mission-mist py-14 sm:py-16">
+        <div className="mx-auto grid max-w-[1440px] gap-10 px-6 lg:grid-cols-[1.3fr_0.7fr] lg:px-8">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-mission-navy">Relationship first</p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-black tracking-tight text-mission-ink sm:text-4xl">Why Working With Mission is Different</h2>
+            <p className="mt-3 max-w-2xl text-base leading-7 text-slate-600">Friendly experts. Straight answers. Technology that helps your people do their best work.</p>
+            <div className="mt-7 grid gap-3 sm:grid-cols-2">
+              {[
+                ["Direct to the right person", "No layers of escalation between you and the technician who can help."],
+                ["Help without the hold music", "Responsive support, clear updates, and less time waiting."],
+                ["Experts who explain", "We solve the issue and help you understand why it happened."],
+                ["Simple, predictable billing", "Know what is covered and plan with confidence."],
+                ["A partner beyond the helpdesk", "Practical guidance for your business, its technology, and what comes next."],
+              ].map(([title, text]) => <div key={title} className="rounded-xl border border-slate-200 bg-white p-4">
+                <h3 className="text-sm font-extrabold text-mission-ink">{title}</h3>
+                <p className="mt-1 text-sm leading-6 text-slate-600">{text}</p>
+              </div>)}
+            </div>
+          </div>
+          <aside className="rounded-2xl bg-mission-navy p-6 text-white sm:p-8">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-mission-gold">What guides us</p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {["Transparency", "Integrity", "Passion", "Quality", "Excellence", "Service"].map((value) => <span key={value} className="rounded-full border border-white/20 px-3 py-2 text-sm font-semibold">{value}</span>)}
+            </div>
+            <Link href="/about#values" className="mt-7 inline-flex items-center gap-2 text-sm font-extrabold text-mission-gold hover:text-white">Meet the people behind Mission <ArrowRightIcon className="h-4 w-4" /></Link>
+          </aside>
+        </div>
+      </section>
+
+      <SupportStats />
 
       <section className="relative overflow-hidden bg-mission-ink py-14 text-white lg:py-16">
         <Image src="/photos/managed-it-team.jpg" alt="Mission team consulting together around a laptop" fill sizes="100vw" className="object-cover opacity-20" />
