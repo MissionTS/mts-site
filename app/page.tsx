@@ -237,32 +237,58 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-mission-mist py-14 sm:py-16">
-        <div className="mx-auto grid max-w-[1440px] gap-10 px-6 lg:grid-cols-[1.3fr_0.7fr] lg:px-8">
-          <div>
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-mission-navy">Relationship first</p>
-            <h2 className="mt-3 max-w-3xl text-3xl font-black tracking-tight text-mission-ink sm:text-4xl">Why Working With Mission is Different</h2>
-            <p className="mt-3 max-w-2xl text-base leading-7 text-slate-600">Friendly experts. Straight answers. Technology that helps your people do their best work.</p>
-            <div className="mt-7 grid gap-3 sm:grid-cols-2">
-              {[
-                ["Direct to the right person", "No layers of escalation between you and the technician who can help."],
-                ["Help without the hold music", "Responsive support, clear updates, and less time waiting."],
-                ["Experts who explain", "We solve the issue and help you understand why it happened."],
-                ["Simple, predictable billing", "Know what is covered and plan with confidence."],
-                ["A partner beyond the helpdesk", "Practical guidance for your business, its technology, and what comes next."],
-              ].map(([title, text]) => <div key={title} className="rounded-xl border border-slate-200 bg-white p-4">
-                <h3 className="text-sm font-extrabold text-mission-ink">{title}</h3>
-                <p className="mt-1 text-sm leading-6 text-slate-600">{text}</p>
-              </div>)}
+      <section className="relative isolate overflow-hidden bg-mission-ink py-16 text-white sm:py-20">
+        <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full border border-white/10" />
+        <div aria-hidden="true" className="pointer-events-none absolute -right-8 top-0 h-full w-1/2 bg-[radial-gradient(ellipse_at_top_right,rgba(217,167,55,0.18),transparent_62%)]" />
+        <div className="relative mx-auto max-w-[1440px] px-6 lg:px-8">
+          <div className="grid gap-7 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-mission-gold">Relationship first</p>
+              <h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight text-white sm:text-5xl">Why Working With Mission is Different</h2>
+              <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-200">Friendly experts. Straight answers. Technology that helps your people do their best work.</p>
+            </div>
+            <div className="lg:justify-self-end">
+              <Link href="/about#values" className="inline-flex items-center gap-2 rounded-full bg-mission-gold px-5 py-3 text-sm font-extrabold text-mission-ink transition hover:bg-white">
+                Meet the people behind Mission <ArrowRightIcon className="h-4 w-4" />
+              </Link>
             </div>
           </div>
-          <aside className="rounded-2xl bg-mission-navy p-6 text-white sm:p-8">
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-mission-gold">What guides us</p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {["Transparency", "Integrity", "Passion", "Quality", "Excellence", "Service"].map((value) => <span key={value} className="rounded-full border border-white/20 px-3 py-2 text-sm font-semibold">{value}</span>)}
+
+          <div className="mt-10 grid grid-cols-2 border-y border-white/15 sm:grid-cols-3 lg:grid-cols-6">
+            {[
+              ["Transparency", "Clear scope, updates, and billing."],
+              ["Integrity", "Honest advice you can count on."],
+              ["Passion", "Curiosity and care in every problem solved."],
+              ["Quality", "Work we are proud to stand behind."],
+              ["Excellence", "Always looking for a better way to serve."],
+              ["Service", "People come first in every interaction."],
+            ].map(([value, description], index) => (
+              <article key={value} className="border-b border-white/15 px-4 py-5 first:pl-0 sm:border-b-0 sm:odd:border-r sm:odd:pl-0 sm:even:pl-5 lg:border-r lg:px-4 lg:py-6 lg:last:border-r-0">
+                <span className="text-xs font-black tracking-[0.16em] text-mission-gold">0{index + 1}</span>
+                <h3 className="mt-2 text-lg font-extrabold text-white">{value}</h3>
+                <p className="mt-1 text-sm leading-6 text-slate-300">{description}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-11">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-mission-gold">What you can expect</p>
+            <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5">
+              {[
+                ["Straight to the right person", "No escalation maze between you and the tech who can solve it."],
+                ["Help without the hold music", "Responsive support, clear updates, and less time waiting."],
+                ["Friendly, capable techs", "We fix the issue and explain what caused it."],
+                ["Simple, predictable billing", "Know what is covered and plan with confidence."],
+                ["A partner beyond the helpdesk", "Practical guidance to make your business and technology work better."],
+              ].map(([title, description], index) => (
+                <article key={title} className="border-l-2 border-mission-gold/70 pl-4">
+                  <span className="text-xs font-black tracking-[0.14em] text-white/50">0{index + 1}</span>
+                  <h3 className="mt-2 text-base font-extrabold leading-6 text-white">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">{description}</p>
+                </article>
+              ))}
             </div>
-            <Link href="/about#values" className="mt-7 inline-flex items-center gap-2 text-sm font-extrabold text-mission-gold hover:text-white">Meet the people behind Mission <ArrowRightIcon className="h-4 w-4" /></Link>
-          </aside>
+          </div>
         </div>
       </section>
 
