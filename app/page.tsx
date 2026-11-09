@@ -256,12 +256,12 @@ export default function Home() {
 
           <div className="mt-10 grid grid-cols-2 border-y border-white/15 sm:grid-cols-3 lg:grid-cols-6">
             {[
-              ["Transparency", "Clear scope, updates, and billing."],
-              ["Integrity", "Honest advice you can count on."],
-              ["Passion", "Curiosity and care in every problem solved."],
+              ["Transparency", "Clear billing, communication, timelines, and expectations."],
+              ["Integrity", "A team you can trust with your data and security."],
+              ["Passion", "Dedicated to solving issues and helping your business run better."],
               ["Quality", "Work we are proud to stand behind."],
-              ["Excellence", "Always looking for a better way to serve."],
-              ["Service", "People come first in every interaction."],
+              ["Service", "Serving our clients comes before our bottom line."],
+              ["Excellence", "We keep improving to serve you better."],
             ].map(([value, description], index) => (
               <article key={value} className="border-b border-white/15 px-4 py-5 first:pl-0 sm:border-b-0 sm:odd:border-r sm:odd:pl-0 sm:even:pl-5 lg:border-r lg:px-4 lg:py-6 lg:last:border-r-0">
                 <span className="text-xs font-black tracking-[0.16em] text-mission-gold">0{index + 1}</span>

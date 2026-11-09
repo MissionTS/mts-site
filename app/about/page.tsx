@@ -13,12 +13,12 @@ export const metadata: Metadata = withSeoMetadata({
 }, "/about");
 
 const values = [
-  ["Transparency", "Clear recommendations, honest answers, and no surprises about the work or the bill."],
-  ["Integrity", "We do what is right for the people and organizations who trust us."],
-  ["Passion", "We love solving technology problems and keep learning as the work changes."],
+  ["Transparency", "We keep billing, communication, timelines, and expectations clear so you know what to expect and where things stand."],
+  ["Integrity", "Our team earns your trust by treating your data, sensitive information, and security with care and responsibility."],
+  ["Passion", "We are dedicated to solving the issue in front of us and helping your business function at its best."],
   ["Quality", "We take care with the details, document the work, and finish the job well."],
-  ["Excellence", "We keep improving our craft, our communication, and the experience we provide."],
-  ["Service", "We show up with patience, respect, and a commitment to help."],
+  ["Service", "Serving clients comes before profit. We focus on what helps your organization and the people who depend on it."],
+  ["Excellence", "We hold ourselves to a higher standard, keep growing and improving, and use that progress to serve you better."],
 ];
 
 const differences = [
